@@ -36,7 +36,7 @@ Borrowing from _Element of Programming_ (section 1.3), an object is _well formed
 
 A regular type, may be _partially formed_ (section 1.5). In such a state the only valid operations are destruction and assignment-to (partially formed objects may only appear on the left hand side of assignment). A partially formed object need not be a valid representation of a value.
 
-An operation on an object is _safe_ if the post-condition for the operation leaves the object in a well formed state. An operation is _unsafe_ if it does not. An unsafe operation requires subsequent operation to either return the object to a well formed state or to safely destroy it. That doesn't imply that an unsafe operation leaves an object in a partially formed state, it may leave the object in any state, but a partially formed state is a common and useful state. Generally we like to keep unsafe operations contained within the implementation of our type and not as part of the public interface.
+An operation on an object is _safe_ if the post-condition for the operation leaves the object in a well formed state. An operation is _unsafe_ if it does not. An unsafe operation requires subsequent operations to either return the object to a well formed state or to safely destroy it. That doesn't imply that an unsafe operation leaves an object in a partially formed state, it may leave the object in any state, but a partially formed state is a common and useful state. Generally we like to keep unsafe operations contained within the implementation of our type and not as part of the public interface.
 
 An operation is _efficient_ if there is no faster way to perform it.
 
@@ -73,13 +73,15 @@ struct double_t
 };
 ```
 
-If I were to pass a range of `double_t` to std::sort(), then a moved from value would violate the requirements of the algorithm, the ordering is no longer strict-weak. But there is _no_ way for me to know the requirements of the algorithm I'm going to use on an object when deciding what the value is for my moved from state. Perhaps 0.0 is bad for an algorithm relying on divide, another algorithm may require no duplicates.
+If I were to pass a range of `double_t` to std::sort(), then a moved from value would violate the requirements of the algorithm, the ordering is no longer strict-weak. But there is _no_ way to know the requirements of the algorithm when deciding the value for the moved from state. Perhaps 0.0 is bad for an algorithm relying on divide, another algorithm may require no duplicates.
 
-The only operations any algorithm could safely assume are defined, is assignment to, and destruction. That is, the requirement is that the object is partially formed. The only way to strengthen that requirement would be to require that the value of the moved from object is the same as another object being used by the algorithm. The only way to satisfy that locally is by defining move to be copy. It works, but we lose efficiency. Unless a specific value is required, the only requirement is that the object is partially formed.
+The only valid operations on the moved from type are to establish a new value, through assignment, or to destroy the object. That is, the requirement is that the object is partially formed. The only way to strengthen that requirement would be to require that the value of the moved from object is the same as another object being used by the algorithm. The only way to satisfy that locally is by defining move to be copy. It works, but we lose efficiency. Unless a specific value is required, the only requirement is that the object is partially formed.
+
+(In the assignment case, there is another option, which is to define move assignment as swap. Prior to C++11, swap was used by many of the STL algorithms as a form of move which could be implemented more efficiently than copy.)
 
 ## could we fix move?
 
-There isn't anything broken about it, other than the note in the standard. But if the question is can we make move safe, the answer is no. But we could make it safe in more circumstance.
+There isn't anything broken about it, other than the note in the standard. But if the question is can we make move safe, the answer is no. But we could make it safe in more circumstance, and we could make it efficient.
 
 Here is where we go down the destructive move rathole. For background you might look at a wiki page I started (it will get migrated at some point to this blog) for a [non-proposal for destructive move](https://github.com/sean-parent/sean-parent.github.com/wiki/Non-Proposal-for-Destructive-Move).
 
