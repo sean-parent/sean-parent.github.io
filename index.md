@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Sean Parent
 tagline: Too many projects, too little time
+layout: page
 ---
 {% include JB/setup %}
 

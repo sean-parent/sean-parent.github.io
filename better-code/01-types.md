@@ -1,5 +1,7 @@
 ---
-title: Preface
+title: Types
+tagline: No Incomplete Types
+
 layout: page
 tags: [ better-code ]
 ---

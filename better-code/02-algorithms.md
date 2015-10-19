@@ -1,5 +1,7 @@
 ---
-title: Preface
+title: Algorithms
+tagline: No Raw Loops
+
 layout: page
 tags: [ better-code ]
 ---
