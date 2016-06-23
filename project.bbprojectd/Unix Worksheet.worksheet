@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CurrentWorkingDirectory</key>
+	<string>/Users/sean-parent</string>
+	<key>WorksheetContents</key>
+	<string>### Editing better-code## Jeykll for github pages# In Terminalcd ~/Projects/github.com/sean-parent/sean-parent.github.iobundle updatebundle exec jekyll serve##open -a "Google Chrome" "http://0.0.0.0:4000/better-code/index.html"open -a "LiveReload"</string>
+</dict>
+</plist>
