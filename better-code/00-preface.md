@@ -1,6 +1,6 @@
 ---
 title: Preface
-layout: page
+layout: book-page
 tags: [ better-code ]
 ---
 

@@ -2,11 +2,9 @@
 layout: post
 title: "About Move"
 description: ""
-category: 
+category:
 tags: [C++11, move, regular, efficient]
 ---
-{% include JB/setup %}
-
 ## background
 
 At C++Now 2014 I presented a talk about writing complete and efficient types. My talk came directly after a talk Eric Neibler gave about writing library API's.
@@ -27,7 +25,7 @@ Again, we debated the requirements of a moved from type, not destructive move. T
 
 The C++ standard defines _move_ as:
 
-> T u = rv; u is equivalent to the value of rv before the construction  
+> T u = rv; u is equivalent to the value of rv before the construction
 > rv’s state is unspecified.
 
 I would strengthen that to be "u is equal to..." but otherwise I agree with the wording up to this point. This is the description of MoveConstructible, a concept fragment, there is no need to discuss the semantics of MoveAssignment because assignment can be expressed in terms of MoveConstruction.
@@ -87,7 +85,7 @@ Here is where we go down the destructive move rathole. For background you might 
 
 The key thing here is that we change our definition of move to:
 
-> T u = rv; u is equivalent to the value of rv before the construction  
+> T u = rv; u is equivalent to the value of rv before the construction
 > rv is uninitialized and will not be destructed if it is a local variable
 
 We get around the whole _unspecified_ issue by defining the state of rv to be gone. This makes the one case where a local variable is explicitly moved safe. It also makes move efficient because it doesn't require writing back to the moved from object.

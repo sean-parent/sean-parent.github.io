@@ -2,8 +2,10 @@
 title: Types
 tagline: No Incomplete Types
 
-layout: page
+layout: book-page
 tags: [ better-code ]
 ---
 
-Testing 1.2.3...
+{::comment}This section is referenced by chapter[03]{:/comment}
+
+### What is an _incomplete_ type?
