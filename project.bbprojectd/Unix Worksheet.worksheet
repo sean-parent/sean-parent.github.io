@@ -5,6 +5,19 @@
 	<key>CurrentWorkingDirectory</key>
 	<string>/Users/sean-parent</string>
 	<key>WorksheetContents</key>
-	<string>### Editing better-code## Jeykll for github pages# In Terminalopen -a terminalcd ~/Projects/github.com/sean-parent/sean-parent.github.iobundle updatebundle exec jekyll serve##open -a "Google Chrome" "http://127.0.0.1:4000/better-code/index.html"open -a "LiveReload"</string>
+	<string>### Editing better-code
+## Jeykll for github pages
+# In Terminal
+open -a terminal
+
+cd ~/Projects/github.com/sean-parent/sean-parent.github.io
+bundle update
+bundle exec jekyll serve
+
+##
+open -a "Google Chrome" "http://127.0.0.1:4000/better-code/index.html"
+open -a "LiveReload"
+# Click on live-reload extension in Chrome
+</string>
 </dict>
 </plist>

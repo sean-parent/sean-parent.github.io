@@ -120,6 +120,20 @@ blockquote {
     }
 }
 
+dt {
+    font-weight: bold;
+}
+
+dl {
+    color: $grey-color-dark;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
 
 
 /**
