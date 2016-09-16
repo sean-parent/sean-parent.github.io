@@ -18,7 +18,7 @@ However, this definition doesn't define _structure_, instead it replaces it with
 
 {::comment}Some of this section may move into chapter[01]{:/comment}
 
-As we saw in [chapter 1](01-types) a type is a pattern for storing and modifying objects. In other words, a type is a structure that relates a set of objects to a set of values. This is a _representational_ relationship and it is this relationship that imbues the type with meaning. A representational relationship creates a _trivial data structure_ consisting of a single value.
+As we saw in [chapter 1](01-types) a type is a pattern for storing and modifying objects. That is, a type is a structure that relates a set of objects to a set of values. This is a _representational_ relationship and it is this relationship that imbues the type with meaning. A representational relationship creates a _trivial data structure_ consisting of a single value.
 
 Values are related to other values, for example, 3 is not equal to 4.
 
@@ -34,19 +34,53 @@ The choice of encoding can make a dramatic difference on the performance of oper
 
 {::comment} Digression into memory hierarchy performance and utilizing relationships with algorithms - where should that go {:/comment}
 
-Although data structures tend to be thought of simply in terms of containers such as arrays, lists, or maps, anytime a relationship is established between objects a data structure is created.
+Although data structures tend to be thought of simply in terms of containers such as arrays, lists, or maps, anytime a relationship is established between objects a data structure is created. However, to avoid confusion we will reserve the term _data structure_ to refer to types with a set of invariants which insure a set of relationships are maintained. More transient data structures will be referred to as _structured data_.
 
-As an example, consider the problem of finding the `nth` to `mth` elements of an array as if the arra was in sorted order. The trivial way to do this is to simply sort the entire array and then print the `nth` to `mth` elements:
+As an example of utilizing structured data_, consider the problem of finding the `nth` to `mth` elements of an array as if the array was in sorted order. The trivial way to do this is to simply sort the entire array and then print the `nth` to `mth` elements. In this example `[sf, sl)` is a subrange of `[f, l)`. {::comment}appendix to describe half open notation?{:/comment}
+
+~~~ C++
+template <typename I> // I models RandomAccessIterator
+void sort_subrange_0(I f, I l, I sf, I sl) {
+    std::sort(f, l);
+}
+~~~
+
+{::comment} Should this section start with partial_sort then add nth_element instead of the other way around? {:/comment}
+
+This function, however, does more work than is necessary. There is a function in the standard library, `nth_element()` which given a position `nth` within a range `[f, l)` has the post condition that the element at `nth` is the same element that would be in that position if `[f, l)` were sorted. `nth_element()` is a special case of sort_subrange when the subrange is of length 1 (or 0 if `nth == l`).
+
+This would not be of much use to build `sort_subrang()` except that `nth_element()` has an additional post condition. The range `[f, l)` is partitioned such that all elements prior to `nth` are less than or equal to the final element at `nth`. This post condition leaves us with _structured data_ and we can take advantage of that structure. If we find the `nth_element()` where `nth` is `sf` then we only need to sort the remaining elements to `sl` which can be done with `partial_sort()`.
+
+~~~ C++
+template <typename I> // I models RandomAccessIterator
+void sort_subrange_1(I f, I l, I sf, I sl) {
+    std::nth_element(f, sf, l); // partitions [f, l) at sf
+    if (sf != l) {
+        ++sf;
+        std::partial_sort(sf, sl, l);
+    }
+}
+~~~
+
+We can improve this function slightly by noting that in the case where `sf == f` we do not need to call `nth_element()`.
 
 ~~~ C++
 template <typename I> // I models RandomAccessIterator
 void sort_subrange(I f, I l, I sf, I sl) {
-    sort(f, l);
+    if (sf == sl) return;
+    if (sf != f) {
+        std::nth_element(f, sf, l);
+        ++sf;
+    }
+    std::partial_sort(sf, sl, l);
 }
 ~~~
 
-{::comment}
+{::comment} add exercise to test performance? {:/comment}
 
-use the sort a range of a container example.
+#### Composite Objects and the Whole-Part relationship
 
-{:/comment}
+A _composite object_ is consists of other objects, called _parts_. These parts are related to the _composite object_ via a _whole-part_ relationship.
+
+> A _whole-part_ relationship is _connected_, _non-circular_, _logically disjoint_, and _owned_. _Connected_ means any part is reachable from the object's starting address. _Non-circular_ means that no part is a part of itself. _Logically disjoint_ means that if two objects share a subpart where modifications to the subpart effect the value of both objects, then one of the objects must be a subpart of the other. _Owned_ means that copying the object, copies its parts, and destroying the object destroys its parts. {::comment} add citation for EoP 12.1 {:/comment}
+

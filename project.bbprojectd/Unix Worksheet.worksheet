@@ -8,9 +8,7 @@
 	<string>### Editing better-code
 ## Jeykll for github pages
 # In Terminal
-open -a terminal
-
-cd ~/Projects/github.com/sean-parent/sean-parent.github.io
+open -a terminal --args '~/Projects/github.com/sean-parent/sean-parent.github.io'
 bundle update
 bundle exec jekyll serve
 
