@@ -18,7 +18,7 @@ However, this definition doesn't define _structure_, instead it replaces it with
 
 {::comment}Some of this section may move into chapter[01]{:/comment}
 
-As we saw in [chapter 1](https://broken-link) a type is a pattern for storing and modifying objects. In other words, a type is a structure that relates a set of objects to a set of values. This is a _representational_ relationship and it is this relationship that imbues the type with meaning. A representational relationship creates a _trivial data structure_ consisting of a single value.
+As we saw in [chapter 1](01-types) a type is a pattern for storing and modifying objects. In other words, a type is a structure that relates a set of objects to a set of values. This is a _representational_ relationship and it is this relationship that imbues the type with meaning. A representational relationship creates a _trivial data structure_ consisting of a single value.
 
 Values are related to other values, for example, 3 is not equal to 4.
 
