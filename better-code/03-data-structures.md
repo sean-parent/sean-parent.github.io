@@ -82,5 +82,8 @@ void sort_subrange(I f, I l, I sf, I sl) {
 
 A _composite object_ is consists of other objects, called _parts_. These parts are related to the _composite object_ via a _whole-part_ relationship.
 
-> A _whole-part_ relationship is _connected_, _non-circular_, _logically disjoint_, and _owned_. _Connected_ means any part is reachable from the object's starting address. _Non-circular_ means that no part is a part of itself. _Logically disjoint_ means that if two objects share a subpart where modifications to the subpart effect the value of both objects, then one of the objects must be a subpart of the other. _Owned_ means that copying the object, copies its parts, and destroying the object destroys its parts. {::comment} add citation for EoP 12.1 {:/comment}
+> A _whole-part_ relationship is _connected_, _non-circular_, _logically disjoint_, and _owned_. _Connected_ means any part is reachable from the object's starting address. _Non-circular_ means that no part is a part of itself. _Logically disjoint_ means that if two objects share a subpart where modifications to the subpart effect the value of both objects, then one of the objects must be a subpart of the other. _Owned_ means that copying the object, copies its parts, and destroying the object destroys its parts. [^eop]
+
+[^eop]:
+    Alexander Stepanov & Paul McJones, _Elements of Programming_ (Addison-Wesley, 2009), 12.1
 

@@ -11,3 +11,16 @@ By working through this book and applying the ideas within I hope that you will 
 This book presents a collection of software development goals. The word _goal_ was chosen carefully. These are not guidelines or rules, and achieving the goal is not always simple or straight forward. Each goal is phrased as a negative, what not to do, but what _to do_ is an open ended challenge. You will find that trying to apply these goals you will fail at times, but through the effort you will gain a deeper understanding of your code and learn to write _better code_.
 
 The examples in this book are primarily in C++, this is for two reasons. The majority of my professional career has been spent writing C++ code. I also believe it is the best mainstream language with which to present the ideas within. It comes closest to an ideal language, but at times I will point out some significant shortcomings. The ideas in this book are not limited to the C++ developer, but apply equally if you are programming in any other language. Where I think there is value in illustrating this point I provide examples in other languages [REVISIT: It may just be JavaScript as the other language, as yet undecided].
+
+{::comment}
+
+Format for each chapter:
+
+short introduction that provides motivation
+explain the problem
+    show examples
+define the goal
+present possible solutions
+concluding remarks
+
+{:/comment}
