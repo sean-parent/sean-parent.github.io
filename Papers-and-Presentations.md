@@ -3,7 +3,10 @@ title: Papers and Presentations
 permalink: /papers-and-presentations
 tagline: Too many projects, too little time
 layout: page
+comments: true
 ---
+
+***
 
 Date: 2016-08-08, 2015-09-23
 
