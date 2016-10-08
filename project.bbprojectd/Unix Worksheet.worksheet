@@ -8,7 +8,9 @@
 	<string>### Editing better-code
 ## Jeykll for github pages
 # In Terminal
-open -a terminal --args '~/Projects/github.com/sean-parent/sean-parent.github.io'
+open -a terminal
+
+cd '~/Projects/github.com/sean-parent/sean-parent.github.io'
 bundle update
 bundle exec jekyll serve
 
@@ -16,6 +18,11 @@ bundle exec jekyll serve
 open -a "Google Chrome" "http://127.0.0.1:4000/better-code/index.html"
 open -a "LiveReload"
 # Click on live-reload extension in Chrome
+
+## Kramdown sytax reference
+open -a "Google Chrome" "http://kramdown.gettalong.org/syntax.html"
+open -a "Google Chrome" "https://github.com/Shopify/liquid/wiki/liquid-for-designers"
+open -a "Google Chrome" "https://jekyllrb.com/docs/home/"
 </string>
 </dict>
 </plist>

@@ -3,6 +3,8 @@ title: Sean Parent
 tagline: Too many projects, too little time
 layout: page
 ---
+[Papers and Presentation](papers-and-presentations)
+
 ## Posts
 
 <ul class="posts">
