@@ -640,7 +640,7 @@
 				<integer>1</integer>
 			</dict>
 			<key>ItemName</key>
-			<string>Papers-and-Presentations.md</string>
+			<string>papers-and-presentations.md</string>
 			<key>ItemType</key>
 			<string>FileReference</string>
 			<key>UserOverrideItemName</key>
