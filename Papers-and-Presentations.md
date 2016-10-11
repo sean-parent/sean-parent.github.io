@@ -8,6 +8,19 @@ comments: true
 
 ***
 
+Date: 2016-10-10
+
+**Title: Better Code: Runtime Polymorphism**
+
+Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. Part of my “Better Code” series of talks, the goal is “No Inheritance.”
+
+Notes: This is an updated version of the "Value Semantics and Concept-based Polymorphism" talk presented at Facebook.
+
+*   [PDF](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.pdf)
+*   [Keynote](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.key)
+
+***
+
 Date: 2016-08-08, 2015-09-23
 
 **Title: Better Code: Data Structures**

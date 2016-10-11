@@ -10,7 +10,7 @@
 # In Terminal
 open -a terminal
 
-cd '~/Projects/github.com/sean-parent/sean-parent.github.io'
+cd ~/Projects/github.com/sean-parent/sean-parent.github.io
 bundle update
 bundle exec jekyll serve
 
