@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A670CF31DA325BF00E619FE /* 04-class-inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A670CF21DA325BF00E619FE /* 04-class-inheritance.cpp */; };
+		9AD7FE871DB31FA2009318CF /* 03-sort-subrange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7FE851DB31FA2009318CF /* 03-sort-subrange.cpp */; };
+		9AD7FE881DB31FA2009318CF /* 04-class-inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7FE861DB31FA2009318CF /* 04-class-inheritance.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		9A670CEF1DA325BF00E619FE /* better-code */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "better-code"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A670CF21DA325BF00E619FE /* 04-class-inheritance.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "04-class-inheritance.cpp"; sourceTree = "<group>"; };
+		9AD7FE851DB31FA2009318CF /* 03-sort-subrange.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "03-sort-subrange.cpp"; sourceTree = "<group>"; };
+		9AD7FE861DB31FA2009318CF /* 04-class-inheritance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "04-class-inheritance.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,7 @@
 		9A670CE61DA325BF00E619FE = {
 			isa = PBXGroup;
 			children = (
-				9A670CF11DA325BF00E619FE /* better-code */,
+				9AD7FE841DB31FA2009318CF /* better-code */,
 				9A670CF01DA325BF00E619FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,10 +56,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A670CF11DA325BF00E619FE /* better-code */ = {
+		9AD7FE841DB31FA2009318CF /* better-code */ = {
 			isa = PBXGroup;
 			children = (
-				9A670CF21DA325BF00E619FE /* 04-class-inheritance.cpp */,
+				9AD7FE851DB31FA2009318CF /* 03-sort-subrange.cpp */,
+				9AD7FE861DB31FA2009318CF /* 04-class-inheritance.cpp */,
 			);
 			path = "better-code";
 			sourceTree = "<group>";
@@ -119,7 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A670CF31DA325BF00E619FE /* 04-class-inheritance.cpp in Sources */,
+				9AD7FE871DB31FA2009318CF /* 03-sort-subrange.cpp in Sources */,
+				9AD7FE881DB31FA2009318CF /* 04-class-inheritance.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +135,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -178,7 +182,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -248,6 +252,7 @@
 				9A670CF81DA325BF00E619FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

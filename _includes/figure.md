@@ -4,7 +4,7 @@
 {% assign figure-index = figure-number | minus: 1 %}
 
 {% assign -figure-ref = '[figure ' | append: page.chapter | append: '.' | append: figure-number
-        | append: '](#' | append: figure-name | append: ')' %}
+        | append: '](#' | append: include.name | append: ')' %}
 
 {% if figure-reference %}
     {% assign figure-reference = ((figure-reference | join: '$') | append: '$'
@@ -13,9 +13,9 @@
     {% assign figure-reference = -figure-ref | split: '$'  %}
 {% endif %}
 
-![figure {{page.chapter}}.{{figure-number}}: {{figure-caption}}][{{figure-name}}]\\
+![figure {{page.chapter}}.{{figure-number}}: {{include.caption}}][{{include.name}}]\\
 
-figure {{page.chapter}}.{{figure-number}}: {{figure-caption}}
-</p>{: #{{figure-name}} }
+figure {{page.chapter}}.{{figure-number}}: {{include.caption}}
+</p>{: #{{include.name}} }
 
-[{{figure-name}}]: figures/{{figure-name}}.svg
+[{{include.name}}]: figures/{{include.name}}.svg

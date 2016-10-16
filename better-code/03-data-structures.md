@@ -4,6 +4,7 @@ tagline: No Incidental Data Structures
 
 layout: book-page
 tags: [ better-code ]
+chapter: 3
 ---
 
 ### What is an _incidental_ data structure?
@@ -38,12 +39,7 @@ Although data structures tend to be thought of simply in terms of containers suc
 
 As an example of utilizing structured data_, consider the problem of finding the `nth` to `mth` elements of an array as if the array was in sorted order. The trivial way to do this is to simply sort the entire array and then print the `nth` to `mth` elements. In this example `[sf, sl)` is a subrange of `[f, l)`. {::comment}appendix to describe half open notation?{:/comment}
 
-~~~ C++
-template <typename I> // I models RandomAccessIterator
-void sort_subrange_0(I f, I l, I sf, I sl) {
-    std::sort(f, l);
-}
-~~~
+{% include code.md name='sort-subrange-0' caption='inefficient sort subrange' %}
 
 {::comment} Should this section start with partial_sort then add nth_element instead of the other way around? {:/comment}
 
