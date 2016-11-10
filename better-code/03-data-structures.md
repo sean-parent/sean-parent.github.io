@@ -47,16 +47,7 @@ This function, however, does more work than is necessary. There is a function in
 
 This would not be of much use to build `sort_subrang()` except that `nth_element()` has an additional post condition. The range `[f, l)` is partitioned such that all elements prior to `nth` are less than or equal to the final element at `nth`. This post condition leaves us with _structured data_ and we can take advantage of that structure. If we find the `nth_element()` where `nth` is `sf` then we only need to sort the remaining elements to `sl` which can be done with `partial_sort()`.
 
-~~~ C++
-template <typename I> // I models RandomAccessIterator
-void sort_subrange_1(I f, I l, I sf, I sl) {
-    std::nth_element(f, sf, l); // partitions [f, l) at sf
-    if (sf != l) {
-        ++sf;
-        std::partial_sort(sf, sl, l);
-    }
-}
-~~~
+{% include code.md name='sort-subrange-1' caption='improved sort subrange' %}
 
 We can improve this function slightly by noting that in the case where `sf == f` we do not need to call `nth_element()`.
 

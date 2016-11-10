@@ -53,7 +53,10 @@ public:
     }
 };
 
+int test_03();
+
 int main() {
+    test_03();
     document doc;
     doc.emplace_back(make_shared<circle>(42.0));
     draw(doc, cout, 0);
