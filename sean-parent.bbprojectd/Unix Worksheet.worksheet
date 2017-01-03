@@ -7,6 +7,19 @@
 	<key>WorksheetContents</key>
 	<string>### Editing better-code
 ## Jeykll for github pages
+
+# Requires xcode command line tools (make sure to update when xcode is updated):
+
+xcode-select --install
+
+# github pages requires an access token setup per the instructions here:
+
+open -a "Google Chrome" "http://knightcodes.com/miscellaneous/2016/09/13/fix-github-metadata-error.html"
+
+## Environment variables set in:
+
+bbedit ~./profile
+
 # In Terminal
 open -a terminal --args ~/Projects/github.com/sean-parent/sean-parent.github.io
 

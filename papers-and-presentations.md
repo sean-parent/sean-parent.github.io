@@ -8,6 +8,17 @@ comments: true
 
 ***
 
+Date: 2016-12-14
+
+**Title: Four Tips for Junior Engineers and Senior Managers**
+
+Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/SFBay-Association-of-C-C-Users/).
+
+*   [PDF](presentations/2016-12-14-management-tips/2016-12-14-management-tips.pdf)
+*   [Keynote](presentations/2016-12-14-management-tips/2016-12-14-management-tips.key)
+
+***
+
 Date: 2016-11-16, 2016-08-08, 2015-04-21, 2015-02-27
 
 **Title: Better Code: Concurrency**
@@ -16,8 +27,9 @@ Abstract: Despite all of the recent interest, concurrency in standard C++ is sti
 
 Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
-*   [PDF](presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf) **DRAFT**
-*   [Keynote](presentations/2016-11-16-concurrency/2016-11-16-concurrency.key) **DRAFT**
+*   [Video](https://youtu.be/QIHy8pXbneI)
+*   [PDF](presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf)
+*   [Keynote](presentations/2016-11-16-concurrency/2016-11-16-concurrency.key)
 
 Note: This is the version of the talk presented at Bloomberg.
 
@@ -47,8 +59,9 @@ Abstract: The process of improving an existing body of code can be very challeng
 
 Note: This is a revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
-*   [PDF](presentations/2016-11-16-better-code/2016-11-16-better-code.pdf) **DRAFT**
-*   [Keynote](/presentations/2016-11-16-better-code/2016-11-16-better-code.key) **DRAFT**
+*   [Video](https://youtu.be/cK_kftBNgBc)
+*   [PDF](presentations/2016-11-16-better-code/2016-11-16-better-code.pdf)
+*   [Keynote](/presentations/2016-11-16-better-code/2016-11-16-better-code.key)
 
 Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://www.program-comprehension.org/icpc16/keynote.html).
 
