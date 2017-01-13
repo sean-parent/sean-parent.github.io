@@ -43,3 +43,20 @@ The fix is to test atomically with the decrement, the correct code is shown in [
 Another problem with raw synchronization primitives is that their use can have a large negative impact on system performance. To understand why, we need to understand Amdahl's Law.
 
 The intuition behind Amdah's Law is that if part of system takes time x to complete,
+
+{::comment}
+Math experiment for Fibonacci matrix.
+{:/comment}
+$$
+\begin{align*}
+  \left[ \begin{array}{cc}
+      1 & 1 \\
+      1 & 0
+    \end{array} \right]^{n} =
+    \left[ \begin{array}{cc}
+      F_{n+1} & F_n \\
+      F_n & F_{n-1}
+    \end{array} \right]
+\end{align*}
+$$
+

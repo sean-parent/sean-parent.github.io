@@ -12,13 +12,34 @@
 
 xcode-select --install
 
+# install homebrew (is this needed? try without.)
+
+open -a "Google Chrome" "http://brew.sh/"
+
+# install rvm &lt;https://github.com/rvm/rvm#installation&gt;
+
+\curl -sSL https://get.rvm.io | bash -s stable
+
+# make sure source line is in profile
+
+bbedit ~/.profile
+
+#install latest ruby
+
+rvm install ruby --latest
+
+# install bundler
+
+gem install bundler
+
 # github pages requires an access token setup per the instructions here:
 
 open -a "Google Chrome" "http://knightcodes.com/miscellaneous/2016/09/13/fix-github-metadata-error.html"
 
 ## Environment variables set in:
 
-bbedit ~./profile
+bbedit ~/.profile
+
 
 # In Terminal
 open -a terminal --args ~/Projects/github.com/sean-parent/sean-parent.github.io
@@ -35,6 +56,7 @@ open -a "LiveReload"
 open -a "Google Chrome" "http://kramdown.gettalong.org/syntax.html"
 open -a "Google Chrome" "https://github.com/Shopify/liquid/wiki/liquid-for-designers"
 open -a "Google Chrome" "https://jekyllrb.com/docs/home/"
+
 </string>
 </dict>
 </plist>
