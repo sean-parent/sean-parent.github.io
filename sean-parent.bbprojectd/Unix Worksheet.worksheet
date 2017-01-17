@@ -12,10 +12,6 @@
 
 xcode-select --install
 
-# install homebrew (is this needed? try without.)
-
-open -a "Google Chrome" "http://brew.sh/"
-
 # install rvm &lt;https://github.com/rvm/rvm#installation&gt;
 
 \curl -sSL https://get.rvm.io | bash -s stable
@@ -39,6 +35,7 @@ open -a "Google Chrome" "http://knightcodes.com/miscellaneous/2016/09/13/fix-git
 ## Environment variables set in:
 
 bbedit ~/.profile
+
 
 
 # In Terminal
