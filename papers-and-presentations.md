@@ -8,22 +8,61 @@ comments: true
 
 ***
 
-Date: 2016-12-14
+Date: 2017-01-25, 2016-11-16, 2016-05-16
 
-**Title: Four Tips for Junior Engineers and Senior Managers**
+**Title: Better Code**
 
-Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/SFBay-Association-of-C-C-Users/).
+Abstract: The process of improving an existing body of code can be very challenging. In this talk I'll offer a concise definition of "good code", inherent tradeoffs in any system, and techniques for approaching a large code base.
 
-*   [PDF](presentations/2016-12-14-management-tips/2016-12-14-management-tips.pdf)
-*   [Keynote](presentations/2016-12-14-management-tips/2016-12-14-management-tips.key)
+Note: This is a revised version of the talk presented at [ACCU Bay Area](https://www.meetup.com/ACCU-Bay-Area/).
+
+*   [PDF](presentations/2017-01-25-better-code/2017-01-25-better-code.pdf)
+*   [Keynote](/presentations/2017-01-25-better-code/2017-01-25-better-code.key)
+
+Note: This is a revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
+
+*   [Video](https://youtu.be/cK_kftBNgBc)
+*   [PDF](presentations/2016-11-16-better-code/2016-11-16-better-code.pdf)
+*   [Keynote](/presentations/2016-11-16-better-code/2016-11-16-better-code.key)
+
+Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://www.program-comprehension.org/icpc16/keynote.html).
+
+*   [C++Now 2016 Video](https://youtu.be/giNtMitSdfQ)
+*   [PDF](presentations/2016-05-16-better-code/2016-05-16-better-code.pdf)
+*   [Keynote](/presentations/2016-05-16-better-code/2016-05-16-better-code.key)
 
 ***
 
-Date: 2016-11-16, 2016-08-08, 2015-04-21, 2015-02-27
+Date: 2017-01-17, 2016-10-10
+
+**Title: Better Code: Runtime Polymorphism**
+
+Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. Part of my “Better Code” series of talks, the goal is “No Inheritance.”
+
+Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
+
+*   [PDF](presentations/2017-01-17-runtime-polymorphism/2017-01-17-runtime-polymorphism.pdf)
+*   [Keynote](presentations/2017-01-17-runtime-polymorphism/2017-01-17-runtime-polymorphism.key)
+
+Note: This is an updated version of the "Value Semantics and Concept-based Polymorphism" talk presented at Facebook.
+
+*   [PDF](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.pdf)
+*   [Keynote](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.key)
+
+***
+
+Date: 2017-01-17, 2016-11-16, 2016-08-08, 2015-04-21, 2015-02-27
 
 **Title: Better Code: Concurrency**
 
 Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference, implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations, and looks towards sequential communicating processes, higher level concurrent constructs. Part of my “Better Code” series of talks, the goal is to learn to write software that doesn’t wait.
+
+__Erratum: I've incorrectly stated that `std::async()` changed with C++14. I intend to write a lengthier description of the issue soon.__
+
+Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
+
+*   [PDF](presentations/2017-01-17-concurrency/2017-01-17-concurrency.pdf)
+*   [Keynote](presentations/2017-01-17-concurrency/2017-01-17-concurrency.key)
 
 Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
@@ -51,36 +90,14 @@ Note: This is the version of the talk I presented at the [C++ Russia Conference,
 
 ***
 
-Date: 2016-11-16, 2016-05-16
+Date: 2016-12-14
 
-**Title: Better Code**
+**Title: Four Tips for Junior Engineers and Senior Managers**
 
-Abstract: The process of improving an existing body of code can be very challenging. In this talk I'll offer a concise definition of "good code", inherent tradeoffs in any system, and techniques for approaching a large code base.
+Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/SFBay-Association-of-C-C-Users/).
 
-Note: This is a revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
-
-*   [Video](https://youtu.be/cK_kftBNgBc)
-*   [PDF](presentations/2016-11-16-better-code/2016-11-16-better-code.pdf)
-*   [Keynote](/presentations/2016-11-16-better-code/2016-11-16-better-code.key)
-
-Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://www.program-comprehension.org/icpc16/keynote.html).
-
-*   [C++Now 2016 Video](https://youtu.be/giNtMitSdfQ)
-*   [PDF](presentations/2016-05-16-better-code/2016-05-16-better-code.pdf)
-*   [Keynote](/presentations/2016-05-16-better-code/2016-05-16-better-code.key)
-
-***
-
-Date: 2016-10-10
-
-**Title: Better Code: Runtime Polymorphism**
-
-Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. Part of my “Better Code” series of talks, the goal is “No Inheritance.”
-
-Note: This is an updated version of the "Value Semantics and Concept-based Polymorphism" talk presented at Facebook.
-
-*   [PDF](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.pdf)
-*   [Keynote](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.key)
+*   [PDF](presentations/2016-12-14-management-tips/2016-12-14-management-tips.pdf)
+*   [Keynote](presentations/2016-12-14-management-tips/2016-12-14-management-tips.key)
 
 ***
 
