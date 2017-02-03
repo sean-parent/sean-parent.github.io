@@ -39,7 +39,7 @@ bbedit ~/.profile
 
 
 # In Terminal
-open -a terminal --args ~/Projects/github.com/sean-parent/sean-parent.github.io
+open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
 
 bundle update
 bundle exec jekyll serve
