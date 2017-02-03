@@ -117,7 +117,7 @@ Note: This is the version of the talk presented at Bloomberg.
 *   [PDF](presentations/2016-08-08-data-structures/2016-08-08-data-structures.pdf)
 *   [Keynote](presentations/2016-08-08-data-structures/2016-08-08-data-structures.key)
 
-Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.org).
+Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.org/).
 
 *   [Video](https://www.youtube.com/watch?v=sWgDk-o-6ZE)
 *   [PDF](presentations/2015-09-23-data-structures/data-structures.pdf)
