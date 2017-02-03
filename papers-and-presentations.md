@@ -21,13 +21,13 @@ Note: This is a revised version of the talk presented at [ACCU Bay Area](https:/
 
 Note: This is a revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
-*   [Video](https://youtu.be/cK_kftBNgBc)
+*   [Video](https://www.youtube.com/watch?v=cK_kftBNgBc)
 *   [PDF](presentations/2016-11-15-better-code/2016-11-15-better-code.pdf)
 *   [Keynote](/presentations/2016-11-15-better-code/2016-11-15-better-code.key)
 
 Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://2016.program-comprehension.org/keynote.html).
 
-*   [C++Now 2016 Video](https://youtu.be/giNtMitSdfQ)
+*   [C++Now 2016 Video](https://www.youtube.com/watch?v=giNtMitSdfQ)
 *   [PDF](presentations/2016-05-16-better-code/2016-05-16-better-code.pdf)
 *   [Keynote](/presentations/2016-05-16-better-code/2016-05-16-better-code.key)
 
@@ -66,7 +66,7 @@ Note: This is a revised version of the talk presented at [NDC { London } 2017](h
 
 Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
-*   [Video](https://youtu.be/QIHy8pXbneI)
+*   [Video](https://www.youtube.com/watch?v=QIHy8pXbneI)
 *   [PDF](presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf)
 *   [Keynote](presentations/2016-11-16-concurrency/2016-11-16-concurrency.key)
 
@@ -82,8 +82,8 @@ Note: This is the version of the talk presented at the [Bay Area C++ User Group 
 
 Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
 
-*   [Video (1)](http://youtu.be/IYmoz7e1L5c)
-*   [Video (2)](http://youtu.be/BngVqHzOFX8)
+*   [Video (1)](https://www.youtube.com/watch?v=IYmoz7e1L5c)
+*   [Video (2)](https://www.youtube.com/watch?v=BngVqHzOFX8)
 *   [PDF](presentations/2015-02-27-concurrency/concurrency.pdf)
 *   [Keynote](presentations/2015-02-27-concurrency/concurrency.key)
 *   [C++ Source](presentations/2015-02-27-concurrency/concurrency-talk.cpp)
@@ -117,7 +117,7 @@ Note: This is the version of the talk presented at Bloomberg.
 *   [PDF](presentations/2016-08-08-data-structures/2016-08-08-data-structures.pdf)
 *   [Keynote](presentations/2016-08-08-data-structures/2016-08-08-data-structures.key)
 
-Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.org/).
+Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.org).
 
 *   [Video](https://www.youtube.com/watch?v=sWgDk-o-6ZE)
 *   [PDF](presentations/2015-09-23-data-structures/data-structures.pdf)
@@ -171,7 +171,7 @@ Date: 2014-05-14
 
 Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
 
-*   [Video](https://youtu.be/mYrbivnruYw)
+*   [Video](https://www.youtube.com/watch?v=mYrbivnruYw)
 *   [PDF](presentations/2014-04-14-goal-complete-types/goal-complete-types.pdf)
 *   [Keynote](presentations/2014-04-14-goal-complete-types/goal-complete-types.key)
 
@@ -244,7 +244,7 @@ _Part 3: Goodness_
 A plethora of networked devices is changing the software landscape. The infrastructure of the internet is fading into the background and increasingly customers are expecting all of their information, available on all their devices, instantly. What impact do such systems have on how we architect and write software? What is the role C++ will play in this new world.
 
 
-*   [Video](https://youtu.be/iGenpw2NeKQ)
+*   [Video](https://www.youtube.com/watch?v=iGenpw2NeKQ)
 *   [Keynote](presentations/2012-05-17-now-what/now-what.key)
 *   [PDF](presentations/2012-05-17-now-what/now-what.pdf)
 
