@@ -8,7 +8,7 @@ comments: true
 
 ***
 
-Date: 2017-01-25, 2016-11-16, 2016-05-16
+Date: 2017-01-25, 2016-11-15, 2016-05-16
 
 **Title: Better Code**
 
@@ -22,10 +22,10 @@ Note: This is a revised version of the talk presented at [ACCU Bay Area](https:/
 Note: This is a revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
 *   [Video](https://youtu.be/cK_kftBNgBc)
-*   [PDF](presentations/2016-11-16-better-code/2016-11-16-better-code.pdf)
-*   [Keynote](/presentations/2016-11-16-better-code/2016-11-16-better-code.key)
+*   [PDF](presentations/2016-11-15-better-code/2016-11-15-better-code.pdf)
+*   [Keynote](/presentations/2016-11-15-better-code/2016-11-15-better-code.key)
 
-Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://www.program-comprehension.org/icpc16/keynote.html).
+Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://2016.program-comprehension.org/keynote.html).
 
 *   [C++Now 2016 Video](https://youtu.be/giNtMitSdfQ)
 *   [PDF](presentations/2016-05-16-better-code/2016-05-16-better-code.pdf)
@@ -33,7 +33,7 @@ Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conferen
 
 ***
 
-Date: 2017-01-17, 2016-10-10
+Date: 2017-01-18, 2016-10-10
 
 **Title: Better Code: Runtime Polymorphism**
 
@@ -41,8 +41,8 @@ Abstract: This talk explains why (and how) to implement non-intrusive polymorphi
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
-*   [PDF](presentations/2017-01-17-runtime-polymorphism/2017-01-17-runtime-polymorphism.pdf)
-*   [Keynote](presentations/2017-01-17-runtime-polymorphism/2017-01-17-runtime-polymorphism.key)
+*   [PDF](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.pdf)
+*   [Keynote](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.key)
 
 Note: This is an updated version of the "Value Semantics and Concept-based Polymorphism" talk presented at Facebook.
 
@@ -51,7 +51,7 @@ Note: This is an updated version of the "Value Semantics and Concept-based Polym
 
 ***
 
-Date: 2017-01-17, 2016-11-16, 2016-08-08, 2015-04-21, 2015-02-27
+Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-04-21, 2015-02-27
 
 **Title: Better Code: Concurrency**
 
@@ -61,8 +61,8 @@ __Erratum: I've incorrectly stated that `std::async()` changed with C++14. I int
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
-*   [PDF](presentations/2017-01-17-concurrency/2017-01-17-concurrency.pdf)
-*   [Keynote](presentations/2017-01-17-concurrency/2017-01-17-concurrency.key)
+*   [PDF](presentations/2017-01-18-concurrency/2017-01-18-concurrency.pdf)
+*   [Keynote](presentations/2017-01-18-concurrency/2017-01-18-concurrency.key)
 
 Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
@@ -80,7 +80,7 @@ Note: This is the version of the talk presented at the [Bay Area C++ User Group 
 *   [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
 *   [Keynote](presentations/2015-04-21-concurrency/concurrency.key)
 
-Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/SFBay-Association-of-C-C-Users/).
+Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
 
 *   [Video (1)](http://youtu.be/IYmoz7e1L5c)
 *   [Video (2)](http://youtu.be/BngVqHzOFX8)
@@ -94,7 +94,7 @@ Date: 2016-12-14
 
 **Title: Four Tips for Junior Engineers and Senior Managers**
 
-Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/SFBay-Association-of-C-C-Users/).
+Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/ACCU-Bay-Area/).
 
 *   [PDF](presentations/2016-12-14-management-tips/2016-12-14-management-tips.pdf)
 *   [Keynote](presentations/2016-12-14-management-tips/2016-12-14-management-tips.key)
@@ -117,7 +117,7 @@ Note: This is the version of the talk presented at Bloomberg.
 *   [PDF](presentations/2016-08-08-data-structures/2016-08-08-data-structures.pdf)
 *   [Keynote](presentations/2016-08-08-data-structures/2016-08-08-data-structures.key)
 
-Note: This is the version of the talk presented at [CppCon 2015](http://cppcon.org/).
+Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.org/).
 
 *   [Video](https://www.youtube.com/watch?v=sWgDk-o-6ZE)
 *   [PDF](presentations/2015-09-23-data-structures/data-structures.pdf)
@@ -143,7 +143,7 @@ Authors: Jaakko Järvi, Sean Parent
 
 Abstract: Selecting items from a collection is one of the most common tasks users perform with graphical user interfaces. Practically every application supports this task with a selection feature different from that of any other application. Defects are common, especially in manipulating selections of non-adjacent elements, and flexible selection features are often missing when they would clearly be useful. As a consequence, user effort is wasted. The loss of productivity is experienced in small doses, but all computer users are impacted. The undesirable state of support for multi-element selection prevails because the same selection features are redesigned and reimplemented repeatedly. This article seeks to establish common abstractions for multi-selection. It gives generic but precise meanings to selection operations and makes multi-selection reusable; a JavaScript implementation is described. Application vendors benefit because of reduced development effort. Users benefit because correct and consistent multi-selection becomes available in more contexts.
 
-Note: Paper to be presented at [ECOOP 2016](http://2016.ecoop.org/program/program-ecoop-2016#modal-phid_408b82be875f9bc0a558f5b9183620ba)
+Note: Paper to be presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
 
 *   [PDF](papers/2016-07-18-ecoop/ecoop16-final28.pdf)
 *   [Example Library](http://hotdrink.github.io/multiselectjs/)
