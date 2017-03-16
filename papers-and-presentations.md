@@ -16,6 +16,7 @@ Abstract: The process of improving an existing body of code can be very challeng
 
 Note: This is a revised version of the talk presented at [ACCU Bay Area](https://www.meetup.com/ACCU-Bay-Area/).
 
+*   [Video](https://www.youtube.com/watch?v=WPxax37AGz4)
 *   [PDF](presentations/2017-01-25-better-code/2017-01-25-better-code.pdf)
 *   [Keynote](/presentations/2017-01-25-better-code/2017-01-25-better-code.key)
 
