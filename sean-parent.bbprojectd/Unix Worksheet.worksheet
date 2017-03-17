@@ -42,7 +42,14 @@ bbedit ~/.profile
 open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
 
 bundle update
-bundle exec jekyll serve
+bundle exec jekyll build --watch
+
+# (old) bundle exec jekyll serve
+
+open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
+browser-sync start --config bs-config.js
+
+# (old) browser-sync start --server '_site' --file '_site' --extensions 'html'
 
 ##
 open -a "Google Chrome" "http://127.0.0.1:4000/better-code/index.html"

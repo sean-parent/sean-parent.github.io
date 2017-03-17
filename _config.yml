@@ -18,7 +18,7 @@ github_username:  sean-parent
 markdown: kramdown
 highlighter: rouge
 
-exclude: ["sean-parent.bbprojectd/", "exclude/"]
+exclude: ["sean-parent.bbprojectd/", "exclude/", "bs-config.js"]
 exclude-tags: [ better-code ]
 
 #wire this up
