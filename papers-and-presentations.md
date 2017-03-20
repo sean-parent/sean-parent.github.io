@@ -138,14 +138,15 @@ Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me f
 
 Data: 2016-07-18
 
-**Title: One Way to Select Many**
+####Title: One Way to Select Many
 
 Authors: Jaakko Järvi, Sean Parent
 
 Abstract: Selecting items from a collection is one of the most common tasks users perform with graphical user interfaces. Practically every application supports this task with a selection feature different from that of any other application. Defects are common, especially in manipulating selections of non-adjacent elements, and flexible selection features are often missing when they would clearly be useful. As a consequence, user effort is wasted. The loss of productivity is experienced in small doses, but all computer users are impacted. The undesirable state of support for multi-element selection prevails because the same selection features are redesigned and reimplemented repeatedly. This article seeks to establish common abstractions for multi-selection. It gives generic but precise meanings to selection operations and makes multi-selection reusable; a JavaScript implementation is described. Application vendors benefit because of reduced development effort. Users benefit because correct and consistent multi-selection becomes available in more contexts.
 
-Note: Paper to be presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
+Note: Paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
 
+*   [Video](https://www.youtube.com/watch?v=i8lc0I1yoZ8)
 *   [PDF](papers/2016-07-18-ecoop/ecoop16-final28.pdf)
 *   [Example Library](http://hotdrink.github.io/multiselectjs/)
 
