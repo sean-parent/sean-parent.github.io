@@ -138,7 +138,8 @@ Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me f
 
 Data: 2016-07-18
 
-#### Title: One Way to Select Many
+**Title: One Way to Select Many**
+{: #one-way-to-select-many}
 
 Authors: Jaakko Järvi, Sean Parent
 
