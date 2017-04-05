@@ -6,7 +6,7 @@ layout: page
 tags: [ better-code ]
 ---
 
-Object-oriented programming has been one of the paradigms support by C++ from its invention. The idea of type inheritance and virtual functions where borrowed from Simula[^cpp-history]. Inheritance can represent a subtype or protocol relationship. Although the two are closely related, in this chapter we're primarily concerned with subtype relationships through class inheritance. Protocols are discussed in the next chapter. {::comment}link{:/comment}
+Object-oriented programming has been one of the paradigms supported by C++ from its invention. The idea of type inheritance and virtual functions were borrowed from Simula[^cpp-history]. Inheritance can represent a subtype or protocol relationship. Although the two are closely related, in this chapter we're primarily concerned with subtype relationships through class inheritance. Protocols are discussed in the next chapter. {::comment}link{:/comment}
 
 With a subtype, or _is-a_, relationship a subclass inherits from a baseclass. The baseclass defines a set of virtual member functions for which the implementation can be overriden by the subclass. The canonical example is a drawing library for shapes:
 
