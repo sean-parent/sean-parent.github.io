@@ -81,7 +81,7 @@ The only valid operations on the moved from type are to establish a new value, t
 
 There isn't anything broken about it, other than the note in the standard. But if the question is can we make move safe, the answer is no. But we could make it safe in more circumstance, and we could make it efficient.
 
-Here is where we go down the destructive move rathole. For background you might look at a wiki page I started (it will get migrated at some point to this blog) for a [non-proposal for destructive move](https://github.com/sean-parent/sean-parent.github.com/wiki/Non-Proposal-for-Destructive-Move).
+Here is where we go down the destructive move rathole. For background you might look at a wiki page I started (it will get migrated at some point to this blog) for a [non-proposal for destructive move](https://github.com/sean-parent/sean-parent.github.com/wiki/Non-Proposal-for-Destructive-Move.html).
 
 The key thing here is that we change our definition of move to:
 

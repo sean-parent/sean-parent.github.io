@@ -40,13 +40,13 @@ bbedit ~/.profile
 
 # In Terminal
 open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
-
 bundle update
 bundle exec jekyll build --watch
 
 # (old) bundle exec jekyll serve
 
 open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
+npm update -g browser-sync
 browser-sync start --config bs-config.js
 
 # (old) browser-sync start --server '_site' --file '_site' --extensions 'html'

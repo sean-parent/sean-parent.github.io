@@ -4,19 +4,39 @@
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: $title-height;
 
     // Positioning context for the mobile navigation icon
     position: relative;
 }
 
 .site-title {
+    /*
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    */
+
+    float: left;
+    width: 50%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    min-height: $title-height;
+
+    /*
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    */
+
+    background-image: url("/images/site/stlab-logo-long.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
 
     &,
     &:visited {
@@ -26,7 +46,7 @@
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: $title-height;
 
     .menu-icon {
         display: none;
@@ -127,48 +147,55 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - #{$spacing-unit} / 2);
-    width:         calc(35% - #{$spacing-unit} / 2);
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - #{$spacing-unit} / 2);
-    width:         calc(20% - #{$spacing-unit} / 2);
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - #{$spacing-unit} / 2);
-    width:         calc(45% - #{$spacing-unit} / 2);
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {
-        width: -webkit-calc(50% - #{$spacing-unit} / 2);
-        width:         calc(50% - #{$spacing-unit} / 2);
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
     }
 
     .footer-col-3 {
-        width: -webkit-calc(100% - #{$spacing-unit} / 2);
-        width:         calc(100% - #{$spacing-unit} / 2);
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
     }
 }
 
 @include media-query($on-palm) {
     .footer-col {
         float: none;
-        width: -webkit-calc(100% - #{$spacing-unit} / 2);
-        width:         calc(100% - #{$spacing-unit} / 2);
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
     }
 }
 
-
+.example_box {
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+  width: 55em;
+  overflow: auto;
+}
 
 /**
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $spacing-unit / 2 0;
 }
 
 .page-heading {
@@ -200,43 +227,230 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
+
+    > .code {
+        font-family: $mono-font-family;
+    }
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+    font-size: 2.5em;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 2.3em;
     }
 }
 
 .post-content {
     margin-bottom: $spacing-unit;
 
-    h2 {
-        font-size: 32px;
+    h1 {
+        font-size: 2em;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 1.8em;
+        }
+    }
+
+    h2 {
+        font-size: 1.8em;
+
+        @include media-query($on-laptop) {
+            font-size: 1.6em;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: 1.6em;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
+            font-size: 1.4em;
         }
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 1.4em;
 
         @include media-query($on-laptop) {
-            font-size: 18px;
+            font-size: 1.2em;
         }
+    }
+}
+
+/**
+ * Tables
+ */
+
+table {
+    border-collapse: collapse;
+}
+
+/**
+ * Definition tables are indented on the left, and have horizontal lines between
+ * every row.
+ */
+.definition-table {
+    margin-left: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+    border-bottom: 1px solid $grey-color;
+    border-top: 1px solid $grey-color;
+    width: 100%;
+
+    > tbody {
+        > tr {
+            border-top: 1px solid $grey-color;
+
+            > th {
+                text-align: left;
+            }
+            > td {
+                > p {
+                    margin: 0;
+                    display: inline;
+                }
+                > span.annotation {
+                    color: green;
+                    font-style: oblique;
+                }
+            }
+            > td.decl {
+                font-family: $mono-font-family;
+            }
+            > td.defn {
+                padding-left: 1.5em;
+            }
+        }
+    }
+}
+
+/**
+ * Declaration tables are identical to definition tables, but without the
+ * indent.
+ */
+.declaration-table {
+    margin-bottom: $spacing-unit / 2;
+    border-bottom: 1px solid $grey-color;
+    border-top: 1px solid $grey-color;
+    width: 100%;
+
+    > tbody {
+        > tr {
+            border-top: 1px solid $grey-color;
+
+            > th {
+                text-align: left;
+            }
+            > td {
+                > p {
+                    margin: 0;
+                    display: inline;
+                }
+                > span.annotation {
+                    color: green;
+                    font-style: oblique;
+                }
+            }
+            > td.decl {
+                font-family: $mono-font-family;
+            }
+            > td.defn {
+                padding-left: 1.5em;
+            }
+        }
+    }
+}
+
+/**
+ * Parameter tables are identical to definition tables, but without the
+ * horizontal lines.
+ */
+.parameter-table {
+    margin-left: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+    width: 100%;
+
+    > tbody {
+        > tr {
+            > th {
+                text-align: left;
+            }
+            > td {
+                > p {
+                    margin: 0;
+                    display: inline;
+                }
+                > span.annotation {
+                    color: green;
+                    font-style: oblique;
+                }
+            }
+            > td.decl {
+                font-family: $mono-font-family;
+            }
+            > td.defn {
+                padding-left: 1.5em;
+            }
+        }
+    }
+}
+
+/**
+ * Front page iconography
+ */
+.icon-table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 3em 0;
+
+    @include media-query($on-palm) {
+        border-spacing: 1em 0;
+    }
+}
+
+.icon-box {
+    background: $stlab-purple;
+    border-radius: 1em;
+    @include media-query($on-palm) {
+        border-radius: .3em;
+    }
+
+    > .top {
+        border-radius: 1em 1em 0 0;
+        @include media-query($on-palm) {
+            border-radius: .3em .3em 0 0;
+        }
+        > .fa {
+            display: inline-block;
+            width: 2em;
+            text-align: center;
+            line-height: 1.6em;
+            font-size: 5em;
+            vertical-align: middle;
+
+            @include media-query($on-palm) {
+                font-size: 2em;
+            }
+        }
+    }
+    > .bottom {
+        background: white;
+        border-radius: 0 0 1em 1em;
+        border-left: 1px solid $grey-color;
+        border-right: 1px solid $grey-color;
+        border-bottom: 1px solid $grey-color;
+        font-weight: bold;
+        text-align: center;
+        padding-top: .7em;
+        padding-bottom: .7em;
+
+        @include media-query($on-palm) {
+            padding-top: .2em;
+            padding-bottom: .2em;
+            border-radius: 0 0 .3em .3em;
+        }
+    }
+    &:hover {
+        background: $stlab-grey;
     }
 }

@@ -7,11 +7,11 @@
 //
 
 #include <algorithm>
-#include <iterator>
-#include <vector>
-#include <numeric>
 #include <chrono>
+#include <iterator>
+#include <numeric>
 #include <random>
+#include <vector>
 
 #include "../../code/sort-subrange-0.cpp"
 
@@ -24,7 +24,7 @@ void shuffle(I f, I l) {
 }
 
 int test_03() {
-    vector<int> a(1024*1024);
+    vector<int> a(1024 * 1024);
     iota(begin(a), end(a), 0);
     shuffle(begin(a), end(a));
     sort_subrange_0(begin(a), end(a), begin(a) + 3, end(a) + 5);
