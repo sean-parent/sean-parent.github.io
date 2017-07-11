@@ -171,7 +171,7 @@ If the default is not immediate execution, then there must be a way to override 
 
 I do not believe that the issue of context (executors) can be meaningfully separated from futures with continuations.
 
-Unfortunately, this is not a universal answer, there are problems where futures are useful, which have nothing to do with asynchronous development and you want a fast implementation that doesn't require synchronization always executes continuations immediately. A channel as a stream of futures for connecting co-routines as communicating sequential processes is one possible example. As of yet, I don't have enough experience with implementing this to fully understand the impact on the design of futures.
+Unfortunately, this is not a universal answer, there are problems where futures are useful, which have nothing to do with asynchronous development and you want a fast implementation that doesn't require synchronization and always executes continuations immediately. A channel as a stream of futures for connecting co-routines as communicating sequential processes is one possible example. As of yet, I don't have enough experience with implementing this to fully understand the impact on the design of futures.
 
 ## Conclusions
 
