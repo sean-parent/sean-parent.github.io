@@ -6,11 +6,16 @@ layout: page
 comments: true
 ---
 
+#### Contents
+{:.no_toc}
+* contents
+{:toc}
+
 ***
 
 Date: 2017-01-25, 2016-11-15, 2016-05-16
 
-**Title: Better Code**
+## Title: Better Code
 
 Abstract: The process of improving an existing body of code can be very challenging. In this talk I'll offer a concise definition of "good code", inherent tradeoffs in any system, and techniques for approaching a large code base.
 
@@ -36,7 +41,7 @@ Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conferen
 
 Date: 2017-01-18, 2016-10-10
 
-**Title: Better Code: Runtime Polymorphism**
+## Title: Better Code: Runtime Polymorphism
 
 Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. Part of my “Better Code” series of talks, the goal is “No Inheritance.”
 
@@ -52,9 +57,9 @@ Note: This is an updated version of the "Value Semantics and Concept-based Polym
 
 ***
 
-Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-04-21, 2015-02-27
+Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
 
-**Title: Better Code: Concurrency**
+## Title: Better Code: Concurrency
 
 Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference, implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations, and looks towards sequential communicating processes, higher level concurrent constructs. Part of my “Better Code” series of talks, the goal is to learn to write software that doesn’t wait.
 
@@ -76,6 +81,9 @@ Note: This is the version of the talk presented at Bloomberg.
 *   [PDF](presentations/2016-08-08-concurrency/2016-08-08-concurrency.pdf)
 *   [Keynote](presentations/2016-08-08-concurrency/2016-08-08-concurrency.key)
 
+Note: This is an interview from [CppCast](http://cppcast.com/) about my talk.
+*   [Audio](http://cppcast.com/2015/06/sean-parent/)
+
 Note: This is the version of the talk presented at the [Bay Area C++ User Group Meeting](http://www.meetup.com/SF-Bay-Area-Cpp/events/221680178/).
 
 *   [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
@@ -93,7 +101,7 @@ Note: This is the version of the talk I presented at the [C++ Russia Conference,
 
 Date: 2016-12-14
 
-**Title: Four Tips for Junior Engineers and Senior Managers**
+## Title: Four Tips for Junior Engineers and Senior Managers
 
 Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/ACCU-Bay-Area/).
 
@@ -104,7 +112,7 @@ Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](
 
 Date: 2016-08-08, 2015-09-23
 
-**Title: Better Code: Data Structures**
+## Title: Better Code: Data Structures
 
 Abstract: The standard library containers are often both misused and underused.
 Instead of creating new containers, applications are often structured with
@@ -128,7 +136,7 @@ Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.
 
 Date: 2016-08-06
 
-**Title: An interview with Sean Parent**
+## Title: An interview with Sean Parent
 
 Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me following my C++Now keynote.
 
@@ -138,7 +146,7 @@ Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me f
 
 Data: 2016-07-18
 
-**Title: One Way to Select Many**
+## Title: One Way to Select Many
 {: #one-way-to-select-many}
 
 Authors: Jaakko Järvi, Sean Parent
@@ -155,7 +163,7 @@ Note: Paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016
 
 Date: 2015-10-26
 
-**Title: Generating Reactive Programs for Graphical User Interfaces from Multi-way Dataflow Constraint Systems**
+## Title: Generating Reactive Programs for Graphical User Interfaces from Multi-way Dataflow Constraint Systems
 
 Authors: Gabriel Foust, Jaakko Järvi, Sean Parent
 
@@ -170,7 +178,7 @@ Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generat
 
 Date: 2014-05-14
 
-**Title: Goal: Implement Complete & Efficient Types**
+## Title: Goal: Implement Complete & Efficient Types
 
 Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
 
@@ -182,7 +190,7 @@ Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goa
 
 Date: 2013-09-11
 
-**Title: C++ Seasoning**
+## Title: C++ Seasoning
 
 Abstract: A look at many of the new features in C++ and a couple of old features you may not have known about. With the goal of correctness in mind, we'll see how to utilize these features to create simple, clear, and beautiful code. Just a little pinch can really spice things up.
 
@@ -197,7 +205,7 @@ Note: This is the ACCU, Silicon Valley Chapter version of the talk originally gi
 
 Date: 2013-09-11
 
-**Title: Inheritance Is The Base Class of Evil**
+## Title: Inheritance Is The Base Class of Evil
 
 Abstract: Implementing non-intrusive runtime polymorphic objects with value-semantics, and multiple-undo in 20 minutes.
 
@@ -210,7 +218,7 @@ Note: This is an abbreviated version of the Value Semantics and Concept-based Po
 Date: 2013-09-06
 Updated: 2013-09-24
 
-**Title: Value Semantics and Concept-based Polymorphism**
+## Title: Value Semantics and Concept-based Polymorphism
 
 Abstract: This talk explains why (and how) to implement polymorphism without inheritance in C++. The talk contains many C++ tips and techniques, including many new features from C++11. During the course of that talk a key feature from Photoshop will be demonstrated and implemented.
 
@@ -223,7 +231,7 @@ Abstract: This talk explains why (and how) to implement polymorphism without inh
 
 Date: 2013-03-05
 
-**Title: Language Delay**
+## Title: Language Delay
 
 Abstract: A look at how programming languages are failing to keep up with a rapidly changing hardware and business landscape. Not long ago it was clear to everyone that because of the rate at which clock speeds were doubling the industry should be optimizing for programmer productivity and let the hardware solve the performance issues. More recently both the dynamics of hardware and the business landscape have thrown these assumptions out the window and left a large vacuum in the programming language landscape. This talk takes a looks at how much things have changed and how a reset in our approach is needed.
 
@@ -234,7 +242,7 @@ Abstract: A look at how programming languages are failing to keep up with a rapi
 
 Date: 2012-05-17
 
-**Title: Now What? A vignette in 3 parts**
+## Title: Now What? A vignette in 3 parts
 
 Abstract:
 _Part 1: Beauty_
@@ -252,5 +260,7 @@ A plethora of networked devices is changing the software landscape. The infrastr
 *   [PDF](presentations/2012-05-17-now-what/now-what.pdf)
 
 ***
+
+## Older papers and presentation
 
 Some of my older papers and presentation can be found [here](https://stlab.adobe.com/wiki/index.php/Papers_and_Presentations).
