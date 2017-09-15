@@ -32,6 +32,7 @@ The symbol for a simple transistor is shown in {{figure-reference[figure-transis
 
 {::comment}Discussion of relationships here? or in chapter[03]?{:/comment}
 
+{::comment}Hyrum's Law: With a sufficient number of users of an API, it does not matter what you promised in the contract, all observable behaviors of your interface will be depended upon by somebody. -- Hyrum Wright, Software Engineer a Google{:/comment}
 
 
 ### Why incomplete types are problematic

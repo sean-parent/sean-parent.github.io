@@ -263,4 +263,4 @@ A plethora of networked devices is changing the software landscape. The infrastr
 
 ## Older papers and presentation
 
-Some of my older papers and presentation can be found [here](https://stlab.adobe.com/wiki/index.php/Papers_and_Presentations).
+Some of my older papers and presentation can be found [here](http://stlab.cc/legacy/papers-and-presentations.html).
