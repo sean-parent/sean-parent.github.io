@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CurrentWorkingDirectory</key>
-	<string>/Users/sean-parent</string>
+	<string>/Users/seanparent</string>
 	<key>WorksheetContents</key>
 	<string>### Editing better-code
 ## Jeykll for github pages
@@ -28,6 +28,11 @@ rvm install ruby --latest
 
 gem install bundler
 
+# intall npm
+
+brew install npm
+npm install -g browser-sync
+
 # github pages requires an access token setup per the instructions here:
 
 open -a "Google Chrome" "http://knightcodes.com/miscellaneous/2016/09/13/fix-github-metadata-error.html"
@@ -41,7 +46,7 @@ bbedit ~/.profile
 # In Terminal
 open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
 bundle update
-bundle exec jekyll build --watch
+bundle exec jekyll build --watch --incremental
 
 # (old) bundle exec jekyll serve
 
