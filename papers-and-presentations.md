@@ -13,6 +13,14 @@ comments: true
 
 ***
 
+Date: 2017-11-06, 2017-11-09
+
+## [DRAFT] Title: Better Code: Human interface
+
+Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics and improving how we reason about code can have a direct on positive impact on the human interface behavior of the system. Part of my “Better Code” series of talks, the goal is “Don’t Lie.”
+
+***
+
 Date: 2017-01-25, 2016-11-15, 2016-05-16
 
 ## Title: Better Code

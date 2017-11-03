@@ -4,7 +4,7 @@
 <dict>
 	<key>EmbeddedEditorHidden:sean-parent</key>
 	<false/>
-	<key>ExpandedEditorWidth:sean-parent:displays([(0, 0), (2560, 1600)])</key>
+	<key>ExpandedEditorWidth:sean-parent:displays([(0, 0), (1680, 1050)])</key>
 	<integer>646</integer>
 	<key>ExpandedItems:sean-parent</key>
 	<array>
@@ -36,8 +36,8 @@
 			AAAABAAAQb38LqgAAAAkAAAAAQEAADRBQzFBQzU0LURGMEQtM0FB
 			Ri05MzQzLUMyNUZCMTgyRTk4QRgAAAABAgAAgQAAAAEAAADvEwAA
 			AQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAAD+AAAAAQIA
-			ADAxMTRkZjg0ZmQzMjZkOTI1YmVkZjdjMzU2NTg2MTc1MzdkZTA3
-			OTQ7MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAyMDtj
+			AGQ2MzVhNzhlZmJlMWM5ZmQzZGJmYzA0Y2QwZWNjYmIwMWQyMTlh
+			OWU7MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAyMDtj
 			b20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0ZTswMDAwMDAw
 			MTswMTAwMDAwNTswMDAwMDAwMDAwMjUyODcwOy91c2Vycy9zZWFu
 			LXBhcmVudC9wcm9qZWN0cy9naXRodWIuY29tL3NlYW4tcGFyZW50
@@ -82,8 +82,8 @@
 			QzFBQzU0LURGMEQtM0FBRi05MzQzLUMyNUZCMTgyRTk4QRgAAAAB
 			AgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAA
 			GgAAAAEBAABOU1VSTERvY3VtZW50SWRlbnRpZmllcktleQAABAAA
-			AAMDAAA8AQAA9QAAAAECAABkMzE5YjVlODg2ZGMyZTNkMDgwZGM2
-			MzQyY2IyMzkzY2NlZjIwNDg1OzAwMDAwMDAwOzAwMDAwMDAwOzAw
+			AAMDAAA8AQAA9QAAAAECAAA3N2M4NjI2MWIwMjBjMTNjNDJlYmQ0
+			NGI5ODQ3NTExNTVlNzkwNzIzOzAwMDAwMDAwOzAwMDAwMDAwOzAw
 			MDAwMDAwMDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94LnJl
 			YWQtd3JpdGU7MDAwMDAwMDE7MDEwMDAwMDU7MDAwMDAwMDAwMDZj
 			NTVmODsvdXNlcnMvc2Vhbi1wYXJlbnQvcHJvamVjdHMvZ2l0aHVi
@@ -127,8 +127,8 @@
 			AQAANEFDMUFDNTQtREYwRC0zQUFGLTkzNDMtQzI1RkIxODJFOThB
 			GAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEA
 			AC8AAAAaAAAAAQEAAE5TVVJMRG9jdW1lbnRJZGVudGlmaWVyS2V5
-			AAAEAAAAAwMAAPYDAAABAQAAAQIAAGMxOTc2NmM1N2MwYmU0ZWY1
-			MTA3MTRmMjY5YWJhZjdkMDNkZWRhOGE7MDAwMDAwMDA7MDAwMDAw
+			AAAEAAAAAwMAAPYDAAABAQAAAQIAADc1YTBhNWM1Nzk5NDk0ZDBk
+			ZDk4ODMxMGJkYWU4MTZjM2Q2YTQzNTg7MDAwMDAwMDA7MDAwMDAw
 			MDA7MDAwMDAwMDAwMDAwMDAyMDtjb20uYXBwbGUuYXBwLXNhbmRi
 			b3gucmVhZC13cml0ZTswMDAwMDAwMTswMTAwMDAwNTswMDAwMDAw
 			MDAwZmY3NmJkOy91c2Vycy9zZWFuLXBhcmVudC9wcm9qZWN0cy9n
@@ -172,8 +172,8 @@
 			QzU0LURGMEQtM0FBRi05MzQzLUMyNUZCMTgyRTk4QRgAAAABAgAA
 			gQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAGgAA
 			AAEBAABOU1VSTERvY3VtZW50SWRlbnRpZmllcktleQAABAAAAAMD
-			AAA2AwAA+QAAAAECAAA0NTRlYTczZmY4MjhmNmMzNDUxNGM4YzQx
-			MDNmZjhhZWQ4M2EwZTk2OzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAw
+			AAA2AwAA+QAAAAECAABkOWZhZTliMzE2OTQ4YzRiNzdhODRhODdl
+			YTVmODUyNzc0OWRiMDFkOzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAw
 			MDAwMDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94LnJlYWQt
 			d3JpdGU7MDAwMDAwMDE7MDEwMDAwMDU7MDAwMDAwMDAwMDEwODlk
 			NzsvdXNlcnMvc2Vhbi1wYXJlbnQvcHJvamVjdHMvZ2l0aHViLmNv
@@ -217,8 +217,8 @@
 			LTNBQUYtOTM0My1DMjVGQjE4MkU5OEEYAAAAAQIAAIEAAAABAAAA
 			7xMAAAEAAAAAAAAAAAAAAAEAAAABAQAALwAAABoAAAABAQAATlNV
 			UkxEb2N1bWVudElkZW50aWZpZXJLZXkAAAQAAAADAwAA/wMAAPEA
-			AAABAgAAMDcyMTlhNjEwYjkwODY3ZmI1ZDEzZTRhM2MxMGFlNjA4
-			YjAyOGZjNjswMDAwMDAwMDswMDAwMDAwMDswMDAwMDAwMDAwMDAw
+			AAABAgAAMWYwMzRjNzFlZTZhYTAxODAwMjI2ZjQ5YTAxZjIxN2Vh
+			NmY5OWMzNzswMDAwMDAwMDswMDAwMDAwMDswMDAwMDAwMDAwMDAw
 			MDIwO2NvbS5hcHBsZS5hcHAtc2FuZGJveC5yZWFkLXdyaXRlOzAw
 			MDAwMDAxOzAxMDAwMDA1OzAwMDAwMDAwMDAxMDg5ZGY7L3VzZXJz
 			L3NlYW4tcGFyZW50L3Byb2plY3RzL2dpdGh1Yi5jb20vc2Vhbi1w
@@ -260,8 +260,8 @@
 			LTkzNDMtQzI1RkIxODJFOThBGAAAAAECAACBAAAAAQAAAO8TAAAB
 			AAAAAAAAAAAAAAABAAAAAQEAAC8AAAAaAAAAAQEAAE5TVVJMRG9j
 			dW1lbnRJZGVudGlmaWVyS2V5AAAEAAAAAwMAADQDAADlAAAAAQIA
-			ADJkMjllNWFhOGQ2MzE0OTljMjgxNWMyNDhkMzY0MmM2YjhhNzYz
-			Zjg7MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAyMDtj
+			AGRjODViYjQwM2E2Yzg2NWRhZTExOWVmOGQwMGQ1YjcwMTU1MjQx
+			MjY7MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAyMDtj
 			b20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0ZTswMDAwMDAw
 			MTswMTAwMDAwNTswMDAwMDAwMDAwZDRkZjA3Oy91c2Vycy9zZWFu
 			LXBhcmVudC9wcm9qZWN0cy9naXRodWIuY29tL3NlYW4tcGFyZW50
@@ -287,7 +287,7 @@
 	<key>OpenDocumentsExpanded</key>
 	<true/>
 	<key>OpenDocumentsSplitterProportion</key>
-	<real>0.85016947984695435</real>
+	<real>0.83625733852386475</real>
 	<key>ProjectItemsExpanded</key>
 	<true/>
 	<key>ProjectViewVisible</key>
@@ -296,7 +296,7 @@
 	<array>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -321,8 +321,8 @@
 				AAAAAQIAAIEAAAABAAAA7xMAAAEAAAAAAAAAAAAAAAEA
 				AAABAQAALwAAAAAAAAABBQAAGgAAAAEBAABOU1VSTERv
 				Y3VtZW50SWRlbnRpZmllcktleQAABAAAAAMDAAA8AQAA
-				9QAAAAECAABkMzE5YjVlODg2ZGMyZTNkMDgwZGM2MzQy
-				Y2IyMzkzY2NlZjIwNDg1OzAwMDAwMDAwOzAwMDAwMDAw
+				9QAAAAECAAA3N2M4NjI2MWIwMjBjMTNjNDJlYmQ0NGI5
+				ODQ3NTExNTVlNzkwNzIzOzAwMDAwMDAwOzAwMDAwMDAw
 				OzAwMDAwMDAwMDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1z
 				YW5kYm94LnJlYWQtd3JpdGU7MDAwMDAwMDE7MDEwMDAw
 				MDU7MDAwMDAwMDAwMDZjNTVmODsvdXNlcnMvc2Vhbi1w
@@ -347,7 +347,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -373,8 +373,8 @@
 				NUZCMTgyRTk4QRgAAAABAgAAgQAAAAEAAADvEwAAAQAA
 				AAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAAAaAAAA
 				AQEAAE5TVVJMRG9jdW1lbnRJZGVudGlmaWVyS2V5AAAE
-				AAAAAwMAAPYDAAABAQAAAQIAAGMxOTc2NmM1N2MwYmU0
-				ZWY1MTA3MTRmMjY5YWJhZjdkMDNkZWRhOGE7MDAwMDAw
+				AAAAAwMAAPYDAAABAQAAAQIAADc1YTBhNWM1Nzk5NDk0
+				ZDBkZDk4ODMxMGJkYWU4MTZjM2Q2YTQzNTg7MDAwMDAw
 				MDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAyMDtjb20u
 				YXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0ZTswMDAw
 				MDAwMTswMTAwMDAwNTswMDAwMDAwMDAwZmY3NmJkOy91
@@ -400,7 +400,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -426,8 +426,8 @@
 				OEEYAAAAAQIAAIEAAAABAAAA7xMAAAEAAAAAAAAAAAAA
 				AAEAAAABAQAALwAAAAAAAAABBQAAGgAAAAEBAABOU1VS
 				TERvY3VtZW50SWRlbnRpZmllcktleQAABAAAAAMDAAA2
-				AwAA+QAAAAECAAA0NTRlYTczZmY4MjhmNmMzNDUxNGM4
-				YzQxMDNmZjhhZWQ4M2EwZTk2OzAwMDAwMDAwOzAwMDAw
+				AwAA+QAAAAECAABkOWZhZTliMzE2OTQ4YzRiNzdhODRh
+				ODdlYTVmODUyNzc0OWRiMDFkOzAwMDAwMDAwOzAwMDAw
 				MDAwOzAwMDAwMDAwMDAwMDAwMjA7Y29tLmFwcGxlLmFw
 				cC1zYW5kYm94LnJlYWQtd3JpdGU7MDAwMDAwMDE7MDEw
 				MDAwMDU7MDAwMDAwMDAwMDEwODlkNzsvdXNlcnMvc2Vh
@@ -452,7 +452,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -478,8 +478,8 @@
 				AACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEA
 				AC8AAAAAAAAAAQUAABoAAAABAQAATlNVUkxEb2N1bWVu
 				dElkZW50aWZpZXJLZXkAAAQAAAADAwAA/wMAAPEAAAAB
-				AgAAMDcyMTlhNjEwYjkwODY3ZmI1ZDEzZTRhM2MxMGFl
-				NjA4YjAyOGZjNjswMDAwMDAwMDswMDAwMDAwMDswMDAw
+				AgAAMWYwMzRjNzFlZTZhYTAxODAwMjI2ZjQ5YTAxZjIx
+				N2VhNmY5OWMzNzswMDAwMDAwMDswMDAwMDAwMDswMDAw
 				MDAwMDAwMDAwMDIwO2NvbS5hcHBsZS5hcHAtc2FuZGJv
 				eC5yZWFkLXdyaXRlOzAwMDAwMDAxOzAxMDAwMDA1OzAw
 				MDAwMDAwMDAxMDg5ZGY7L3VzZXJzL3NlYW4tcGFyZW50
@@ -504,7 +504,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -528,8 +528,8 @@
 				MzQzLUMyNUZCMTgyRTk4QRgAAAABAgAAgQAAAAEAAADv
 				EwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEF
 				AAAaAAAAAQEAAE5TVVJMRG9jdW1lbnRJZGVudGlmaWVy
-				S2V5AAAEAAAAAwMAADQDAADlAAAAAQIAADJkMjllNWFh
-				OGQ2MzE0OTljMjgxNWMyNDhkMzY0MmM2YjhhNzYzZjg7
+				S2V5AAAEAAAAAwMAADQDAADlAAAAAQIAAGRjODViYjQw
+				M2E2Yzg2NWRhZTExOWVmOGQwMGQ1YjcwMTU1MjQxMjY7
 				MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAy
 				MDtjb20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0
 				ZTswMDAwMDAwMTswMTAwMDAwNTswMDAwMDAwMDAwZDRk
@@ -554,7 +554,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -607,7 +607,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -660,7 +660,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -711,7 +711,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -761,7 +761,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -811,7 +811,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -860,7 +860,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -910,7 +910,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -958,7 +958,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -1008,7 +1008,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2017-09-08T21:36:14Z</date>
+			<date>2017-09-25T23:20:21Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -1067,7 +1067,7 @@
 	<false/>
 	<key>ViewSplitterPosition:sean-parent</key>
 	<real>0.23910482227802277</real>
-	<key>WindowFrame:sean-parent:displays([(0, 0), (2560, 1600)])</key>
-	<string>rect(45,0,1520,849)</string>
+	<key>WindowFrame:sean-parent:displays([(0, 0), (1680, 1050)])</key>
+	<string>rect(133,88,988,937)</string>
 </dict>
 </plist>
