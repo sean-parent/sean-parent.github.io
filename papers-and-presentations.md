@@ -13,11 +13,29 @@ comments: true
 
 ***
 
+Date: 2017-11-11
+
+## Title: Polymorphic Task Template in Ten
+
+Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes.
+
+Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
+
+*   [PDF](presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
+*   [Keynote](presentations/2017-11-11-lightning-talk/lightning-talk.key)
+
+***
+
 Date: 2017-11-06, 2017-11-09
 
-## [DRAFT] Title: Better Code: Human interface
+## Title: Better Code: Human interface
 
 Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics and improving how we reason about code can have a direct on positive impact on the human interface behavior of the system. Part of my “Better Code” series of talks, the goal is “Don’t Lie.”
+
+Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017/) and [C++ User Group, Russia](http://cpp-russia.ru/?p=1422).
+
+*   [PDF](presentations/2017-11-09-human-interface/2017-11-09-human-interface.pdf)
+*   [Keynote](presentations/2017-11-09-human-interface/2017-11-09-human-interface.key)
 
 ***
 
