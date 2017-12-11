@@ -13,9 +13,13 @@ comments: true
 
 ***
 
+## Presentations
+
+***
+
 Date: 2017-11-11
 
-## Title: Polymorphic Task Template in Ten
+### Polymorphic Task Template in Ten
 
 Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes.
 
@@ -28,7 +32,7 @@ Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.c
 
 Date: 2017-11-06, 2017-11-09
 
-## Title: Better Code: Human interface
+### Better Code: Human interface
 
 Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics and improving how we reason about code can have a direct on positive impact on the human interface behavior of the system. Part of my “Better Code” series of talks, the goal is “Don’t Lie.”
 
@@ -41,7 +45,7 @@ Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017
 
 Date: 2017-01-25, 2016-11-15, 2016-05-16
 
-## Title: Better Code
+### Better Code
 
 Abstract: The process of improving an existing body of code can be very challenging. In this talk I'll offer a concise definition of "good code", inherent tradeoffs in any system, and techniques for approaching a large code base.
 
@@ -67,12 +71,13 @@ Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conferen
 
 Date: 2017-01-18, 2016-10-10
 
-## Title: Better Code: Runtime Polymorphism
+### Better Code: Runtime Polymorphism
 
 Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. Part of my “Better Code” series of talks, the goal is “No Inheritance.”
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
+*   [Video](https://www.youtube.com/watch?v=QGcVXgEVMJg)
 *   [PDF](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.pdf)
 *   [Keynote](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.key)
 
@@ -85,7 +90,7 @@ Note: This is an updated version of the "Value Semantics and Concept-based Polym
 
 Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
 
-## Title: Better Code: Concurrency
+### Better Code: Concurrency
 
 Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference, implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations, and looks towards sequential communicating processes, higher level concurrent constructs. Part of my “Better Code” series of talks, the goal is to learn to write software that doesn’t wait.
 
@@ -93,6 +98,7 @@ __Erratum: I've incorrectly stated that `std::async()` changed with C++14. I int
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
+*   [Video](https://www.youtube.com/watch?v=zULU6Hhp42w)
 *   [PDF](presentations/2017-01-18-concurrency/2017-01-18-concurrency.pdf)
 *   [Keynote](presentations/2017-01-18-concurrency/2017-01-18-concurrency.key)
 
@@ -127,7 +133,7 @@ Note: This is the version of the talk I presented at the [C++ Russia Conference,
 
 Date: 2016-12-14
 
-## Title: Four Tips for Junior Engineers and Senior Managers
+### Four Tips for Junior Engineers and Senior Managers
 
 Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/ACCU-Bay-Area/).
 
@@ -138,7 +144,7 @@ Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](
 
 Date: 2016-08-08, 2015-09-23
 
-## Title: Better Code: Data Structures
+### Better Code: Data Structures
 
 Abstract: The standard library containers are often both misused and underused.
 Instead of creating new containers, applications are often structured with
@@ -162,7 +168,7 @@ Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.
 
 Date: 2016-08-06
 
-## Title: An interview with Sean Parent
+### An interview with Sean Parent
 
 Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me following my C++Now keynote.
 
@@ -170,41 +176,9 @@ Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me f
 
 ***
 
-Data: 2016-07-18
-
-## Title: One Way to Select Many
-{: #one-way-to-select-many}
-
-Authors: Jaakko Järvi, Sean Parent
-
-Abstract: Selecting items from a collection is one of the most common tasks users perform with graphical user interfaces. Practically every application supports this task with a selection feature different from that of any other application. Defects are common, especially in manipulating selections of non-adjacent elements, and flexible selection features are often missing when they would clearly be useful. As a consequence, user effort is wasted. The loss of productivity is experienced in small doses, but all computer users are impacted. The undesirable state of support for multi-element selection prevails because the same selection features are redesigned and reimplemented repeatedly. This article seeks to establish common abstractions for multi-selection. It gives generic but precise meanings to selection operations and makes multi-selection reusable; a JavaScript implementation is described. Application vendors benefit because of reduced development effort. Users benefit because correct and consistent multi-selection becomes available in more contexts.
-
-Note: Paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
-
-*   [Video](https://www.youtube.com/watch?v=i8lc0I1yoZ8)
-*   [PDF](papers/2016-07-18-ecoop/ecoop16-final28.pdf)
-*   [Example Library](http://hotdrink.github.io/multiselectjs/)
-
-***
-
-Date: 2015-10-26
-
-## Title: Generating Reactive Programs for Graphical User Interfaces from Multi-way Dataflow Constraint Systems
-
-Authors: Gabriel Foust, Jaakko Järvi, Sean Parent
-
-Abstract: For a GUI to remain responsive, it must be able to schedule lengthy tasks to be executed asynchronously. In the traditional approach to GUI implementation–writing functions to handle individual user events–asynchronous programming easily leads to defects. Ensuring that all data dependencies are respected is difficult when new events arrive while prior events are still being handled. Reactive programming techniques, gaining popularity in GUI programming, help since they make data dependencies explicit and enforce them automatically as variables’ values change. However, data dependencies in GUIs usually change along with its state. Reactive programming must therefore describe a GUI as a collection of many reactive programs, whose interaction the programmer must explicitly coordinate. This paper presents a declarative approach for GUI programming in which the programmer is relieved from coordinating asynchronous computations. The approach is based on our prior work on “property models”, where GUI state is maintained by a dataflow constraint system. A property model responds to user events by atomically constructing new data dependencies and scheduling asynchronous computations to enforce those dependencies. In essence, a property model dynamically generates a reactive program, adding to it as new events occur. The approach gives the following guarantee: the same sequence of events produces the same result, regardless of the duration of processing the events.
-
-Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generating-reactive-programs-for-graphical-user-interfaces-from-multi-way-dataflow-constraint-systems).
-
-*   [PDF](papers/2015-10-26-gpce/gpce15main-mainid43-p-e08bb9a-25371M-final.pdf)
-*   [ACM Citation](http://dl.acm.org/citation.cfm?id=2814207)
-
-***
-
 Date: 2014-05-14
 
-## Title: Goal: Implement Complete & Efficient Types
+### Goal: Implement Complete & Efficient Types
 
 Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
 
@@ -216,7 +190,7 @@ Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goa
 
 Date: 2013-09-11
 
-## Title: C++ Seasoning
+### C++ Seasoning
 
 Abstract: A look at many of the new features in C++ and a couple of old features you may not have known about. With the goal of correctness in mind, we'll see how to utilize these features to create simple, clear, and beautiful code. Just a little pinch can really spice things up.
 
@@ -231,7 +205,7 @@ Note: This is the ACCU, Silicon Valley Chapter version of the talk originally gi
 
 Date: 2013-09-11
 
-## Title: Inheritance Is The Base Class of Evil
+### Inheritance Is The Base Class of Evil
 
 Abstract: Implementing non-intrusive runtime polymorphic objects with value-semantics, and multiple-undo in 20 minutes.
 
@@ -244,7 +218,7 @@ Note: This is an abbreviated version of the Value Semantics and Concept-based Po
 Date: 2013-09-06
 Updated: 2013-09-24
 
-## Title: Value Semantics and Concept-based Polymorphism
+### Value Semantics and Concept-based Polymorphism
 
 Abstract: This talk explains why (and how) to implement polymorphism without inheritance in C++. The talk contains many C++ tips and techniques, including many new features from C++11. During the course of that talk a key feature from Photoshop will be demonstrated and implemented.
 
@@ -257,7 +231,7 @@ Abstract: This talk explains why (and how) to implement polymorphism without inh
 
 Date: 2013-03-05
 
-## Title: Language Delay
+### Language Delay
 
 Abstract: A look at how programming languages are failing to keep up with a rapidly changing hardware and business landscape. Not long ago it was clear to everyone that because of the rate at which clock speeds were doubling the industry should be optimizing for programmer productivity and let the hardware solve the performance issues. More recently both the dynamics of hardware and the business landscape have thrown these assumptions out the window and left a large vacuum in the programming language landscape. This talk takes a looks at how much things have changed and how a reset in our approach is needed.
 
@@ -268,7 +242,7 @@ Abstract: A look at how programming languages are failing to keep up with a rapi
 
 Date: 2012-05-17
 
-## Title: Now What? A vignette in 3 parts
+### Now What? A vignette in 3 parts
 
 Abstract:
 _Part 1: Beauty_
@@ -287,6 +261,135 @@ A plethora of networked devices is changing the software landscape. The infrastr
 
 ***
 
+## Papers
+
+***
+
+Data: 2016-07-18
+
+### One Way to Select Many
+
+Authors: Jaakko Järvi, Sean Parent
+
+Abstract: Selecting items from a collection is one of the most common tasks users perform with graphical user interfaces. Practically every application supports this task with a selection feature different from that of any other application. Defects are common, especially in manipulating selections of non-adjacent elements, and flexible selection features are often missing when they would clearly be useful. As a consequence, user effort is wasted. The loss of productivity is experienced in small doses, but all computer users are impacted. The undesirable state of support for multi-element selection prevails because the same selection features are redesigned and reimplemented repeatedly. This article seeks to establish common abstractions for multi-selection. It gives generic but precise meanings to selection operations and makes multi-selection reusable; a JavaScript implementation is described. Application vendors benefit because of reduced development effort. Users benefit because correct and consistent multi-selection becomes available in more contexts.
+
+Note: Paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
+
+*   [Video](https://www.youtube.com/watch?v=i8lc0I1yoZ8)
+*   [PDF](papers/2016-07-18-ecoop/ecoop16-final28.pdf)
+*   [Example Library](http://hotdrink.github.io/multiselectjs/)
+
+***
+
+Date: 2015-10-26
+
+### Generating Reactive Programs for Graphical User Interfaces from Multi-way Dataflow Constraint Systems
+
+Authors: Gabriel Foust, Jaakko Järvi, Sean Parent
+
+Abstract: For a GUI to remain responsive, it must be able to schedule lengthy tasks to be executed asynchronously. In the traditional approach to GUI implementation–writing functions to handle individual user events–asynchronous programming easily leads to defects. Ensuring that all data dependencies are respected is difficult when new events arrive while prior events are still being handled. Reactive programming techniques, gaining popularity in GUI programming, help since they make data dependencies explicit and enforce them automatically as variables’ values change. However, data dependencies in GUIs usually change along with its state. Reactive programming must therefore describe a GUI as a collection of many reactive programs, whose interaction the programmer must explicitly coordinate. This paper presents a declarative approach for GUI programming in which the programmer is relieved from coordinating asynchronous computations. The approach is based on our prior work on “property models”, where GUI state is maintained by a dataflow constraint system. A property model responds to user events by atomically constructing new data dependencies and scheduling asynchronous computations to enforce those dependencies. In essence, a property model dynamically generates a reactive program, adding to it as new events occur. The approach gives the following guarantee: the same sequence of events produces the same result, regardless of the duration of processing the events.
+
+Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generating-reactive-programs-for-graphical-user-interfaces-from-multi-way-dataflow-constraint-systems).
+
+*   [PDF](papers/2015-10-26-gpce/gpce15main-mainid43-p-e08bb9a-25371M-final.pdf)
+*   [ACM Citation](http://dl.acm.org/citation.cfm?id=2814207)
+
+***
+
+Date: 2011-10
+
+### Helping Programmers Help Users
+
+Authors: John Freeman, Jaakko Järvi, Wonseok Kim, Mat Marcus
+
+Abstract: User interfaces exhibit a wide range of features that are designed to assist users. Interaction with one widget may trigger value changes, disabling, or other behaviors in other widgets. Such automatic behavior may be confusing or disruptive to users. Research literature on user interfaces offers a number of solutions, including interface features for explaining or controlling these behaviors. To help programmers help users, the implementation costs of these features need to be much lower. Ideally, they could be generated for free. This paper shows how several help and control mechanisms can be implemented as algorithms and reused across interfaces, making the cost of their adoption negligible. Specifically, we describe generic help mechanisms for visualizing data flow and explaining command deactivation, and a mechanism for controlling the flow of data. A reusable implementation of these features is enabled by our property model framework, where the data manipulated through a user interface is modeled as a constraint system.
+
+Note: Paper presented at [GCPE 2011](http://program-transformation.org/GPCE11/WebHome).
+
+*   [PDF](papers/2011-10-gpce/p177-freeman.pdf)
+*   [ACM Citation](https://dl.acm.org/citation.cfm?id=2047892)
+
+***
+
+Date: 2010-09
+
+### Dynamic Algorithm Selection for Runtime Concepts
+
+Authors: Peter Pirkelbauer, Sean Parent, Mat Marcus, Bjarne Stroustrup
+
+Abstract: A key benefit of generic programming is its support for producing modules with clean separation. In particular, generic algorithms are written to work with a wide variety of types without requiring modifications to them. The Runtime concept idiom extends this support by allowing unmodified concrete types to behave in a runtime polymorphic manner. In this paper, we describe one implementation of the runtime concept idiom, in the domain of the C++ standard template library (STL). We complement the runtime concept idiom with an algorithm library that considers both type and concept information to maximize performance when selecting algorithm implementations. We present two implementations, one in ISO C++ and one using an experimental language extension. We use our implementations to describe and measure the performance of runtime-polymorphic analogs of several STL algorithms. The tests demonstrate the effects of different compile-time vs. run-time algorithm selection choices.
+
+*   [PDF](papers/2010-09-scp/1-s2.0-S0167642309000732-main.pdf)
+*   [ACM Citation](https://dl.acm.org/citation.cfm?id=1823252)
+
+***
+
+Data: 2009-10-04
+
+### Algorithms for User Interfaces
+
+Authors: Jaakko Järvi, Mat Marcus, Sean Parent, John Freeman, and Jacob N. Smith
+
+Abstract: User interfaces for modern applications must support a rich set of interactive features.
+It is commonplace to find applications with dependencies between values manipulated by user
+interface elements, conditionally enabled controls, and script record-ability and playback against
+different documents. A significant fraction of the application programming effort is devoted to
+implementing such functionality, and the resulting code is typically not reusable.
+
+This paper extends our “property models” approach to programming user interfaces. Property models
+allow a large part of the functionality of a user interface to be implemented in reusable libraries,
+reducing application specific code to a set of declarative rules. We describe how, as a by-product
+of computations that maintain the values of user interface elements, property models obtain accurate
+information of the currently active dependencies among those elements. This information enables
+further expanding the class of user interface functionality that we can encode as generic
+algorithms. In particular, we describe automating the decisions for the enablement of user interface
+widgets and activation of command widgets. Failing to disable or deactivate widgets correctly is a
+common source of user-interface defects, which our approach largely removes.
+
+We report on the increased reuse, reduced defect rates, and improved user interface design
+turnarounds in a commercial software development effort as a result of adopting our approach.
+
+Note: Paper presented at GPCE 2009.
+
+*   [PDF](papers/2009-10-04-gpce/p147-jarvi.pdf)
+*   [ACM Citation](https://dl.acm.org/citation.cfm?doid=1621607.1621630)
+
+***
+
+Date: 2008-10
+
+### Property Models: From Incidental Algorithms to Reusable Components
+
+Authors: Jaakko Järvi, Mat Marcus, Sean Parent, John Freeman, Jacob N. Smith
+
+Abstract: A user interface, such as a dialog, assists a user in synthesising a set of values, typically parameters for a command object. Code for "command parameter synthesis" is usually application-specific and non-reusable, consisting of validation logic in event handlers and code that controls how values of user interface elements change in response to a user's actions, etc. These software artifacts are incidental - they are not explicitly designed and their implementation emerges from a composition of locally defined behaviors.
+
+This article presents property models to capture explicitly the algorithms, validation, and interaction rules, arising from command parameter synthesis. A user interface's behavior can be derived from a declarative property model specification, with the assistance of a component akin to a constraint solver. This allows multiple interfaces, both human and programmatic, to reuse a single model along with associated validation logic and widget activation logic.
+
+The proposed technology is deployed in large commercial software application suites. Where we have applied property models, we have measured significant reductions in source-code size with equivalent or increased functionality; additional levels of reuse are apparent, both within single applications, and across product lines; and applications are able to provide more uniform access to functionality. There is potential for wide adoption: by our measurements command parameter synthesis comprises roughly one third of the code and notably more of the defects in desktop applications.
+
+Note: Paper presented at GPCE 2008.
+
+*   [PDF](papers/2008-10-gpce/p89-jarvi.pdf)
+*   [ACM Citation](https://dl.acm.org/citation.cfm?id=1449927)
+
+***
+
+Date: 2008-03
+
+### Runtime Concepts for the C++ Standard Template Library
+
+Authors: Peter Pirkelbauer, Sean Parent, Mat Marcus, Bjarne Stroustrup
+
+Abstract: A key benefit of generic programming is its support for producing modules with clean separation. In particular, generic algorithms are written to work with a wide variety of unmodified types. The Runtime concept idiom extends this support by allowing unmodified concrete types to behave in a runtime polymorphic manner. In this paper, we describe one implementation of the runtime concept idiom, in the domain of the C++ standard template library (STL). We describe and measure the performance of runtime-polymorphic analogs of several STL algorithms. We augment the runtime concept idiom by employing a dispatch mechanism that considers both type and concept information to maximize performance when selecting algorithm implementations. We use our implementation to demonstrate the effects of different compile-time vs. run-time algorithm selection choices, and we indicate where improved language and compiler support would be useful.
+
+*   [PDF](papers/2008-03-sac/p171-pirkelbauer.pdf)
+*   [ACM Citation](https://dl.acm.org/citation.cfm?id=1363734)
+
+***
+
 ## Older papers and presentation
+
+***
 
 Some of my older papers and presentation can be found [here](http://stlab.cc/legacy/papers-and-presentations.html).

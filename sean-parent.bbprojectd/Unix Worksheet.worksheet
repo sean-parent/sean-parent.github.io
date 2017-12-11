@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CurrentWorkingDirectory</key>
-	<string>/Users/seanparent</string>
+	<string>/Users/sean-parent</string>
 	<key>WorksheetContents</key>
 	<string>### Editing better-code
 ## Jeykll for github pages
@@ -45,6 +45,8 @@ bbedit ~/.profile
 
 # In Terminal
 open -a terminal ~/Projects/github.com/sean-parent/sean-parent.github.io
+brew update
+brew upgrade npm
 bundle update
 bundle exec jekyll build --watch --incremental
 
@@ -66,6 +68,7 @@ open -a "Google Chrome" "http://kramdown.gettalong.org/syntax.html"
 open -a "Google Chrome" "https://github.com/Shopify/liquid/wiki/liquid-for-designers"
 open -a "Google Chrome" "https://jekyllrb.com/docs/home/"
 
-</string>
+## Icon Finder Icons
+open -a "Google Chrome" "https://www.iconfinder.com/icons/290138/document_extension_file_format_paper_icon"</string>
 </dict>
 </plist>
