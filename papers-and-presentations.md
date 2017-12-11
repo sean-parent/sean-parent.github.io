@@ -166,16 +166,6 @@ Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.
 
 ***
 
-Date: 2016-08-06
-
-### An interview with Sean Parent
-
-Abstract: Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me following my C++Now keynote.
-
-*   [Link](http://meetingcpp.com/index.php/br/items/interview-with-sean-parent.html)
-
-***
-
 Date: 2014-05-14
 
 ### Goal: Implement Complete & Efficient Types
@@ -385,6 +375,40 @@ Abstract: A key benefit of generic programming is its support for producing modu
 
 *   [PDF](papers/2008-03-sac/p171-pirkelbauer.pdf)
 *   [ACM Citation](https://dl.acm.org/citation.cfm?id=1363734)
+
+***
+
+## Interviews
+
+***
+
+Date: 2017-09-14
+
+### Meeting C++ live - "Parental Advisory" with Sean Parent
+
+Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me leading up to my keynote.
+
+*   [Video](https://www.youtube.com/watch?v=0ZS_-G4urko)
+
+***
+
+Date: 2016-08-06
+
+### An interview with Sean Parent
+
+Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me following my C++Now keynote.
+
+*   [Link](http://meetingcpp.com/index.php/br/items/interview-with-sean-parent.html)
+
+***
+
+Date: 2015-06-01
+
+### Better Code Concurrency with Sean Parent
+
+An interview from [CppCast](http://cppcast.com/) about my [talk](#better-code-concurrency).
+
+*   [Audio](http://cppcast.com/2015/06/sean-parent/)
 
 ***
 
