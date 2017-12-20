@@ -21,10 +21,11 @@ Date: 2017-11-11
 
 ### Polymorphic Task Template in Ten
 
-Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes.
+Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes. The complete template is part of the stlab concurrency library and can be found [here](http://stlab.cc/libraries/concurrency/task/).
 
 Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
 
+*   [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
 *   [PDF](presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
 *   [Keynote](presentations/2017-11-11-lightning-talk/lightning-talk.key)
 
