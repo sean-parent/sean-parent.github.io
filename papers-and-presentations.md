@@ -23,6 +23,8 @@ Date: 2017-11-11
 
 Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes. The complete template is part of the stlab concurrency library and can be found [here](http://stlab.cc/libraries/concurrency/task/).
 
+Errata: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](http://stlab.cc/tips/small-object-optimizations.html).
+
 Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
 
 *   [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
