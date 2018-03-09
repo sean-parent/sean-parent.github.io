@@ -24,6 +24,7 @@ exclude-tags: [ better-code ]
 
 exclude:
     - sean-parent.bbprojectd/
+    - tools/
 
 #wire this up
 comments :

@@ -23,4 +23,4 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
-Gemfile.lock
+*.bbprojectsettings
