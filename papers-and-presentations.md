@@ -17,6 +17,20 @@ comments: true
 
 ***
 
+Date: 2018-10-18
+
+### Generic Programming
+
+Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet the core concepts of generic programming are still often misunderstood and misrepresented. 30 years in, this talk will look a little at how generic programming came to be, and why it is not simply "another paradigm" for software development.
+
+Note: Talk presented at [pacific++ 2018](https://pacificplusplus.com/).
+
+*   [PDF](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.pdf)
+*   [Keynote](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.key)
+
+
+***
+
 Date: 2017-11-11
 
 ### Polymorphic Task Template in Ten
@@ -123,6 +137,10 @@ Note: This is the version of the talk presented at the [Bay Area C++ User Group 
 
 *   [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
 *   [Keynote](presentations/2015-04-21-concurrency/concurrency.key)
+
+Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I belive the slides are the same as those listed above.
+
+*    [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
 
 Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
 
