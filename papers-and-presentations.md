@@ -315,7 +315,7 @@ Authors: John Freeman, Jaakko Järvi, Wonseok Kim, Mat Marcus
 
 Abstract: User interfaces exhibit a wide range of features that are designed to assist users. Interaction with one widget may trigger value changes, disabling, or other behaviors in other widgets. Such automatic behavior may be confusing or disruptive to users. Research literature on user interfaces offers a number of solutions, including interface features for explaining or controlling these behaviors. To help programmers help users, the implementation costs of these features need to be much lower. Ideally, they could be generated for free. This paper shows how several help and control mechanisms can be implemented as algorithms and reused across interfaces, making the cost of their adoption negligible. Specifically, we describe generic help mechanisms for visualizing data flow and explaining command deactivation, and a mechanism for controlling the flow of data. A reusable implementation of these features is enabled by our property model framework, where the data manipulated through a user interface is modeled as a constraint system.
 
-Note: Paper presented at [GCPE 2011](http://program-transformation.org/GPCE11/WebHome).
+Note: Paper presented at [GPCE 2011](http://program-transformation.org/GPCE11/WebHome).
 
 *   [PDF](papers/2011-10-gpce/p177-freeman.pdf)
 *   [ACM Citation](https://dl.acm.org/citation.cfm?id=2047892)
