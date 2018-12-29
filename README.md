@@ -1,3 +1,3 @@
-# [Sean Parent](http://sean-parent.stlab.cc/)
+# [Sean Parent](https://sean-parent.stlab.cc/)
 
-View this blog at <http://sean-parent.stlab.cc/>
+View this blog at <https://sean-parent.stlab.cc/>

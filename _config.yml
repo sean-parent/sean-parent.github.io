@@ -10,7 +10,7 @@ title: Sean Parent
 email: sean.parent@stlab.cc
 description: Too many projects, too little time.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://sean-parent.stlab.cc" # the base hostname & protocol for your site
+url: "https://sean-parent.stlab.cc" # the base hostname & protocol for your site
 twitter_username: SeanParent
 github_username:  sean-parent
 
