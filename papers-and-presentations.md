@@ -17,17 +17,23 @@ comments: true
 
 ***
 
-Date: 2018-10-18
+Date: 2018-10-18, 2018-11-08
 
 ### Generic Programming
 
 Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet the core concepts of generic programming are still often misunderstood and misrepresented. 30 years in, this talk will look a little at how generic programming came to be, and why it is not simply "another paradigm" for software development.
 
-Note: Talk presented at [pacific++ 2018](https://pacificplusplus.com/).
+Note: Talk presented at [code::dive 2018](), 2018-11-08.
 
+*   [Video](https://www.youtube.com/watch?v=FX78-1uBCNA&t=869s)
+*   [PDF](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.pdf)
+*   [Keynote](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.key)
+
+Note: Talk presented at [pacific++ 2018](https://pacificplusplus.com/), 2018-10-18.
+
+*   [Video](https://www.youtube.com/watch?v=iwJpxWHuZQY)
 *   [PDF](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.pdf)
 *   [Keynote](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.key)
-
 
 ***
 
@@ -47,11 +53,17 @@ Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.c
 
 ***
 
-Date: 2017-11-06, 2017-11-09
+Date: 2017-11-06, 2017-11-09, 2018-09-28
 
 ### Better Code: Human interface
 
 Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics and improving how we reason about code can have a direct on positive impact on the human interface behavior of the system. Part of my “Better Code” series of talks, the goal is “Don’t Lie.”
+
+Note: Talk presented at [cppcon 2018](https://cppcon.org/) and [Wargaming.net](https://na.wargaming.net/).
+
+*   [Video](https://www.youtube.com/watch?v=0WlJEz2wb8Y)
+*   [PDF](presentations/2018-09-28-human-interface/2018-09-28-human-interface.pdf)
+*   [Keynote](presentations/2018-09-28-human-interface/2018-09-28-human-interface.key)
 
 Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017/) and [C++ User Group, Russia](http://cpp-russia.ru/?p=1422).
 
