@@ -23,7 +23,12 @@ Date: 2018-10-18, 2018-11-08
 
 Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet the core concepts of generic programming are still often misunderstood and misrepresented. 30 years in, this talk will look a little at how generic programming came to be, and why it is not simply "another paradigm" for software development.
 
-Note: Talk presented at [code::dive 2018](), 2018-11-08.
+Addition: When preparing this talk I was unable to find a picture of Meng and Alex from the Al Stevens interview in [Dr. Dobb's Journal, March 1995](http://stepanovpapers.com/drdobbs-interview.pdf). Alex was kind enough to give me a copy of the original publication.
+
+*   [JPEG](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.jpg)
+*   [44MB TIFF](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.tif)
+
+Note: Talk presented at [code::dive 2018](https://codedive.pl/), 2018-11-08.
 
 *   [Video](https://www.youtube.com/watch?v=FX78-1uBCNA&t=869s)
 *   [PDF](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.pdf)
