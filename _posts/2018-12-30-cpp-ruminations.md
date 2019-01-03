@@ -2,7 +2,7 @@
 layout: post
 title: '"Modern" C++ Ruminations'
 description: ""
-category: draft
+category:
 tags: [efficient, loops]
 ---
 
