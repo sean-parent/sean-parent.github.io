@@ -49,7 +49,7 @@ auto p = remove_if(begin(a), end(a), [](const auto& e) {
 a.erase(p, end(a));
 ```
 
-This code works with any sequence container (the first version does not), it works even if the container is empty (with no additional check), and it works in linear time (the first version is quadratic). And I know all of that at a glance. The only thing I need to consider is the cost of `e.selected()`.But I do have to know what `remove_if()` does, what it returns, and what the complexity is. But if I don't know, I can look it up.
+This code works with any sequence container (the first version does not), it works even if the container is empty (with no additional check), and it works in linear time (the first version is quadratic). And I know all of that at a glance. The only thing I need to consider is the cost of `e.selected()`. I do have to know what `remove_if()` does, what it returns, and what the complexity is. If I don't know, I can look it up.
 
 As an exercise rewrite the above with a raw loop to solve these issues and prove your solution is correct. How long did that take?
 
