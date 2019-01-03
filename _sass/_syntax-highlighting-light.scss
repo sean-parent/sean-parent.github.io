@@ -1,25 +1,21 @@
 /**
  * Syntax highlighting styles
  */
-pre.highlight {
-    .highlighter-rouge & {
-        border-radius: 5px;
-        border: 1px solid silver;
-        margin: 1em 0;
-        overflow: auto;
-        padding: 1em;
-        width: 100%;
-    }
 
-    .c     { color: #998; font-style: italic } // Comment
+ @import
+    "syntax-highlighting-base"
+;
+
+pre.highlight {
+    .c     { color: #009926; font-style: italic } // Comment
     // Variadic templates are currently supported for highlighting. Toning down the error a bit.
     .err   { color: #a61717 } // Error
     // .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { color: #0000dd } // Keyword
     .o     { font-weight: bold } // Operator
-    .cm    { color: #998; font-style: italic } // Comment.Multiline
-    .cp    { color: #999; font-weight: bold } // Comment.Preproc
-    .c1    { color: #998; font-style: italic } // Comment.Single
+    .cm    { color: #009926; font-style: italic } // Comment.Multiline
+    .cp    { color: #c33f40; font-weight: bold } // Comment.Preproc
+    .c1    { color: #009926; font-style: italic } // Comment.Single
     .cs    { color: #999; font-weight: bold; font-style: italic } // Comment.Special
     .gd    { color: #000; background-color: #fdd } // Generic.Deleted
     .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
