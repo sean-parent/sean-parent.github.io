@@ -17,6 +17,31 @@ comments: true
 
 ***
 
+Date: 2018-10-18, 2018-11-08
+
+### Generic Programming
+
+Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet the core concepts of generic programming are still often misunderstood and misrepresented. 30 years in, this talk will look a little at how generic programming came to be, and why it is not simply "another paradigm" for software development.
+
+Addition: When preparing this talk I was unable to find a picture of Meng and Alex from the Al Stevens interview in [Dr. Dobb's Journal, March 1995](http://stepanovpapers.com/drdobbs-interview.pdf). Alex was kind enough to give me a copy of the original publication.
+
+*   [JPEG](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.jpg)
+*   [44MB TIFF](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.tif)
+
+Note: Talk presented at [code::dive 2018](https://codedive.pl/), 2018-11-08.
+
+*   [Video](https://www.youtube.com/watch?v=FX78-1uBCNA&t=869s)
+*   [PDF](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.pdf)
+*   [Keynote](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.key)
+
+Note: Talk presented at [pacific++ 2018](https://pacificplusplus.com/), 2018-10-18.
+
+*   [Video](https://www.youtube.com/watch?v=iwJpxWHuZQY)
+*   [PDF](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.pdf)
+*   [Keynote](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.key)
+
+***
+
 Date: 2017-11-11
 
 ### Polymorphic Task Template in Ten
@@ -33,11 +58,17 @@ Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.c
 
 ***
 
-Date: 2017-11-06, 2017-11-09
+Date: 2017-11-06, 2017-11-09, 2018-09-28
 
 ### Better Code: Human interface
 
 Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics and improving how we reason about code can have a direct on positive impact on the human interface behavior of the system. Part of my “Better Code” series of talks, the goal is “Don’t Lie.”
+
+Note: Talk presented at [cppcon 2018](https://cppcon.org/) and [Wargaming.net](https://na.wargaming.net/).
+
+*   [Video](https://www.youtube.com/watch?v=0WlJEz2wb8Y)
+*   [PDF](presentations/2018-09-28-human-interface/2018-09-28-human-interface.pdf)
+*   [Keynote](presentations/2018-09-28-human-interface/2018-09-28-human-interface.key)
 
 Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017/) and [C++ User Group, Russia](http://cpp-russia.ru/?p=1422).
 
@@ -123,6 +154,10 @@ Note: This is the version of the talk presented at the [Bay Area C++ User Group 
 
 *   [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
 *   [Keynote](presentations/2015-04-21-concurrency/concurrency.key)
+
+Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I belive the slides are the same as those listed above.
+
+*    [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
 
 Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
 
@@ -297,7 +332,7 @@ Authors: John Freeman, Jaakko Järvi, Wonseok Kim, Mat Marcus
 
 Abstract: User interfaces exhibit a wide range of features that are designed to assist users. Interaction with one widget may trigger value changes, disabling, or other behaviors in other widgets. Such automatic behavior may be confusing or disruptive to users. Research literature on user interfaces offers a number of solutions, including interface features for explaining or controlling these behaviors. To help programmers help users, the implementation costs of these features need to be much lower. Ideally, they could be generated for free. This paper shows how several help and control mechanisms can be implemented as algorithms and reused across interfaces, making the cost of their adoption negligible. Specifically, we describe generic help mechanisms for visualizing data flow and explaining command deactivation, and a mechanism for controlling the flow of data. A reusable implementation of these features is enabled by our property model framework, where the data manipulated through a user interface is modeled as a constraint system.
 
-Note: Paper presented at [GCPE 2011](http://program-transformation.org/GPCE11/WebHome).
+Note: Paper presented at [GPCE 2011](http://program-transformation.org/GPCE11/WebHome).
 
 *   [PDF](papers/2011-10-gpce/p177-freeman.pdf)
 *   [ACM Citation](https://dl.acm.org/citation.cfm?id=2047892)
