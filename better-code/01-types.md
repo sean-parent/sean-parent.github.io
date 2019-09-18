@@ -25,12 +25,12 @@ The fact that an object exists _in memory_ is important. Objects are physical en
 
 The basic building block for modern computers is the transistor. A transistor is a solid-state electronic switch. Prior to the use of transistors (the first transistor based computer was built in 1953{::comment}Citation{:/comment}) computers were built with vacuum tubes, relays, or gears. {::comment}citation{:/comment} Any device that can serve as a controlled switch can be used to build a computer.
 
-{% include figure.md name=‘transistor’ caption=‘Transistor’ %}
+{% include figure.md name='transistor' caption='Transistor' %}
 {% assign figure-transistor = figure-index %}
 
 The symbol for a simple transistor is shown in {{figure-reference[figure-transistor]}}. Voltage applied to the base allows current to flow from the collector to the emitter.
 
-{% include figure.md name=‘relay’ caption=‘Relay’ %}
+{% include figure.md name='relay' caption='Relay' %}
 {% assign figure-relay = figure-number %}
 
 {::comment}Discussion of relationships here? or in chapter[03]?{:/comment}
