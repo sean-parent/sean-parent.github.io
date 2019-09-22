@@ -17,6 +17,22 @@ comments: true
 
 ***
 
+Date: 2019-09-19
+
+### Better Code: Relationships
+
+Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them together. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use, and misuse of these paradigms. Then we'll look at ways to model these relationships in C++ and use them to build correct applications.
+
+Note: Talk presented at [CppCon 2019](https://cppcon.org/), 2019-09-19.
+
+*   [Video](https://www.youtube.com/watch?v=ejF6qqohp3M)
+*   [PDF](presentations/2019-09-19-relationships/2019-09-19-relationships.pdf)
+*   [Keynote](presentations/2019-09-19-relationships/2019-09-19-relationships.key)
+
+Errata: In the video, the slide for erasing an element from the registry contains a bug. It fails to check if the element has already been erased. Fixed in the posted slides.
+
+***
+
 Date: 2018-10-18, 2018-11-08
 
 ### Generic Programming
