@@ -17,11 +17,16 @@ comments: true
 
 ***
 
-Date: 2019-09-19
+Date: 2019-10-31, 2019-09-19
 
 ### Better Code: Relationships
 
 Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them together. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use, and misuse of these paradigms. Then we'll look at ways to model these relationships in C++ and use them to build correct applications.
+
+Note: Talk presented at [C++ Russia](https://cppconf.ru/en/), 2019-10-31
+
+*   [PDF](presentations/2019-10-31-relationships/2019-10-31-relationships.pdf)
+*   [Keynote](presentations/2019-10-31-relationships/2019-10-31-relationships.key)
 
 Note: Talk presented at [CppCon 2019](https://cppcon.org/), 2019-09-19.
 
@@ -33,7 +38,20 @@ Errata: In the video, the slide for erasing an element from the registry contain
 
 ***
 
-Date: 2018-10-18, 2018-11-08
+Date: 2019-10-31
+
+### Compose This!
+
+Abstract: Ruminations on composability, why functional composition is inherently limited, and why we need a better theory of composition.
+
+Note: Lightning talk presented at [C++ Russia](https://cppconf.ru/en/), 2019-10-31
+
+*   [PDF](presentations/2019-10-31-compositional-efficiency/2019-10-31-compositional-efficiency.pdf)
+*   [Keynote](presentations/2019-10-31-compositional-efficiency/2019-10-31-compositional-efficiency.key)
+
+***
+
+Date: 2018-11-08, 2018-10-18
 
 ### Generic Programming
 
@@ -74,7 +92,7 @@ Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.c
 
 ***
 
-Date: 2017-11-06, 2017-11-09, 2018-09-28
+Date: 2018-09-28, 2017-11-09, 2017-11-06
 
 ### Better Code: Human interface
 
@@ -433,6 +451,16 @@ Abstract: A key benefit of generic programming is its support for producing modu
 ***
 
 ## Interviews
+
+***
+
+Date: 2019-10-17
+
+### cpp.chat - Episode #62 (with Sean Parent) "I’m Surprised You Brought up Rotate"
+
+Jon Kalb and Phil Nash interview me live at [CppCon 2019](https://cppcon.org/).
+
+*   [Video](https://www.youtube.com/watch?v=czHpJE3xIXc)
 
 ***
 
