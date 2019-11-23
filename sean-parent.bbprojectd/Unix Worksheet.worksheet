@@ -5,7 +5,9 @@
 	<key>CurrentWorkingDirectory</key>
 	<string>/Users/sean-parent</string>
 	<key>WorksheetContents</key>
-	<string>### Editing better-code
+	<string>ditto 
+
+### Editing better-code
 ## Jeykll for github pages
 
 # Requires xcode command line tools (make sure to update when xcode is updated):
