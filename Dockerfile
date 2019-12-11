@@ -1,11 +1,18 @@
-FROM docker.pkg.github.com/sean-parent/jupyter-docker/docs-tool-cpp-base:1.0.0
+FROM docker.pkg.github.com/sean-parent/jupyter-docker/docs-tool-cpp-base:latest
 USER app
+WORKDIR /home/app
 
 RUN mkdir ./install
 WORKDIR ./install
 COPY ./Gemfile .
 COPY ./Gemfile.lock .
-COPY .ruby-version .
+COPY ./.ruby-version .
 
-RUN (eval "$(rbenv init -)"; bundle install)
-WORKDIR ~
+RUN  (eval "$(rbenv init -)"; \
+    gem install bundler; \
+    rbenv rehash; \
+    bundle install)
+
+EXPOSE 3000 3001
+
+ADD VERSION .

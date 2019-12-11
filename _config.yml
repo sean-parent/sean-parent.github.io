@@ -26,8 +26,3 @@ exclude:
     - sean-parent.bbprojectd/
     - tools/
 
-#wire this up
-comments :
-  provider : disqus
-  disqus :
-    short_name : seanparent
