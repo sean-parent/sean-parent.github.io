@@ -19,7 +19,7 @@ draft: true
     </tr>
     <tr>
         <td markdown="span">`T(rv)`</td>
-        <td markdown="span">_Postconditions:_ `T(rv)` is equivalent ot the value of `rv` before the construction</td>
+        <td markdown="span">_Postconditions:_ `T(rv)` is equivalent to the value of `rv` before the construction</td>
     </tr>
     <tr>
         <td markdown="span">_common_</td>
