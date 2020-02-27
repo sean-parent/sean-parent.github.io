@@ -54,6 +54,8 @@ _Preconditions:_ `t` and `rv` do not refer to the same object, or the object val
 _Postconditions:_
 - `t` is equivalent to the value of `rv` before the assignment
 - `rv` is destructible
+- If `rv` is a glvalue
+    - `rv` satisfies any preconditions for the lhs argument to move-assignment
 - If `rv` is a glvalue and `rv` is required to be _Cpp17CopyAssignable_;
     - `rv` satisfies any preconditions for the lhs argument to copy-assignment
 - The value of rv is otherwise unspecified
