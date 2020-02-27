@@ -16,6 +16,7 @@ github_username:  sean-parent
 
 # Build settings
 markdown: kramdown
+# markdown: GFM
 highlighter: rouge
 
 exclude: ["sean-parent.bbprojectd/", "exclude/", "bs-config.js"]
@@ -25,4 +26,3 @@ exclude-tags: [ better-code ]
 exclude:
     - sean-parent.bbprojectd/
     - tools/
-
