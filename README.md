@@ -13,12 +13,15 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/docs-src -t -i \
   docker.pkg.github.com/sean-parent/jupyter-docker/docs-tool-cpp-base:latest bash
 
 cd /mnt/docs-src
-./tools/update.sh
+./tools/update.sh --lock
 exit
 
+VERSION="1.1.1"
+echo $VERSION > ./VERSION
 docker build -t docker.pkg.github.com/sean-parent/sean-parent.github.io/tools:latest .
+docker tag docker.pkg.github.com/sean-parent/sean-parent.github.io/tools:latest \
+    docker.pkg.github.com/sean-parent/sean-parent.github.io/tools:$VERSION
 docker push docker.pkg.github.com/sean-parent/sean-parent.github.io/tools:latest
-
-
+docker push docker.pkg.github.com/sean-parent/sean-parent.github.io/tools:$VERSION
 
 ```

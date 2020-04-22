@@ -29,7 +29,7 @@ Because objects exist in memory, they have a _physical_ relationship. The value 
 
 Given this, an improved definition of a data structure is:
 
-> A _data structure_ is a structure utilizing value, representational, and physical relationship to encode semantic relationships on a collection of object.
+> A _data structure_ is a structure utilizing value, representational, and physical relationships to encode semantic relationships on a collection of objects.
 
 The choice of encoding can make a dramatic difference on the performance of operations performed on the collection.
 
@@ -73,4 +73,3 @@ A _composite object_ is consists of other objects, called _parts_. These parts a
 
 [^eop]:
     Alexander Stepanov & Paul McJones. _Elements of Programming_ (Addison-Wesley, 2009), 12.1
-
