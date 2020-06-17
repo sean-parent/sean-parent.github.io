@@ -12,7 +12,7 @@ _\[ This page is a work in progress._
 
 _We need wording to state that these are requirements for operations with the domain of values passed to the STL component. Borrowing from [http://eel.is/c++draft/iterator.cpp17#input.iterators-2](http://eel.is/c++draft/iterator.cpp17#input.iterators-2): \]_
 
-The term _domain_ of an operation is used in the ordinary mathematical sense to denote the set of values over which an operation is (required to be) defined. This set can change over time. Each component may place additional requirements on the domain of an operation. These requirements can be inferred from the uses that component makes of the operation and is generally constrained to those values accesible through the operations arguments. \[ _Example:_ The call `find(a, b, x)` is defined only if the value of `a` has the property _p_ defined as follows: `b` has property _p_ and a value `i` has property _p_ if (`*i == x`) or if (`*i != x` and `++i` has property _p_). _— end example_ \]
+The term _domain_ of an operation is used in the ordinary mathematical sense to denote the set of values over which an operation is (required to be) defined. This set can change over time. Each component may place additional requirements on the domain of an operation. These requirements can be inferred from the uses that a component makes of the operation and is generally constrained to those values accesible through the operations arguments. \[ _Example:_ The call `find(a, b, x)` is defined only if the value of `a` has the property _p_ defined as follows: `b` has property _p_ and a value `i` has property _p_ if (`*i == x`) or if (`*i != x` and `++i` has property _p_). _— end example_ \]
 
 ## _Option 1_
 
