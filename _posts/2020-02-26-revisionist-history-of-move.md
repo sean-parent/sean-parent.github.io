@@ -2,10 +2,9 @@
 layout: post
 title: Revisionist History of Move
 description: ""
-category:
+category: draft
 mathjax: true
 tags: [standard, move]
-draft: true
 ---
 
 <style>

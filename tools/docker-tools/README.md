@@ -36,6 +36,7 @@ docker build --file ./tools/docker-tools/Dockerfile --target full --tag $VOLUME 
 To run the docker image, execute the following.
 
 ```
+VOLUME="sean-parent.github.io"
 docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
     --tty --interactive --publish 3000-3001:3000-3001 \
     $VOLUME bash
