@@ -51,6 +51,20 @@ Note: Lightning talk presented at [C++ Russia](https://cppconf.ru/en/), 2019-10-
 
 ***
 
+Date: 2019-03-20
+
+### Bringing Photoshop to the iPad
+
+Abstract: A "behind the scenes" look at the challenges to bring one of Adobe's premier products to mobile devices and the role that C++ developments have played in overcoming them.
+
+Note: Talk presented at the [Northwest C++ Users' Group](https://nwcpp.org/March-2019.html), 2019-03-20.
+
+*   [Video](https://www.youtube.com/watch?v=oQUtu_vD91g)
+*   [PDF](presentations/2019-03-20-photoshop-on-ipad/2019-03-20-photoshop-on-ipad.pdf)
+*   [Keynote](presentations/2019-03-20-photoshop-on-ipad/2019-03-20-photoshop-on-ipad.key)
+
+***
+
 Date: 2018-11-08, 2018-10-18
 
 ### Generic Programming

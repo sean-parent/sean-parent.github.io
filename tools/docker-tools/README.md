@@ -10,7 +10,7 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.0"
+VERSION="1.0.1"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -90,4 +90,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 ### Release Notes
 
 - 1.0.0 - Initial release for jekyll
-- 1.0.1 - (not yet pushed) minima theme (developing hyde theme)
+- 1.0.1 - First update
