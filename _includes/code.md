@@ -13,9 +13,8 @@
     {% assign figure-reference = -figure-ref | split: '$'  %}
 {% endif %}
 
-~~~cpp
-{% include_relative code/{{include.name}}.cpp %}~~~
+```cpp
+{% include_relative code/{{include.name}}.cpp %}```
 <p style='text-align: center;' markdown='1'>
-code {{page.chapter}}.{{figure-number}}: {{include.caption}}
+Code {{page.chapter}}.{{figure-number}}: {{include.caption}}
 </p>{: #{{include.name}} }
-

@@ -51,7 +51,7 @@ This would not be of much use to build `sort_subrang()` except that `nth_element
 
 We can improve this function slightly by noting that in the case where `sf == f` we do not need to call `nth_element()`.
 
-~~~ C++
+```cpp
 template <typename I> // I models RandomAccessIterator
 void sort_subrange(I f, I l, I sf, I sl) {
     if (sf == sl) return;
@@ -61,7 +61,7 @@ void sort_subrange(I f, I l, I sf, I sl) {
     }
     std::partial_sort(sf, sl, l);
 }
-~~~
+```
 
 {::comment} add exercise to test performance? {:/comment}
 

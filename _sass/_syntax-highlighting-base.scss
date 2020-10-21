@@ -21,6 +21,21 @@ h1,h2,h3,h4,h5,h6,a {
     }
 }
 
+table.rouge-table {
+    line-height: 1.2em;
+    border: none;
+    .rouge-gutter {
+        font-size: smaller;
+        font-weight:bolder;
+        padding-right: 1em;
+        text-align: right;
+    }
+    td {
+        border: none;
+        vertical-align: baseline;
+    }
+}
+
 pre.highlight {
     .highlighter-rouge & {
         border-left: 4px solid $embedded-code-accent-color;
