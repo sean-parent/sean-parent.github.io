@@ -2,6 +2,7 @@
 title: Preface
 layout: book-page
 tags: [ better-code ]
+chapter: 0
 ---
 
 To understand what _better code_ is we first need to understand what _good code_ is. Students are often taught that good code is code that does what the specification says it should. But such an answer begs the question of what is a good specification? Nearly every experienced developer I've met has a snippet of code filed away that has profound beauty - it likely has no corresponding specification and may not even contain a single comment. So what is good code?

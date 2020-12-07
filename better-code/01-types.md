@@ -1,13 +1,12 @@
 ---
 title: Types
 tagline: No Incomplete Types
-
 layout: book-page
 tags: [ better-code ]
 chapter: 1
 ---
 
-The notion of a _type_ is a fundemantal component of programming. Types are created to represent a class of objects. Types can be very general, such as “integer” or very specific such as “index into the collection of documents.”
+The notion of a _type_ is a fundamental component of programming. Types are created to represent a class of objects. Types can be very general, such as “integer” or very specific such as “index into the collection of documents.”
 
 {::comment}This section is referenced by chapter[03]{:/comment}
 
