@@ -14,7 +14,8 @@
 {% endif %}
 
 ```cpp
-{% include_relative code/{{include.name}}.cpp %}```
+{% include_relative code/{{include.name}}.cpp %}
+```
 <p style='text-align: center;' markdown='1'>
 Code {{page.chapter}}.{{figure-number}}: {{include.caption}}
 </p>{: #{{include.name}} }

@@ -50,7 +50,7 @@ Where the speedup $$S$$ is defined by this equation. $$P$$ is hereby the amount 
 Drawing the abscissa in logarithmic scale illustrates that there is only a speedup of 20 times, even when the system is running on 2048 or more cores and just 5% synchronization takes place.
 
 {::comment} Convert/Create new SVG image
-{% include figure.md name='amdahl_log' caption="Amdahl's Law logarithmic scale" %}
+{% include figure.md name='amdahl_log' caption="Amdahl's law logarithmic scale" %}
 {::/comment}
 
 ![Amdahl's Law](figures/amdahl_log.png){:height="40%" width="40%"}
@@ -59,14 +59,14 @@ Amdahl's Law Logarithmic Scale
 Since most desktop or mobile processors have less than 64 cores, it is better to take a look at the graph with linear scale. Each line below the diagonal represents 10% more of serialisation. So if the application just has 10% of serialisation and it is running on 16 cores then the speed-up is just a little better than factor of six.
 
 {::comment} Convert/Create new SVG image
-{% include figure.md name='amdahl_lin' caption="Amdahl's Law linear scale" %}
+{% include figure.md name='amdahl_lin' caption="Amdahl's law linear scale" %}
 {::/comment}
 ![Amdahl's Law](figures/amdahl_lin.png){:height="40%" width="40%"}
 Amdahl's Law Linear Scale
 
 So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a mutex. Serialization can mean sharing the same memory or sharing the same address bus for the memory, if it is not a NUMA architecture. Sharing the same cache line or anything that is shared within the processor starts to bend that curve down and it bends down rapidly, even an atomic bends that curve down.
 
-An often used model for implementing exclusive access to an object by multiple threads is this:
+This is an often used model for implementing exclusive access to an object by multiple threads:
 
 {% include figure.md name='05-traditional_locking' caption="Exclusive access by different threads" %}
 
@@ -76,7 +76,7 @@ This is a horrible way to think about threading. The goal has to be to minimize 
 
 In the following, let's take a look at a traditional piece of code:
 
-{% include code.md name='05-registry-0' caption='Registry Example' %}
+{% include code.md name='05-registry-0' caption='Registry example' %}
 
 It is a registry class with a shared `set` and `get` function. The access to the underlying unordered map is protected against concurrent access with a mutex. At the first glance it seems that only minimal work is done under the mutex. The unordered map is a fairly efficient data structure, it is a hash map. But the amount of time it takes to hash the key depends on the length of the string. So the work that is being done under the lock here is actually fairly unbounded. It depends completely on the lengths of the string. It may be probably typically small but it could be big. On top of the hash calculation comes a potentially allocation of a new bucket within the unordered map, which in most cases requires another lock within the memory manager. This lock can be, depending on the operating system, a global lock within the process.
 
@@ -84,7 +84,7 @@ For a better understanding what shall be actually achieved by using the locks it
 
 So why is this an important sentence? It means that one can always think about mutexes as if one has some set of interleaved operations. 
 
-{% include figure.md name='05-sequential_operations' caption='Sequential Operations' %}
+{% include figure.md name='05-sequential_operations' caption='Sequential operations' %}
 
 * A mutex serializes a set of operations, $$Op_n$$, where the operation is the code executed while the mutex is locked
 * Operations are interleaved and may be executed in any order and may be repeated
@@ -97,29 +97,27 @@ So there is not a lot of difference between an `std::atomic`. In fact there is a
 
 That means that any piece of code that has a mutex can be transformed into a queued model. This idea applied to the registry example from above leads to this:
 
-{% include code.md name='05-registry-1' caption='registry with queue' %}
+{% include code.md name='05-registry-1' caption='Registry with queue' %}
 
 Given that there is a serial queue `_q` with an `async` function which executes the passed item and it uses the same calling conventions as `std::async`. Hereby with the difference that it guarantees that the next item being processed in that queue doesn't start until the previous one is completed. Then one can rewrite the `set` string function to be executed with `_q.async`.
 As well one can rewrite the `get` string operation. But here the difference is, that one needs the result back out, paired with that particular `get`. It is realized here with a future. (Futures will be covered later in more detail.) So the result of the `get` function, e.g. with a continuation, can be used whenever the `key` is hashed and and the lookup in the hash is completed.
 
-{% include code.md name='05-registry-2' caption='Enhanced Registry with Queue' %}
+{% include code.md name='05-registry-2' caption='Enhanced registry with queue' %}
 
 Why is it important to understand this concept? Because at any place with a mutex in the code one can always make this transformation. One can always transform it into a serialized queue model. And this means that within the serialized queue model anytime somebody can come along and calls `set`, regardless of the amount of work that `set` takes, the time it takes for `set` to return back to the caller itself constant. This means as well that one can add something like an arbitrary `set`, e.g a whole vector of key value pairs. And to the caller this `set` will take just as much time as the previous `set`. It's a non blocking operation with an upper bound of overhead. 
 
-### Definition of _raw threads_
+### Problems of _raw threads_
 
 A _thread_ is a execution environment consisting of a stack and processor state running in parallel to other threads.
 A _task_ is a unit of work, often a function, to be executed on a thread.
 
-### Problems of _raw threads_
+Another common scenario is that increased work within an application is outsourced to a spawned background thread with the intent that the available CPU cores are better utilized. 
 
-Another common scenario is that increased work within an application is outsourced to a spawned background thread with the intent that the available CPU cores are better utililized. 
-
-{% include figure.md name='05-background_thread' caption='Background Thread executing Tasks' %}
+{% include figure.md name='05-background_thread' caption='Background thread executing tasks' %}
 
 Since this is recognized as a successful idiom to solve performance problems of an application, it becomes easily the default way to solve such issues. 
 
-{% include code.md name='05-background_worker' caption='Simplified Background Worker' %}
+{% include code.md name='05-background_worker' caption='Simple background worker' %}
 
 Over time the application gets enhanced with more modules and plugins. When now for each of these the same idea was applied then the complete application uses a huge number threads.
 An over subscription of threads is then easily the case. That means that more threads are used than CPU cores are available. So the kernel of the operating system has to constantly switch the threads between the available cores to prevent starvation of single threads. 
@@ -128,7 +126,7 @@ So the goal has to be that the number of context switches is as low as possible.
 
 One way to archive this goal is to use a task system. A task system uses a set of threads, normally equal to the number of CPU cores and distributes the submitted tasks over the available threads. In case that more tasks are submitted than free threads are available then they are put into a queue and whenever one is done the next task is taken from the queue and executed.
 
-{% include figure.md name='05-simple_tasking_system' caption='Simple Tasking System' %}
+{% include figure.md name='05-simple_tasking_system' caption='Simple task system' %}
 
 Since the number of threads is constant, ideally there is no need to perform any context switches. (Because of simplification the fact here is neglected that other system services have running threads as well.) So a task system within an application is an appropriate measure to reduce the number of context switches as long as all modules within it use the same instance of the task system.
 
@@ -136,37 +134,47 @@ For illustrational purpose and understanding better the implications within such
 
 The figure above shows that the task system consist out of a notification queue:
 
-{% include code.md name='05-notification_queue-1' caption='Notification Queue' %}
+{% include code.md name='05-notification_queue-1' caption='Notification queue' %}
 
 This notification queue is build out of a `deque` of `std::function` with a `mutex` and a `condition_variable`. It has a pop operation which is just going to pull one item off of the queue. And it has a push operation to push one item into the queue and notify anybody who might be waiting on the queue.
 
-{% include code.md name='05-task_system-1' caption='Task System' %}
+{% include code.md name='05-task_system-1' caption='Task system' %}
 
-The task system has a `count` member which contains the number of available cores. It has a vector of threads and the notification queue. The `run` function is the function that will be executed by the threads. In which it creates an empty function object and pops the function from the queue and executes it.
-The constructor of the task system spins up one thread and binds it with a lambda against our run function.
-When the task system gets destructed, it is necessasry to join all threads. The function that is used by the outside is `async`. It just takes a function and pushs it into the queue.
-This system is so far very primitive. As well it would hang on destruction. The latter is corrected by the following additions:
+The task system has a `_count` member which is set to the number of available cores. It has a vector of threads and the notification queue. The `run` function is the function that will be executed by the threads. Inside that function is an empty function object. As an item is available in the queue, it pops it from the queue and executes it and try to pick the next one.
+The constructor of the task system spins up as many threads as there are cores. Each thread is bound with a lambda against the `run` function.
+When the task system gets destructed, it is necessary to join all threads. The function that is used by the outside is `async`. It just takes a function and pushes it into the queue.
+This system is so far very primitive, e.g. it would hang on destruction. The latter is corrected by the following additions:
 
-{% include code.md name='05-notification_queue-2' caption='Notification Queue With Termination Switch' %}
-
-{% include code.md name='05-task_system-2' caption='Non-blocking Task System on Destruction' %}
+{% include code.md name='05-notification_queue-2' caption='Notification queue with done switch' %}
 
 So with the new `done` function the new member `_done` is set and the queue is notified about the change. In case the code is waiting in the pop function, it is woken up from the condition variable and it is checked if `_done` is set and then returned false.
 
-so how do you guys think this performs I already told you right right badly kind of barely get off the mark horrible why is this horrible makes a good example right it's easy to write nothing fundamentally wrong about it it's exactly this model right we've got a single Q and we've got a bunch of threads and they're banging on that Q okay and we've got locks understanding that I can transform those locks into a queue model doesn't help me because all I have is a Q it locks around it okay so I need to come up with a better way.
+{% include code.md name='05-task_system-2' caption='Non-blocking task system on destruction' %}
 
-{% include figure.md name='05-task_system_multiple_queues' caption='Task System with Multiple Notification Queues' %}
+The task system notifies within the destructor all queues to ignore all potentially remaining entries which allows that the threads can be joined without delay. (With C++20 this could be enhanced with `jthread`s.) 
 
-{% include code.md name='05-notification_queue-3' caption='Notification Queue With Termination Switch' %}
+This task system performs very badly compared to MacOS' Grand Central Dispatch (GCD). It just has a throughput of nnn%. Why does this system perform so badly even that this is the recommended design at several places? 
+This design follows principle from above /*Figure 5.5: Exclusive access by different threads*/. It has a single queue and a bunch of threads. These are banging on that queue and so the threads are waiting often on the mutex. 
 
-{% include code.md name='05-task_system-3' caption='Non-blocking Task System on Destruction' %}
+Unfortunately it is not possible to transform this model as it is described above because all that is there is a queue. So a different approach is needed.
+
+{% include figure.md name='05-task_system_multiple_queues' caption='Task system with multiple notification queues' %}
+
+A way to reduce the contention on this single queue is to change the task system it in a way that each thread has its own queue.
+
+{% include code.md name='05-task_system-3' caption='Task system with multiple queues' %}
+
+we're just going to have a vector of notification queues. We get to reuse or same notification queue. okay one for each thread so now our run is going to take an index into into which q it's actually bound against when we join now we need to tell all the Q's they're done. next one and when we're going to do our push we're going to keep a little atomic index so we can be pushing from multiple threads and we're just going to keep incrementing it but then we're going to modulo it by our count and so we're just going to round-robin going through pushing into into it there okay and if you notice that's unsigned so wrapping around on that index is not a problem well-defined behavior on our overflow it's a modulo arithmetic
+
+okay so how do you guys think we did on our speedometer twice as fast is it going to go half halfway up we're just going to go nobody so so I actually did profile all this code. I wrote this. All profiled it it's about ten times better. 
+
+okay barely get this movie okay so and we have two problems here one is is I can get a long-running task in one of my Q's and it can cause a bubble and I can have my other course sitting there idle okay so the other is is even in a fully loaded system I can end up with a fair amount of contention right where one of those mutexes blocks and that's you know upwards of a million cycles to do a full task switch right in overhead so having keeping one of those mutexes and actually having it locked kills performance okay
+
+
 
 {% include figure.md name='05-task_system_task_stealing' caption='Task System with Task Stealing' %}
 
-okay so that's X so here is the common answer I put a Q on each thread that minimizes my contention okay so let's write that we can do this pretty quickly we're just going to have a vector of notification Q's we get to reuse or same notification q okay one for each thread so now our run is going to take an index into into which q it's actually bound against when we join now we need to tell all the Q's they're done next one and when we're going to do our push we're going to keep a little atomic index so we can be pushing from multiple threads and we're just going to keep incrementing it but then we're going to modulo it by our count and so we're just going to round-robin going through
-pushing into into it there okay and if you notice that's unsigned so wrapping
-around on that index is not a problem well-defined behavior on our overflow
-it's a modulo arithmetic okay so how do you guys think we did on our speedometer twice as fast is it going to go half halfway up we're just going to go nobody so so I actually did profile all this code I wrote this all profiled it it's about ten times better okay barely get this movie okay so and we have two problems here one is is I can get a long-running task in one of my Q's and it can cause a bubble and I can have my other course sitting there idle okay so the other is is even in a fully loaded system I can end up with a fair amount of contention right where one of those mutexes blocks and that's you know upwards of a million cycles to do a full task switch right in overhead so having keeping one of those mutexes and actually having it locked kills performance okay so here's the next solution right called task stealing okay now there are lots of sophisticated algorithms that are heavily tuned for
+so here's the next solution right called task stealing okay now there are lots of sophisticated algorithms that are heavily tuned for
 doing task stealing but we're just going to code it very simply here and the idea with task stealing is is if your queue you being a thread is busy because
 somebody's pushing in the other end okay ah or it's empty either you don't really care see if you can go pull something out to somebody else's queue
 okay so let's do that so and we're going to take our pop and we're going to have tri pop here okay so our tri pop is going to take a tri lock on our mutex
