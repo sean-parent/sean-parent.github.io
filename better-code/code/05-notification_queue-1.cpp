@@ -1,6 +1,7 @@
 using lock_t = unique_lock<mutex>;
 
-class notification_queue {
+class notification_queue 
+{
     deque<function<void()>> _q;
     mutex                   _mutex;
     condition_variable      _ready;
@@ -24,4 +25,3 @@ public:
         _ready.notify_one();
     }
 };
-

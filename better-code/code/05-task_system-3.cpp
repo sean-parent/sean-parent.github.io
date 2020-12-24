@@ -1,10 +1,11 @@
-class task_system {
+class task_system 
+{
     const unsigned              _count{thread::hardware_concurrency()};
     vector<thread>              _threads;
     vector<notification_queue>  _q{_count};
     atomic<unsigned>            _index{0};
 
- void run(unsigned i) {
+    void run(unsigned i) {
         while (true) {
             function<void()> f;
             if (!_q[i].pop(f)) break;
@@ -12,7 +13,7 @@ class task_system {
         }
     }
 
-  public:
+public:
     task_system() {  }
 
     ~task_system() {
