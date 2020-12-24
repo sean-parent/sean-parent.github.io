@@ -68,7 +68,11 @@ So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a 
 
 This is an often used model for implementing exclusive access to an object by multiple threads:
 
-{% include figure.md name='05-traditional_locking' caption="Exclusive access by different threads" %}
+{% include figure.md name='05-traditional_locking-1' caption="Different threads need access to single object" %}
+
+{% include figure.md name='05-traditional_locking-2' caption="Exclusive access with locking" %}
+
+{% include figure.md name='05-traditional_locking-3' caption="Exclusive access by different threads" %}
 
 As long as one thread has exclusive access to the object all other threads have to wait until they get the access right. 
 
