@@ -49,34 +49,29 @@ Where the speedup $$S$$ is defined by this equation. $$P$$ is hereby the amount 
 
 Drawing the abscissa in logarithmic scale illustrates that there is only a speedup of 20 times, even when the system is running on 2048 or more cores and just 5% synchronization takes place.
 
-{::comment} Convert/Create new SVG image
-{% include figure.md name='amdahl_log' caption="Amdahl's law logarithmic scale" %}
-{::/comment}
-
-![Amdahl's Law](figures/amdahl_log.png){:height="40%" width="40%"}
-Amdahl's Law Logarithmic Scale
+{% include figure.md name='05-amdahl_log' caption="Amdahl's law logarithmic scale" size=75 %}
 
 Since most desktop or mobile processors have less than 64 cores, it is better to take a look at the graph with linear scale. Each line below the diagonal represents 10% more of serialisation. So if the application just has 10% of serialisation and it is running on 16 cores then the speed-up is just a little better than factor of six.
 
-{::comment} Convert/Create new SVG image
-{% include figure.md name='amdahl_lin' caption="Amdahl's law linear scale" %}
-{::/comment}
-![Amdahl's Law](figures/amdahl_lin.png){:height="40%" width="40%"}
-Amdahl's Law Linear Scale
+{% include figure.md name='05-amdahl_lin' caption="Amdahl's law linear scale" %}
 
 So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a mutex. Serialization can mean sharing the same memory or sharing the same address bus for the memory, if it is not a NUMA architecture. Sharing the same cache line or anything that is shared within the processor starts to bend that curve down and it bends down rapidly, even an atomic bends that curve down.
 
-This is an often used model for implementing exclusive access to an object by multiple threads:
+The following illustrates an often used model for implementing exclusive access to an object by multiple threads:
 
 {% include figure.md name='05-traditional_locking-1' caption="Different threads need access to single object" %}
 
+As soon as the different threads do not only want to read the single object, but need write access as well, it is necessary to give just a single thread exclusive access. (Otherwise undefined behavior is the result.) All other threads have to wait for their turn to get read or access. 
+
 {% include figure.md name='05-traditional_locking-2' caption="Exclusive access with locking" %}
+
+When the one threads does not need any more its exclusive access it gives its up. 
 
 {% include figure.md name='05-traditional_locking-3' caption="Exclusive access by different threads" %}
 
-As long as one thread has exclusive access to the object all other threads have to wait until they get the access right. 
+And the next thread can get the exclusive [^access].
 
-This is a horrible way to think about threading. The goal has to be to minimize waiting at all costs. David Butenhof, one of the POSIX implementors, coined the phrase that mutex should be better named bottleneck, because of the property of slowing down an application[^butenhof].
+This is a horrible way to think about threading. The goal has to be to minimize waiting at all costs. David [^Butenhof], one of the POSIX implementors, coined the phrase that mutex should be better named bottleneck, because of the property of slowing down an application.
 
 In the following, let's take a look at a traditional piece of code:
 
@@ -123,7 +118,7 @@ Since this is recognized as a successful idiom to solve performance problems of 
 
 {% include code.md name='05-background_worker' caption='Simple background worker' %}
 
-Over time the application gets enhanced with more modules and plugins. When now for each of these the same idea was applied then the complete application uses a huge number threads.
+Over time the application gets enhanced with more modules and plugins. When now for each of these the same idea was applied then the complete application uses a huge number of threads.
 An over subscription of threads is then easily the case. That means that more threads are used than CPU cores are available. So the kernel of the operating system has to constantly switch the threads between the available cores to prevent starvation of single threads. 
 Within such a switch - named context switch - the CPU registers, program counter and stack pointer of the old thread are saved and the ones from the new thread needs to be restored. This save and restore takes time that is lost for computational tasks of an application. Beside this the translation lookaside buffer (TLB) must be flushed and the page table of the next process is loaded. The flushing of the TLB causes that the memory access of the new thread is slower in the beginning. This causes an additional slow down.
 So the goal has to be that the number of context switches is as low as possible.
@@ -132,43 +127,49 @@ One way to archive this goal is to use a task system. A task system uses a set o
 
 {% include figure.md name='05-simple_tasking_system' caption='Simple task system' %}
 
-Since the number of threads is constant, ideally there is no need to perform any context switches. (Because of simplification the fact here is neglected that other system services have running threads as well.) So a task system within an application is an appropriate measure to reduce the number of context switches as long as all modules within it use the same instance of the task system.
+Since the number of threads is constant, ideally there is no need to perform any context switches. (Because of simplification reasons a fact is here ignored that other system services have running threads as well so there are happening context switches in any case.) A task system within an application is an appropriate measure to reduce the number of context switches as long as all modules within it use the same instance of the task system.
 
-For illustrational purpose and understanding better the implications within such a task system, its code is developed in the following. 
+For illustration purpose and a better understanding of the implications within such a task system, its code is developed in the following. 
 
 The figure above shows that the task system consist out of a notification queue:
 
-{% include code.md name='05-notification_queue-1' caption='Notification queue' %}
+{% include code.md name='05-notification_queue-1' caption='Notification queue class' %}
 
 This notification queue is build out of a `deque` of `std::function` with a `mutex` and a `condition_variable`. It has a pop operation which is just going to pull one item off of the queue. And it has a push operation to push one item into the queue and notify anybody who might be waiting on the queue.
 
-{% include code.md name='05-task_system-1' caption='Task system' %}
+{% include code.md name='05-task_system-1' caption='Task system class' %}
 
-The task system has a `_count` member which is set to the number of available cores. It has a vector of threads and the notification queue. The `run` function is the function that will be executed by the threads. Inside that function is an empty function object. As an item is available in the queue, it pops it from the queue and executes it and try to pick the next one.
+The task system has a `_count` member which is set to the number of available cores. It has a vector of threads and the notification queue as additional members. The `run` function is the function that will be executed by the threads. Inside that function is an empty function object. As an item is available in the queue, it pops it from the queue and executes it and try to pick the next one.
 The constructor of the task system spins up as many threads as there are cores. Each thread is bound with a lambda against the `run` function.
-When the task system gets destructed, it is necessary to join all threads. The function that is used by the outside is `async`. It just takes a function and pushes it into the queue.
+When the task system gets destructed, it is necessary to join all threads. The function that is used by the external user is `async`. It just takes the given function and pushes it into the queue.
 This system is so far very primitive, e.g. it would hang on destruction. The latter is corrected by the following additions:
 
-{% include code.md name='05-notification_queue-2' caption='Notification queue with done switch' %}
+{% include code.md name='05-notification_queue-2' caption='Notification queue class with done switch' %}
 
-So with the new `done` function the new member `_done` is set and the queue is notified about the change. In case the code is waiting in the pop function, it is woken up from the condition variable and it is checked if `_done` is set and then returned false.
+So with the new `done` function the new member `_done` is set and the queue is notified about this change. In case the code is waiting in the pop function, it is woken up from the condition variable and it is checked if `_done` is set and then it returns false.
 
-{% include code.md name='05-task_system-2' caption='Non-blocking task system on destruction' %}
+{% include code.md name='05-task_system-2' caption='Non-blocking task system class on destruction' %}
 
 The task system notifies within the destructor all queues to ignore all potentially remaining entries which allows that the threads can be joined without delay. (With C++20 this could be enhanced with `jthread`s.) 
 
-This task system performs very badly compared to MacOS' Grand Central Dispatch (GCD). It just has a throughput of nnn%. Why does this system perform so badly even that this is the recommended design at several places? 
+This task system performs very badly e.g. compared to MacOS' Grand Central Dispatch (GCD). It just has a throughput of nnn%. Why does this system perform so badly even that this is the recommended design at several places? 
 This design follows principle from above /*Figure 5.5: Exclusive access by different threads*/. It has a single queue and a bunch of threads. These are banging on that queue and so the threads are waiting often on the mutex. 
 
 Unfortunately it is not possible to transform this model as it is described above because all that is there is a queue. So a different approach is needed.
 
-{% include figure.md name='05-task_system_multiple_queues' caption='Task system with multiple notification queues' %}
+{% include figure.md name='05-task_system_multiple_queues' caption='Task system class with multiple notification queues' %}
 
 A way to reduce the contention on this single queue is to change the task system it in a way that each thread has its own queue.
 
 {% include code.md name='05-task_system-3' caption='Task system with multiple queues' %}
 
-we're just going to have a vector of notification queues. We get to reuse or same notification queue. okay one for each thread so now our run is going to take an index into into which q it's actually bound against when we join now we need to tell all the Q's they're done. next one and when we're going to do our push we're going to keep a little atomic index so we can be pushing from multiple threads and we're just going to keep incrementing it but then we're going to modulo it by our count and so we're just going to round-robin going through pushing into into it there okay and if you notice that's unsigned so wrapping around on that index is not a problem well-defined behavior on our overflow it's a modulo arithmetic
+So the task system has now not a single notification queue, but one for each thread of the same type as before.
+Each thread gets now the index for its queue during construction. All queues are informed within the destructor that they are done. An constantly by one increased atomic int modulo the numbers of threads is used within the `async` function to distribute equally the incoming tasks over the different queues.
+
+
+  
+
+we're going to keep a little atomic index so we can be pushing from multiple threads and we're just going to keep incrementing it but then we're going to modulo it by our count and so we're just going to round-robin going through pushing into into it there okay and if you notice that's unsigned so wrapping around on that index is not a problem well-defined behavior on our overflow it's a modulo arithmetic
 
 okay so how do you guys think we did on our speedometer twice as fast is it going to go half halfway up we're just going to go nobody so so I actually did profile all this code. I wrote this. All profiled it it's about ten times better. 
 
@@ -260,5 +261,8 @@ The primary advantage of a future over a simple callback is that a callback requ
 [^cow]:
     Copy-on-write implementation in stlab. [https://github.com/stlab/libraries/blob/develop/stlab/copy_on_write.hpp](https://github.com/stlab/libraries/blob/develop/stlab/copy_on_write.hpp)
 
-[^butenhof]:
-    Recursive mutexes by David Butenhof [http://zaval.org/resources/library/butenhof1.html](Recursive mutexes by David Butenhof)
+[^access]:
+    Different operating systems have different strategies to which currently waiting thread they give the next access. This strategy might not be fair which means that some OS prefer to give the next lock to those who previously already had it. This causes that individual threads get the lock with a lower probability than others.
+
+[^Butenhof]:
+    Recursive mutexes by David Butenhof [http://zaval.org/resources/library/butenhof1.html](http://zaval.org/resources/library/butenhof1.html)
