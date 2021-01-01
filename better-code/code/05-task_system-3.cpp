@@ -14,15 +14,13 @@ class task_system
     }
 
 public:
-    task_system() {  }
-
     ~task_system() {
         for (auto& e : _q) e.done();
         for (auto& e : _threads) e.join();
     }
 
     template <typename F>
-    void async_(F&& f) {
+    void async(F&& f) {
         auto i = _index++;
         _q[i % _count].push(forward<F>(f));
     }

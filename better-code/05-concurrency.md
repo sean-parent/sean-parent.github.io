@@ -57,17 +57,21 @@ Since most desktop or mobile processors have less than 64 cores, it is better to
 
 So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a mutex. Serialization can mean sharing the same memory or sharing the same address bus for the memory, if it is not a NUMA architecture. Sharing the same cache line or anything that is shared within the processor starts to bend that curve down and it bends down rapidly, even an atomic bends that curve down.
 
-This is an often used model for implementing exclusive access to an object by multiple threads:
+The following illustrates an often used model for implementing exclusive access to an object by multiple threads:
 
 {% include figure.md name='05-traditional_locking-1' caption="Different threads need access to single object" %}
 
+As soon as the different threads do not only want to read the single object, but need write access as well, it is necessary to give just a single thread exclusive access. (Otherwise undefined behavior is the result.) All other threads have to wait for their turn to get read or access. 
+
 {% include figure.md name='05-traditional_locking-2' caption="Exclusive access with locking" %}
+
+When the one threads does not need any more its exclusive access it gives its up. 
 
 {% include figure.md name='05-traditional_locking-3' caption="Exclusive access by different threads" %}
 
-As long as one thread has exclusive access to the object all other threads have to wait until they get the access right. 
+And the next thread can get the exclusive [^access].
 
-This is a horrible way to think about threading. The goal has to be to minimize waiting at all costs. David Butenhof, one of the POSIX implementors, coined the phrase that mutex should be better named bottleneck, because of the property of slowing down an application[^butenhof].
+This is a horrible way to think about threading. The goal has to be to minimize waiting at all costs. David [^Butenhof], one of the POSIX implementors, coined the phrase that mutex should be better named bottleneck, because of the property of slowing down an application.
 
 In the following, let's take a look at a traditional piece of code:
 
@@ -114,7 +118,7 @@ Since this is recognized as a successful idiom to solve performance problems of 
 
 {% include code.md name='05-background_worker' caption='Simple background worker' %}
 
-Over time the application gets enhanced with more modules and plugins. When now for each of these the same idea was applied then the complete application uses a huge number threads.
+Over time the application gets enhanced with more modules and plugins. When now for each of these the same idea was applied then the complete application uses a huge number of threads.
 An over subscription of threads is then easily the case. That means that more threads are used than CPU cores are available. So the kernel of the operating system has to constantly switch the threads between the available cores to prevent starvation of single threads. 
 Within such a switch - named context switch - the CPU registers, program counter and stack pointer of the old thread are saved and the ones from the new thread needs to be restored. This save and restore takes time that is lost for computational tasks of an application. Beside this the translation lookaside buffer (TLB) must be flushed and the page table of the next process is loaded. The flushing of the TLB causes that the memory access of the new thread is slower in the beginning. This causes an additional slow down.
 So the goal has to be that the number of context switches is as low as possible.
@@ -123,33 +127,33 @@ One way to archive this goal is to use a task system. A task system uses a set o
 
 {% include figure.md name='05-simple_tasking_system' caption='Simple task system' %}
 
-Since the number of threads is constant, ideally there is no need to perform any context switches. (Because of simplification the fact here is neglected that other system services have running threads as well.) So a task system within an application is an appropriate measure to reduce the number of context switches as long as all modules within it use the same instance of the task system.
+Since the number of threads is constant, ideally there is no need to perform any context switches. (Because of simplification reasons a fact is here ignored that other system services have running threads as well so there are happening context switches in any case.) A task system within an application is an appropriate measure to reduce the number of context switches as long as all modules within it use the same instance of the task system.
 
-For illustrational purpose and understanding better the implications within such a task system, its code is developed in the following. 
+For illustration purpose and a better understanding of the implications within such a task system, its code is developed in the following. 
 
-The figure above shows that the task system consist out of a notification queue:
+The [figure](#05-simple_tasking_system) above shows that the task system consist out of a notification queue:
 
-{% include code.md name='05-notification_queue-1' caption='Notification queue' %}
+{% include code.md name='05-notification_queue-1' caption='Notification queue class' %}
 
-This notification queue is build out of a `deque` of `std::function` with a `mutex` and a `condition_variable`. It has a pop operation which is just going to pull one item off of the queue. And it has a push operation to push one item into the queue and notify anybody who might be waiting on the queue.
+This notification queue consists of a `deque` of `std::function` with a `mutex` and a `condition_variable`. It has a `pop()` operation which is just going to pull one item off of the queue. And it has a `push()` operation to push one item into the queue and notify anybody who might be waiting on the queue.
 
-{% include code.md name='05-task_system-1' caption='Task system' %}
+{% include code.md name='05-task_system-1' caption='Task system class' %}
 
-The task system has a `_count` member which is set to the number of available cores. It has a vector of threads and the notification queue. The `run` function is the function that will be executed by the threads. Inside that function is an empty function object. As an item is available in the queue, it pops it from the queue and executes it and try to pick the next one.
-The constructor of the task system spins up as many threads as there are cores. Each thread is bound with a lambda against the `run` function.
-When the task system gets destructed, it is necessary to join all threads. The function that is used by the outside is `async`. It just takes a function and pushes it into the queue.
+The task system has a `_count` member which is set to the number of available cores. The system has a vector of threads and the notification queue. The `run()` function is the function that will be executed by the threads. Inside that function is an empty function object. As soon as an item is available in the queue, it pops it from the queue and executes it and tries to pick the next one.
+The constructor of the task system spins up as many threads as there are cores. Each thread is bound with a lambda against the `run()` function.
+When the task system gets destructed, it is necessary to join all threads. The function that is used by the outside is `async`. It takes the function object and pushes it into the queue.
 This system is so far very primitive, e.g. it would hang on destruction. The latter is corrected by the following additions:
 
 {% include code.md name='05-notification_queue-2' caption='Notification queue with done switch' %}
 
-So with the new `done` function the new member `_done` is set and the queue is notified about the change. In case the code is waiting in the pop function, it is woken up from the condition variable and it is checked if `_done` is set and then returned false.
+So with the new `done()` function the new member `_done` is set and the queue is notified about the change. In case the code is waiting in the `pop()` function, it is woken up from the condition variable and it is checked if `_done` is set and then returns `false`.
 
 {% include code.md name='05-task_system-2' caption='Non-blocking task system on destruction' %}
 
 The task system notifies within the destructor all queues to ignore all potentially remaining entries which allows that the threads can be joined without delay. (With C++20 this could be enhanced with `jthread`s.) 
 
-This task system performs very badly compared to MacOS' Grand Central Dispatch (GCD). It just has a throughput of nnn%. Why does this system perform so badly even that this is the recommended design at several places? 
-This design follows principle from above /*Figure 5.5: Exclusive access by different threads*/. It has a single queue and a bunch of threads. These are banging on that queue and so the threads are waiting often on the mutex. 
+This task system performs very badly compared to MacOS' Grand Central Dispatch (GCD) for instance. It just has a throughput of about 6%. Why does this system perform so badly even that this is the recommended design at several places? 
+This design follows principle from the above [figure](#05-traditional_locking-2). It has a single queue and a bunch of threads. These are banging on that queue and so the threads are waiting often on the mutex. 
 
 Unfortunately it is not possible to transform this model as it is described above because all that is there is a queue. So a different approach is needed.
 
@@ -159,52 +163,31 @@ A way to reduce the contention on this single queue is to change the task system
 
 {% include code.md name='05-task_system-3' caption='Task system with multiple queues' %}
 
-we're just going to have a vector of notification queues. We get to reuse or same notification queue. okay one for each thread so now our run is going to take an index into into which q it's actually bound against when we join now we need to tell all the Q's they're done. next one and when we're going to do our push we're going to keep a little atomic index so we can be pushing from multiple threads and we're just going to keep incrementing it but then we're going to modulo it by our count and so we're just going to round-robin going through pushing into into it there okay and if you notice that's unsigned so wrapping around on that index is not a problem well-defined behavior on our overflow it's a modulo arithmetic
+The task system has now as many queues as threads and the `run()` function gets as parameter the index for its corresponding queue so that it can pick its belonging items.
+On destruction the task system has now to notify all queues about to end their work.
+An continuously incremented atomic integer modulo the number of queues is used within the `async()` function to distribute the tasks in round robin manner over the queues. An atomic member is used to enable that this function can be used from multiple threads.
 
-okay so how do you guys think we did on our speedometer twice as fast is it going to go half halfway up we're just going to go nobody so so I actually did profile all this code. I wrote this. All profiled it it's about ten times better. 
+This system now performs about as twice as fast compared to the previuous approach. But this new way has still two problems: A long running task will block the execution of all other tasks which are behind this one in the queue even that the queues of other cores went dry. And on a fully loaded system there is a fair amount of contention on the mutex of a queue.
 
-okay barely get this movie okay so and we have two problems here one is is I can get a long-running task in one of my Q's and it can cause a bubble and I can have my other course sitting there idle okay so the other is is even in a fully loaded system I can end up with a fair amount of contention right where one of those mutexes blocks and that's you know upwards of a million cycles to do a full task switch right in overhead so having keeping one of those mutexes and actually having it locked kills performance okay
-
-
+These problems can be minimized by using the mechanism of task stealing.
 
 {% include figure.md name='05-task_system_task_stealing' caption='Task System with Task Stealing' %}
 
-so here's the next solution right called task stealing okay now there are lots of sophisticated algorithms that are heavily tuned for
-doing task stealing but we're just going to code it very simply here and the idea with task stealing is is if your queue you being a thread is busy because
-somebody's pushing in the other end okay ah or it's empty either you don't really care see if you can go pull something out to somebody else's queue
-okay so let's do that so and we're going to take our pop and we're going to have tri pop here okay so our tri pop is going to take a tri lock on our mutex
-okay so it's going to try to lock will either get the lock or not if we don't
-get the lock we just return false okay or if the queue is empty we return false
-by the way so we'll do that we're going to do the same thing on our push just for good measure okay so if I'm trying to push something into a queue and that queue is busy I shouldn't wait on it okay cause hold a mutex cause a whole process or cast square to even do a spin lock okay what I'm going to do is if it's busy I'm just going to return false okay couldn't push it okay so now our
-caste system our constructor and destructor stay the same okay but when we do the run now what we're going to do is we're going to do try pop and we'll just run once round all the queues okay and then if we don't get anything once around then we'll just wait where we were okay now on the push side we'll spin around and it turns out on the push if all the cues are busy right right you have to push okay so so what are you going to do well you could just sit and wait on one cue but there's no guarantee that that's the first cue that frees up okay so it's actually better on the push to spin a little more okay so I've got a que there right right and there's a trade-off there you're you're improving overall throughput of the system versus sacrificing a single core to burn it in the spin loop so whether or not it's a win in your system depends on what the load is on your system okay whether or not you have that core to burn so but you can tune it quite a bit so now how do you think we did
-okay so way better okay so we got way up into there now at this point we're about a hundred times better than when we started from Oracle's example code so
-this is a pretty huge improvement okay now what I was benchmarking these at was
-Apple's Grand Central Dispatch that's my one point oh right that's my mindful thing apples Grand Central Dispatch is a very nice piece of work if you actually go and read the code and it even has hooked into Lib colonel and the reason why it has looks into Lib colonel is because it understands when one task is blocked and how to go just ignore that task and go take care of other
-things so you cannot match it with the primitives that you have in standard C++
-okay but we actually came within about 15% okay of it with some straightforward
-code so that's pretty good
+There are different soffisticated, highly optimized approaches in implemening task stealing. Here is take a very simple strategy. 
 
+{% include code.md name='05-notification_queue-3' caption='Notification queue with try_pop and try_push' %}
 
+The queue is enhanced by two new functions, `try_pop()` and `try_push()`.
+The `try_pop()` function return `false` when the atempt fails to get the lock on the mutex with the additional `try_to_lock` property. This can be the case when either an other thread currently pushes or pops an item into or from the queue. The other possibility of a `false` result is when the queue is empty.
+Similar applies for the `try_push()` function. 
+The important difference is that a thread using one of these two functions does never stop on a blocked mutex!
 
+{% include code.md name='05-task_system-4' caption='Task system with task stealing' %}
 
+The code tries within the `run()` function to pop an item from its corresponding queue by calling `try_pop()`. This can either fail because that queue is currently busy or empty. In both cases the code tries to steal a task from a different thread until it has checked for all other queues. If there are no tasks to execute, then it calls for a blocking `pop()` and it is woken up whenever there is more work to do.
+The same approach is taken for pushing an item into the queue in the `async()` function with the difference that the code spins some times over all queues  until it finds one to push the task to. The spinning is done to lower the probability that the calling thread get stuck on the later finally implemented `push()` call.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The task system reaches about 85% of the performance of the reference implementation.
 
 
 But as soon as each application on a system uses its own thread pool there is again the problem of over subscription.
