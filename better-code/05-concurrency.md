@@ -187,13 +187,17 @@ The important difference is that a thread using one of these two functions does 
 The code tries within the `run()` function to pop an item from its corresponding queue by calling `try_pop()`. This can either fail because that queue is currently busy or empty. In both cases the code tries to steal a task from a different thread until it has checked for all other queues. If there are no tasks to execute, then it calls for a blocking `pop()` and it is woken up whenever there is more work to do.
 The same approach is taken for pushing an item into the queue in the `async()` function with the difference that the code spins some times over all queues  until it finds one to push the task to. The spinning is done to lower the probability that the calling thread get stuck on the later finally implemented `push()` call.
 
-The task system reaches about 85% of the performance of the reference implementation.
+The task system reaches now about 85% of the performance of the reference implementation.
 
+So the first goal reducing the number of arbitrary thread is fulfilled; the number of context switches can be minimized by using a task system. But as soon as each individual application on a machine uses its own instance of a task system there is again the problem of over subscription, because each instance would start as many threads as there are cores.
+Such a task system has an other problem. There is the risk of dead-locks.
 
-But as soon as each application on a system uses its own thread pool there is again the problem of over subscription.
+{% include figure.md name='05-dead_lock' caption='Dead lock within queued tasks' %}
 
-So the only solution to reduce the amount of context switches is that all application within a system use the same thread pool. Since an optimized thread pool needs knowledge about the locking state of a possible task within the thread pool to potentially spawn new threads to avoid dead locks this must be an operating system facility. MacOS and Windows provide here out of the box a thread pool through a low level API.
+As soon as a task `a` creates a new task `b` and the progress of `a` depends on the result of task `b` and task `b` got stuck in the queue behind `a` then the system is in a dead-lock. Figure [](#05-dead_lock) illustrates the problem just with a single queue. But the same problem is there with multiple queues and depending tasks get stuck behind other tasks that are blocked because they are waiting for getting a lock on a mutex or waiting for an other result.
 
+So the only solution to reduce the problem having unbound number of threads and dead-locks is that all application within a system use the same task system. Only a task system on OS's kernel level has knowledge about threads that currently don't make progress and so can spawn new threads to prevent the dead-lock situation.
+MacOS and Windows provide here out of the box a thread pool through a low level API.
 
 
 ### Problems of call backs
