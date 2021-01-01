@@ -23,30 +23,4 @@ class notification_queue {
         _ready.notify_one();
         return true;
     }
-
-    void done() {
-        {
-            unique_lock<mutex> lock{_mutex};
-            _done = true;
-        }
-        _ready.notify_all();
-    }
-
-    bool pop(function<void()>& x) {
-        lock_t lock{_mutex};
-         while (_q.empty() && !_done) _ready.wait(lock);
-         if (_q.empty()) return false;
-         x = move(_q.front());
-        _q.pop_front();
-        return true;
-    }
-
-    template<typename F>
-    void push(F&& f) {
-        {
-            lock_t lock{_mutex};
-            _q.emplace_back(forward<F>(f));
-        }
-        _ready.notify_one();
-    }
 };
