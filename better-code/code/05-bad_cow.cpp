@@ -1,13 +1,11 @@
 template <typename T>
-class bad_cow 
-{
-    struct object_t 
-    {
-        explicit object_t(const T& x) : _data(x) {}
-        atomic<int> _count{1};
-        T           _data; 
-    };
-    object_t* _object;
+class bad_cow {
+  struct object_t {
+    explicit object_t(const T& x) : _data(x) {}
+    atomic<int> _count{1};
+    T _data;
+  };
+  object_t* _object;
 
  public:
     explicit bad_cow(const T& x) : _object(new object_t(x)) { }
