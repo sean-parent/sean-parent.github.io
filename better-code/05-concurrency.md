@@ -189,16 +189,20 @@ The same approach is taken for pushing an item into the queue in the `async()` f
 
 The task system reaches now about 85% of the performance of the reference implementation.
 
-So the first goal reducing the number of arbitrary thread is fulfilled; the number of context switches can be minimized by using a task system. But as soon as each individual application on a machine uses its own instance of a task system there is again the problem of over subscription, because each instance would start as many threads as there are cores.
-Such a task system has an other problem. There is the risk of dead-locks.
+So the first goal reducing the number of arbitrary thread is fulfilled; the number of context switches can be minimized by using a task system. But as soon as each individual application on a machine uses its own instance of a task system, there is again the problem of over subscription because each instance would start as many threads as there are cores.
+Such a task system of fixed number of threads has an other problem. There is the risk of dead-locks.
 
 {% include figure.md name='05-dead_lock' caption='Dead lock within queued tasks' %}
 
 As soon as a task `a` creates a new task `b` and the progress of `a` depends on the result of task `b` and task `b` got stuck in the queue behind `a` then the system is in a dead-lock. Figure [](#05-dead_lock) illustrates the problem just with a single queue. But the same problem is there with multiple queues and depending tasks get stuck behind other tasks that are blocked because they are waiting for getting a lock on a mutex or waiting for an other result.
 
-So the only solution to reduce the problem having unbound number of threads and dead-locks is that all application within a system use the same task system. Only a task system on OS's kernel level has knowledge about threads that currently don't make progress and so can spawn new threads to prevent the dead-lock situation.
-MacOS and Windows provide here out of the box a thread pool through a low level API.
+So the only solution to reduce the problem of having an unbound number of threads and the probability of dead-locks because of depending tasks is that all application within a system use the same task system. Only a task system on OS's kernel level has knowledge about threads that currently don't make progress and can spawn new threads to prevent the dead-lock situation.
+MacOS and Windows e.g. provide here out of the box a task system through a low level API.
 
+
+{::comment}
+Shall call backs be discussed here? Technically they don't introduce a problem. But from the point of view of maintenability it is one, because the control flow is hard to understand.
+{:/comment}
 
 ### Problems of call backs
 * Contra: Hard dto reason about the flow in the code

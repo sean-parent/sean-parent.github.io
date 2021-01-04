@@ -164,11 +164,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="1.1825314"
-     inkscape:cy="187.22356"
+     inkscape:zoom="31.678384"
+     inkscape:cx="241.33688"
+     inkscape:cy="255.45979"
      inkscape:document-units="mm"
-     inkscape:current-layer="g364-1-0-1-5-3"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:window-width="2482"
@@ -194,7 +194,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -378,13 +378,13 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="98.208374"
-         y="86.466621"
+         x="98.525757"
+         y="86.366394"
          id="text841-1-8"><tspan
            sodipodi:role="line"
            id="tspan843-3-1"
-           x="98.208374"
-           y="86.466621"
+           x="98.525757"
+           y="86.366394"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Task</tspan></text>
     </g>
     <g
@@ -414,34 +414,18 @@
            id="tspan1973">b</tspan></text>
     </g>
     <g
-       id="g6384-6"
-       transform="matrix(0.8352335,0,0,0.79636631,33.542362,154.50785)">
+       id="g1553"
+       transform="matrix(0.22545791,0,0,0.22545791,109.68474,164.16451)">
       <path
-         sodipodi:type="star"
-         style="mix-blend-mode:normal;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.406;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path6199-7"
-         sodipodi:sides="8"
-         sodipodi:cx="118.29996"
-         sodipodi:cy="43.541431"
-         sodipodi:r1="5.3626075"
-         sodipodi:r2="5.8289208"
-         sodipodi:arg1="1.5707963"
-         sodipodi:arg2="1.9634954"
-         inkscape:flatsided="false"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 118.29996,48.904039 -2.23063,0.02261 -1.56131,-1.593284 -1.59328,-1.561305 0.0226,-2.230631 -0.0226,-2.230632 1.59328,-1.561305 1.56131,-1.593284 2.23063,0.02261 2.23063,-0.02261 1.5613,1.593284 1.59329,1.561305 -0.0226,2.230631 0.0226,2.230632 -1.59329,1.561304 -1.5613,1.593285 z" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="113.61463"
-         y="44.886082"
-         id="text6203-46"><tspan
-           sodipodi:role="line"
-           id="tspan6201-7"
-           x="113.61463"
-           y="44.886082"
-           style="font-size:3.52778px;stroke-width:0.264583">STOP</tspan></text>
+         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1.965;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 100.54167,88.635417 19.84375,31.750003 H 80.697917 Z"
+         id="path833"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 99.785084,96.188298 -4.284054,14.057382 3.883404,-3.36316 -2.127323,7.16017 -1.287167,-1.98584 0.325554,5.28827 4.409272,-3.42201 -2.629408,0.29424 4.374208,-10.87266 -4.672217,3.45144 4.228967,-9.791463 z"
+         id="path837"
+         sodipodi:nodetypes="cccccccccccc" />
     </g>
   </g>
 </svg>
