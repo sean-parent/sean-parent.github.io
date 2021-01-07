@@ -5,7 +5,7 @@ class task_system {
 
   void run(unsigned i) {
     while (true) {
-      function<void()> f;
+      task<void()> f;
       _q.pop(f);
       f();
     }

@@ -1,11 +1,11 @@
 class notification_queue {
-  deque<function<void()>> _q;
+  deque<task<void()>> _q;
   bool _done{false};
   mutex _mutex;
   condition_variable _ready;
 
  public:
-  bool try_pop(function<void()>& x) {
+  bool try_pop(task<void()>& x) {
     lock_t lock{_mutex, try_to_lock};
     if (!lock || _q.empty()) return false;
     x = move(_q.front());

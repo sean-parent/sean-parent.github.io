@@ -18,13 +18,13 @@ All of the goals and lessons in this book have been, in one way or another, abou
 
 ### Definition of _raw synchronization primitives_.
 
-A _raw synchronization primitive_ is a low level construct used to synchronize access to data. Examples include locks and mutexes, condition variables, semaphores, atomic operations, and memory fences.
+A _raw synchronization primitive_ is a low-level construct used to synchronize access to data. Examples include locks and mutexes, condition variables, semaphores, atomic operations, and memory fences.
 
-{::comment} Discuss difference between data parallelism and task concurrency, so far this chapter is only dealing with tasking. However, it could be expanded upon. {:/comment}
+{::comment} Discuss the difference between data parallelism and task concurrency, so far this chapter is only dealing with tasking. However, it could be expanded upon. {:/comment}
 
 The goal of this chapter is to develop concurrent code without using raw synchronization primitives.
 
-The first problem with raw synchronization primitives are that they are exceedingly error prone to use because, by defintion, they require reasoning about non-local effects.
+The first problem with raw synchronization primitives are that they are exceedingly error-prone to use because, by definition, they require reasoning about non-local effects.
 
 For example, [xxxx] is a snippet from a copy-on-write datatype, this is a simplified version of code from a shipping system.
 

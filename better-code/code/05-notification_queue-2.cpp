@@ -1,5 +1,5 @@
 class notification_queue {
-  deque<function<void()>> _q;
+  deque<task<void()>> _q;
   bool _done{false};
   mutex _mutex;
   condition_variable _ready;
@@ -13,7 +13,7 @@ class notification_queue {
     _ready.notify_all();
   }
 
-  bool pop(function<void()>& x) {
+  bool pop(task<void()>& x) {
     lock_t lock{_mutex};
 
     while (_q.empty() && !_done) _ready.wait(lock);

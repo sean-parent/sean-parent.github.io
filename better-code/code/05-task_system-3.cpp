@@ -6,7 +6,7 @@ class task_system {
 
   void run(unsigned i) {
     while (true) {
-      function<void()> f;
+      task<void()> f;
       if (!_q[i].pop(f)) break;
       f();
     }
