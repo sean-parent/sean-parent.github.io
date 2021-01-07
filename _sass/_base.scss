@@ -148,7 +148,7 @@ dd {
 	margin-left: 8px;
 }
 
-pre {
+pre:not(.language-mermaid > *) {
     // padding: 8px 0px 8px 0px;
     overflow-x: auto;
     margin: 0;
