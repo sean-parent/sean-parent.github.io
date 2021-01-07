@@ -123,7 +123,7 @@ An over-subscription of threads is then easily the case. That means that more th
 Within such a switch - named context switch - the CPU registers, program counter, and stack pointer of the old thread are saved and the ones from the new thread need to be restored. This saving and restoring take time that is lost for computational tasks of an application. Besides this, the translation lookaside buffer (TLB) must be flushed and the page table of the next process is loaded. The flushing of the TLB causes that the memory access of the new thread is slower in the beginning. This causes an additional slow down.
 So the goal has to be that the number of context switches is as low as possible.
 
-One way to archive this goal is to use a task system. A task system uses a set of threads, normally equal to the number of CPU-cores and distributes the submitted tasks over the available threads. In case that more tasks are submitted than free threads are available then they are put into a queue and whenever one is done the next task is taken from the queue and executed.
+One way to archive this goal is to use a task system. A task system uses a set of threads, normally equal to the number of CPU-cores, and distributes the submitted tasks over the available threads. In case that more tasks are submitted than free threads are available then they are put into a queue and whenever one is done the next task is taken from the queue and executed.
 
 {% include figure.md name='05-simple_tasking_system' caption='Simple task system' %}
 
@@ -135,13 +135,13 @@ The [figure](#05-simple_tasking_system) above shows that the task system consist
 
 {% include code.md name='05-notification_queue-1' caption='Notification queue class' %}
 
-This notification queue consists of a `deque` of `std::function` with a `mutex` and a `condition_variable`. It has a `pop()` operation which is just going to pull one item off of the queue. And it has a `push()` operation to push one item into the queue and notify anybody who might be waiting on the queue.
+This notification queue consists of a `deque` of `task` with a `mutex` and a `condition_variable`. It has a `pop()` operation which is just going to pull one item off of the queue. And it has a `push()` operation to push one item into the queue and notify anybody who might be waiting on the queue.
 
 {% include code.md name='05-task_system-1' caption='Task system class' %}
 
-The task system has a `_count` member which is set to the number of available cores. The system has a vector of threads and the notification queue. The `run()` function is the function that will be executed by the threads. Inside that function is an empty function object. As soon as an item is available in the queue, it pops it from the queue and executes it, and tries to pick the next one.
+The task system has a `_count` member which is set to the number of available cores. The system has a vector of threads and the notification queue. The `run()` function is the function that will be executed by the threads. Inside that function is an empty `task` object. As soon as an item is available in the queue, it pops it from the queue and executes it, and tries to pick the next one.
 The constructor of the task system spins up as many threads as there are cores. Each thread is bound with a lambda against the `run()` function.
-When the task system gets destructed, it is necessary to join all threads. The function that is used by the outside is `async`. It takes the function object and pushes it into the queue.
+When the task system gets destructed, it is necessary to join all threads. The function that is used by the outside is `async`. It takes the `task` object and pushes it into the queue.
 This system is so far very primitive, e.g. it would hang on destruction. The latter is corrected by the following additions:
 
 {% include code.md name='05-notification_queue-2' caption='Notification queue with done switch' %}

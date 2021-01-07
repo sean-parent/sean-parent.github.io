@@ -8,7 +8,7 @@ class task_system {
 
   void run(unsigned i) {
     while (true) {
-      function<void()> f;
+      task<void()> f;
 
       // TODO Take _spin / _count or something different?
       for (unsigned n = 0; n != _spin / _count; ++n) {
