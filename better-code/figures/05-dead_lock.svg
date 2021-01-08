@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="72.732498mm"
-   height="76.622696mm"
-   viewBox="0 0 72.732498 76.622694"
+   height="82.372803mm"
+   viewBox="0 0 72.732498 82.372801"
    version="1.1"
    id="svg2267"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
@@ -165,14 +165,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="102.43065"
-     inkscape:cy="171.07592"
+     inkscape:cx="187.43065"
+     inkscape:cy="223.64195"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
-     inkscape:window-width="2482"
-     inkscape:window-height="1417"
+     inkscape:window-width="1362"
+     inkscape:window-height="877"
      inkscape:window-x="70"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -183,8 +183,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid166"
-       originx="-4.1576966"
-       originy="-30.940765" />
+       originx="-4.1576962"
+       originy="-25.190655" />
   </sodipodi:namedview>
   <metadata
      id="metadata2264">
@@ -194,7 +194,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -202,7 +202,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-69.039396,-120.14831)">
+     transform="translate(-69.039396,-114.3982)">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.273518px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3424-8)"
        d="m 93.985866,175.19713 v 7.67291"
@@ -360,11 +360,6 @@
            y="111.49866"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Arial;-inkscape-font-specification:Arial;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Task</tspan></text>
     </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-42)"
-       d="m 126.7942,189.22004 h -11.64166 v -66.93923 h 17.19791 v 5.29167"
-       id="path168-5"
-       sodipodi:nodetypes="ccccc" />
     <g
        id="g369-3-6"
        transform="translate(31.110396,103.77323)"
@@ -427,5 +422,27 @@
          id="path837"
          sodipodi:nodetypes="cccccccccccc" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="86.331848"
+       y="119.54012"
+       id="text969"><tspan
+         sodipodi:role="line"
+         id="tspan967"
+         x="86.331848"
+         y="119.54012"
+         style="font-size:4.23333px;stroke-width:0.264583">State 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="124.41295"
+       y="119.54012"
+       id="text969-2"><tspan
+         sodipodi:role="line"
+         id="tspan967-6"
+         x="124.41295"
+         y="119.54012"
+         style="font-size:4.23333px;stroke-width:0.264583">State 2</tspan></text>
   </g>
 </svg>
