@@ -57,6 +57,10 @@ Since most desktop or mobile processors have less than 64 cores, it is better to
 
 So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a mutex. Serialization can mean sharing the same memory or sharing the same address bus for the memory, if it is not a NUMA architecture. Sharing the same cache line or anything that is shared within the processor starts to bend that curve down and it bends down rapidly, even an atomic bends that curve down.
 
+{::comment}
+Also, in the Amdahl's law section I think we should have a passing reference to Gustafson's law which is related to Amdahl's law but is looking at latency of the system as the number of processors increases instead of time to complete a fixed body of work. Gustafson's law is applicable for building interactive systems and scalable server architectures as examples where scalability implies the system will be processing more requests.
+{:/comment}
+
 The following illustrates an often used model for implementing exclusive access to an object by multiple threads:
 
 {% include figure.md name='05-traditional_locking-1' caption="Different threads need access to single object" %}
@@ -197,8 +201,22 @@ Such a task system with a fixed number of threads has another problem. The risk 
 As soon as a task `a` creates a new task `b` and the progress of `a` depends on the result of task `b` and task `b` got stuck in the queue behind `a` then the system is in a dead-lock. Figure [](#05-dead_lock) illustrates the problem just with a single queue. But the same problem is there with multiple queues and depending task get stuck behind other tasks that are blocked because they are waiting for getting a lock on a mutex or waiting for another result.
 
 So the only solution to reduce the problem of having an unbound number of threads and the probability of dead-locks because of depending tasks is that all applications within a system use the same task system. Only a task system on OS's kernel-level knows about threads that currently don't make progress and can spawn new threads to prevent a dead-lock situation.
-MacOS and Windows e.g. provide here out of the box a task system through a low-level API.
+MacOS and Windows e.g. provide here out of the box a task system through a low-level API. (Mac's task-system libdispatch can be added to Linux via package managements.)
 
+Regarding the previous implementation with the serial-queue and the task-system, it is important to keep in mind that lock-free implementations of queues exist which can be utilized to improve the performance. Lock-free does not mean that no synchronizations take place, but the overhead is reduced.
+While submitting tasks, the size of the task should be weighted against the overhead of the used serial-queue or task-system. If the tasks are too small compared to the overhead then it is more efficient to execute them serially. 
+
+#### Futures as abstraction
+
+Conceptually, a future is a way to separate the result of a function from the execution of the function. The task (the function packaged so it returns void) can be executed in a different context (the execution context is controlled by executors in some of the proposals) and the result will become available via the future.
+
+A future also serves as a handle to the associated task, and may provide some operation to control the task.
+
+The primary advantage of a future over a callback is that a callback requires the subsequent operation in advance. Where a future allows a continuation, via a `then()` function, at some later point. This feature makes futures easier to compose, easier to integrate into an existing system, and more powerful as they can be stored and the continuation can be attached as the result of another action, later. However, this flexibility comes with the inherent cost, it requires an atomic test when the continuation is attached to determine if the value is already available. Because of this cost, for many library operations, it makes sense to provide a form taking a callback as well as one returning a future. Although at first glance it may appear, that a callback from is easily adapted to a future form, that is not the case for reasons discussed below.
+
+{::comment}
+Add that under a mutex no user objects should be destroyed
+{:/comment}
 
 {::comment}
 Shall call backs be discussed here? Technically they don't introduce a problem. But from the point of view of maintainability it is one because the control flow is hard to understand.
