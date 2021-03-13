@@ -17,13 +17,18 @@ comments: true
 
 ***
 
-Date: 2019-10-31, 2019-09-19
+Date: 2019-10-31, 2019-09-19, 2021-03-13
 
 ### Better Code: Relationships
 
 Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use and misuse of these paradigms. Then we'll look at ways to model these relationships in C++ and use them to build correct applications.
 
-Note: Talk presented at [C++ Russia](https://cppconf.ru/en/), 2019-10-31
+Note: Talk presented at [ACCU 2021](https://accu.org/), 2021-03-13
+
+*   [PDF](presentations/2021-03-13-relationships/2021-03-13-relationships.pdf)
+*   [Keynote](presentations/2021-03-13-relationships/2021-03-13-relationships.key)
+
+Note: Talk presented at [C++ Russia 2019](https://cppconf.ru/en/), 2019-10-31
 
 *   [PDF](presentations/2019-10-31-relationships/2019-10-31-relationships.pdf)
 *   [Keynote](presentations/2019-10-31-relationships/2019-10-31-relationships.key)
