@@ -21,7 +21,7 @@ Date: 2019-10-31, 2019-09-19
 
 ### Better Code: Relationships
 
-Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them together. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use, and misuse of these paradigms. Then we'll look at ways to model these relationships in C++ and use them to build correct applications.
+Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use and misuse of these paradigms. Then we'll look at ways to model these relationships in C++ and use them to build correct applications.
 
 Note: Talk presented at [C++ Russia](https://cppconf.ru/en/), 2019-10-31
 
@@ -34,7 +34,7 @@ Note: Talk presented at [CppCon 2019](https://cppcon.org/), 2019-09-19.
 *   [PDF](presentations/2019-09-19-relationships/2019-09-19-relationships.pdf)
 *   [Keynote](presentations/2019-09-19-relationships/2019-09-19-relationships.key)
 
-Errata: In the video, the slide for erasing an element from the registry contains a bug. It fails to check if the element has already been erased. Fixed in the posted slides.
+Errata: In the video, the slide for erasing an element from the registry contains a bug. It fails to check if the element has already been erased. It is fixed in the posted slides.
 
 ***
 
@@ -69,9 +69,9 @@ Date: 2018-11-08, 2018-10-18
 
 ### Generic Programming
 
-Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet the core concepts of generic programming are still often misunderstood and misrepresented. 30 years in, this talk will look a little at how generic programming came to be, and why it is not simply "another paradigm" for software development.
+Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet, the core concepts of generic programming are still often misunderstood and misrepresented. Thirty years in, this talk will look a little at how generic programming came to be and why it is not simply "another paradigm" for software development.
 
-Addition: When preparing this talk I was unable to find a picture of Meng and Alex from the Al Stevens interview in [Dr. Dobb's Journal, March 1995](http://stepanovpapers.com/drdobbs-interview.pdf). Alex was kind enough to give me a copy of the original publication.
+Addition: When preparing this talk, I was unable to find a picture of Meng and Alex from the Al Stevens interview in [Dr. Dobb's Journal, March 1995](http://stepanovpapers.com/drdobbs-interview.pdf). Alex was kind enough to give me a copy of the original publication.
 
 *   [JPEG](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.jpg)
 *   [44MB TIFF](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.tif)
@@ -98,7 +98,7 @@ Abstract: A lightning talk demonstrating how to write a polymorphic task templat
 
 Errata: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](http://stlab.cc/tips/small-object-optimizations.html).
 
-Note: Talk presented as lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
+Note: Talk presented as a lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
 
 *   [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
 *   [PDF](presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
@@ -110,7 +110,7 @@ Date: 2018-09-28, 2017-11-09, 2017-11-06
 
 ### Better Code: Human interface
 
-Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics and improving how we reason about code can have a direct on positive impact on the human interface behavior of the system. Part of my “Better Code” series of talks, the goal is “Don’t Lie.”
+Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics, and improving how we reason about code can have a direct and positive impact on the human interface behavior of the system. As part of my "Better Code" series of talks, the goal is "Don't Lie."
 
 Note: Talk presented at [cppcon 2018](https://cppcon.org/) and [Wargaming.net](https://na.wargaming.net/).
 
@@ -129,7 +129,7 @@ Date: 2017-01-25, 2016-11-15, 2016-05-16
 
 ### Better Code
 
-Abstract: The process of improving an existing body of code can be very challenging. In this talk I'll offer a concise definition of "good code", inherent tradeoffs in any system, and techniques for approaching a large code base.
+Abstract: The process of improving an existing body of code can be very challenging. In this talk, I'll offer a concise definition of "good code," inherent tradeoffs in any system, and techniques for approaching a large codebase.
 
 Note: This is a revised version of the talk presented at [ACCU Bay Area](https://www.meetup.com/ACCU-Bay-Area/).
 
@@ -155,7 +155,7 @@ Date: 2017-01-18, 2016-10-10
 
 ### Better Code: Runtime Polymorphism
 
-Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. Part of my “Better Code” series of talks, the goal is “No Inheritance.”
+Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. As part of my "Better Code" series of talks, the goal is "No Inheritance."
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
@@ -174,7 +174,7 @@ Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
 
 ### Better Code: Concurrency
 
-Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference, implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations, and looks towards sequential communicating processes, higher level concurrent constructs. Part of my “Better Code” series of talks, the goal is to learn to write software that doesn’t wait.
+Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. Part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
 
 __Erratum: I've incorrectly stated that `std::async()` changed with C++14. I intend to write a lengthier description of the issue soon.__
 
@@ -203,7 +203,7 @@ Note: This is the version of the talk presented at the [Bay Area C++ User Group 
 *   [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
 *   [Keynote](presentations/2015-04-21-concurrency/concurrency.key)
 
-Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I belive the slides are the same as those listed above.
+Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I believe the slides are the same as those listed above.
 
 *    [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
 
@@ -363,7 +363,7 @@ Date: 2015-10-26
 
 Authors: Gabriel Foust, Jaakko Järvi, Sean Parent
 
-Abstract: For a GUI to remain responsive, it must be able to schedule lengthy tasks to be executed asynchronously. In the traditional approach to GUI implementation–writing functions to handle individual user events–asynchronous programming easily leads to defects. Ensuring that all data dependencies are respected is difficult when new events arrive while prior events are still being handled. Reactive programming techniques, gaining popularity in GUI programming, help since they make data dependencies explicit and enforce them automatically as variables’ values change. However, data dependencies in GUIs usually change along with its state. Reactive programming must therefore describe a GUI as a collection of many reactive programs, whose interaction the programmer must explicitly coordinate. This paper presents a declarative approach for GUI programming in which the programmer is relieved from coordinating asynchronous computations. The approach is based on our prior work on “property models”, where GUI state is maintained by a dataflow constraint system. A property model responds to user events by atomically constructing new data dependencies and scheduling asynchronous computations to enforce those dependencies. In essence, a property model dynamically generates a reactive program, adding to it as new events occur. The approach gives the following guarantee: the same sequence of events produces the same result, regardless of the duration of processing the events.
+Abstract: For a GUI to remain responsive, it must be able to schedule lengthy tasks to be executed asynchronously. In the traditional approach to GUI implementation–writing functions to handle individual user events–asynchronous programming easily leads to defects. Ensuring that all data dependencies are respected is difficult when new events arrive while prior events are still being handled. Reactive programming techniques, gaining popularity in GUI programming, help since they make data dependencies explicit and enforce them automatically as variables' values change. However, data dependencies in GUIs usually change along with its state. Reactive programming must therefore describe a GUI as a collection of many reactive programs, whose interaction the programmer must explicitly coordinate. This paper presents a declarative approach for GUI programming in which the programmer is relieved from coordinating asynchronous computations. The approach is based on our prior work on "property models", where GUI state is maintained by a dataflow constraint system. A property model responds to user events by atomically constructing new data dependencies and scheduling asynchronous computations to enforce those dependencies. In essence, a property model dynamically generates a reactive program, adding to it as new events occur. The approach gives the following guarantee: the same sequence of events produces the same result, regardless of the duration of processing the events.
 
 Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generating-reactive-programs-for-graphical-user-interfaces-from-multi-way-dataflow-constraint-systems).
 
@@ -412,7 +412,7 @@ interface elements, conditionally enabled controls, and script record-ability an
 different documents. A significant fraction of the application programming effort is devoted to
 implementing such functionality, and the resulting code is typically not reusable.
 
-This paper extends our “property models” approach to programming user interfaces. Property models
+This paper extends our "property models" approach to programming user interfaces. Property models
 allow a large part of the functionality of a user interface to be implemented in reusable libraries,
 reducing application specific code to a set of declarative rules. We describe how, as a by-product
 of computations that maintain the values of user interface elements, property models obtain accurate
@@ -470,7 +470,7 @@ Abstract: A key benefit of generic programming is its support for producing modu
 
 Date: 2019-10-17
 
-### cpp.chat - Episode #62 (with Sean Parent) "I’m Surprised You Brought up Rotate"
+### cpp.chat - Episode #62 (with Sean Parent) "I'm Surprised You Brought up Rotate"
 
 Jon Kalb and Phil Nash interview me live at [CppCon 2019](https://cppcon.org/).
 
