@@ -9,6 +9,8 @@ chapter: 5
 
 ### Motivation
 
+A _task_ is a unit of work, often a function.
+
 _Concurrency_ is when multiple tasks start, run, and complete in overlapping time-periods and should not be confused with _parallelism_ which is when multiple tasks execute simultaneously. Parallelism requires some form of hardware support, whereas concurrency can be achieved strictly through software, such as a cooperative tasking system.
 
 There are two primary benefits of concurrent code. The performance is the first by enabling parallelism. The second is to improve interactivity by not blocking the user while a prior action is being processed.
@@ -19,7 +21,7 @@ The goal of this chapter is to develop concurrent code without using raw synchro
 
 ### Definition of _raw synchronization primitives_
 
-A _raw synchronization primitive_ is a low-level construct used to synchronize access to data. Examples include locks and mutexes, condition variables, semaphores, atomic operations, and memory fences.
+A _raw synchronization primitive_ is a low-level construct used to synchronize access to data. Examples include locks and [^mutex]es, condition variables, semaphores, atomic operations, and memory fences.
 
 {::comment} Discuss the difference between data parallelism and task concurrency, so far this chapter is only dealing with tasking. However, it could be expanded upon. {:/comment}
 
@@ -31,31 +33,31 @@ For example, the following is a snippet from a copy-on-write[^cow_definition] da
 
 {% include code.md name='05-bad_cow' caption='Incorrect copy-on-write' %}
 
-The code contains a subtle race condition. The `if` statement at line 16 is checking the value of an atomic count to see if it is 1. The `else` statement handles the case where it is not 1. Within the else statement the count is decremented at line 19. The problem is that if decrementing the count results in a value of 0 then the object stored in `_object` should be deleted. The code fails to check for this case, and so an object may be leaked.
+The code contains a subtle race condition. The `if` statement at line 16 is checking the value of an atomic count to see if it is one. The `else` statement handles the case where it is not one. At line 19, the count is decremented within the `else` statement. The problem is that if decrementing the count results in a value of zero then the object stored in `_object` should be deleted. The code fails to check for this case, and so an object may be leaked.
 
-The initial test to see if the count was 1 isn't sufficient, between that check and when the count is decremented and another thread may have released ownership and decremented the count leaving this object instance as the sole owner.
+The initial test isn’t sufficient to see if the count was one. Between that check and when the count is decremented and another thread may have released ownership and decremented the count leaving this object instance as the sole owner.
 
-The fix is to test atomically with the decrement in the same statement, line 19. The correct code is shown in shown below:
+The correct way is to test atomically with the decrement in the same statement, line 19. The code is shown below:
 
 {% include code.md name='05-correct_cow' caption='Correct copy-on-write' %}
 
 The code of the complete, correct implementations is available online[^cow].
 
-Another problem with raw synchronization primitives is that their use can have a large negative impact on system performance. To understand why, we need to understand Amdahl's Law.
+Another problem with raw synchronization primitives is that their use can have a large negative impact on the system performance. This implications are described by Amdahl’s Law.
 
 The intuition behind Amdahl's Law is that if a part of the system takes time x to complete on a single core or processor, then it will encounter a speedup of y if it is run on y cores, but only if no synchronization takes places between the different cores or processors. 
 $$S(N) = \frac{1}{(1-P)+\frac{P}{N}}$$
-Where the speedup $$S$$ is defined by this equation. $$P$$ is hereby the amount of synchronization in the range of $$[0 .. 1]$$ and $$N$$ the number of cores or processors.
+Where the speedup $$S$$ is defined by this equation. $$P$$ is hereby the amount of synchronization in the range of $$[0 .. 1]$$ and $$N$$ is the number of cores or processors.
 
 Drawing the abscissa in logarithmic scale illustrates that there is only a speedup of 20 times, even when the system is running on 2048 or more cores and just 5% synchronization takes place.
 
 {% include figure.md name='05-amdahl_log' caption="Amdahl's law logarithmic scale" %}
 
-Since most desktop or mobile processors have less than 64 cores, it is better to take a look at the graph with a linear scale. Each line below the diagonal represents 10% more serialization. So if the application just has 10% of serialization and it is running on 16 cores then the speed-up is just a little better than the factor of six.
+Since most desktop or mobile processors have nowadays less than 64 cores, it is better to take a look at the graph with a linear scale. Each line below the diagonal represents 10% more serialization. So if the application just has 10% of serialization and it is running on 16 cores then the speed-up is just a little better than factor of six.
 
 {% include figure.md name='05-amdahl_lin' caption="Amdahl's law linear scale" %}
 
-So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a mutex. Serialization can mean sharing the same memory or sharing the same address bus for the memory, if it is not a NUMA architecture. Sharing the same cache line or anything that is shared within the processor starts to bend that curve down and it bends down rapidly, even an atomic bends that curve down.
+So Amdahl's law has a huge impact. Serialization doesn't mean only locking on a mutex. Serialization can mean sharing the same memory or sharing the same address bus for the memory, if it is not a NUMA architecture. Sharing the same cache line or anything that is shared within the processor starts to bend that curve down. Even a write operation on an atomic value is synchronized between the cores and bends that curve down, it bends it down rapidly, 
 
 {::comment}
 Also, in the Amdahl's law section I think we should have a passing reference to Gustafson's law which is related to Amdahl's law but is looking at latency of the system as the number of processors increases instead of time to complete a fixed body of work. Gustafson's law is applicable for building interactive systems and scalable server architectures as examples where scalability implies the system will be processing more requests.
@@ -65,7 +67,7 @@ The following illustrates an often used model for implementing exclusive access 
 
 {% include figure.md name='05-traditional_locking-1' caption="Different threads need access to single object" %}
 
-As soon as the different threads do not only want to read the single object, but need write access as well, it is necessary to give just a single thread exclusive access. (Otherwise, undefined behavior is the result.) All other threads have to wait for their turn to get read or access. 
+As soon as the different threads do not only want to read the single object, but need write access as well, it is necessary to give just a single thread exclusive access. (Otherwise, undefined behavior is the result.) All other threads have to stop for their turn to get read or write access. 
 
 {% include figure.md name='05-traditional_locking-2' caption="Exclusive access with locking" %}
 
@@ -73,7 +75,7 @@ When the one thread does not need anymore its exclusive access, it gives its up.
 
 {% include figure.md name='05-traditional_locking-3' caption="Exclusive access by different threads" %}
 
-And the next thread can get the exclusive [^access].
+And the next thread can get the exclusive access.
 
 This is a horrible way to think about threading. The goal has to be to minimize waiting at all costs. David [^Butenhof], one of the POSIX implementors, coined the phrase that mutex should be named better bottleneck, because of the property of slowing down an application.
 
@@ -96,7 +98,7 @@ So why is this an important sentence? It means that one can always think about m
 * Each operation may yield a result, $$r_m$$, which can communicate information about the state of $$x$$ while it’s associated operation was executed
 * The same is true of all atomic operations
 
-So there is not a lot of difference between a `std::atomic`. In fact there, is a call on `std::atomic` that returns `true`, if it is lock-free. This means the processor supports to do that as an atomic item within the processor or is there, not processor support and the compiler has to generate a mutex pair to lock, make the change on the atomic operation, and do the unlock. So all that mutexes and locks are the way to construct atomic operations. 
+So there is not a lot of difference between a `std::atomic`. In fact, there is a call on `std::atomic` that returns `true`, if it is lock-free. This means the processor supports to do that as an atomic item within the processor, or is there, not processor support and the compiler has to generate a mutex pair to lock, make the change on the atomic operation, and do the unlock. So that mutexes and locks are the way to construct atomic operations. 
 
 That means that any piece of code that has a mutex can be transformed into a queued model. This idea applied to the registry example from above leads to this:
 
@@ -108,6 +110,36 @@ As well one can rewrite the `get` string operation. But here the difference is, 
 {% include code.md name='05-registry-2' caption='Enhanced registry with queue' %}
 
 Why is it important to understand this concept? Because at any place with a mutex in the code one can always make this transformation. One can always transform it into a serialized queue model. And this means that within the serialized queue model anytime somebody can come along and calls `set`, regardless of the amount of work that `set` takes, the time it takes for `set` to return to the caller itself constant. This means as well that one can add something like an arbitrary `set`, e.g a whole vector of key-value pairs. And to the caller, this `set` will take just as much time as the previous `set`. It's a non-blocking operation with an upper bound of overhead. 
+
+{::comment}
+Add here the two measurement graphs that compare the mutex guarded and serial queue guarded map without and with additional load
+{:/comment}
+
+### Further problems of mutexes
+
+The usage of mutexes raise the probability of dead-locks within a complex system. Function calls under a locked mutex should be avoided. 
+
+This means as well that user objects should not be destructed under a locked mutex. 
+
+{% include code.md name='05-destruction-0' caption='Destruction of container node under mutex' %}
+
+Depending of the - in this example omitted - complexity of class `Field`, the destruction of the object under the mutex increases the contention under the lock.
+
+{% include code.md name='05-destruction-1' caption='Destruction of list node outside the mutex' %}
+
+Only node pointers are transfered within the `list.splice` operation to the temporary element `obsolete_field`, so that the node can be deleted outside the mutex.
+
+{% include code.md name='05-destruction-2' caption='Destruction of unordered_map node outside the mutex' %}
+
+`unordered_map.find` returns the iterator of the searched noded, if it is available. `unordered_map.extract` moves the node out of the container into the temporary object `obsolete_node`. The possible content of the node is deleted - outside of the mutex - when it is destructed by leaving the outer scope.
+
+{% include code.md name='05-destruction-3' caption='Destruction of vector objects outside the mutex' %}
+
+The situation within a container is different because it is not node based. When the complexity of `vector<T>::value_type` is beyond trivial destructable one can move the obsolete objects into a temporary vector and delete it outside of the mutex.
+
+{::comment}
+More problems???
+{:/comment}
 
 ### Problems of _raw threads_
 
@@ -215,10 +247,6 @@ A future also serves as a handle to the associated task, and may provide some op
 The primary advantage of a future over a callback is that a callback requires the subsequent operation in advance. Where a future allows a continuation, via a `then()` function, at some later point. This feature makes futures easier to compose, easier to integrate into an existing system, and more powerful as they can be stored and the continuation can be attached as the result of another action, later. However, this flexibility comes with the inherent cost, it requires an atomic test when the continuation is attached to determine if the value is already available. Because of this cost, for many library operations, it makes sense to provide a form taking a callback as well as one returning a future. Although at first glance it may appear, that a callback from is easily adapted to a future form, that is not the case for reasons discussed below.
 
 {::comment}
-Add that under a mutex no user objects should be destroyed
-{:/comment}
-
-{::comment}
 Shall call backs be discussed here? Technically they don't introduce a problem. But from the point of view of maintainability it is one because the control flow is hard to understand.
 {:/comment}
 
@@ -253,6 +281,9 @@ The primary advantage of a future over a simple callback is that a callback requ
 2nd solution Use channels
 
 ### Conclusion
+
+[^mutex]:
+    mutual exclusion
 
 [^cow_definition]:
     Copy-on-write [https://en.wikipedia.org/wiki/Copy-on-write](https://en.wikipedia.org/wiki/Copy-on-write)
