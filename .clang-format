@@ -9,7 +9,7 @@ AccessModifierOffset: -4
 AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
-AlignEscapedNewlines: Left
+AlignEscapedNewlinesLeft: true
 AlignOperands: true
 AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: true
@@ -33,24 +33,19 @@ BinPackParameters: false
 #  AfterObjCDeclaration: false
 #  AfterStruct: false
 #  AfterUnion: false
-#  AfterExternBlock: false
 #  BeforeCatch: false
 #  BeforeElse: false
 #  IndentBraces: false
-#  SplitEmptyFunction: true
-#  SplitEmptyRecord: true
-#  SplitEmptyNamespace: true
 BreakBeforeBinaryOperators: None
 BreakBeforeBraces: Attach
 BreakBeforeInheritanceComma: false
 BreakBeforeTernaryOperators: false
 BreakConstructorInitializersBeforeComma: false
-BreakConstructorInitializers: AfterColon
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: false
-ColumnLimit: 100
+ColumnLimit: 100 # for slides
 CommentPragmas: '^ IWYU pragma:'
-CompactNamespaces: false
+BreakBeforeInheritanceComma: true # ??? (wasn't in PIE)
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
@@ -59,21 +54,16 @@ DerivePointerAlignment: false
 DisableFormat: false
 ExperimentalAutoDetectBinPacking: false
 FixNamespaceComments: true
-ForEachMacros:
-  - foreach
-  - Q_FOREACH
-  - BOOST_FOREACH
-IncludeBlocks:   Preserve
+ForEachMacros: [ foreach, Q_FOREACH, BOOST_FOREACH ]
 IncludeCategories:
   - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
     Priority:        2
-  - Regex:           '^(<|"(gtest|gmock|isl|json)/)'
+  - Regex:           '^(<|"(gtest|isl|json)/)'
     Priority:        3
   - Regex:           '.*'
     Priority:        1
 IncludeIsMainRegex: '$'
 IndentCaseLabels: true
-IndentPPDirectives: None # Other option is AfterHash, which indents top level includes as well
 IndentWidth: 4
 IndentWrappedFunctionNames: true
 JavaScriptQuotes: Leave
@@ -86,7 +76,6 @@ NamespaceIndentation: None
 ObjCBlockIndentWidth: 4
 ObjCSpaceAfterProperty: true
 ObjCSpaceBeforeProtocolList: true
-PenaltyBreakAssignment: 2
 PenaltyBreakBeforeFirstCallParameter: 19
 PenaltyBreakComment: 300
 PenaltyBreakFirstLessLess: 120
@@ -94,13 +83,8 @@ PenaltyBreakString: 1000
 PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 1000
 PointerAlignment: Left
-#RawStringFormats:
-#  - Delimiter:       pb
-#    Language:        TextProto
-#    BasedOnStyle:    google
 ReflowComments: true
 SortIncludes: true
-SortUsingDeclarations: true
 SpaceAfterCStyleCast: false
 SpaceAfterTemplateKeyword: true
 SpaceBeforeAssignmentOperators: true
