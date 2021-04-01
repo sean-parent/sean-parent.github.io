@@ -10,7 +10,7 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.2"
+VERSION="1.0.3"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -67,7 +67,8 @@ cd /mnt/host
 Once the site has been prepared, you can run it to see how it looks. From the docker promt enter:
 
 ```
-./tools/docs/start.sh
+cd /mnt/host
+./tools/docs/start.sh --drafts
 ```
 
 To view the site, open a browser to `http://localhost:3000`. The site will auto rebuild and refresh as files are changed. The [Atom editor](https://atom.io/) has a nice [language package for markdown](https://atom.io/packages/language-markdown) that understand the YAML front matter that Jekyll uses, as well as a core package for markdown previews that uses the github style (great for editing readme files).
@@ -94,3 +95,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 
 - 1.0.0 - Initial release for jekyll
 - 1.0.1 - First update
+- 1.0.3 - Updating jekyll tooling

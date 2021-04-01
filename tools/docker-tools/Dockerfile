@@ -4,7 +4,7 @@ FROM ubuntu:latest AS base
 # Install items requiring root access
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install --no-install-recommends -y \
+RUN apt-get update && apt-get install -y \
     apt-utils \
     fswatch \
     g++ \
@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     wget \
     zlib1g-dev \
 && rm -rf /var/lib/apt/lists/*
+
+RUN npm install -g n
+RUN n latest
 
 RUN npm install -g npm@latest
 RUN npm install -g browser-sync
