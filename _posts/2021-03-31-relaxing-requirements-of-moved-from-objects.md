@@ -11,9 +11,13 @@ date: 2021-03-31 21:16 +0000
 <style>
 .proposed {
   background: #eeffee;
+  border-left: dashed;
+  border-left-color: #00ff00;
 }
 .comment {
   background: #eeeeff;
+  font-family: sans-serif;
+  padding: 8px;
 }
 </style>
 
@@ -39,12 +43,12 @@ This paper details the issue and presents some suggested wording to address it. 
 ### Document Conventions
 
 > This is the proposed wording for the standard. There may be more than one proposed variant for the same section.
-> {: .proposed }
+{: .proposed }
 
 > This is a quote from an existing document.
 
-> This is a comment or work in progress.
-> {: .comment }
+This is a comment or work in progress.
+{: .comment }
 
 ## Motivation and Scope
 
@@ -101,10 +105,10 @@ sort(begin(a), p);
 We need a general requirement regarding _the domain of an operation_. Borrowing from [the text for input iterators](http://eel.is/c++draft/iterator.cpp17#input.iterators-2):
 
 > Unless otherwise specified, there is a general precondition for all operations that the requirements hold for values within the _domain of the operation_.
-> {: .proposed}
+{: .proposed}
 
 > The term _domain of the operation_ is used in the ordinary mathematical sense to denote the set of values over which an operation is (required to be) defined. This set can change over time. Each component may place additional requirements on the domain of an operation. These requirements can be inferred from the uses that a component makes of the operation and is generally constrained to those values accessible through the operation's arguments.
-> {: .proposed}
+{: .proposed}
 
 The above wording should appear in the [Requirements section of the Library Introduction](https://eel.is/c++draft/structure.requirements#8).
 
@@ -188,8 +192,8 @@ _Postconditions:_
 
 ### Option 2
 
-> Option 2 requires that a moved-from object can be used as an rhs argument to move-assignment always, but the result of self-move-assignment is unspecified.
-> {: .comment }
+Option 2 requires that a moved-from object can be used as an rhs argument to move-assignment always, but the result of self-move-assignment is unspecified.
+{: .comment }
 
 <blockquote><p style='text-align:center;' markdown="span">
     Table 28: _Cpp17MoveConstructible_ requirements
