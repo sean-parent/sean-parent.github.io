@@ -79,6 +79,7 @@ After the move `_remote` is equal to `nullptr` and dereferencing `_remote` is un
         } else {
             *_remote = *a._remote;
         }
+        return *this;
     }
 ```
 
