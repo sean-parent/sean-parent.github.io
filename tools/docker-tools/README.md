@@ -10,7 +10,7 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.3"
+VERSION="1.0.4"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -19,12 +19,12 @@ VOLUME="sean-parent.github.io"
 RUBY_VERSION="2.7.1"
 
 # build the base image, no-cache is used so the latest tools are installed
-docker build --build-arg RUBY_VERSION=$RUBY_VERSION --no-cache --file ./tools/docker-tools/Dockerfile --target base --tag $VOLUME .
+docker build --build-arg RUBY_VERSION=$RUBY_VERSION --file ./tools/docker-tools/Dockerfile \
+  --target base --tag $VOLUME . \
+  --no-cache 
 
 # update the docs environment
 docker run --mount type=bind,source="$(pwd)",target=/mnt/host --tty --interactive $VOLUME bash
-
-# from the docker prompt, speciy the ruby version to match https://pages.github.com/versions/
 
 cd /mnt/host
 ./tools/docs/update.sh --lock
@@ -95,4 +95,5 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 
 - 1.0.0 - Initial release for jekyll
 - 1.0.1 - First update
+- 1.0.3 - Updating jekyll tooling
 - 1.0.3 - Updating jekyll tooling

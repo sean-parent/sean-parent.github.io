@@ -4,5 +4,10 @@
     "[markdown]": {
         "editor.wordWrap": "bounded"
     },
-    "editor.rulers": [ 100 ]
+    "editor.rulers": [
+        100
+    ],
+    "cSpell.words": [
+        "postconditions"
+    ]
 }
