@@ -1,7 +1,6 @@
 ---
 title: Data Structures
 tagline: No Incidental Data Structures
-
 layout: book-page
 tags: [ better-code ]
 chapter: 3
