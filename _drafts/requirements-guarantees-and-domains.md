@@ -21,7 +21,7 @@ mathjax: true
 
 ## Introduction and History
 
-In C++ we take if for granted that calling one of the Standard algorithms will do something meaningful. i.e., when invoking `p = std::find(first, last, value)` we expect that if an item equal to `value` is contained in the sequence `[first, last)` then `p` will point to the first such item, otherwise `p` will equal `last`. **How do we know `find` will actually perform this operation?**
+In C++, we take for granted that calling one of the Standard algorithms will do something meaningful. i.e., when invoking `p = std::find(first, last, value)` we expect that if an item equal to `value` is contained in the sequence `[first, last)` then `p` will point to the first such item, otherwise `p` will equal `last`. **How do we know `find` will actually perform this operation?**
 
 The correctness of `find()`, and all of the Standard components, are built with an intricate set of logic stated in the form of _requirements_ and _guarantees_ that ensure, when used correctly, the operation performs as expected. The _requirements_ and _guarantees_ are rooted in _Hoare logic_.
 
@@ -29,23 +29,27 @@ The correctness of `find()`, and all of the Standard components, are built with 
 
 _Hoare logic_ is a formal system for reasoning about the correctness of computer programs.[^hoare-logic] It was proposed in 1969 by Tony Hoare and based on prior work by Robert Floyd. Hoare logic is also known as _Floyd-Hoare logic_.
 
-Hoare logic describes a computation statements as a _Hoare triple_, two assertions bracketing a command.
+Hoare logic describes a computation statements as a _Hoare triple_, two assertions bracketing an operation.
 
 $$
 \begin{aligned}
-  \{P\}C\{Q\}
+  P\{Q\}R.
 \end{aligned}
 $$
 
-Where $$P$$ and $$Q$$ are assertions and $$C$$ is a command. $$P$$ is the precondition, and $$Q$$ the postcondition. When the precondition is met, executing the command establishes the postcondition.
+Where $$P$$ and $$R$$ are assertions and $${Q}$$ is an operation. $$P$$ is the precondition, and $$R$$ the postcondition. When the precondition is met, executing the command establishes the postcondition. An operation without preconditions would be written as $$true\{Q\}R.$$
 
 ### Design by Contract
 
 _Design by contract_ is a term coined by Bertrand Meyer and his Eiffel programming language included constructs to specify preconditions, postconditions, and _class invariants_.[^design-by-contract] The latter is a collection of postconditions that apply to all operations on a class and hence, as preconditions the invariants are always guaranteed to hold.
 
+If a given set of preconditions are met, an operation either succeeds or flags an exception and leaves the machine in a known or determinable state.
+
 ### Generic Programming and Concepts
 
-_Generic Programming_ is a term first used by Alex Stepanov and David Musser in 1988.[^generic-programming] Developed independently from Bertrand Meyer's work, Generic Programming also relies on Hoare logic to reason about the correctness of generic components. A key idea in generic programming is to associate _syntactic constructs_ with a set of axioms that specify the semantics of the construct. The combination of the syntax and axioms form a set of required preconditions and postcondition on types used in a generic components. Generic Programming extends the idea of Hoare logic from values to types. In generic programming a collection of associated syntactic requirements and axioms are named, creating a _named requirement_. i.e., _EqualityComparable_ In 1998, soon after the Standard Template Library was officially adopted into C++98, Alex and James Dehnert coined the term _concepts_ as a more formal definition of named requirements.
+_Generic programming_ is a term first used by Alex Stepanov and David Musser in 1988.[^generic-programming] Developed independently from Bertrand Meyer's work, Generic Programming also relies on Hoare logic to reason about the correctness of generic components. A key idea in generic programming is associating _syntactic constructs_ with a set of axioms that specify the semantics. The syntax and axioms form a set of required preconditions and postconditions on operations on types used in generic components. Generic programming extends the idea of Hoare logic from values to types. In generic programming, a collection of associated syntactic requirements and axioms are named, creating a _named requirement_. i.e., _EqualityComparable_ In 1998, soon after the Standard Template Library was officially adopted into C++98, Alex and James Dehnert coined the term _concepts_ as a more formal definition of named requirements.
+
+A concept is a similar notion to an algebraic structure in mathematics. For example, in mathematics a _semigroup_ is a structure formed by values with an associative binary operation, and by convention, the associative operation is denoted with a $$\cdot$$ operator.
 
 ## Requirements
 ### Preconditions
@@ -106,3 +110,6 @@ Compare the description for the old [SGI STL LessThanComparable concept](http://
 
 
 The Standard no longer relies heavily on named requirements. For example, [`std::find()` in the SGI STL required that `*i` satisify _EqualityComparable_](http://www.martinbroadhurst.com/stl/find.html), but the current Standard only requires that `*i == value` is comparable to `true`.
+
+[:hoare-logic]
+ Hoare, C. A. R. ["An axiomatic basis for computer programming"](http://web.stanford.edu/class/cs357/hoare69.pdf). _Communications of the ACM_, vol. 12, no. 10, Oct. 1969, pp. 576–580. doi:10.1145/363235.363259.

@@ -24,7 +24,7 @@ date: 2021-03-31 21:16 +0000
 }
 </style>
 
-| Document Number: | D2345R2 |
+| Document Number: | P2345R0 |
 | Date: | 2021-04-14 |
 | Reply-to: | Sean Parent, [sean.parent@stlab.cc](sean.parent@stlab.cc) |
 | Audience: | LWG & LEWG |
@@ -42,8 +42,8 @@ The C++ Standard Library requirements are overly restrictive regarding the state
 
 The issue was recognized in Geoffrey Romer's paper, [P2027R0](#p2027). The approach outlined here differs in the following ways:
 
-- The requirements are (slightly) stronger to support `swap(a, a)`
-- It avoids introducing a new object state, _partially formed_, (see [Future Implications](#future-implications))
+- The proposed requirements are (slightly) stronger to support `swap(a, a)`
+- The proposed requirements avoid introducing a new object state, _partially formed_, (see [Future Implications](#future-implications))
 
 This paper details the issue and presents some suggested wording to address it. Depending on the wording chosen, it may be possible to address the issue with a defect report retroactively.
 {: .comment }
@@ -382,7 +382,14 @@ Note that a new component could still provide stronger guarantees than is requir
 
 ### Class invariants
 
-Although the proposal _Support for contract based programming in C++_, [P0542R5](#p0542), did not include class invariants, it is possible that a future version of the standard will. At which time the likely correct decision would be that invariants are not checked on an object that has just been moved from by default, and more generally allow the declaration of _unsafe_ operations where invariants are not checked.
+Although the proposal _Support for contract based programming in C++_, [P0542R5](#p0542), did not include class invariants, it is possible that a future version of the standard will. Class invariants are a way to state postconditions that apply to all (safe) operations on a type. For move, it would be desirable if class invariants where not validated for a moved from object by default, and more generally allow the declaration of _unsafe_ operations where invariants are not checked. One possible way this could be done would be with an attribute to declare if an invariant holds for a given argument:
+
+```cpp
+// unsafe operation on doubly linked list
+void set_next(node& n) [[invariant_holds(n, false)]];
+```
+
+Member functions which are `protected` or `private` would default to `invariant_holds(*this, false)`.
 
 ## References
 

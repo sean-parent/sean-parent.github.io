@@ -10,12 +10,12 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.4"
+VERSION="1.0.5"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
 
-# Speciy the ruby version to match https://pages.github.com/versions/
+# Specify the ruby version to match https://pages.github.com/versions/
 RUBY_VERSION="2.7.1"
 
 # build the base image, no-cache is used so the latest tools are installed
@@ -51,7 +51,7 @@ This should leave you at bash prompt that looks like:
 app@fc7590a63ba3:~$
 ```
 
-The hex number is the docker image container ID and may be different. Going forward I refer to this as the _docker_ prompt to distinguish it from the _local_ promt.
+The hex number is the docker image container ID and may be different. Going forward I refer to this as the _docker_ prompt to distinguish it from the _local_ prompt.
 
 ## Build the documentation site
 
@@ -64,7 +64,7 @@ cd /mnt/host
 
 ## Run a local server for the site
 
-Once the site has been prepared, you can run it to see how it looks. From the docker promt enter:
+Once the site has been prepared, you can run it to see how it looks. From the docker prompt enter:
 
 ```
 cd /mnt/host
@@ -97,3 +97,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.1 - First update
 - 1.0.3 - Updating jekyll tooling
 - 1.0.3 - Updating jekyll tooling
+- 1.0.5 - Updating jekyll tooling
