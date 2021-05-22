@@ -23,13 +23,13 @@ mathjax: true
 
 In C++, we take for granted that calling one of the Standard algorithms will do something meaningful. i.e., when invoking `p = std::find(first, last, value)` we expect that if an item equal to `value` is contained in the sequence `[first, last)` then `p` will point to the first such item, otherwise `p` will equal `last`. **How do we know `find` will actually perform this operation?**
 
-The correctness of `find()`, and all of the Standard components, are built with an intricate set of logic stated in the form of _requirements_ and _guarantees_ that ensure, when used correctly, the operation performs as expected. The _requirements_ and _guarantees_ are rooted in _Hoare logic_.
+The correctness of `find()` and all of the Standard components are built with an intricate set of logic stated in the form of _requirements_ and _guarantees_ that ensure, when used correctly, the operation performs as expected. The _requirements_ and _guarantees_ are rooted in _Hoare logic_.
 
 ### Hoare Logic
 
 _Hoare logic_ is a formal system for reasoning about the correctness of computer programs.[^hoare-logic] It was proposed in 1969 by Tony Hoare and based on prior work by Robert Floyd. Hoare logic is also known as _Floyd-Hoare logic_.
 
-Hoare logic describes a computation statements as a _Hoare triple_, two assertions bracketing an operation.
+Hoare logic describes computation statements as a _Hoare triple_, two assertions bracketing an operation.
 
 $$
 \begin{aligned}
