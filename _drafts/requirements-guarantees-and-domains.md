@@ -1,8 +1,8 @@
----
+—
 layout: post
 title: Requirements, Guarantees, & Domains (Oh My!)
 mathjax: true
----
+—
 <style>
 .comment {
   background: #eeeeff;
@@ -47,12 +47,18 @@ If a given set of preconditions are met, an operation either succeeds or flags a
 
 ### Generic Programming and Concepts
 
-_Generic programming_ is a term first used by Alex Stepanov and David Musser in 1988.[^generic-programming] Developed independently from Bertrand Meyer's work, Generic Programming also relies on Hoare logic to reason about the correctness of generic components. A key idea in generic programming is associating _syntactic constructs_ with a set of axioms that specify the semantics. The syntax and axioms form a set of required preconditions and postconditions on operations on types used in generic components. Generic programming extends the idea of Hoare logic from values to types. In generic programming, a collection of associated syntactic requirements and axioms are named, creating a _named requirement_. i.e., _EqualityComparable_ In 1998, soon after the Standard Template Library was officially adopted into C++98, Alex and James Dehnert coined the term _concepts_ as a more formal definition of named requirements.
+_Generic programming_ is a term first used by Alex Stepanov and David Musser in 1988.[^generic-programming] Developed independently from Bertrand Meyer’s work, Generic Programming also relies on Hoare logic to reason about the correctness of generic components. A key idea in generic programming is associating _syntactic constructs_ with a set of axioms that specify the semantics. The syntax and axioms form a set of required preconditions and postconditions on operations on types used in generic components. Generic programming extends the idea of Hoare logic from values to types. In generic programming, a collection of associated syntactic requirements and axioms are named, creating a _named requirement_. i.e., _EqualityComparable_. In 1998, soon after the Standard Template Library was officially adopted into C++98, Alex and James Dehnert coined the term _concepts_ as a more formal definition of named requirements.
 
 A concept is a similar notion to an algebraic structure in mathematics. For example, in mathematics a _semigroup_ is a structure formed by values with an associative binary operation, and by convention, the associative operation is denoted with a $$\cdot$$ operator.
 
 ## Requirements
+
+For non-generic component operating on a known type, a set of preconditions on the arguments passed to an operation are sufficient. But for a generic component, there are additional requirement on the operations available on the arguments and those operations semantics. Collectively, the preconditions and concepts define the requiements of a generic component.
+
 ### Preconditions
+
+Although a precondition is a predicate, it may not be testable.
+
 ### Class Invariants
 ### Concepts
 ## Guarantees
@@ -66,37 +72,37 @@ Insert quote from Craig Silverstein here.
 
 ##### Items here are snippets that may be incorporated above
 
-The description of `std::find()` might have been better stated that `std::find()` requires the `value` be equality_comparable with values in the sequence, however operator==() of the items in the sequence is not required to be reflexive, but this must hold for `value`. That would allow `std::find(f, l, 3.0)` while disallowing `std::find(f, l, std::nan(""))`.
+The description of `std::find()` might have been better stated that `std::find()` requires the `value` be equality_comparable with values in the sequence, however operator==() of the items in the sequence is not required to be reflexive, but this must hold for `value`. That would allow `std::find(f, l, 3.0)` while disallowing `std::find(f, l, std::nan(“”))`.
 
 Now, I think the best that can be done to salvage the requirements of `std::find()` is to add a note that if the `value` and items in the sequence satisfies equality_comparable then the requirements of `std::find()` are satisfied and if a value is found it will be equal to the `value`.
 
 Compare the description for the old [SGI STL `find()` algorithm](http://eel.is/c++draft/alg.find), to the [specification for `std::find()` in C++20](http://eel.is/c++draft/alg.find).
 
-SGI STL defined `find()` as requiring that the value type, "is a model of _EqualityComparable_." And the concept _EqualityComparable_ contained the precondition that ["x and y are in the domain of `==`"](http://www.martinbroadhurst.com/stl/EqualityComparable.html).
+SGI STL defined `find()` as requiring that the value type, “is a model of _EqualityComparable_.” And the concept _EqualityComparable_ contained the precondition that [“x and y are in the domain of `==`”](http://www.martinbroadhurst.com/stl/EqualityComparable.html).
 
 The definition of domain for `==` still exists in the C++ standard but the use is limited to [_input iterators_](http://eel.is/c++draft/iterator.cpp17#input.iterators-2) and the [requirements for _sentinel_](https://eel.is/c++draft/iterator.concept.sentinel#3).
 
 C++20 does not require the value type in `std::find()` is _EqualityComparable_ but instead requires `operator==()` exist, that it is callable with the value type, and that it returns an item convertible to bool. It no longer makes reference to an _EqualityComparable_ concept. To illustrate the distinction; in the SGI STL the following invocation of `find()` violates the preconditions and is undefined behavior:
 
 ```cpp
-double a[]{1.0, nan(""), 3.0};
-double* p = find(begin(a), end(a), nan(""));
+double a[]{1.0, nan(“”), 3.0};
+double* p = find(begin(a), end(a), nan(“”));
 ```
 
-The reason is that `nan` is outside the domain of operation for `operator==()` when used with `find()` because it doesn't satisfy the requirements of _EqualityComparible_.
+The reason is that `nan` is outside the domain of operation for `operator==()` when used with `find()` because it doesn’t satisfy the requirements of _EqualityComparible_.
 
-By contrast, in C++20, the above code is well defined, but it won't actually find the `nan` value.
+By contrast, in C++20, the above code is well defined, but it won’t actually find the `nan` value.
 
 The weakening of the requirements in the C++ Standard allows for cases like the following:
 
 ```cpp
-double a[]{1.0, nan(""), 3.0};
+double a[]{1.0, nan(“”), 3.0};
 double* p = find(begin(a), end(a), 3.0);
 ```
 
 With the SGI STL specification this is still undefined behavior, but in C++20 this is well defined and will result with `*p == 3.0`.
 
-Concepts, which were created to define the semantics of algorithms and containers, only rarely appear in the current specification for algorithms and containers, and then mostly for iterators. This leaves the algorithms devoid of semantics. i.e. The above `find()` example doesn't actually _find_ anything. The concept requirements and preconditions were created
+Concepts, which were created to define the semantics of algorithms and containers, only rarely appear in the current specification for algorithms and containers, and then mostly for iterators. This leaves the algorithms devoid of semantics. i.e. The above `find()` example doesn’t actually _find_ anything. The concept requirements and preconditions were created
 
 
 
@@ -112,4 +118,4 @@ Compare the description for the old [SGI STL LessThanComparable concept](http://
 The Standard no longer relies heavily on named requirements. For example, [`std::find()` in the SGI STL required that `*i` satisify _EqualityComparable_](http://www.martinbroadhurst.com/stl/find.html), but the current Standard only requires that `*i == value` is comparable to `true`.
 
 [:hoare-logic]
- Hoare, C. A. R. ["An axiomatic basis for computer programming"](http://web.stanford.edu/class/cs357/hoare69.pdf). _Communications of the ACM_, vol. 12, no. 10, Oct. 1969, pp. 576–580. doi:10.1145/363235.363259.
+ Hoare, C. A. R. [“An axiomatic basis for computer programming”](http://web.stanford.edu/class/cs357/hoare69.pdf). _Communications of the ACM_, vol. 12, no. 10, Oct. 1969, pp. 576–580. doi:10.1145/363235.363259.

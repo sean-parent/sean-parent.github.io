@@ -8,6 +8,8 @@ tags: [ better-code ]
 
 ### Motivation
 
+
+
 {::comment}
 For this section I need to first provide motivation for concurrency, and define concurrency and parallelism. which are not commonly understood. Do I need to provide a motivation section for each chapter?
 {:/comment}
