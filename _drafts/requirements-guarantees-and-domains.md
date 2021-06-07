@@ -11,7 +11,7 @@ mathjax: true
 }
 </style>
 
-> Understanding why software fails is interesting, but the real challenge is understanding why software works. &mdash; _Alex Stepanov_
+> Understanding why software fails is important, but the real challenge is understanding why software works. &mdash; _Alexander Stepanov_
 
 ### Table of Contents
 {: .no_toc }
