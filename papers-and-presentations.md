@@ -17,6 +17,19 @@ comments: true
 
 ***
 
+Date: 2021-06-19
+
+### Warning: `std::find()` is broken!
+
+Abstract: We often take it for granted that calling one of the Standard algorithms will do something meaningful. For example, when invoking `position = find(first, last, value)` we expect that if an element equal to value is contained in the range `[first, last)` then `position` will point to the first such element; otherwise, `position` will equal `last`. But how do we know `find` will perform this operation? This talk explores requirements, guarantees, and domains, and we'll discover that maybe `find` doesn't.
+
+Note: Talk presented at [Italian C++ 2021](https://italiancpp.github.io/), 2021-06-19
+
+*   [PDF](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.pdf)
+*   [Keynote](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.key)
+
+***
+
 Date: 2019-10-31, 2019-09-19, 2021-03-13
 
 ### Better Code: Relationships
@@ -25,6 +38,7 @@ Abstract: Computer scientists are bad at relationships. Nearly every program cra
 
 Note: Talk presented at [ACCU 2021](https://accu.org/), 2021-03-13
 
+*   [Video](https://www.youtube.com/watch?v=f5UsHQW7-9w)
 *   [PDF](presentations/2021-03-13-relationships/2021-03-13-relationships.pdf)
 *   [Keynote](presentations/2021-03-13-relationships/2021-03-13-relationships.key)
 
@@ -160,7 +174,7 @@ Date: 2017-01-18, 2016-10-10
 
 ### Better Code: Runtime Polymorphism
 
-Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk a key feature from Photoshop will be demonstrated and implemented. As part of my "Better Code" series of talks, the goal is "No Inheritance."
+Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk, a key feature from Photoshop will be demonstrated and implemented. As part of my "Better Code" series of talks, the goal is "No Inheritance."
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
@@ -470,6 +484,56 @@ Abstract: A key benefit of generic programming is its support for producing modu
 ***
 
 ## Interviews
+
+***
+
+Date: 2021-06-04
+
+### ADSP: The Podcast - Episode 28: Steve Jobs & Sean Parent
+
+In this episode, Conor and Bryce talk to Sean Parent about some of his Steve Jobs stories.
+
+*   [Audio](https://adspthepodcast.com/2021/06/04/Episode-28.html)
+
+***
+
+Date: 2021-05-28
+
+### ADSP: The Podcast - Episode 27: MacHack & Apple with Sean Parent
+
+In this episode, Conor and Bryce talk to Sean Parent about MacHack and how he got hired at Apple.
+
+*   [Audio](https://adspthepodcast.com/2021/05/28/Episode-27.html)
+
+***
+
+Date: 2021-05-21
+
+### ADSP: The Podcast - Episode 26: Sean Parent on Slides Decks, UI & More
+
+In this episode, Conor and Bryce talk to Sean Parent about a plethora of topics including slides, UI and more.
+
+*   [Audio](https://adspthepodcast.com/2021/05/21/Episode-26.html)
+
+***
+
+Date: 2021-03-26
+
+### ADSP: The Podcast - Episode 18: Special Guest Sean Parent! (Part 2)
+
+In this episode, we finish part two of our interview with Sean Parent!
+
+*   [Audio](https://adspthepodcast.com/2021/03/26/Episode-18.html)
+
+***
+
+Date: 2021-03-19
+
+### ADSP: The Podcast - Episode 17: Special Guest Sean Parent!
+
+In this episode, we have our first guest - Sean Parent!
+
+*   [Audio](https://adspthepodcast.com/2021/03/19/Episode-17.html)
 
 ***
 

@@ -1,8 +1,9 @@
-—
+---
 layout: post
 title: Requirements, Guarantees, & Domains (Oh My!)
 mathjax: true
-—
+---
+
 <style>
 .comment {
   background: #eeeeff;
