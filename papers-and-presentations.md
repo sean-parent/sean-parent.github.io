@@ -25,6 +25,9 @@ Abstract: We often take it for granted that calling one of the Standard algorith
 
 Note: Talk presented at [Italian C++ 2021](https://italiancpp.github.io/), 2021-06-19
 
+Note: My pointer/cursor was not visible in the video feed, making some of the code discussion harder to follow.
+
+*   [Video](https://www.youtube.com/watch?v=NO5wHzI_oug&t=1104s)
 *   [PDF](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.pdf)
 *   [Keynote](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.key)
 
