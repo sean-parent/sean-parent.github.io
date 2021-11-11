@@ -89,7 +89,8 @@ The Standard even notes that [assignment need not be a total function](https://e
 
 Geoffrey Romer's paper, [P2027R0](#p2027) makes the observation that _valid but unspecified_ does not compose. The result is that any composite object requires additional code to move the object into a valid state on move.
 
-Attempting to make all operations total with respect to moved-from objects imposes an unnecessary performance penalty and the implementation of such operations is error-prone. Examples and details are provided in an _Annoyance_ I wrote for the upcoming [_Embracing Modern C++ Safely_](#move-annoyance). An example directly from the standard library is detailed in the [Weaker Guarantees for Future Components] section.
+{:#bl-move-annoyance}
+Attempting to make all operations total with respect to moved-from objects imposes an unnecessary performance penalty and the implementation of such operations is error-prone. Examples and details are provided in an _Annoyance_ I wrote for the upcoming [_Embracing Modern C++ Safely_](#move-annoyance). An example directly from the standard library is detailed in the [Weaker Guarantees for Future Components](#weaker-guarantees-for-future-components) section.
 {:#bl-move-annoyance}
 
 In [the discussion](https://lists.isocpp.org/lib-ext/2020/01/14004.php) of [P2027R0](#p2027) there is a lot of confusion about the difference between requirements and guarantees in the Standard. In short, the standard library _requirements_ impose a set of syntactic and semantic requirements on operations on arguments (both types and values) passed to a standard component. i.e., Give `std::find(f, l, v)`; it is required that `f` and `l` denotes a [_valid range_](https://eel.is/c++draft/iterator.requirements#def:range,valid).
