@@ -10,7 +10,7 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.6"
+VERSION="1.0.7"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
