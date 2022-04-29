@@ -54,7 +54,7 @@ A concept is a similar notion to an algebraic structure in mathematics. For exam
 
 ## Requirements
 
-For non-generic component operating on a known type, a set of preconditions on the arguments passed to an operation are sufficient. But for a generic component, there are additional requirement on the operations available on the arguments and those operations semantics. Collectively, the preconditions and concepts define the requiements of a generic component.
+For non-generic component operating on a known type, a set of preconditions on the arguments passed to an operation are sufficient. But for a generic component, there are additional requirement on the operations available on the arguments and those operations semantics. Collectively, the preconditions and concepts define the requirements of a generic component.
 
 ### Preconditions
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Requirements, Guarantees, & Domains (Oh My!)
+title: Property Models
 mathjax: true
 ---
 

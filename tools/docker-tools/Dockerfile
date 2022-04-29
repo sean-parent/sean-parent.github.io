@@ -1,5 +1,5 @@
 # Build from the latest ubuntu release
-FROM ubuntu:latest AS base
+FROM ubuntu:impish AS base
 
 # Install items requiring root access
 

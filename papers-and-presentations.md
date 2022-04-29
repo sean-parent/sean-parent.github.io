@@ -17,11 +17,36 @@ comments: true
 
 ***
 
-Date: 2021-06-19
+Date: 2021-10-19
+
+### Language: Fragmentation of Machine Architecture
+
+Abstract: Not too many years ago, the machine architecture supported by consumer devices looked to be converging on a largely uniform model, the Intel x86 instruction set & OpenCL/GL GPU computation. But now, hardware architecture is increasingly fragmented and complex, while at the same time, the marketplace is demanding higher performance and interactivity across a more extensive range of devices. This talk looks at how we got here, the challenges of supporting these architectures from software applications, and an opening to discuss how software languages will play a role in making sense of the chaos.
+
+Note: Talk presented at [Rebase 2021](https://rebase-conf.org/2021-SPLASH/#fragmentation-of-machine-architecture) as a discussion with Mario Wolczko, 2021-10-19
+
+*  [Video](https://youtu.be/lqBzUBKLal0)
+*  [PDF](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.pdf)
+*  [Keynote](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.key)
+
+***
+
+Date: 2021-06-19, 2021-10-24, 2021-11-14
 
 ### Warning: `std::find()` is broken!
 
 Abstract: We often take it for granted that calling one of the Standard algorithms will do something meaningful. For example, when invoking `position = find(first, last, value)` we expect that if an element equal to value is contained in the range `[first, last)` then `position` will point to the first such element; otherwise, `position` will equal `last`. But how do we know `find` will perform this operation? This talk explores requirements, guarantees, and domains, and we'll discover that maybe `find` doesn't.
+
+Note: Talk presented at [HiPar](https://sc21.supercomputing.org/proceedings/workshops/workshop_pages/misc227.html) under the alternative title, _Reasoning About Software Correctness_, 2021-11-24
+
+*  [PDF](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.pdf)
+*  [Keynote](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.key)
+
+Note: Talk presented at [CppCon](https://cppcon.org/program2021/), 2021-10-24
+
+*  [Video](https://youtu.be/2FAi2mNYjFA)
+*  [PDF](presentations/2021-10-24-domain-of-operation/2021-10-24-domain-of-operation.pdf)
+*  [Keynote](presentations/2021-10-24-domain-of-operation/2021-10-24-domain-of-operation.key)
 
 Note: Talk presented at [Italian C++ 2021](https://italiancpp.github.io/), 2021-06-19
 

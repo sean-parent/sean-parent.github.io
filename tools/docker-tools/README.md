@@ -10,12 +10,16 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.7"
+VERSION="1.0.8"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
 
 # Specify the ruby version to match https://pages.github.com/versions/
+# The docker file is currently building from ubuntu:impish instead of latest because
+# past that, Ruby 2.7.3 is not supported. If the ruby requirement is updated, then move to
+# latest.
+
 RUBY_VERSION="2.7.3"
 echo $RUBY_VERSION > ./.ruby-version
 
@@ -99,3 +103,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.3 - Updating jekyll tooling
 - 1.0.3 - Updating jekyll tooling
 - 1.0.5 - Updating jekyll tooling
+- 1.0.8 - Updating tooling, locking to ubuntu:impish, draft of exceptions talk, adding recent talks to page
