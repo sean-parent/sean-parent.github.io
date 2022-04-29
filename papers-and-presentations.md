@@ -39,6 +39,7 @@ Abstract: We often take it for granted that calling one of the Standard algorith
 
 Note: Talk presented at [HiPar](https://sc21.supercomputing.org/proceedings/workshops/workshop_pages/misc227.html) under the alternative title, _Reasoning About Software Correctness_, 2021-11-24
 
+*  [Video](https://youtu.be/4MI5cS7kLSc)
 *  [PDF](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.pdf)
 *  [Keynote](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.key)
 
