@@ -17,6 +17,19 @@ comments: true
 
 ***
 
+Date: 2022-05-05
+
+### Exceptions the Other Way Around
+
+Abstract: When discussing exceptions, there is a focus on when to throw an exception and how to propagate it. But little attention is given to how to recover from an exception. By looking at error handling from what it means to recover from a mistake, we can understand the requirements to handle exceptions correctly. We'll see the technique of shifting perspectives is more broadly helpful in developing usable operations and types.
+
+Note: Talk presented at [C++Now 2022](https://cppnow.org/history/2022/schedule/). The slides here contain minor corrections, 2022-05-05
+
+*  [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
+*  [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
+
+***
+
 Date: 2021-10-19
 
 ### Language: Fragmentation of Machine Architecture
