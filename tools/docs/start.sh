@@ -23,5 +23,5 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 #bundle exec jekyll build
 
 bundle exec jekyll build --watch --incremental $OPTIONS &
-sleep 60
+sleep 10
 browser-sync start --config bs-config.js

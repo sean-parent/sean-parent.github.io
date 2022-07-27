@@ -10,7 +10,7 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.8"
+VERSION="1.0.9"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -36,7 +36,8 @@ cd /mnt/host
 exit
 
 # build the final image
-docker build --build-arg RUBY_VERSION=$RUBY_VERSION --file ./tools/docker-tools/Dockerfile --target full --tag $VOLUME .
+docker build --build-arg RUBY_VERSION=$RUBY_VERSION \
+  --file ./tools/docker-tools/Dockerfile --target full --tag $VOLUME .
 ```
 
 ## Running the Docker image
@@ -104,3 +105,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.3 - Updating jekyll tooling
 - 1.0.5 - Updating jekyll tooling
 - 1.0.8 - Updating tooling, locking to ubuntu:impish, draft of exceptions talk, adding recent talks to page
+- 1.0.9 - Updating tooling

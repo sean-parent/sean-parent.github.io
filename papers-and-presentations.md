@@ -6,14 +6,38 @@ layout: page
 comments: true
 ---
 
-#### Contents
+## Contents
 {:.no_toc}
-* contents
+
+* [place holder]
 {:toc}
 
 ***
 
 ## Presentations
+
+***
+
+Date: 2022-08-30
+
+## Where Have All the Cycles Gone?
+
+Abstract: Personal computers and devices are unbelievably fast but often struggle to keep up with mundane tasks. Why hasn't software managed to scale in performance with hardware? This talk looks at some of the reasons, the characteristics of fast systems, the limits of human perception, and the need to rethink how software is authored to build efficient systems.
+
+***
+
+Date: 2022-07-20
+
+### The Tragedy of C++, Acts One and Two
+
+Abstract: Ten years ago, soon after the release of C++11, I presented a talk at C++Now titled [_C++ Now What?_](#now-what) That talk looked at where C++ should go next. In the last decade, what progress has been made? This talk examines why C++ remains successful, where we still have gaps, and what gaps have widened. Will the next decade bring more of the same or something fundamentally different?
+
+Additional commentary about this talk is available [here]({% post_url 2022-07-26-the-tragedy-of-c %}).
+
+Note: Talk presents at [CppNorth 2022](https://cppnorth2022.sched.com/event/140gg/closing-keynote-sean-parent), 2022-07-20
+
+* [PDF](presentations/2022-07-20-cpp-tomorrow/2022-07-20-cpp-tomorrow.pdf)
+* [Keynote](presentations/2022-07-20-cpp-tomorrow/2022-07-20-cpp-tomorrow.key)
 
 ***
 
@@ -25,8 +49,8 @@ Abstract: When discussing exceptions, there is a focus on when to throw an excep
 
 Note: Talk presented at [C++Now 2022](https://cppnow.org/history/2022/schedule/). The slides here contain minor corrections, 2022-05-05
 
-*  [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
-*  [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
+* [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
+* [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
 
 ***
 
@@ -38,37 +62,37 @@ Abstract: Not too many years ago, the machine architecture supported by consumer
 
 Note: Talk presented at [Rebase 2021](https://rebase-conf.org/2021-SPLASH/#fragmentation-of-machine-architecture) as a discussion with Mario Wolczko, 2021-10-19
 
-*  [Video](https://youtu.be/lqBzUBKLal0)
-*  [PDF](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.pdf)
-*  [Keynote](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.key)
+* [Video](https://youtu.be/lqBzUBKLal0)
+* [PDF](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.pdf)
+* [Keynote](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.key)
 
 ***
 
 Date: 2021-06-19, 2021-10-24, 2021-11-14
 
-### Warning: `std::find()` is broken!
+### Warning: `std::find()` is broken
 
 Abstract: We often take it for granted that calling one of the Standard algorithms will do something meaningful. For example, when invoking `position = find(first, last, value)` we expect that if an element equal to value is contained in the range `[first, last)` then `position` will point to the first such element; otherwise, `position` will equal `last`. But how do we know `find` will perform this operation? This talk explores requirements, guarantees, and domains, and we'll discover that maybe `find` doesn't.
 
 Note: Talk presented at [HiPar](https://sc21.supercomputing.org/proceedings/workshops/workshop_pages/misc227.html) under the alternative title, _Reasoning About Software Correctness_, 2021-11-24
 
-*  [Video](https://youtu.be/4MI5cS7kLSc)
-*  [PDF](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.pdf)
-*  [Keynote](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.key)
+* [Video](https://youtu.be/4MI5cS7kLSc)
+* [PDF](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.pdf)
+* [Keynote](presentations/2021-11-14-domain-of-operation/2021-11-14-domain-of-operation.key)
 
 Note: Talk presented at [CppCon](https://cppcon.org/program2021/), 2021-10-24
 
-*  [Video](https://youtu.be/2FAi2mNYjFA)
-*  [PDF](presentations/2021-10-24-domain-of-operation/2021-10-24-domain-of-operation.pdf)
-*  [Keynote](presentations/2021-10-24-domain-of-operation/2021-10-24-domain-of-operation.key)
+* [Video](https://youtu.be/2FAi2mNYjFA)
+* [PDF](presentations/2021-10-24-domain-of-operation/2021-10-24-domain-of-operation.pdf)
+* [Keynote](presentations/2021-10-24-domain-of-operation/2021-10-24-domain-of-operation.key)
 
 Note: Talk presented at [Italian C++ 2021](https://italiancpp.github.io/), 2021-06-19
 
 Note: My pointer/cursor was not visible in the video feed, making some of the code discussion harder to follow.
 
-*   [Video](https://www.youtube.com/watch?v=NO5wHzI_oug&t=1104s)
-*   [PDF](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.pdf)
-*   [Keynote](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.key)
+* [Video](https://www.youtube.com/watch?v=NO5wHzI_oug&t=1104s)
+* [PDF](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.pdf)
+* [Keynote](presentations/2021-06-19-domain-of-operation/2021-06-19-domain-of-operation.key)
 
 ***
 
@@ -80,35 +104,35 @@ Abstract: Computer scientists are bad at relationships. Nearly every program cra
 
 Note: Talk presented at [ACCU 2021](https://accu.org/), 2021-03-13
 
-*   [Video](https://www.youtube.com/watch?v=f5UsHQW7-9w)
-*   [PDF](presentations/2021-03-13-relationships/2021-03-13-relationships.pdf)
-*   [Keynote](presentations/2021-03-13-relationships/2021-03-13-relationships.key)
+* [Video](https://www.youtube.com/watch?v=f5UsHQW7-9w)
+* [PDF](presentations/2021-03-13-relationships/2021-03-13-relationships.pdf)
+* [Keynote](presentations/2021-03-13-relationships/2021-03-13-relationships.key)
 
 Note: Talk presented at [C++ Russia 2019](https://cppconf.ru/en/), 2019-10-31
 
-*   [PDF](presentations/2019-10-31-relationships/2019-10-31-relationships.pdf)
-*   [Keynote](presentations/2019-10-31-relationships/2019-10-31-relationships.key)
+* [PDF](presentations/2019-10-31-relationships/2019-10-31-relationships.pdf)
+* [Keynote](presentations/2019-10-31-relationships/2019-10-31-relationships.key)
 
 Note: Talk presented at [CppCon 2019](https://cppcon.org/), 2019-09-19.
 
-*   [Video](https://www.youtube.com/watch?v=ejF6qqohp3M)
-*   [PDF](presentations/2019-09-19-relationships/2019-09-19-relationships.pdf)
-*   [Keynote](presentations/2019-09-19-relationships/2019-09-19-relationships.key)
+* [Video](https://www.youtube.com/watch?v=ejF6qqohp3M)
+* [PDF](presentations/2019-09-19-relationships/2019-09-19-relationships.pdf)
+* [Keynote](presentations/2019-09-19-relationships/2019-09-19-relationships.key)
 
-Errata: In the video, the slide for erasing an element from the registry contains a bug. It fails to check if the element has already been erased. It is fixed in the posted slides.
+__Erratum: In the video, the slide for erasing an element from the registry contains a bug. It fails to check if the element has already been erased. It is fixed in the posted slides.__
 
 ***
 
 Date: 2019-10-31
 
-### Compose This!
+### Compose This
 
 Abstract: Ruminations on composability, why functional composition is inherently limited, and why we need a better theory of composition.
 
 Note: Lightning talk presented at [C++ Russia](https://cppconf.ru/en/), 2019-10-31
 
-*   [PDF](presentations/2019-10-31-compositional-efficiency/2019-10-31-compositional-efficiency.pdf)
-*   [Keynote](presentations/2019-10-31-compositional-efficiency/2019-10-31-compositional-efficiency.key)
+* [PDF](presentations/2019-10-31-compositional-efficiency/2019-10-31-compositional-efficiency.pdf)
+* [Keynote](presentations/2019-10-31-compositional-efficiency/2019-10-31-compositional-efficiency.key)
 
 ***
 
@@ -120,9 +144,9 @@ Abstract: A "behind the scenes" look at the challenges to bring one of Adobe's p
 
 Note: Talk presented at the [Northwest C++ Users' Group](https://nwcpp.org/March-2019.html), 2019-03-20.
 
-*   [Video](https://www.youtube.com/watch?v=oQUtu_vD91g)
-*   [PDF](presentations/2019-03-20-photoshop-on-ipad/2019-03-20-photoshop-on-ipad.pdf)
-*   [Keynote](presentations/2019-03-20-photoshop-on-ipad/2019-03-20-photoshop-on-ipad.key)
+* [Video](https://www.youtube.com/watch?v=oQUtu_vD91g)
+* [PDF](presentations/2019-03-20-photoshop-on-ipad/2019-03-20-photoshop-on-ipad.pdf)
+* [Keynote](presentations/2019-03-20-photoshop-on-ipad/2019-03-20-photoshop-on-ipad.key)
 
 ***
 
@@ -132,22 +156,24 @@ Date: 2018-11-08, 2018-10-18
 
 Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet, the core concepts of generic programming are still often misunderstood and misrepresented. Thirty years in, this talk will look a little at how generic programming came to be and why it is not simply "another paradigm" for software development.
 
+__Erratum: The slide _Jon Bentley's Solution (Translated to C++)_ contains an error. The line, `int u = n;` should read `int u = n - 1;`. Slides have been updated with the fix. Thanks to Alex Muscar.__
+
 Addition: When preparing this talk, I was unable to find a picture of Meng and Alex from the Al Stevens interview in [Dr. Dobb's Journal, March 1995](http://stepanovpapers.com/drdobbs-interview.pdf). Alex was kind enough to give me a copy of the original publication.
 
-*   [JPEG](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.jpg)
-*   [44MB TIFF](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.tif)
+* [JPEG](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.jpg)
+* [44MB TIFF](presentations/2018-11-08-generic-programming/additional/1995-03-dr-dobbs.tif)
 
 Note: Talk presented at [code::dive 2018](https://codedive.pl/), 2018-11-08.
 
-*   [Video](https://www.youtube.com/watch?v=FX78-1uBCNA&t=869s)
-*   [PDF](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.pdf)
-*   [Keynote](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.key)
+* [Video](https://www.youtube.com/watch?v=FX78-1uBCNA&t=869s)
+* [PDF](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.pdf)
+* [Keynote](presentations/2018-11-08-generic-programming/2018-11-08-generic-programming.key)
 
 Note: Talk presented at [pacific++ 2018](https://pacificplusplus.com/), 2018-10-18.
 
-*   [Video](https://www.youtube.com/watch?v=iwJpxWHuZQY)
-*   [PDF](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.pdf)
-*   [Keynote](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.key)
+* [Video](https://www.youtube.com/watch?v=iwJpxWHuZQY)
+* [PDF](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.pdf)
+* [Keynote](presentations/2018-10-18-generic-programming/2018-10-18-generic-programming.key)
 
 ***
 
@@ -157,13 +183,13 @@ Date: 2017-11-11
 
 Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes. The complete template is part of the stlab concurrency library and can be found [here](http://stlab.cc/libraries/concurrency/task/).
 
-Errata: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](http://stlab.cc/tips/small-object-optimizations.html).
+__Erratum: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](http://stlab.cc/tips/small-object-optimizations.html).__
 
 Note: Talk presented as a lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
 
-*   [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
-*   [PDF](presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
-*   [Keynote](presentations/2017-11-11-lightning-talk/lightning-talk.key)
+* [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
+* [PDF](presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
+* [Keynote](presentations/2017-11-11-lightning-talk/lightning-talk.key)
 
 ***
 
@@ -175,14 +201,14 @@ Abstract: This talk explains the relationship between good code and a good human
 
 Note: Talk presented at [cppcon 2018](https://cppcon.org/) and [Wargaming.net](https://na.wargaming.net/).
 
-*   [Video](https://www.youtube.com/watch?v=0WlJEz2wb8Y)
-*   [PDF](presentations/2018-09-28-human-interface/2018-09-28-human-interface.pdf)
-*   [Keynote](presentations/2018-09-28-human-interface/2018-09-28-human-interface.key)
+* [Video](https://www.youtube.com/watch?v=0WlJEz2wb8Y)
+* [PDF](presentations/2018-09-28-human-interface/2018-09-28-human-interface.pdf)
+* [Keynote](presentations/2018-09-28-human-interface/2018-09-28-human-interface.key)
 
 Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017/) and [C++ User Group, Russia](http://cpp-russia.ru/?p=1422).
 
-*   [PDF](presentations/2017-11-09-human-interface/2017-11-09-human-interface.pdf)
-*   [Keynote](presentations/2017-11-09-human-interface/2017-11-09-human-interface.key)
+* [PDF](presentations/2017-11-09-human-interface/2017-11-09-human-interface.pdf)
+* [Keynote](presentations/2017-11-09-human-interface/2017-11-09-human-interface.key)
 
 ***
 
@@ -194,21 +220,21 @@ Abstract: The process of improving an existing body of code can be very challeng
 
 Note: This is a revised version of the talk presented at [ACCU Bay Area](https://www.meetup.com/ACCU-Bay-Area/).
 
-*   [Video](https://www.youtube.com/watch?v=WPxax37AGz4)
-*   [PDF](presentations/2017-01-25-better-code/2017-01-25-better-code.pdf)
-*   [Keynote](/presentations/2017-01-25-better-code/2017-01-25-better-code.key)
+* [Video](https://www.youtube.com/watch?v=WPxax37AGz4)
+* [PDF](presentations/2017-01-25-better-code/2017-01-25-better-code.pdf)
+* [Keynote](/presentations/2017-01-25-better-code/2017-01-25-better-code.key)
 
 Note: This is a revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
-*   [Video](https://www.youtube.com/watch?v=cK_kftBNgBc)
-*   [PDF](presentations/2016-11-15-better-code/2016-11-15-better-code.pdf)
-*   [Keynote](/presentations/2016-11-15-better-code/2016-11-15-better-code.key)
+* [Video](https://www.youtube.com/watch?v=cK_kftBNgBc)
+* [PDF](presentations/2016-11-15-better-code/2016-11-15-better-code.pdf)
+* [Keynote](/presentations/2016-11-15-better-code/2016-11-15-better-code.key)
 
 Note: Talk presented as keynote at [C++Now 2016](http://cppnow.org/2016-conference/announcements/2016/03/22/keynote-announced.html) and [ICPC 2016](http://2016.program-comprehension.org/keynote.html).
 
-*   [C++Now 2016 Video](https://www.youtube.com/watch?v=giNtMitSdfQ)
-*   [PDF](presentations/2016-05-16-better-code/2016-05-16-better-code.pdf)
-*   [Keynote](/presentations/2016-05-16-better-code/2016-05-16-better-code.key)
+* [C++Now 2016 Video](https://www.youtube.com/watch?v=giNtMitSdfQ)
+* [PDF](presentations/2016-05-16-better-code/2016-05-16-better-code.pdf)
+* [Keynote](/presentations/2016-05-16-better-code/2016-05-16-better-code.key)
 
 ***
 
@@ -220,14 +246,14 @@ Abstract: This talk explains why (and how) to implement non-intrusive polymorphi
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
-*   [Video](https://www.youtube.com/watch?v=QGcVXgEVMJg)
-*   [PDF](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.pdf)
-*   [Keynote](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.key)
+* [Video](https://www.youtube.com/watch?v=QGcVXgEVMJg)
+* [PDF](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.pdf)
+* [Keynote](presentations/2017-01-18-runtime-polymorphism/2017-01-18-runtime-polymorphism.key)
 
 Note: This is an updated version of the "Value Semantics and Concept-based Polymorphism" talk presented at Facebook.
 
-*   [PDF](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.pdf)
-*   [Keynote](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.key)
+* [PDF](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.pdf)
+* [Keynote](presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.key)
 
 ***
 
@@ -237,44 +263,45 @@ Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
 
 Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. Part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
 
-__Erratum: I've incorrectly stated that `std::async()` changed with C++14. I intend to write a lengthier description of the issue soon.__
+__Erratum: I've incorrectly stated that `std::async()` changed with C++14.__
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
-*   [Video](https://www.youtube.com/watch?v=zULU6Hhp42w)
-*   [PDF](presentations/2017-01-18-concurrency/2017-01-18-concurrency.pdf)
-*   [Keynote](presentations/2017-01-18-concurrency/2017-01-18-concurrency.key)
+* [Video](https://www.youtube.com/watch?v=zULU6Hhp42w)
+* [PDF](presentations/2017-01-18-concurrency/2017-01-18-concurrency.pdf)
+* [Keynote](presentations/2017-01-18-concurrency/2017-01-18-concurrency.key)
 
 Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
 
-*   [Video](https://www.youtube.com/watch?v=QIHy8pXbneI)
-*   [PDF](presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf)
-*   [Keynote](presentations/2016-11-16-concurrency/2016-11-16-concurrency.key)
+* [Video](https://www.youtube.com/watch?v=QIHy8pXbneI)
+* [PDF](presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf)
+* [Keynote](presentations/2016-11-16-concurrency/2016-11-16-concurrency.key)
 
 Note: This is the version of the talk presented at Bloomberg.
 
-*   [PDF](presentations/2016-08-08-concurrency/2016-08-08-concurrency.pdf)
-*   [Keynote](presentations/2016-08-08-concurrency/2016-08-08-concurrency.key)
+* [PDF](presentations/2016-08-08-concurrency/2016-08-08-concurrency.pdf)
+* [Keynote](presentations/2016-08-08-concurrency/2016-08-08-concurrency.key)
 
 Note: This is an interview from [CppCast](http://cppcast.com/) about my talk.
-*   [Audio](http://cppcast.com/2015/06/sean-parent/)
+
+* [Audio](http://cppcast.com/2015/06/sean-parent/)
 
 Note: This is the version of the talk presented at the [Bay Area C++ User Group Meeting](http://www.meetup.com/SF-Bay-Area-Cpp/events/221680178/).
 
-*   [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
-*   [Keynote](presentations/2015-04-21-concurrency/concurrency.key)
+* [PDF](presentations/2015-04-21-concurrency/concurrency.pdf)
+* [Keynote](presentations/2015-04-21-concurrency/concurrency.key)
 
 Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I believe the slides are the same as those listed above.
 
-*    [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
+* [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
 
 Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
 
-*   [Video (1)](https://www.youtube.com/watch?v=IYmoz7e1L5c)
-*   [Video (2)](https://www.youtube.com/watch?v=BngVqHzOFX8)
-*   [PDF](presentations/2015-02-27-concurrency/concurrency.pdf)
-*   [Keynote](presentations/2015-02-27-concurrency/concurrency.key)
-*   [C++ Source](presentations/2015-02-27-concurrency/concurrency-talk.cpp)
+* [Video (1)](https://www.youtube.com/watch?v=IYmoz7e1L5c)
+* [Video (2)](https://www.youtube.com/watch?v=BngVqHzOFX8)
+* [PDF](presentations/2015-02-27-concurrency/concurrency.pdf)
+* [Keynote](presentations/2015-02-27-concurrency/concurrency.key)
+* [C++ Source](presentations/2015-02-27-concurrency/concurrency-talk.cpp)
 
 ***
 
@@ -284,8 +311,8 @@ Date: 2016-12-14
 
 Abstract: A short lighting talk presented at the [ACCU, Silicon Valley Chapter](http://www.meetup.com/ACCU-Bay-Area/).
 
-*   [PDF](presentations/2016-12-14-management-tips/2016-12-14-management-tips.pdf)
-*   [Keynote](presentations/2016-12-14-management-tips/2016-12-14-management-tips.key)
+* [PDF](presentations/2016-12-14-management-tips/2016-12-14-management-tips.pdf)
+* [Keynote](presentations/2016-12-14-management-tips/2016-12-14-management-tips.key)
 
 ***
 
@@ -302,14 +329,14 @@ greatly simplify code. The goal is no incidental data structures.
 
 Note: This is the version of the talk presented at Bloomberg.
 
-*   [PDF](presentations/2016-08-08-data-structures/2016-08-08-data-structures.pdf)
-*   [Keynote](presentations/2016-08-08-data-structures/2016-08-08-data-structures.key)
+* [PDF](presentations/2016-08-08-data-structures/2016-08-08-data-structures.pdf)
+* [Keynote](presentations/2016-08-08-data-structures/2016-08-08-data-structures.key)
 
 Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.org/).
 
-*   [Video](https://www.youtube.com/watch?v=sWgDk-o-6ZE)
-*   [PDF](presentations/2015-09-23-data-structures/data-structures.pdf)
-*   [Keynote](presentations/2015-09-23-data-structures/data-structures.key)
+* [Video](https://www.youtube.com/watch?v=sWgDk-o-6ZE)
+* [PDF](presentations/2015-09-23-data-structures/data-structures.pdf)
+* [Keynote](presentations/2015-09-23-data-structures/data-structures.key)
 
 ***
 
@@ -319,9 +346,9 @@ Date: 2014-05-14
 
 Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
 
-*   [Video](https://www.youtube.com/watch?v=mYrbivnruYw)
-*   [PDF](presentations/2014-04-14-goal-complete-types/goal-complete-types.pdf)
-*   [Keynote](presentations/2014-04-14-goal-complete-types/goal-complete-types.key)
+* [Video](https://www.youtube.com/watch?v=mYrbivnruYw)
+* [PDF](presentations/2014-04-14-goal-complete-types/goal-complete-types.pdf)
+* [Keynote](presentations/2014-04-14-goal-complete-types/goal-complete-types.key)
 
 ***
 
@@ -333,10 +360,10 @@ Abstract: A look at many of the new features in C++ and a couple of old features
 
 Note: This is the ACCU, Silicon Valley Chapter version of the talk originally given at GoingNative 2013. The talk is also known as "3 Goals for Better Code." This version contains an expanded ending to the polymorphism code, starting on page 179 of the PDF, and some optional slides that did not make that talk. The extended version of the talk was also given at A9.
 
-*   [Video](http://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning)
-*   [Video (extended)](https://www.youtube.com/watch?v=IzNtM038JuI)
-*   [PDF](presentations/2013-09-11-cpp-seasoning/cpp-seasoning.pdf)
-*   [Keynote](presentations/2013-09-11-cpp-seasoning/cpp-seasoning.key)
+* [Video](http://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning)
+* [Video (extended)](https://www.youtube.com/watch?v=IzNtM038JuI)
+* [PDF](presentations/2013-09-11-cpp-seasoning/cpp-seasoning.pdf)
+* [Keynote](presentations/2013-09-11-cpp-seasoning/cpp-seasoning.key)
 
 ***
 
@@ -348,7 +375,7 @@ Abstract: Implementing non-intrusive runtime polymorphic objects with value-sema
 
 Note: This is an abbreviated version of the Value Semantics and Concept-based Polymorphism talk linked to below given at GoingNative 2013.
 
-*   [Video](http://channel9.msdn.com/Events/GoingNative/2013/Inheritance-Is-The-Base-Class-of-Evil).
+* [Video](http://channel9.msdn.com/Events/GoingNative/2013/Inheritance-Is-The-Base-Class-of-Evil).
 
 ***
 
@@ -359,10 +386,10 @@ Updated: 2013-09-24
 
 Abstract: This talk explains why (and how) to implement polymorphism without inheritance in C++. The talk contains many C++ tips and techniques, including many new features from C++11. During the course of that talk a key feature from Photoshop will be demonstrated and implemented.
 
-*   [Keynote](presentations/2013-09-24-value-semantics/value-semantics.key)
-*   [PDF](presentations/2013-09-24-value-semantics/value-semantics.pdf)
-*   [C++ Source](presentations/2013-03-06-value_semantics/value-semantics.cpp)
-*   [C++ Source (unique_ptr version)](presentations/2013-09-06-inheritance/value-semantics-unique.cpp)
+* [Keynote](presentations/2013-09-24-value-semantics/value-semantics.key)
+* [PDF](presentations/2013-09-24-value-semantics/value-semantics.pdf)
+* [C++ Source](presentations/2013-03-06-value_semantics/value-semantics.cpp)
+* [C++ Source (unique_ptr version)](presentations/2013-09-06-inheritance/value-semantics-unique.cpp)
 
 ***
 
@@ -372,14 +399,14 @@ Date: 2013-03-05
 
 Abstract: A look at how programming languages are failing to keep up with a rapidly changing hardware and business landscape. Not long ago it was clear to everyone that because of the rate at which clock speeds were doubling the industry should be optimizing for programmer productivity and let the hardware solve the performance issues. More recently both the dynamics of hardware and the business landscape have thrown these assumptions out the window and left a large vacuum in the programming language landscape. This talk takes a looks at how much things have changed and how a reset in our approach is needed.
 
-*   [Keynote](presentations/2013-03-05-language-delay/language-delay.key)
-*   [PDF](presentations/2013-03-05-language-delay/language-delay.pdf)
+* [Keynote](presentations/2013-03-05-language-delay/language-delay.key)
+* [PDF](presentations/2013-03-05-language-delay/language-delay.pdf)
 
 ***
 
 Date: 2012-05-17
 
-### Now What? A vignette in 3 parts
+### Now What? A vignette in 3 parts {#now-what}
 
 Abstract:
 _Part 1: Beauty_
@@ -391,10 +418,9 @@ On modern hardware, straight C++ code gives you access to just 0.25% of the avai
 _Part 3: Goodness_
 A plethora of networked devices is changing the software landscape. The infrastructure of the internet is fading into the background and increasingly customers are expecting all of their information, available on all their devices, instantly. What impact do such systems have on how we architect and write software? What is the role C++ will play in this new world.
 
-
-*   [Video](https://www.youtube.com/watch?v=iGenpw2NeKQ)
-*   [Keynote](presentations/2012-05-17-now-what/now-what.key)
-*   [PDF](presentations/2012-05-17-now-what/now-what.pdf)
+* [Video](https://www.youtube.com/watch?v=iGenpw2NeKQ)
+* [Keynote](presentations/2012-05-17-now-what/now-what.key)
+* [PDF](presentations/2012-05-17-now-what/now-what.pdf)
 
 ***
 
@@ -412,9 +438,9 @@ Abstract: Selecting items from a collection is one of the most common tasks user
 
 Note: Paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
 
-*   [Video](https://www.youtube.com/watch?v=i8lc0I1yoZ8)
-*   [PDF](papers/2016-07-18-ecoop/ecoop16-final28.pdf)
-*   [Example Library](http://hotdrink.github.io/multiselectjs/)
+* [Video](https://www.youtube.com/watch?v=i8lc0I1yoZ8)
+* [PDF](papers/2016-07-18-ecoop/ecoop16-final28.pdf)
+* [Example Library](http://hotdrink.github.io/multiselectjs/)
 
 ***
 
@@ -428,8 +454,8 @@ Abstract: For a GUI to remain responsive, it must be able to schedule lengthy ta
 
 Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generating-reactive-programs-for-graphical-user-interfaces-from-multi-way-dataflow-constraint-systems).
 
-*   [PDF](papers/2015-10-26-gpce/gpce15main-mainid43-p-e08bb9a-25371M-final.pdf)
-*   [ACM Citation](http://dl.acm.org/citation.cfm?id=2814207)
+* [PDF](papers/2015-10-26-gpce/gpce15main-mainid43-p-e08bb9a-25371M-final.pdf)
+* [ACM Citation](http://dl.acm.org/citation.cfm?id=2814207)
 
 ***
 
@@ -443,8 +469,8 @@ Abstract: User interfaces exhibit a wide range of features that are designed to 
 
 Note: Paper presented at [GPCE 2011](http://program-transformation.org/GPCE11/WebHome).
 
-*   [PDF](papers/2011-10-gpce/p177-freeman.pdf)
-*   [ACM Citation](https://dl.acm.org/citation.cfm?id=2047892)
+* [PDF](papers/2011-10-gpce/p177-freeman.pdf)
+* [ACM Citation](https://dl.acm.org/citation.cfm?id=2047892)
 
 ***
 
@@ -456,8 +482,8 @@ Authors: Peter Pirkelbauer, Sean Parent, Mat Marcus, Bjarne Stroustrup
 
 Abstract: A key benefit of generic programming is its support for producing modules with clean separation. In particular, generic algorithms are written to work with a wide variety of types without requiring modifications to them. The Runtime concept idiom extends this support by allowing unmodified concrete types to behave in a runtime polymorphic manner. In this paper, we describe one implementation of the runtime concept idiom, in the domain of the C++ standard template library (STL). We complement the runtime concept idiom with an algorithm library that considers both type and concept information to maximize performance when selecting algorithm implementations. We present two implementations, one in ISO C++ and one using an experimental language extension. We use our implementations to describe and measure the performance of runtime-polymorphic analogs of several STL algorithms. The tests demonstrate the effects of different compile-time vs. run-time algorithm selection choices.
 
-*   [PDF](papers/2010-09-scp/1-s2.0-S0167642309000732-main.pdf)
-*   [ACM Citation](https://dl.acm.org/citation.cfm?id=1823252)
+* [PDF](papers/2010-09-scp/1-s2.0-S0167642309000732-main.pdf)
+* [ACM Citation](https://dl.acm.org/citation.cfm?id=1823252)
 
 ***
 
@@ -488,8 +514,8 @@ turnarounds in a commercial software development effort as a result of adopting 
 
 Note: Paper presented at GPCE 2009.
 
-*   [PDF](papers/2009-10-04-gpce/p147-jarvi.pdf)
-*   [ACM Citation](https://dl.acm.org/citation.cfm?doid=1621607.1621630)
+* [PDF](papers/2009-10-04-gpce/p147-jarvi.pdf)
+* [ACM Citation](https://dl.acm.org/citation.cfm?doid=1621607.1621630)
 
 ***
 
@@ -507,8 +533,8 @@ The proposed technology is deployed in large commercial software application sui
 
 Note: Paper presented at GPCE 2008.
 
-*   [PDF](papers/2008-10-gpce/p89-jarvi.pdf)
-*   [ACM Citation](https://dl.acm.org/citation.cfm?id=1449927)
+* [PDF](papers/2008-10-gpce/p89-jarvi.pdf)
+* [ACM Citation](https://dl.acm.org/citation.cfm?id=1449927)
 
 ***
 
@@ -520,8 +546,23 @@ Authors: Peter Pirkelbauer, Sean Parent, Mat Marcus, Bjarne Stroustrup
 
 Abstract: A key benefit of generic programming is its support for producing modules with clean separation. In particular, generic algorithms are written to work with a wide variety of unmodified types. The Runtime concept idiom extends this support by allowing unmodified concrete types to behave in a runtime polymorphic manner. In this paper, we describe one implementation of the runtime concept idiom, in the domain of the C++ standard template library (STL). We describe and measure the performance of runtime-polymorphic analogs of several STL algorithms. We augment the runtime concept idiom by employing a dispatch mechanism that considers both type and concept information to maximize performance when selecting algorithm implementations. We use our implementation to demonstrate the effects of different compile-time vs. run-time algorithm selection choices, and we indicate where improved language and compiler support would be useful.
 
-*   [PDF](papers/2008-03-sac/p171-pirkelbauer.pdf)
-*   [ACM Citation](https://dl.acm.org/citation.cfm?id=1363734)
+* [PDF](papers/2008-03-sac/p171-pirkelbauer.pdf)
+* [ACM Citation](https://dl.acm.org/citation.cfm?id=1363734)
+
+***
+
+Date: 2007-01
+
+### Runtime Polymorphic Generic Programming--Mixing Objects and Concepts in ConceptC++
+
+Authors: Mat Marcus, Jaakko Järvi, Sean Parent
+
+Abstract: A long-held goal of software engineering has been the ability to treat software libraries as reusable components that can be composed with program-specific code to produce applications. The object-oriented programming paradigm offers mechanisms to write libraries that are open for extension, but it tends to impose intrusive interface requirements on the types that will be supplied to the library. The generic programming paradigm has seen much success in C++, partly due to the fact that libraries remain open to extension without imposing the need to intrusively inherit from particular abstract base classes. However, the static polymorphism that is a staple of programming with templates and overloads in C++, limits generic programming’s applicability in application domains where more dynamic polymorphism is required. In this paper we present the poly<> library, a part of Adobe System’s open source library ASL, that combines the object-oriented and generic programming paradigms to provide non-intrusive, transparent, value-based, runtime-polymorphism. Usage, impact on design, and implementation techniques are discussed.
+
+From: The 6th International Workshop on Multiparadigm Programming with Object-Oriented Languages at the ECOOP 2007. [Slides](papers/2007-ecoop/MPOOL2007-slides-marcus.pdf).
+
+* [PDF](papers/2007-ecoop/MPOOL2007-marcus.pdf)
+* [CiteSeer](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.89.1257)
 
 ***
 
@@ -535,7 +576,7 @@ Date: 2021-06-04
 
 In this episode, Conor and Bryce talk to Sean Parent about some of his Steve Jobs stories.
 
-*   [Audio](https://adspthepodcast.com/2021/06/04/Episode-28.html)
+* [Audio](https://adspthepodcast.com/2021/06/04/Episode-28.html)
 
 ***
 
@@ -545,7 +586,7 @@ Date: 2021-05-28
 
 In this episode, Conor and Bryce talk to Sean Parent about MacHack and how he got hired at Apple.
 
-*   [Audio](https://adspthepodcast.com/2021/05/28/Episode-27.html)
+* [Audio](https://adspthepodcast.com/2021/05/28/Episode-27.html)
 
 ***
 
@@ -555,7 +596,7 @@ Date: 2021-05-21
 
 In this episode, Conor and Bryce talk to Sean Parent about a plethora of topics including slides, UI and more.
 
-*   [Audio](https://adspthepodcast.com/2021/05/21/Episode-26.html)
+* [Audio](https://adspthepodcast.com/2021/05/21/Episode-26.html)
 
 ***
 
@@ -565,17 +606,17 @@ Date: 2021-03-26
 
 In this episode, we finish part two of our interview with Sean Parent!
 
-*   [Audio](https://adspthepodcast.com/2021/03/26/Episode-18.html)
+* [Audio](https://adspthepodcast.com/2021/03/26/Episode-18.html)
 
 ***
 
 Date: 2021-03-19
 
-### ADSP: The Podcast - Episode 17: Special Guest Sean Parent!
+### ADSP: The Podcast - Episode 17: Special Guest Sean Parent
 
 In this episode, we have our first guest - Sean Parent!
 
-*   [Audio](https://adspthepodcast.com/2021/03/19/Episode-17.html)
+* [Audio](https://adspthepodcast.com/2021/03/19/Episode-17.html)
 
 ***
 
@@ -585,7 +626,7 @@ Date: 2019-10-17
 
 Jon Kalb and Phil Nash interview me live at [CppCon 2019](https://cppcon.org/).
 
-*   [Video](https://www.youtube.com/watch?v=czHpJE3xIXc)
+* [Video](https://www.youtube.com/watch?v=czHpJE3xIXc)
 
 ***
 
@@ -595,7 +636,7 @@ Date: 2017-09-14
 
 Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me leading up to my keynote.
 
-*   [Video](https://www.youtube.com/watch?v=0ZS_-G4urko)
+* [Video](https://www.youtube.com/watch?v=0ZS_-G4urko)
 
 ***
 
@@ -605,7 +646,7 @@ Date: 2016-08-06
 
 Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me following my C++Now keynote.
 
-*   [Link](http://meetingcpp.com/index.php/br/items/interview-with-sean-parent.html)
+* [Link](http://meetingcpp.com/index.php/br/items/interview-with-sean-parent.html)
 
 ***
 
@@ -615,7 +656,7 @@ Date: 2015-06-01
 
 An interview from [CppCast](http://cppcast.com/) about my [talk](#better-code-concurrency).
 
-*   [Audio](http://cppcast.com/2015/06/sean-parent/)
+* [Audio](http://cppcast.com/2015/06/sean-parent/)
 
 ***
 
