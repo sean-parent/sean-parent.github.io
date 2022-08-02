@@ -31,3 +31,6 @@ exclude-tags: [ better-code ]
 exclude:
     - sean-parent.bbprojectd/
     - tools/
+
+plugins:
+    - jekyll-redirect-from

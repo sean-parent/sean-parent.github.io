@@ -4,7 +4,9 @@ title: The Tragedy of C++
 description: ''
 mathjax: true
 tags:
-date: 2021-07-26
+date: 2022-07-26
+redirect_from:
+  - /2021/07/26/the-tragedy-of-c.html
 ---
 
 ## Introduction
