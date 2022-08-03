@@ -49,6 +49,7 @@ Abstract: When discussing exceptions, there is a focus on when to throw an excep
 
 Note: Talk presented at [C++Now 2022](https://cppnow.org/history/2022/schedule/). The slides here contain minor corrections, 2022-05-05
 
+* [Video](https://youtu.be/mkkaAWNE-Ig)
 * [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
 * [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
 
