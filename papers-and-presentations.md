@@ -18,11 +18,16 @@ comments: true
 
 ***
 
-Date: 2022-08-30
+Date: 2022-08-29
 
-## Where Have All the Cycles Gone?
+### Where Have All the Cycles Gone?
 
 Abstract: Personal computers and devices are unbelievably fast but often struggle to keep up with mundane tasks. Why hasn't software managed to scale in performance with hardware? This talk looks at some of the reasons, the characteristics of fast systems, the limits of human perception, and the need to rethink how software is authored to build efficient systems.
+
+Note: Talk presented at [skills matter Performance Summit 2022](https://skillsmatter.com/conferences/13902-performance-summit).
+
+* [PDF](presentations/2022-08-29-performance/2022-08-29-performance.pdf)
+* [Keynote](presentations/2022-08-29-performance/2022-08-29-performance.key)
 
 ***
 
@@ -41,7 +46,7 @@ Note: Talk presents at [CppNorth 2022](https://cppnorth2022.sched.com/event/140g
 
 ***
 
-Date: 2022-05-05
+Date: 2022-05-05, 2022-08-31
 
 ### Exceptions the Other Way Around
 
@@ -52,6 +57,11 @@ Note: Talk presented at [C++Now 2022](https://cppnow.org/history/2022/schedule/)
 * [Video](https://youtu.be/mkkaAWNE-Ig)
 * [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
 * [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
+
+Note: Talk presented internally at Adobe. This version was edited down for time. 2022-08-31
+
+* [PDF](presentations/2022-08-31-exceptions/2022-08-31-exceptions.pdf)
+* [Keynote](presentations/2022-08-31-exceptions/2022-08-31-exceptions.key)
 
 ***
 
