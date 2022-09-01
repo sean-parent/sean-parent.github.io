@@ -581,6 +581,22 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 
 ***
 
+Date: 2021-08-13
+
+In this episode, Bryce and Conor interview Sean Parent about restarting the Adobe Software Technology Lab.
+
+[Audio](https://adspthepodcast.com/2021/08/13/Episode-38.html)
+
+***
+
+Date: 2021-07-21
+
+Rob and Jason are joined by Sean Parent and Dave Abrahams. They first talk to Dave about his history with C++, Boost and the Swift programming language. Then they talk with Sean and Dave about Adobe’s Software Technology Lab and their plans to focus on Concurrency in C++.
+
+* [Audio](https://cppcast.com/adobe-software-tech-lab/)
+
+***
+
 Date: 2021-06-04
 
 ### ADSP: The Podcast - Episode 28: Steve Jobs & Sean Parent
