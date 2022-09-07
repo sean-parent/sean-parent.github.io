@@ -26,6 +26,7 @@ Abstract: Personal computers and devices are unbelievably fast but often struggl
 
 Note: Talk presented at [skills matter Performance Summit 2022](https://skillsmatter.com/conferences/13902-performance-summit).
 
+* [Video](https://youtu.be/B-aDBB34o6Y)
 * [PDF](presentations/2022-08-29-performance/2022-08-29-performance.pdf)
 * [Keynote](presentations/2022-08-29-performance/2022-08-29-performance.key)
 
@@ -41,6 +42,7 @@ Additional commentary about this talk is available [here]({% post_url 2022-07-26
 
 Note: Talk presents at [CppNorth 2022](https://cppnorth2022.sched.com/event/140gg/closing-keynote-sean-parent), 2022-07-20
 
+* [Video](https://youtu.be/kZCPURMH744)
 * [PDF](presentations/2022-07-20-cpp-tomorrow/2022-07-20-cpp-tomorrow.pdf)
 * [Keynote](presentations/2022-07-20-cpp-tomorrow/2022-07-20-cpp-tomorrow.key)
 
