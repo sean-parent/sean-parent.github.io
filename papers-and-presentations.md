@@ -585,6 +585,8 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 
 Date: 2021-08-13
 
+### ADSP: The Podcast - Episode 38: Adobe STLab is Back! (with Sean Parent)
+
 In this episode, Bryce and Conor interview Sean Parent about restarting the Adobe Software Technology Lab.
 
 [Audio](https://adspthepodcast.com/2021/08/13/Episode-38.html)
@@ -592,6 +594,8 @@ In this episode, Bryce and Conor interview Sean Parent about restarting the Adob
 ***
 
 Date: 2021-07-21
+
+### CppCast: STLab
 
 Rob and Jason are joined by Sean Parent and Dave Abrahams. They first talk to Dave about his history with C++, Boost and the Swift programming language. Then they talk with Sean and Dave about Adobe’s Software Technology Lab and their plans to focus on Concurrency in C++.
 
@@ -681,7 +685,7 @@ Jens Weller from [Meeting C++](http://meetingcpp.com) interviewed me following m
 
 Date: 2015-06-01
 
-### Better Code Concurrency with Sean Parent
+### CppCast: Better Code Concurrency with Sean Parent
 
 An interview from [CppCast](http://cppcast.com/) about my [talk](#better-code-concurrency).
 
