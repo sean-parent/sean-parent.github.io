@@ -583,13 +583,23 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 
 ***
 
+Date: 2022-11-09
+
+### Meeting C++: AMA with Sean Parent
+
+[This meeting](https://www.meetup.com/meeting-cpp-online/events/288860262/) features an AMA with Sean Parent!
+
+* [Video](https://youtu.be/8SF-UR8AuPI)
+
+***
+
 Date: 2021-08-13
 
 ### ADSP: The Podcast - Episode 38: Adobe STLab is Back! (with Sean Parent)
 
 In this episode, Bryce and Conor interview Sean Parent about restarting the Adobe Software Technology Lab.
 
-[Audio](https://adspthepodcast.com/2021/08/13/Episode-38.html)
+* [Audio](https://adspthepodcast.com/2021/08/13/Episode-38.html)
 
 ***
 

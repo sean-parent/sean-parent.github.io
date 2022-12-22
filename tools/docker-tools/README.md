@@ -10,23 +10,20 @@ If you don't already have docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.9"
+VERSION="1.0.10"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
 
 # Specify the ruby version to match https://pages.github.com/versions/
-# The docker file is currently building from ubuntu:impish instead of latest because
-# past that, Ruby 2.7.3 is not supported. If the ruby requirement is updated, then move to
-# latest.
 
-RUBY_VERSION="2.7.3"
+RUBY_VERSION="2.7.4"
 echo $RUBY_VERSION > ./.ruby-version
 
 # build the base image, no-cache is used so the latest tools are installed
 docker build --build-arg RUBY_VERSION=$RUBY_VERSION --file ./tools/docker-tools/Dockerfile \
   --target base --tag $VOLUME . \
-  --no-cache 
+  --no-cache
 
 # update the docs environment
 docker run --mount type=bind,source="$(pwd)",target=/mnt/host --tty --interactive $VOLUME bash
