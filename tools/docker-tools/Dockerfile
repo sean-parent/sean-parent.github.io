@@ -1,5 +1,5 @@
 # Build from the latest ubuntu release
-FROM ubuntu:latest AS base
+FROM ubuntu:focal AS base
 
 # Install items requiring root access
 
@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     git \
     libreadline-dev \
     make \
+    nodejs \
     npm \
     rbenv \
     wget \
