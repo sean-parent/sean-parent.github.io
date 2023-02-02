@@ -9,5 +9,11 @@
     ],
     "cSpell.words": [
         "postconditions"
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file"
+        }
     ]
 }

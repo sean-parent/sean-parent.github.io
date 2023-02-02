@@ -18,6 +18,16 @@ comments: true
 
 ***
 
+Date: 2023-02-15
+
+### What’s Your Function?
+
+Abstract: A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
+
+Note: This talk will be presented at the the [Northwest C++ User’s Group](https://nwcpp.org).
+
+***
+
 Date: 2022-08-29
 
 ### Where Have All the Cycles Gone?
