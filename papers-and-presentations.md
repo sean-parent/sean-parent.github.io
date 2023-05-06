@@ -383,7 +383,7 @@ Abstract: A look at many of the new features in C++ and a couple of old features
 
 Note: This is the ACCU, Silicon Valley Chapter version of the talk originally given at GoingNative 2013. The talk is also known as "3 Goals for Better Code." This version contains an expanded ending to the polymorphism code, starting on page 179 of the PDF, and some optional slides that did not make that talk. The extended version of the talk was also given at A9.
 
-* [Video](http://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning)
+* [Video](https://youtu.be/W2tWOdzgXHA)
 * [Video (extended)](https://www.youtube.com/watch?v=IzNtM038JuI)
 * [PDF](presentations/2013-09-11-cpp-seasoning/cpp-seasoning.pdf)
 * [Keynote](presentations/2013-09-11-cpp-seasoning/cpp-seasoning.key)
