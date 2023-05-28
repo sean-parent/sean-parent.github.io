@@ -20,4 +20,5 @@ method Main() {
   var a := [1, 2, 3];
   var b := Reverse(a);
   assert b == [3, 2, 1];
+  print b;
 }

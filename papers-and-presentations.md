@@ -18,13 +18,42 @@ comments: true
 
 ***
 
+Date: 2023-05-25
+
+### Better Code: Algorithms
+
+Abstract: A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
+
+Note: This is a shorter version of the _What's Your Function?_ talk below, and was presented internally at Adobe.
+
+* [Slides](presentations/2023-05-25-better-code-algorithms/2023-05-25-better-code-algorithms.pdf)
+* [Keynote](presentations/2023-05-25-better-code-algorithms/2023-05-25-better-code-algorithms.key)
+
+***
+
+Date: 2023-05-08
+
+### All the Safeties
+
+Safety is a hot topic. What do we mean by _safety_? How does it relate to correctness? What about security? This talk proposes a taxonomy of general computer science terminology with specifics about how it applies to C++ and how this better understanding can be used to write Better Code.
+
+Note: This talk was presented at the [C++Now 2023](https://schedule.cppnow.org/session/all-the-safeties/) conference.
+
+* [Slides](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.pdf)
+* [Keynote](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.key)
+
+***
+
 Date: 2023-02-15
 
 ### What’s Your Function?
 
 Abstract: A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
 
-Note: This talk will be presented at the the [Northwest C++ User’s Group](https://nwcpp.org).
+Note: This talk was presented at the the [Northwest C++ User’s Group](https://nwcpp.org). The slides linked from here are generated from a Jupyter notebook and are under development.
+
+* [Video](https://youtu.be/DnfRMYCw_Y4)
+* [Slides](https://sean-parent.stlab.cc/notebook/better-code-class/03-algorithms.slides.html)
 
 ***
 
