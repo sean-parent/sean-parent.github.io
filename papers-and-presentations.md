@@ -18,6 +18,24 @@ comments: true
 
 ***
 
+Date: 2023-06-28, 2023-05-08
+
+### All the Safeties
+
+Safety is a hot topic. What do we mean by _safety_? How does it relate to correctness? What about security? This talk proposes a taxonomy of general computer science terminology with specifics about how it applies to C++ and how this better understanding can be used to write Better Code.
+
+Note: This is a revised version of the talk presented at the [CppOnSea 2023](https://cpponsea.uk/2023/sessions/keynote-all-the-safeties.html) conference, 2023-06-28.
+
+* [Slides](presentations/2023-06-28-all-the-safeties/2023-06-28-all-the-safeties.pdf)
+* [Keynote](presentations/2023-06-28-all-the-safeties/2023-06-28-all-the-safeties.key)
+
+Note: This talk was presented at the [C++Now 2023](https://schedule.cppnow.org/session/all-the-safeties/) conference, 2023-05-08.
+
+* [Slides](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.pdf)
+* [Keynote](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.key)
+
+***
+
 Date: 2023-05-25
 
 ### Better Code: Algorithms
@@ -31,19 +49,6 @@ Note: This is a shorter version of the _What's Your Function?_ talk below, and w
 
 ***
 
-Date: 2023-05-08
-
-### All the Safeties
-
-Safety is a hot topic. What do we mean by _safety_? How does it relate to correctness? What about security? This talk proposes a taxonomy of general computer science terminology with specifics about how it applies to C++ and how this better understanding can be used to write Better Code.
-
-Note: This talk was presented at the [C++Now 2023](https://schedule.cppnow.org/session/all-the-safeties/) conference.
-
-* [Slides](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.pdf)
-* [Keynote](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.key)
-
-***
-
 Date: 2023-02-15
 
 ### What’s Your Function?
@@ -54,6 +59,25 @@ Note: This talk was presented at the the [Northwest C++ User’s Group](https://
 
 * [Video](https://youtu.be/DnfRMYCw_Y4)
 * [Slides](https://sean-parent.stlab.cc/notebook/better-code-class/03-algorithms.slides.html)
+
+***
+
+Date: 2022-08-31, 2022-05-05
+
+### Exceptions the Other Way Around
+
+Abstract: When discussing exceptions, there is a focus on when to throw an exception and how to propagate it. But little attention is given to how to recover from an exception. By looking at error handling from what it means to recover from a mistake, we can understand the requirements to handle exceptions correctly. We'll see the technique of shifting perspectives is more broadly helpful in developing usable operations and types.
+
+Note: Talk presented internally at Adobe. This version was edited down for time. 2022-08-31
+
+* [PDF](presentations/2022-08-31-exceptions/2022-08-31-exceptions.pdf)
+* [Keynote](presentations/2022-08-31-exceptions/2022-08-31-exceptions.key)
+
+Note: Talk presented at [C++Now 2022](https://cppnow.org/history/2022/schedule/). The slides here contain minor corrections, 2022-05-05
+
+* [Video](https://youtu.be/mkkaAWNE-Ig)
+* [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
+* [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
 
 ***
 
@@ -87,40 +111,7 @@ Note: Talk presents at [CppNorth 2022](https://cppnorth2022.sched.com/event/140g
 
 ***
 
-Date: 2022-05-05, 2022-08-31
-
-### Exceptions the Other Way Around
-
-Abstract: When discussing exceptions, there is a focus on when to throw an exception and how to propagate it. But little attention is given to how to recover from an exception. By looking at error handling from what it means to recover from a mistake, we can understand the requirements to handle exceptions correctly. We'll see the technique of shifting perspectives is more broadly helpful in developing usable operations and types.
-
-Note: Talk presented at [C++Now 2022](https://cppnow.org/history/2022/schedule/). The slides here contain minor corrections, 2022-05-05
-
-* [Video](https://youtu.be/mkkaAWNE-Ig)
-* [PDF](presentations/2022-05-05-exceptions/2022-05-05-exceptions.pdf)
-* [Keynote](presentations/2022-05-05-exceptions/2022-05-05-exceptions.key)
-
-Note: Talk presented internally at Adobe. This version was edited down for time. 2022-08-31
-
-* [PDF](presentations/2022-08-31-exceptions/2022-08-31-exceptions.pdf)
-* [Keynote](presentations/2022-08-31-exceptions/2022-08-31-exceptions.key)
-
-***
-
-Date: 2021-10-19
-
-### Language: Fragmentation of Machine Architecture
-
-Abstract: Not too many years ago, the machine architecture supported by consumer devices looked to be converging on a largely uniform model, the Intel x86 instruction set & OpenCL/GL GPU computation. But now, hardware architecture is increasingly fragmented and complex, while at the same time, the marketplace is demanding higher performance and interactivity across a more extensive range of devices. This talk looks at how we got here, the challenges of supporting these architectures from software applications, and an opening to discuss how software languages will play a role in making sense of the chaos.
-
-Note: Talk presented at [Rebase 2021](https://rebase-conf.org/2021-SPLASH/#fragmentation-of-machine-architecture) as a discussion with Mario Wolczko, 2021-10-19
-
-* [Video](https://youtu.be/lqBzUBKLal0)
-* [PDF](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.pdf)
-* [Keynote](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.key)
-
-***
-
-Date: 2021-06-19, 2021-10-24, 2021-11-14
+Date: 2021-11-14, 2021-10-24, 2021-06-19
 
 ### Warning: `std::find()` is broken
 
@@ -148,7 +139,21 @@ Note: My pointer/cursor was not visible in the video feed, making some of the co
 
 ***
 
-Date: 2019-10-31, 2019-09-19, 2021-03-13
+Date: 2021-10-19
+
+### Language: Fragmentation of Machine Architecture
+
+Abstract: Not too many years ago, the machine architecture supported by consumer devices looked to be converging on a largely uniform model, the Intel x86 instruction set & OpenCL/GL GPU computation. But now, hardware architecture is increasingly fragmented and complex, while at the same time, the marketplace is demanding higher performance and interactivity across a more extensive range of devices. This talk looks at how we got here, the challenges of supporting these architectures from software applications, and an opening to discuss how software languages will play a role in making sense of the chaos.
+
+Note: Talk presented at [Rebase 2021](https://rebase-conf.org/2021-SPLASH/#fragmentation-of-machine-architecture) as a discussion with Mario Wolczko, 2021-10-19
+
+* [Video](https://youtu.be/lqBzUBKLal0)
+* [PDF](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.pdf)
+* [Keynote](presentations/2021-10-19-fragmentation/2021-10-19-fragmentation.key)
+
+***
+
+Date: 2021-03-13, 2019-10-31, 2019-09-19
 
 ### Better Code: Relationships
 
@@ -229,6 +234,25 @@ Note: Talk presented at [pacific++ 2018](https://pacificplusplus.com/), 2018-10-
 
 ***
 
+Date: 2018-09-28, 2017-11-09, 2017-11-06
+
+### Better Code: Human interface
+
+Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics, and improving how we reason about code can have a direct and positive impact on the human interface behavior of the system. As part of my "Better Code" series of talks, the goal is "Don't Lie."
+
+Note: Talk presented at [CppCon 2018](https://cppcon.org/) and [Wargaming.net](https://na.wargaming.net/).
+
+* [Video](https://www.youtube.com/watch?v=0WlJEz2wb8Y)
+* [PDF](presentations/2018-09-28-human-interface/2018-09-28-human-interface.pdf)
+* [Keynote](presentations/2018-09-28-human-interface/2018-09-28-human-interface.key)
+
+Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017/) and [C++ User Group, Russia](http://cpp-russia.ru/?p=1422).
+
+* [PDF](presentations/2017-11-09-human-interface/2017-11-09-human-interface.pdf)
+* [Keynote](presentations/2017-11-09-human-interface/2017-11-09-human-interface.key)
+
+***
+
 Date: 2017-11-11
 
 ### Polymorphic Task Template in Ten
@@ -242,25 +266,6 @@ Note: Talk presented as a lightning talk at [Meeting C++ 2017](http://meetingcpp
 * [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
 * [PDF](presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
 * [Keynote](presentations/2017-11-11-lightning-talk/lightning-talk.key)
-
-***
-
-Date: 2018-09-28, 2017-11-09, 2017-11-06
-
-### Better Code: Human interface
-
-Abstract: This talk explains the relationship between good code and a good human interface (graphical or otherwise). Human interface semantics are tightly coupled with code semantics, and improving how we reason about code can have a direct and positive impact on the human interface behavior of the system. As part of my "Better Code" series of talks, the goal is "Don't Lie."
-
-Note: Talk presented at [cppcon 2018](https://cppcon.org/) and [Wargaming.net](https://na.wargaming.net/).
-
-* [Video](https://www.youtube.com/watch?v=0WlJEz2wb8Y)
-* [PDF](presentations/2018-09-28-human-interface/2018-09-28-human-interface.pdf)
-* [Keynote](presentations/2018-09-28-human-interface/2018-09-28-human-interface.key)
-
-Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017/) and [C++ User Group, Russia](http://cpp-russia.ru/?p=1422).
-
-* [PDF](presentations/2017-11-09-human-interface/2017-11-09-human-interface.pdf)
-* [Keynote](presentations/2017-11-09-human-interface/2017-11-09-human-interface.key)
 
 ***
 
@@ -480,7 +485,34 @@ A plethora of networked devices is changing the software landscape. The infrastr
 
 ***
 
-Data: 2016-07-18
+Date: 2021-04-14
+
+### Relaxing Requirements of Moved-From Objects
+
+Authors: Sean Parent
+
+Abstract: The C++ Standard Library requirements are overly restrictive regarding the state of a moved-from object. The strong requirements impose an unnecessary burden on implementers and imposes a performance impact of user-defined operations. This paper proposes relaxing the requirements by specifying what operations a moved-from object must be able to support.
+
+Note: This paper is a C++ standard proposal, P2345.
+
+* [Link](/2021/03/31/relaxing-requirements-of-moved-from-objects.html)
+
+***
+
+Date: 2021-03-31
+
+### Move Annoyance
+
+Authors: Sean Parent
+
+Abstract: Written for Lakos, J., Romeo, V., Khlebnikov, R., & Meredith, A. (2021). [_Embracing Modern C++ Safely_](https://www.pearson.com/en-us/subject-catalog/p/embracing-modern-c-safely/P200000009514/9780137380350). Addison-Wesley Professional. A short chapter discussing problems with the C++ standard requirements for moved-from objects.
+
+
+* [Link](/2021/03/31/move-annoyance.html)
+
+***
+
+Date: 2016-07-18
 
 ### One Way to Select Many
 
@@ -577,7 +609,7 @@ Date: 2008-10
 
 Authors: Jaakko Järvi, Mat Marcus, Sean Parent, John Freeman, Jacob N. Smith
 
-Abstract: A user interface, such as a dialog, assists a user in synthesising a set of values, typically parameters for a command object. Code for "command parameter synthesis" is usually application-specific and non-reusable, consisting of validation logic in event handlers and code that controls how values of user interface elements change in response to a user's actions, etc. These software artifacts are incidental - they are not explicitly designed and their implementation emerges from a composition of locally defined behaviors.
+Abstract: A user interface, such as a dialog, assists a user in synthesizing a set of values, typically parameters for a command object. Code for "command parameter synthesis" is usually application-specific and non-reusable, consisting of validation logic in event handlers and code that controls how values of user interface elements change in response to a user's actions, etc. These software artifacts are incidental - they are not explicitly designed and their implementation emerges from a composition of locally defined behaviors.
 
 This article presents property models to capture explicitly the algorithms, validation, and interaction rules, arising from command parameter synthesis. A user interface's behavior can be derived from a declarative property model specification, with the assistance of a component akin to a constraint solver. This allows multiple interfaces, both human and programmatic, to reuse a single model along with associated validation logic and widget activation logic.
 
@@ -619,6 +651,24 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 ***
 
 ## Interviews
+
+***
+
+Date: 2023-07-07
+
+### ADSP: The Podcast - Episode 137: Sean Parent on Val (vs Rust)!
+
+In this episode, Conor and Bryce interview Sean Parent live from C++ On Sea 2023 about the Val programming language and how it compares to Rust, Swift and C++.
+
+* [Audio](https://adspthepodcast.com/2023/07/07/Episode-137.html)
+
+***
+
+Date: 2023-06-02
+
+### Session Preview with Sean Parent - All the Safeties - C++ on Sea 2023
+
+* [Video](https://youtu.be/YOGbtLU5UtU)
 
 ***
 

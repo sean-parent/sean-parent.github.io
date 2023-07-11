@@ -3,14 +3,14 @@
 ## Setup
 
 ### Install Docker
-If you don't already have docker installed, [install Docker](https://docs.docker.com/get-docker/).
+If you don't already have Docker installed, [install Docker](https://docs.docker.com/get-docker/).
 
 ### Building the docker image
 
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.12"
+VERSION="1.0.13"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -29,6 +29,7 @@ docker build --build-arg RUBY_VERSION=$RUBY_VERSION --file ./tools/docker-tools/
 docker run --mount type=bind,source="$(pwd)",target=/mnt/host --tty --interactive $VOLUME bash
 
 cd /mnt/host
+git config --global --add safe.directory /mnt/host
 ./tools/docs/update.sh --lock
 exit
 
@@ -105,3 +106,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.9 - Updating tooling
 - 1.0.11 - Updating tooling
 - 1.0.12 - Updating tooling
+- 1.0.13 - Updating tooling

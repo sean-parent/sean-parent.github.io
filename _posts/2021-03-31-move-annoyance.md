@@ -3,7 +3,7 @@ layout: post
 title: Move Annoyance
 date: 2021-03-31 21:16 +0000
 ---
-\[Written for John Lakos and Vittorio Romeo. _Embracing Modern C++ Safely._ Boston: Addison-Wesley, forthcoming. Reproduced with permission.\]
+\[Written for Lakos, J., Romeo, V., Khlebnikov, R., & Meredith, A. (2021). [_Embracing Modern C++ Safely_](https://www.pearson.com/en-us/subject-catalog/p/embracing-modern-c-safely/P200000009514/9780137380350). Addison-Wesley Professional. Reproduced with permission.\]
 
 ## Annoyances
 
