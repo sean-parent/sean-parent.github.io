@@ -259,7 +259,7 @@ Date: 2017-11-11
 
 Abstract: A lightning talk demonstrating how to write a polymorphic task template (similar to `std::function<>`) with small object optimization in 10 minutes. The complete template is part of the stlab concurrency library and can be found [here](http://stlab.cc/libraries/concurrency/task/).
 
-__Erratum: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](http://stlab.cc/tips/small-object-optimizations.html).__
+__Erratum: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](https://stlab.cc/tip/2017/12/23/small-object-optimizations.html).__
 
 Note: Talk presented as a lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
 
@@ -679,6 +679,16 @@ Date: 2022-11-09
 [This meeting](https://www.meetup.com/meeting-cpp-online/events/288860262/) features an AMA with Sean Parent!
 
 * [Video](https://youtu.be/8SF-UR8AuPI)
+
+***
+
+Date: 2021-08-20
+
+### ADSP: The Podcast - Episode 39: How Steve Jobs Saved Sean Parent
+
+In this episode, Sean Parent tells the story how Apple sued him and Steve Jobs stepped in to save the day.
+
+* [Audio](https://adspthepodcast.com/2021/08/20/Episode-39.html)
 
 ***
 
