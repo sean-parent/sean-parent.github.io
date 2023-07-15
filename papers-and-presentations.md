@@ -654,6 +654,16 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 
 ***
 
+Date: 2023-07-14
+
+### ADSP: The Podcast - Episode 138: Sean Parent on Val! (Part 2)
+
+In this episode, Conor and Bryce continue their interview with Sean Parent live from C++ On Sea 2023 about the Val programming language!
+
+* [Audio](https://adspthepodcast.com/2023/07/14/Episode-138.html)
+
+***
+
 Date: 2023-07-07
 
 ### ADSP: The Podcast - Episode 137: Sean Parent on Val (vs Rust)!
@@ -679,6 +689,16 @@ Date: 2022-11-09
 [This meeting](https://www.meetup.com/meeting-cpp-online/events/288860262/) features an AMA with Sean Parent!
 
 * [Video](https://youtu.be/8SF-UR8AuPI)
+
+***
+
+Date: 2021-08-27
+
+### ADSP: The Podcast - Episode 40: Star Trek vs PowerPC (with Sean Parent)
+
+In this episode, Sean Parent tells the story of the battle between Project Star Trek and PowerPC.
+
+* [Audio](https://adspthepodcast.com/2021/08/27/Episode-40.html)
 
 ***
 
