@@ -25,7 +25,7 @@ kramdown:
         block:
             line_numbers: true
 
-exclude: ["sean-parent.bbprojectd/", "exclude/", "bs-config.js"]
+exclude: ["sean-parent.bbprojectd/", "exclude/", "bs-config.js", "vendor/"]
 exclude-tags: [ better-code ]
 
 exclude:
