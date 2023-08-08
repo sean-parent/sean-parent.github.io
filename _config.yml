@@ -25,12 +25,14 @@ kramdown:
         block:
             line_numbers: true
 
-exclude: ["sean-parent.bbprojectd/", "exclude/", "bs-config.js", "vendor/"]
 exclude-tags: [ better-code ]
 
 exclude:
     - sean-parent.bbprojectd/
     - tools/
+    - exclude/
+    - bs-config.js
+    - vendor/
 
 plugins:
     - jekyll-redirect-from
