@@ -654,6 +654,16 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 
 ***
 
+Date: 2023-07-21
+
+### ADSP: The Podcast - Episode 139: Why Sean Parent Joined Adobe
+
+In this episode, Conor and Bryce close out their conversation with Sean Parent and learn why he left Apple to join Adobe.
+
+* [Audio](https://adspthepodcast.com/2023/07/21/Episode-139.html)
+
+***
+
 Date: 2023-07-14
 
 ### ADSP: The Podcast - Episode 138: Sean Parent on Val! (Part 2)
