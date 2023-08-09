@@ -31,6 +31,7 @@ Note: This is a revised version of the talk presented at the [CppOnSea 2023](htt
 
 Note: This talk was presented at the [C++Now 2023](https://schedule.cppnow.org/session/all-the-safeties/) conference, 2023-05-08.
 
+* [Video](https://youtu.be/MO-qehjc04s)
 * [Slides](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.pdf)
 * [Keynote](presentations/2023-05-08-all-the-safeties/2023-05-08-all-the-safeties.key)
 
@@ -507,7 +508,6 @@ Authors: Sean Parent
 
 Abstract: Written for Lakos, J., Romeo, V., Khlebnikov, R., & Meredith, A. (2021). [_Embracing Modern C++ Safely_](https://www.pearson.com/en-us/subject-catalog/p/embracing-modern-c-safely/P200000009514/9780137380350). Addison-Wesley Professional. A short chapter discussing problems with the C++ standard requirements for moved-from objects.
 
-
 * [Link](/2021/03/31/move-annoyance.html)
 
 ***
@@ -679,6 +679,14 @@ Date: 2023-06-02
 ### Session Preview with Sean Parent - All the Safeties - C++ on Sea 2023
 
 * [Video](https://youtu.be/YOGbtLU5UtU)
+
+***
+
+Date: 2023-05-08
+
+### Coding for Safety, Security, and Sustainability in C++ - Panel Discussion - CppNow 2023
+
+* [Video](https://youtu.be/jFi5cILjbA4)
 
 ***
 

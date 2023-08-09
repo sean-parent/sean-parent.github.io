@@ -10,14 +10,14 @@ If you don't already have Docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.13"
+VERSION="1.0.14"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
 
 # Specify the ruby version to match https://pages.github.com/versions/
 
-RUBY_VERSION="2.7.4"
+RUBY_VERSION="3.2.2"
 echo $RUBY_VERSION > ./.ruby-version
 
 # build the base image, no-cache is used so the latest tools are installed
@@ -49,7 +49,7 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
     $VOLUME bash
 ```
 
-This should leave you at bash prompt that looks like:
+This should leave you at a bash prompt that looks like this:
 
 ```
 app@fc7590a63ba3:~$
@@ -97,9 +97,9 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 
 ### Release Notes
 
-- 1.0.0 - Initial release for jekyll
+- 1.0.0 - Initial release for Jekyll
 - 1.0.1 - First update
-- 1.0.3 - Updating jekyll tooling
+- 1.0.3 - Updating Jekyll tooling
 - 1.0.3 - Updating jekyll tooling
 - 1.0.5 - Updating jekyll tooling
 - 1.0.8 - Updating tooling, locking to ubuntu:impish, draft of exceptions talk, adding recent talks to page
@@ -107,3 +107,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.11 - Updating tooling
 - 1.0.12 - Updating tooling
 - 1.0.13 - Updating tooling
+- 1.0.14 - Updating to use github actions

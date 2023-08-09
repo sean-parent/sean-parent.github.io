@@ -1,5 +1,5 @@
 # Build from the latest ubuntu release
-FROM ubuntu:focal AS base
+FROM ubuntu:latest AS base
 
 # Install items requiring root access
 
@@ -15,11 +15,13 @@ RUN apt-get update && apt-get install -y \
     npm \
     rbenv \
     wget \
-    zlib1g-dev \
-&& rm -rf /var/lib/apt/lists/*
+    zlib1g-dev
+
+RUN apt-get install -y libyaml-dev
 
 RUN npm install -g n
-RUN n latest
+# Turn off XZ compression because 20.5.1 had a broken link
+RUN export N_USE_XZ=0; n latest
 
 RUN npm install -g npm@latest
 RUN npm install -g browser-sync
