@@ -27,7 +27,11 @@ docker build --build-arg RUBY_VERSION=$RUBY_VERSION --file ./tools/docker-tools/
 
 # update the docs environment
 docker run --mount type=bind,source="$(pwd)",target=/mnt/host --tty --interactive $VOLUME bash
+```
 
+At the docker prompt, execute the following:
+
+```
 cd /mnt/host
 git config --global --add safe.directory /mnt/host
 ./tools/docs/update.sh --lock
