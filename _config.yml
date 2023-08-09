@@ -27,10 +27,6 @@ kramdown:
 
 exclude-tags: [ better-code ]
 
-include:
-    - presentations/
-    - papers/
-
 exclude:
     - sean-parent.bbprojectd/
     - tools/
