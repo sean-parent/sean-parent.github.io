@@ -37,16 +37,23 @@ Note: This talk was presented at the [C++Now 2023](https://schedule.cppnow.org/s
 
 ***
 
-Date: 2023-05-25
+Date: 2023-06-08, 2023-05-25
 
 ### Better Code: Algorithms
 
 Abstract: A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
 
+Note: This is a shorter version of the _What's Your Function?_ talk below, and was presented internally at Adobe - revised.
+
+* [Slides](/presentations/2023-06-08-algorithms/2023-06-08-algorithms.pdf)
+* [Slides with notes](/presentations/2023-06-08-algorithms/2023-06-08-algorithms-notes.pdf)
+* [Keynote](/presentations/2023-06-08-algorithms/2023-06-08-algorithms.key)
+
 Note: This is a shorter version of the _What's Your Function?_ talk below, and was presented internally at Adobe.
 
-* [Slides](/presentations/2023-05-25-better-code-algorithms/2023-05-25-better-code-algorithms.pdf)
-* [Keynote](/presentations/2023-05-25-better-code-algorithms/2023-05-25-better-code-algorithms.key)
+* [Slides](/presentations/2023-05-25-algorithms/2023-05-25-algorithms.pdf)
+* [Slides with notes](/presentations/2023-05-25-algorithms/2023-05-25-algorithms-notes.pdf)
+* [Keynote](/presentations/2023-05-25-algorithms/2023-05-25-algorithms.key)
 
 ***
 
