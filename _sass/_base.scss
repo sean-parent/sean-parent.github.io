@@ -41,7 +41,7 @@ pre, code {
 h1, h2, h3, h4, h5, h6, blockquote,
 ul, ol, dl, p, figure
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 
@@ -125,7 +125,7 @@ blockquote {
     color: $quote-text-color;
     background-color: $quote-background-color;
     border-left: 4px solid $quote-accent-color;
-    padding-left: $spacing-unit / 2;
+    padding-left: calc($spacing-unit / 2);
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 8px;
@@ -174,8 +174,8 @@ pre:not(.language-mermaid > *) {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        padding-right: calc($spacing-unit / 2);
+        padding-left: calc($spacing-unit / 2);
     }
 }
 

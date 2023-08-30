@@ -10,12 +10,12 @@ If you don't already have Docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.14"
+VERSION="1.0.15"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
 
-# Specify the ruby version to match https://pages.github.com/versions/
+# Specify the ruby version to match the latest stable - https://www.ruby-lang.org/en/downloads/
 
 RUBY_VERSION="3.2.2"
 echo $RUBY_VERSION > ./.ruby-version
@@ -112,3 +112,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.12 - Updating tooling
 - 1.0.13 - Updating tooling
 - 1.0.14 - Updating to use github actions
+- 1.0.15 - Updating tooling

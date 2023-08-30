@@ -24,6 +24,7 @@ rm ./Gemfile.lock
 if [[ $LOCK = YES ]]; then
     bundle lock --update
     bundle lock --add-platform x86_64-linux
+    bundle lock --add-platform aarch64-linux
 else
     bundle update
 fi

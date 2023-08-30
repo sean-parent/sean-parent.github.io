@@ -26,6 +26,7 @@ Safety is a hot topic. What do we mean by _safety_? How does it relate to correc
 
 Note: This is a revised version of the talk presented at the [CppOnSea 2023](https://cpponsea.uk/2023/sessions/keynote-all-the-safeties.html) conference, 2023-06-28.
 
+* [Video](https://youtu.be/BaUv9sgLCPc)
 * [Slides](/presentations/2023-06-28-all-the-safeties/2023-06-28-all-the-safeties.pdf)
 * [Keynote](/presentations/2023-06-28-all-the-safeties/2023-06-28-all-the-safeties.key)
 
