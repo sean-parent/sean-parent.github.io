@@ -686,7 +686,7 @@ Date: 2023-07-07
 
 ### ADSP: The Podcast - Episode 137: Sean Parent on Val (vs Rust)!
 
-In this episode, Conor and Bryce interview Sean Parent live from C++ On Sea 2023 about the Val programming language and how it compares to Rust, Swift and C++.
+In this episode, Conor and Bryce interview Sean Parent live from C++ On Sea 2023 about the Val programming language and how it compares to Rust, Swift, and C++.
 
 * [Audio](https://adspthepodcast.com/2023/07/07/Episode-137.html)
 
@@ -720,7 +720,7 @@ Date: 2022-11-09
 
 Date: 2021-08-27
 
-### ADSP: The Podcast - Episode 40: Star Trek vs PowerPC (with Sean Parent)
+### ADSP: The Podcast - Episode 40: Star Trek vs. PowerPC (with Sean Parent)
 
 In this episode, Sean Parent tells the story of the battle between Project Star Trek and PowerPC.
 
@@ -732,7 +732,7 @@ Date: 2021-08-20
 
 ### ADSP: The Podcast - Episode 39: How Steve Jobs Saved Sean Parent
 
-In this episode, Sean Parent tells the story how Apple sued him and Steve Jobs stepped in to save the day.
+In this episode, Sean Parent tells the story of how Apple sued him, and Steve Jobs stepped in to save the day.
 
 * [Audio](https://adspthepodcast.com/2021/08/20/Episode-39.html)
 
@@ -752,7 +752,7 @@ Date: 2021-07-21
 
 ### CppCast: STLab
 
-Rob and Jason are joined by Sean Parent and Dave Abrahams. They first talk to Dave about his history with C++, Boost and the Swift programming language. Then they talk with Sean and Dave about Adobe’s Software Technology Lab and their plans to focus on Concurrency in C++.
+Rob and Jason are joined by Sean Parent and Dave Abrahams. They first talk to Dave about his history with C++, Boost, and the Swift programming language. Then, they talk with Sean and Dave about Adobe’s Software Technology Lab and their plans to focus on Concurrency in C++.
 
 * [Audio](https://cppcast.com/adobe-software-tech-lab/)
 
@@ -782,7 +782,7 @@ Date: 2021-05-21
 
 ### ADSP: The Podcast - Episode 26: Sean Parent on Slides Decks, UI & More
 
-In this episode, Conor and Bryce talk to Sean Parent about a plethora of topics including slides, UI and more.
+In this episode, Conor and Bryce talk to Sean Parent about a plethora of topics, including slides, UI, and more.
 
 * [Audio](https://adspthepodcast.com/2021/05/21/Episode-26.html)
 
@@ -812,7 +812,7 @@ Date: 2019-10-17
 
 ### cpp.chat - Episode #62 (with Sean Parent) "I'm Surprised You Brought up Rotate"
 
-Jon Kalb and Phil Nash interview me live at [CppCon 2019](https://cppcon.org/).
+Jon Kalb and Phil Nash interviewed me live at [CppCon 2019](https://cppcon.org/).
 
 * [Video](https://www.youtube.com/watch?v=czHpJE3xIXc)
 
@@ -848,8 +848,18 @@ An interview from [CppCast](http://cppcast.com/) about my [talk](#better-code-co
 
 ***
 
+Date: 1997-12
+
+### From the Factory Floor - Sean Parent: The Photoshop Development Process
+
+An interview published in [MacTech](https://en.wikipedia.org/wiki/MacTech).
+
+* [Link](https://archive.org/details/eu_MacTech-1997-12_OCR/page/n42/mode/1up)
+
+***
+
 ## Older papers and presentation
 
 ***
 
-Some of my older papers and presentation can be found [here](http://stlab.cc/legacy/papers-and-presentations.html).
+Some of my older papers and presentations can be found [here](http://stlab.cc/legacy/papers-and-presentations.html).
