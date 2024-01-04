@@ -18,6 +18,57 @@ comments: true
 
 ***
 
+Date: 2023-10-06
+
+### Better Code: Contracts
+
+Coauthored and presented with Dave Abrahams.
+
+Are you confident that the code you write, and the changes you make, are correct? What does “correct” even mean? How do we know the code we write today won’t become a long-term liability? These persistent questions can be enough to suck all the fun out of programming, but it doesn’t have to be that way. In this talk, we’ll look at the connective tissue of good code and show how to keep it strong and supple. There is no need to wait for language features to start using contracts. We’ll suggest replacing code reviews with something better and charting the path to a more hopeful future of software.
+
+Note: This talk was presented at the [CppCon 2023](https://cppcon2023.sched.com/event/1Qtgl) conference, 2023-10-06.
+
+* [Video](https://youtu.be/OWsepDEh5lQ)
+* [Slides](/presentations/2023-10-06-better-code-contracts/2023-10-06-better-code-contracts.pdf)
+* [Keynote](/presentations/2023-10-06-better-code-contracts/2023-10-06-better-code-contracts.key)
+
+***
+
+Date: 2023-09-28
+
+### Better Code: Algorithms - Composition
+
+Algorithm composition is the process of combining existing algorithms to create new ones that solve complex problems. This talk looks at different forms of composition with different trade-offs. The talk will inspire you to think of algorithms as reusable building blocks that can be combined in novel ways.
+
+Note: This talk was presented internally at Adobe and will be available on the [C++ at Adobe](https://developer.adobe.com/cpp/training/) site.
+
+* [Slides](/presentations/2023-09-28-algorithm-composition/2023-09-28-algorithm-composition.pdf)
+* [Slides with notes](/presentations/2023-09-28-algorithm-composition/2023-09-28-algorithm-composition-notes.pdf)
+* [Keynote](/presentations/2023-09-28-algorithm-composition/2023-09-28-algorithm-composition.key)
+
+***
+
+Date: 2023-06-08, 2023-05-25
+
+### Better Code: Algorithms - Preliminaries
+
+A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
+
+Note: This talk was presented internally at Adobe and is available on the [C++ at Adobe](https://developer.adobe.com/cpp/training/) site.
+
+* [Video](https://youtu.be/wtOkvB_iFw4)
+* [Slides](/presentations/2023-06-08-algorithms/2023-06-08-algorithms.pdf)
+* [Slides with notes](/presentations/2023-06-08-algorithms/2023-06-08-algorithms-notes.pdf)
+* [Keynote](/presentations/2023-06-08-algorithms/2023-06-08-algorithms.key)
+
+Initial draft version:
+
+* [Slides](/presentations/2023-05-25-algorithms/2023-05-25-algorithms.pdf)
+* [Slides with notes](/presentations/2023-05-25-algorithms/2023-05-25-algorithms-notes.pdf)
+* [Keynote](/presentations/2023-05-25-algorithms/2023-05-25-algorithms.key)
+
+***
+
 Date: 2023-06-28, 2023-05-08
 
 ### All the Safeties
@@ -494,6 +545,20 @@ A plethora of networked devices is changing the software landscape. The infrastr
 
 ***
 
+Date: 2023-11-20
+
+### indirect and polymorphic: Vocabulary Types for Composite Class Design
+
+Authors: Jonathan Coe, Antony Peacock, Sean Parent
+
+Abstract: We propose the addition of two new class templates to the C++ Standard Library: `indirect<T>`` and `polymorphic<T>``.
+
+Specializations of these class templates have value semantics and compose well with other standard library types (such as vector), allowing the compiler to correctly generate special member functions.
+
+[Markdown](https://github.com/jbcoe/value_types/blob/main/DRAFT.md)
+
+***
+
 Date: 2021-04-14
 
 ### Relaxing Requirements of Moved-From Objects
@@ -548,6 +613,18 @@ Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generat
 
 * [PDF](/papers/2015-10-26-gpce/gpce15main-mainid43-p-e08bb9a-25371M-final.pdf)
 * [ACM Citation](http://dl.acm.org/citation.cfm?id=2814207)
+
+***
+
+Date: 2014-10-10
+
+### D4128: Ranges for the Standard Library: Revision 1
+
+Authors: Eric Niebler, Sean Parent, Andrew Sutton
+
+Abstract: This paper outlines what support for ranges in the C++ standard library might look like. Rather than presenting a final design, this paper proposes a set of concepts and guidelines for using them to implement range-based versions of the standard algorithms. It draws inspiration from the Boost.Range library, the range algorithms in Adobe Source Libraries, Elements of Programming by Stepanov and McJones (2009), and from N3351 “A Concept Design for the STL” by Stroustrup and Sutton (2012). In addition to presenting the concepts and guidelines, this paper discusses the rationale behind each, weighing different design options.
+
+* [HTML](https://ericniebler.github.io/std/wg21/D4128.html)
 
 ***
 
@@ -659,6 +736,26 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 ***
 
 ## Interviews
+
+***
+
+Date: 2023-12-29
+
+### ADSP: The Podcast - Episode 162: Sean Parent on the History of Pascal
+
+In this episode, Conor and Bryce chat with Sean Parent about Pascal, C, Unix, Modula(-2/3) and more!
+
+* [Audio](https://adspthepodcast.com/2023/12/29/Episode-162.html)
+
+***
+
+Date 2023-12-15
+
+### ADSP: The Podcast - Episode 160: Rust & Safety at Adobe with Sean Parent
+
+In this episode, Conor and Bryce chat with Sean Parent about the latest on the Hylo programming language, potential limitations to the C++ Senders and Receivers model and the status of Rust and safety at Adobe.
+
+* [Audio](https://adspthepodcast.com/2023/12/15/Episode-160.html)
 
 ***
 
@@ -855,6 +952,36 @@ Date: 1997-12
 An interview published in [MacTech](https://en.wikipedia.org/wiki/MacTech).
 
 * [Link](https://archive.org/details/eu_MacTech-1997-12_OCR/page/n42/mode/1up)
+
+***
+
+## Sightings
+
+Random sightings of me on the web.
+
+***
+
+Date: 2023-09-08
+
+### Basal Gangster - A/UX: The Long View (2010)
+
+References my [ADSP interview](https://adspthepodcast.com/2021/06/04/Episode-28.html) discussing how Carbon almost didn't happen.
+
+[Audio]](https://macfolkloreradio.com/2023/09/08/basal-gangster-a-ux-the-long-view.html)
+
+***
+
+Date: 1992
+
+### MacHack 1992
+
+Somehow I convinced Apple to allow me to bring a prototype of the RISC based Macintosh to MacHack 1992. This unit used an [M68110 with an emulator written by Gary Davidian](https://computerhistory.org/blog/transplanting-the-macs-central-processor-gary-davidian-and-his-68000-emulator/). We did not yet have a prototype with a PowerPC processor. I offered $100 dollars to anyone who could find a piece of Mac software that would not run on the prototype. Waldemar Horwat won the $100 dollars by finding that the TMON debugger did not run under emulation. The video from MacHack is unwatchable but does capture me presenting payment to Waldemar.
+
+* [Video](https://youtu.be/MzQgU5IytNw?si=EpeFvpZzqGKWQPwb&t=1351)
+
+On the same unwatchable video is a clip of me presenting my hack, _Okay, What was that?_
+
+* [Video](https://youtu.be/MzQgU5IytNw?si=avV-qL7YslnM6fQd&t=2419)
 
 ***
 
