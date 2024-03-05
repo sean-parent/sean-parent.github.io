@@ -1,9 +1,9 @@
 ---
 title: Algorithms
 tagline: No Raw Loops
-
-layout: page
+layout: book-page
 tags: [ better-code ]
+chapter: 2
 ---
 
 Testing 1.2.3...
