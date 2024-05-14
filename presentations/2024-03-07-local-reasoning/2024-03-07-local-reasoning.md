@@ -2,7 +2,7 @@
 
 ## Introduction
 
-_Local reasoning_ is the ability to look at a defined unit of code, understand it, and verify its correctness without understanding all the contexts in which it is used.
+_Local Reasoning_ is the ability to reason about a defined unit of code and verify its correctness without understanding all the contexts in which it is used or the implementations upon which it relies.
 
 There are two units of code we will discuss:
 
@@ -11,7 +11,10 @@ There are two units of code we will discuss:
 
 ### Terminology
 
-An API has two sides, the `caller` and the `callee`. The `caller` invokes the `callee`. The `callee` is the function or method being invoked.
+Local Reasoning is concerned with both sides of an API
+
+- The _client_ code is the code calling a function or holding an instance of a class
+- The _implementor_ code is the implementation of a function or class
 
 ## Functions
 
@@ -48,7 +51,7 @@ Let's make our function just a bit more complicated:
 void f(int& x) { x += 1; }
 ```
 
-This is still very simple. But an additional precondition just crept in. What is it?
+This is still very simple. But a precondition just crept in. What is it?
 
 What if another thread is reading `x` at the moment we update it? This would be undefined behavior. There is an implicit precondition here:
 
