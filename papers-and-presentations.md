@@ -6,11 +6,15 @@ layout: page
 comments: true
 ---
 
+<!-- prettier-ignore-start -->
+
 ## Contents
 {:.no_toc}
 
 - [place holder]
 {:toc}
+
+<!-- prettier-ignore-end -->
 
 ---
 
@@ -26,9 +30,9 @@ Local reasoning is the ability to look at a defined unit of code, a function, or
 
 Note: This talk was presented at the [Northwest C++ Users' Group](https://nwcpp.org/May-2024.html).
 
-[Slides](/presentations/2024-05-26-local-reasoning/2024-05-16-local-reasoning.pdf)
-[Slides with notes](/presentations/2024-05-26-local-reasoning/2024-05-16-local-reasoning-notes.pdf)
-[Keynote](/presentations/2024-05-26-local-reasoning/2024-05-16-local-reasoning.key)
+- [Slides](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.pdf)
+- [Slides with notes](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning-notes.pdf)
+- [Keynote](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.key)
 
 ---
 
