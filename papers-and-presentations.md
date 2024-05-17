@@ -7,11 +7,10 @@ comments: true
 ---
 
 ## Contents
-
 {:.no_toc}
 
 - [place holder]
-  {:toc}
+{:toc}
 
 ---
 
