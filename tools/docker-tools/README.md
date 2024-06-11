@@ -3,6 +3,7 @@
 ## Setup
 
 ### Install Docker
+
 If you don't already have Docker installed, [install Docker](https://docs.docker.com/get-docker/).
 
 ### Building the docker image
@@ -10,7 +11,7 @@ If you don't already have Docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```
-VERSION="1.0.17"
+VERSION="1.0.18"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -116,3 +117,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.15 - Updating tooling
 - 1.0.16 - Updating tooling
 - 1.0.17 - Downgrading ruby to match latest ubuntu in github actions
+- 1.0.18 - Updating tooling
