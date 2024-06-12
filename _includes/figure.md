@@ -15,7 +15,7 @@
 
 ![figure {{page.chapter}}.{{figure-number}}: {{include.caption}}][{{include.name}}]\\
 
-figure {{page.chapter}}.{{figure-number}}: {{include.caption}}
+Figure {{page.chapter}}.{{figure-number}}: {{include.caption}}
 </p>{: #{{include.name}} }
 
 [{{include.name}}]: figures/{{include.name}}.svg
