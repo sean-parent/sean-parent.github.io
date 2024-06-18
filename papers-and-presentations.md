@@ -36,6 +36,18 @@ Note: This talk was presented at the [Northwest C++ Users' Group](https://nwcpp.
 
 ---
 
+Date: 2024-03-07
+
+### Chains. An alternative to sender/receivers.
+
+Starting from separating function execution context from a function result, this talk looks at the ensuing problem space and pursues an alternative path to sender/receivers, emphasizing simplicity and low latency in a dynamic environment.
+
+- [Slides](presentations/2024-03-07-chains/2024-03-07-chains.pdf)
+- [Slides with notes](presentations/2024-03-07-chains/2024-03-07-chains-notes.pdf)
+- [Keynote](presentations/2024-03-07-chains/2024-03-07-chains.key)
+
+---
+
 Date: 2023-10-06
 
 ### Better Code: Contracts
@@ -495,7 +507,7 @@ Abstract: A look at many of the new features in C++ and a couple of old features
 
 Note: This is the ACCU, Silicon Valley Chapter version of the talk originally given at GoingNative 2013. The talk is also known as "3 Goals for Better Code." This version contains an expanded ending to the polymorphism code, starting on page 179 of the PDF, and some optional slides that did not make that talk. The extended version of the talk was also given at A9.
 
-- [Video](https://youtu.be/W2tWOdzgXHA)
+- [Video](https://learn.microsoft.com/en-us/shows/goingnative-2013/cpp-seasoning)
 - [Video (extended)](https://www.youtube.com/watch?v=IzNtM038JuI)
 - [PDF](/presentations/2013-09-11-cpp-seasoning/cpp-seasoning.pdf)
 - [Keynote](/presentations/2013-09-11-cpp-seasoning/cpp-seasoning.key)
@@ -510,7 +522,7 @@ Abstract: Implementing non-intrusive runtime polymorphic objects with value-sema
 
 Note: This is an abbreviated version of the Value Semantics and Concept-based Polymorphism talk linked to below given at GoingNative 2013.
 
-- [Video](http://channel9.msdn.com/Events/GoingNative/2013/Inheritance-Is-The-Base-Class-of-Evil).
+- [Video](https://learn.microsoft.com/en-us/shows/goingnative-2013/inheritance-base-class-of-evil).
 
 ---
 
@@ -569,7 +581,7 @@ Date: 2023-11-20
 
 Authors: Jonathan Coe, Antony Peacock, Sean Parent
 
-Abstract: We propose the addition of two new class templates to the C++ Standard Library: ` indirect<T>`` and  `polymorphic<T>``.
+Abstract: We propose the addition of two new class templates to the C++ Standard Library: `indirect<T>` and `polymorphic<T>`.
 
 Specializations of these class templates have value semantics and compose well with other standard library types (such as vector), allowing the compiler to correctly generate special member functions.
 
@@ -985,7 +997,7 @@ Date: 2023-09-08
 
 References my [ADSP interview](https://adspthepodcast.com/2021/06/04/Episode-28.html) discussing how Carbon almost didn't happen.
 
-[Audio]](https://macfolkloreradio.com/2023/09/08/basal-gangster-a-ux-the-long-view.html)
+- [Audio](https://macfolkloreradio.com/2023/09/08/basal-gangster-a-ux-the-long-view.html)
 
 ---
 
