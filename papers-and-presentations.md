@@ -520,7 +520,7 @@ Date: 2013-09-11
 
 Abstract: Implementing non-intrusive runtime polymorphic objects with value-semantics, and multiple-undo in 20 minutes.
 
-Note: This is an abbreviated version of the Value Semantics and Concept-based Polymorphism talk linked to below given at GoingNative 2013.
+Note: This is an abbreviated version of the [_Value Semantics and Concept-based Polymorphism_](#value-semantics-and-concept-based-polymorphism) talk linked to below given at GoingNative 2013.
 
 - [Video](https://learn.microsoft.com/en-us/shows/goingnative-2013/inheritance-base-class-of-evil).
 
