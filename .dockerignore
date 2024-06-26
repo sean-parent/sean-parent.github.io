@@ -1,5 +1,6 @@
 *
 !Gemfile
 !Gemfile.lock
+!.bundle
 !.ruby-version
 !./tools/docker-tools/VERSION
