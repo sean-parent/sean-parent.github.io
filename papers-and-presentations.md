@@ -734,6 +734,16 @@ Note: Paper presented at GPCE 2009.
 
 ---
 
+Date: 2009-06
+
+### Elements of Programming, Appendix B: Programming Language
+
+Bjarne Stroustrup and I developed the syntax and semantics for the programming language described in the book _Elements of Programming_ by Alexander Stepanov and Paul McJones. The language is a subset of C++ with a few extensions. The language is used to describe the algorithms in the book. This was influential in the development of the C++20 Concepts feature.
+
+- [PDF](http://elementsofprogramming.com/eop_coloredlinks.pdf)
+
+---
+
 Date: 2008-10
 
 ### Property Models: From Incidental Algorithms to Reusable Components
@@ -782,6 +792,26 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 ---
 
 ## Interviews
+
+---
+
+Date: 2024-03-08
+
+### ADSP: The Podcast - Episode 172: Sean Parent on Flash, Chains & Memory Safety
+
+In this episode, Conor and Bryce interview Sean Parent about Adobe Flash, his new library and idea called Chains and his latest thoughts on memory safety in programming languages and C++.
+
+- [Audio](https://adspthepodcast.com/2024/03/08/Episode-172.html)
+
+---
+
+Date: 2024-01-05
+
+### ADSP: The Podcast - Episode 163: Sean Parent on Tilt Five, Metrowerks & Be Inc. <!-- markdownlint-disable-line -->
+
+In this episode, Conor and Bryce chat with Sean Parent about Jeri Ellsworth of Tilt Five, Greg Galanos of Metrowerks, Jean-Louis Gassée of Be Inc. and more!
+
+- [Audio](https://adspthepodcast.com/2024/01/05/Episode-163.html)
 
 ---
 
