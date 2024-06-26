@@ -42,9 +42,11 @@ Date: 2024-03-07
 
 Starting from separating function execution context from a function result, this talk looks at the ensuing problem space and pursues an alternative path to sender/receivers, emphasizing simplicity and low latency in a dynamic environment.
 
-- [Slides](presentations/2024-03-07-chains/2024-03-07-chains.pdf)
-- [Slides with notes](presentations/2024-03-07-chains/2024-03-07-chains-notes.pdf)
-- [Keynote](presentations/2024-03-07-chains/2024-03-07-chains.key)
+Note: This talk was presented at the [NYC++ Meetup](https://www.meetup.com/new-york-c-c-meetup-group/events/299348651/).
+
+- [Slides](/presentations/2024-03-07-chains/2024-03-07-chains.pdf)
+- [Slides with notes](/presentations/2024-03-07-chains/2024-03-07-chains-notes.pdf)
+- [Keynote](/presentations/2024-03-07-chains/2024-03-07-chains.key)
 
 ---
 
