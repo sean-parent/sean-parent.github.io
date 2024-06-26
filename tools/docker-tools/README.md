@@ -18,8 +18,9 @@ VOLUME="sean-parent.github.io"
 
 # Specify the ruby version to match the latest stable - https://www.ruby-lang.org/en/downloads/
 # May have to downgrade to match the version available with latest ubuntu in github actions.
+# See https://github.com/actions/runner-images and https://github.com/ruby/setup-ruby
 
-RUBY_VERSION="3.2.3"
+RUBY_VERSION="3.3.3"
 echo $RUBY_VERSION > ./.ruby-version
 
 # build the base image, no-cache is used so the latest tools are installed
@@ -38,7 +39,9 @@ cd /mnt/host
 git config --global --add safe.directory /mnt/host
 ./tools/docs/update.sh --lock
 exit
+```
 
+```zsh
 # build the final image
 docker build --build-arg RUBY_VERSION=$RUBY_VERSION \
   --file ./tools/docker-tools/Dockerfile --target full --tag $VOLUME .
