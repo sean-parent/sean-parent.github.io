@@ -528,7 +528,7 @@ Note: This is an abbreviated version of the [_Value Semantics and Concept-based 
 
 ---
 
-Date: 2013-09-06
+Date: 2013-09-06, 2012-05-18
 Updated: 2013-09-24
 
 ### Value Semantics and Concept-based Polymorphism
@@ -539,6 +539,10 @@ Abstract: This talk explains why (and how) to implement polymorphism without inh
 - [PDF](/presentations/2013-09-24-value-semantics/value-semantics.pdf)
 - [C++ Source](/presentations/2013-03-06-value_semantics/value-semantics.cpp)
 - [C++ Source (unique_ptr version)](/presentations/2013-09-06-inheritance/value-semantics-unique.cpp)
+
+Note: Talk presented at [C++Now 2012](https://github.com/boostcon/cppnow_presentations_2012).
+
+- [Video](https://youtu.be/_BpMYeUFXv8?si=qTKh4vdMex4MZsOP)
 
 ---
 
