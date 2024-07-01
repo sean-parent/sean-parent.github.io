@@ -8,7 +8,7 @@ comments: true
 
 <!-- prettier-ignore-start -->
 
-## Contents
+## Contents <!-- markdownlint-disable-line -->
 {:.no_toc}
 
 - [place holder]
@@ -38,7 +38,7 @@ Note: This talk was presented at the [Northwest C++ Users' Group](https://nwcpp.
 
 Date: 2024-03-07
 
-### Chains. An alternative to sender/receivers.
+### Chains. An alternative to sender/receivers. <!-- markdownlint-disable-line -->
 
 Starting from separating function execution context from a function result, this talk looks at the ensuing problem space and pursues an alternative path to sender/receivers, emphasizing simplicity and low latency in a dynamic environment.
 
@@ -147,7 +147,7 @@ Date: 2023-02-15
 
 Abstract: A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
 
-Note: This talk was presented at the the [Northwest C++ User’s Group](https://nwcpp.org). The slides linked from here are generated from a Jupyter notebook and are under development.
+Note: This talk was presented at the [Northwest C++ User’s Group](https://nwcpp.org). The slides linked from here are generated from a Jupyter notebook and are under development.
 
 - [Video](https://youtu.be/DnfRMYCw_Y4)
 - [Slides](https://sean-parent.stlab.cc/notebook/better-code-class/03-algorithms.slides.html)
@@ -160,7 +160,7 @@ Date: 2022-08-31, 2022-05-05
 
 Abstract: When discussing exceptions, there is a focus on when to throw an exception and how to propagate it. But little attention is given to how to recover from an exception. By looking at error handling from what it means to recover from a mistake, we can understand the requirements to handle exceptions correctly. We'll see the technique of shifting perspectives is more broadly helpful in developing usable operations and types.
 
-Note: Talk presented internally at Adobe. This version was edited down for time. 2022-08-31
+Note: Talk presented internally at Adobe. This version was edited for time. 2022-08-31
 
 - [PDF](/presentations/2022-08-31-exceptions/2022-08-31-exceptions.pdf)
 - [Keynote](/presentations/2022-08-31-exceptions/2022-08-31-exceptions.key)
@@ -179,7 +179,7 @@ Date: 2022-08-29
 
 Abstract: Personal computers and devices are unbelievably fast but often struggle to keep up with mundane tasks. Why hasn't software managed to scale in performance with hardware? This talk looks at some of the reasons, the characteristics of fast systems, the limits of human perception, and the need to rethink how software is authored to build efficient systems.
 
-Note: Talk presented at [skills matter Performance Summit 2022](https://skillsmatter.com/conferences/13902-performance-summit).
+Note: Talk presented at [Skills Matter Performance Summit 2022](https://skillsmatter.com/conferences/13902-performance-summit).
 
 - [Video](https://youtu.be/B-aDBB34o6Y)
 - [PDF](/presentations/2022-08-29-performance/2022-08-29-performance.pdf)
@@ -305,7 +305,7 @@ Date: 2018-11-08, 2018-10-18
 
 Abstract: The term "Generic Programming" was coined by Alex Stepanov and David Musser in 1988. It has become one of the most influential ideas to shape programming and has had a profound impact on the evolution of C++. Yet, the core concepts of generic programming are still often misunderstood and misrepresented. Thirty years in, this talk will look a little at how generic programming came to be and why it is not simply "another paradigm" for software development.
 
-**Erratum: The slide _Jon Bentley's Solution (Translated to C++)_ contains an error. The line, `int u = n;` should read `int u = n - 1;`. Slides have been updated with the fix. Thanks to Alex Muscar.**
+**Erratum: The slide _Jon Bentley's Solution (Translated to C++)_ contains an error. The line, `int u = n;` should read `int u = n - 1;`. The slides have been updated with the fix. Thanks to Alex Muscar.**
 
 Addition: When preparing this talk, I was unable to find a picture of Meng and Alex from the Al Stevens interview in [Dr. Dobb's Journal, March 1995](http://stepanovpapers.com/drdobbs-interview.pdf). Alex was kind enough to give me a copy of the original publication.
 
@@ -353,7 +353,7 @@ Abstract: A lightning talk demonstrating how to write a polymorphic task templat
 
 **Erratum: The solution for the small object optimization presented in this talk relies on undefined behavior. A detailed explanation of the issue and a proper solution can be found [here](https://stlab.cc/tip/2017/12/23/small-object-optimizations.html).**
 
-Note: Talk presented as a lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
+Note: The talk was presented as a lightning talk at [Meeting C++ 2017](http://meetingcpp.com/2017/).
 
 - [Video](https://www.youtube.com/watch?v=2KGkcGtGVM4)
 - [PDF](/presentations/2017-11-11-lightning-talk/lightning-talk.pdf)
@@ -391,7 +391,7 @@ Date: 2017-01-18, 2016-10-10
 
 ### Better Code: Runtime Polymorphism
 
-Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the course of the talk, a key feature from Photoshop will be demonstrated and implemented. As part of my "Better Code" series of talks, the goal is "No Inheritance."
+Abstract: This talk explains why (and how) to implement non-intrusive polymorphism in C++. The talk contains many C++ tips and techniques, including many new features from C++11/14. During the talk, a key feature from Photoshop will be demonstrated and implemented. As part of my "Better Code" series of talks, the goal is "No Inheritance."
 
 Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
 
@@ -410,7 +410,7 @@ Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
 
 ### Better Code: Concurrency
 
-Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. Part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
+Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. As part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
 
 **Erratum: I've incorrectly stated that `std::async()` changed with C++14.**
 
@@ -471,8 +471,8 @@ Date: 2016-08-08, 2015-09-23
 
 Abstract: The standard library containers are often both misused and underused.
 Instead of creating new containers, applications are often structured with
-incidental data structures composed of objects referencing other object.
-This talk looks at some of the ways the standard containers can be better
+incidental data structures composed of objects referencing other objects.
+This talk looks at some of the ways standard containers can be better
 utilized and how creating (or using non-standard library) containers can
 greatly simplify code. The goal is no incidental data structures.
 
@@ -489,11 +489,25 @@ Note: This is the version of the talk presented at [CppCon 2015](https://cppcon.
 
 ---
 
+Date: 2016-01-10
+
+### Meeting Alex
+
+Abstract: Sean Parent is a Principal Scientist at Adobe Systems, where he has worked on many of their digital imaging products. He managed the group that included Alex and Paul McJones while they were writing their book Elements of Programming. In this talk, Sean relates his memories of meeting Alex and working with him during Alex's Adobe years.
+
+Note: This talk was presented at [AlexFest](https://www.youtube.com/playlist?list=PLHxtyCq_WDLWyNjTNTxEow-6EgF2roZOu).
+
+- [Video](https://youtu.be/1P_K4aGYSsw?si=AQhHX6OudW_mtOi5)
+- [PDF](/presentations/2016-01-10-alex-fest/2016-01-10-alex-fest.pdf)
+- [Keynote](/presentations/2016-01-10-alex-fest/2016-01-10-alex-fest.key)
+
+---
+
 Date: 2014-05-14
 
 ### Goal: Implement Complete & Efficient Types
 
-Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
+Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and the physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
 
 - [Video](https://www.youtube.com/watch?v=mYrbivnruYw)
 - [PDF](/presentations/2014-04-14-goal-complete-types/goal-complete-types.pdf)
@@ -505,7 +519,7 @@ Date: 2013-09-11
 
 ### C++ Seasoning
 
-Abstract: A look at many of the new features in C++ and a couple of old features you may not have known about. With the goal of correctness in mind, we'll see how to utilize these features to create simple, clear, and beautiful code. Just a little pinch can really spice things up.
+Abstract: A look at many of the new features in C++ and a couple of old features you may not have known about. With the goal of correctness in mind, we'll see how to utilize these features to create simple, clear, and beautiful code. Just a little pinch can spice things up.
 
 Note: This is the ACCU, Silicon Valley Chapter version of the talk originally given at GoingNative 2013. The talk is also known as "3 Goals for Better Code." This version contains an expanded ending to the polymorphism code, starting on page 179 of the PDF, and some optional slides that did not make that talk. The extended version of the talk was also given at A9.
 
@@ -522,7 +536,7 @@ Date: 2013-09-11
 
 Abstract: Implementing non-intrusive runtime polymorphic objects with value-semantics, and multiple-undo in 20 minutes.
 
-Note: This is an abbreviated version of the [_Value Semantics and Concept-based Polymorphism_](#value-semantics-and-concept-based-polymorphism) talk linked to below given at GoingNative 2013.
+Note: This is an abbreviated version of the [_Value Semantics and Concept-based Polymorphism_](#value-semantics-and-concept-based-polymorphism) talk linked below given at GoingNative 2013.
 
 - [Video](https://learn.microsoft.com/en-us/shows/goingnative-2013/inheritance-base-class-of-evil).
 
@@ -533,7 +547,7 @@ Updated: 2013-09-24
 
 ### Value Semantics and Concept-based Polymorphism
 
-Abstract: This talk explains why (and how) to implement polymorphism without inheritance in C++. The talk contains many C++ tips and techniques, including many new features from C++11. During the course of that talk a key feature from Photoshop will be demonstrated and implemented.
+Abstract: This talk explains why (and how) to implement polymorphism without inheritance in C++. The talk contains many C++ tips and techniques, including many new features from C++11. During that talk, a key feature from Photoshop will be demonstrated and implemented.
 
 - [Keynote](/presentations/2013-09-24-value-semantics/value-semantics.key)
 - [PDF](/presentations/2013-09-24-value-semantics/value-semantics.pdf)
@@ -550,7 +564,7 @@ Date: 2013-03-05
 
 ### Language Delay
 
-Abstract: A look at how programming languages are failing to keep up with a rapidly changing hardware and business landscape. Not long ago it was clear to everyone that because of the rate at which clock speeds were doubling the industry should be optimizing for programmer productivity and let the hardware solve the performance issues. More recently both the dynamics of hardware and the business landscape have thrown these assumptions out the window and left a large vacuum in the programming language landscape. This talk takes a looks at how much things have changed and how a reset in our approach is needed.
+Abstract: A look at how programming languages are failing to keep up with a rapidly changing hardware and business landscape. Not long ago it was clear to everyone that because of the rate at which clock speeds were doubling the industry should be optimizing for programmer productivity and let the hardware solve the performance issues. More recently both the dynamics of hardware and the business landscape have thrown these assumptions out the window and left a large vacuum in the programming language landscape. This talk takes a look at how much things have changed and how a reset in our approach is needed.
 
 - [Keynote](/presentations/2013-03-05-language-delay/language-delay.key)
 - [PDF](/presentations/2013-03-05-language-delay/language-delay.pdf)
@@ -563,13 +577,13 @@ Date: 2012-05-17
 
 Abstract:
 _Part 1: Beauty_
-C++ has seen a resurgence in usage as efficiency has come to dominate costs. Yet many still hold their nose as they move to C++. It can be a frightening transition for a programmer coming from Java, JavaScript, or Python. As a community we need to leverage the tools provided by C++11 to write beautiful, efficient, code.
+C++ has seen a resurgence in usage as efficiency has come to dominate costs. Yet many still hold their nose as they move to C++. It can be a frightening transition for a programmer coming from Java, JavaScript, or Python. As a community, we need to leverage the tools provided by C++11 to write beautiful, efficient, code.
 
 _Part 2: Truth_
 On modern hardware, straight C++ code gives you access to just 0.25% of the available performance on the machine. With C++11 we unlock only a little more with thread support. One of the largest challenges for the language and libraries going forward will be how to get at the other 99.75% of the machine.
 
 _Part 3: Goodness_
-A plethora of networked devices is changing the software landscape. The infrastructure of the internet is fading into the background and increasingly customers are expecting all of their information, available on all their devices, instantly. What impact do such systems have on how we architect and write software? What is the role C++ will play in this new world.
+A plethora of networked devices is changing the software landscape. The infrastructure of the internet is fading into the background and increasingly customers are expecting all of their information, available on all their devices, instantly. What impact do such systems have on how we architect and write software? What is the role C++ will play in this new world?
 
 - [Video](https://www.youtube.com/watch?v=iGenpw2NeKQ)
 - [Keynote](/presentations/2012-05-17-now-what/now-what.key)
@@ -589,7 +603,7 @@ Authors: Jonathan Coe, Antony Peacock, Sean Parent
 
 Abstract: We propose the addition of two new class templates to the C++ Standard Library: `indirect<T>` and `polymorphic<T>`.
 
-Specializations of these class templates have value semantics and compose well with other standard library types (such as vector), allowing the compiler to correctly generate special member functions.
+Specializations of these class templates have value semantics and compose well with other standard library types (such as `std::vector`), allowing the compiler to correctly generate special member functions.
 
 [Markdown](https://github.com/jbcoe/value_types/blob/main/DRAFT.md)
 
@@ -601,7 +615,7 @@ Date: 2021-04-14
 
 Authors: Sean Parent
 
-Abstract: The C++ Standard Library requirements are overly restrictive regarding the state of a moved-from object. The strong requirements impose an unnecessary burden on implementers and imposes a performance impact of user-defined operations. This paper proposes relaxing the requirements by specifying what operations a moved-from object must be able to support.
+Abstract: The C++ Standard Library requirements are overly restrictive regarding the state of a moved-from object. The strong requirements impose an unnecessary burden on implementers and impose a performance impact on user-defined operations. This paper proposes relaxing the requirements by specifying what operations a moved-from object must be able to support.
 
 Note: This paper is a C++ standard proposal, P2345.
 
@@ -627,9 +641,9 @@ Date: 2016-07-18
 
 Authors: Jaakko Järvi, Sean Parent
 
-Abstract: Selecting items from a collection is one of the most common tasks users perform with graphical user interfaces. Practically every application supports this task with a selection feature different from that of any other application. Defects are common, especially in manipulating selections of non-adjacent elements, and flexible selection features are often missing when they would clearly be useful. As a consequence, user effort is wasted. The loss of productivity is experienced in small doses, but all computer users are impacted. The undesirable state of support for multi-element selection prevails because the same selection features are redesigned and reimplemented repeatedly. This article seeks to establish common abstractions for multi-selection. It gives generic but precise meanings to selection operations and makes multi-selection reusable; a JavaScript implementation is described. Application vendors benefit because of reduced development effort. Users benefit because correct and consistent multi-selection becomes available in more contexts.
+Abstract: Selecting items from a collection is one of the most common tasks users perform with graphical user interfaces. Practically every application supports this task with a selection feature different from that of any other application. Defects are common, especially in manipulating selections of non-adjacent elements, and flexible selection features are often missing when they would be useful. As a consequence, user effort is wasted. The loss of productivity is experienced in small doses, but all computer users are impacted. The undesirable state of support for multi-element selection prevails because the same selection features are redesigned and reimplemented repeatedly. This article seeks to establish common abstractions for multi-selection. It gives generic but precise meanings to selection operations and makes multi-selection reusable; a JavaScript implementation is described. Application vendors benefit because of reduced development effort. Users benefit because correct and consistent multi-selection becomes available in more contexts.
 
-Note: Paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
+Note: This paper was presented at [ECOOP 2016](http://2016.ecoop.org/event/ecoop-2016-papers-one-way-to-select-many)
 
 - [Video](https://www.youtube.com/watch?v=i8lc0I1yoZ8)
 - [PDF](/papers/2016-07-18-ecoop/ecoop16-final28.pdf)
@@ -643,7 +657,7 @@ Date: 2015-10-26
 
 Authors: Gabriel Foust, Jaakko Järvi, Sean Parent
 
-Abstract: For a GUI to remain responsive, it must be able to schedule lengthy tasks to be executed asynchronously. In the traditional approach to GUI implementation–writing functions to handle individual user events–asynchronous programming easily leads to defects. Ensuring that all data dependencies are respected is difficult when new events arrive while prior events are still being handled. Reactive programming techniques, gaining popularity in GUI programming, help since they make data dependencies explicit and enforce them automatically as variables' values change. However, data dependencies in GUIs usually change along with its state. Reactive programming must therefore describe a GUI as a collection of many reactive programs, whose interaction the programmer must explicitly coordinate. This paper presents a declarative approach for GUI programming in which the programmer is relieved from coordinating asynchronous computations. The approach is based on our prior work on "property models", where GUI state is maintained by a dataflow constraint system. A property model responds to user events by atomically constructing new data dependencies and scheduling asynchronous computations to enforce those dependencies. In essence, a property model dynamically generates a reactive program, adding to it as new events occur. The approach gives the following guarantee: the same sequence of events produces the same result, regardless of the duration of processing the events.
+Abstract: For a GUI to remain responsive, it must be able to schedule lengthy tasks to be executed asynchronously. In the traditional approach to GUI implementation–writing functions to handle individual user events–asynchronous programming easily leads to defects. Ensuring that all data dependencies are respected is difficult when new events arrive while prior events are still being handled. Reactive programming techniques, gaining popularity in GUI programming, help since they make data dependencies explicit and enforce them automatically as variables' values change. However, data dependencies in GUIs usually change along with their state. Reactive programming must therefore describe a GUI as a collection of many reactive programs, whose interaction the programmer must explicitly coordinate. This paper presents a declarative approach for GUI programming in which the programmer is relieved from coordinating asynchronous computations. The approach is based on our prior work on "property models", where the GUI state is maintained by a dataflow constraint system. A property model responds to user events by atomically constructing new data dependencies and scheduling asynchronous computations to enforce those dependencies. In essence, a property model dynamically generates a reactive program, adding to it as new events occur. The approach gives the following guarantee: the same sequence of events produces the same result, regardless of the duration of processing the events.
 
 Note: Paper presented at [GPCE 2015](http://2015.gpce.org/event/gpce2015-generating-reactive-programs-for-graphical-user-interfaces-from-multi-way-dataflow-constraint-systems).
 
@@ -658,7 +672,7 @@ Date: 2014-10-10
 
 Authors: Eric Niebler, Sean Parent, Andrew Sutton
 
-Abstract: This paper outlines what support for ranges in the C++ standard library might look like. Rather than presenting a final design, this paper proposes a set of concepts and guidelines for using them to implement range-based versions of the standard algorithms. It draws inspiration from the Boost.Range library, the range algorithms in Adobe Source Libraries, Elements of Programming by Stepanov and McJones (2009), and from N3351 “A Concept Design for the STL” by Stroustrup and Sutton (2012). In addition to presenting the concepts and guidelines, this paper discusses the rationale behind each, weighing different design options.
+Abstract: This paper outlines what support for ranges in the C++ standard library might look like. Rather than presenting a final design, this paper proposes a set of concepts and guidelines for using them to implement range-based versions of the standard algorithms. It draws inspiration from the Boost Range library, the range algorithms in Adobe Source Libraries, Elements of Programming by Stepanov and McJones (2009), and from N3351 “A Concept Design for the STL” by Stroustrup and Sutton (2012). In addition to presenting the concepts and guidelines, this paper discusses the rationale behind each, weighing different design options.
 
 - [HTML](https://ericniebler.github.io/std/wg21/D4128.html)
 
@@ -670,7 +684,7 @@ Date: 2011-10
 
 Authors: John Freeman, Jaakko Järvi, Wonseok Kim, Mat Marcus
 
-Abstract: User interfaces exhibit a wide range of features that are designed to assist users. Interaction with one widget may trigger value changes, disabling, or other behaviors in other widgets. Such automatic behavior may be confusing or disruptive to users. Research literature on user interfaces offers a number of solutions, including interface features for explaining or controlling these behaviors. To help programmers help users, the implementation costs of these features need to be much lower. Ideally, they could be generated for free. This paper shows how several help and control mechanisms can be implemented as algorithms and reused across interfaces, making the cost of their adoption negligible. Specifically, we describe generic help mechanisms for visualizing data flow and explaining command deactivation, and a mechanism for controlling the flow of data. A reusable implementation of these features is enabled by our property model framework, where the data manipulated through a user interface is modeled as a constraint system.
+Abstract: User interfaces exhibit a wide range of features that are designed to assist users. Interaction with one widget may trigger value changes, disabling, or other behaviors in other widgets. Such automatic behavior may be confusing or disruptive to users. The research literature on user interfaces offers several solutions, including interface features for explaining or controlling these behaviors. To help programmers help users, the implementation costs of these features need to be much lower. Ideally, they could be generated for free. This paper shows how several help and control mechanisms can be implemented as algorithms and reused across interfaces, making the cost of their adoption negligible. Specifically, we describe generic help mechanisms for visualizing data flow and explaining command deactivation, and a mechanism for controlling the flow of data. A reusable implementation of these features is enabled by our property model framework, where the data manipulated through a user interface is modeled as a constraint system.
 
 Note: Paper presented at [GPCE 2011](http://program-transformation.org/GPCE11/WebHome).
 
@@ -706,9 +720,9 @@ implementing such functionality, and the resulting code is typically not reusabl
 
 This paper extends our "property models" approach to programming user interfaces. Property models
 allow a large part of the functionality of a user interface to be implemented in reusable libraries,
-reducing application specific code to a set of declarative rules. We describe how, as a by-product
+reducing application-specific code to a set of declarative rules. We describe how, as a by-product
 of computations that maintain the values of user interface elements, property models obtain accurate
-information of the currently active dependencies among those elements. This information enables
+information on the currently active dependencies among those elements. This information enables
 further expanding the class of user interface functionality that we can encode as generic
 algorithms. In particular, we describe automating the decisions for the enablement of user interface
 widgets and activation of command widgets. Failing to disable or deactivate widgets correctly is a
@@ -724,6 +738,16 @@ Note: Paper presented at GPCE 2009.
 
 ---
 
+Date: 2009-06
+
+### Elements of Programming, Appendix B: Programming Language
+
+Bjarne Stroustrup and I developed the syntax and semantics for the programming language described in the book _Elements of Programming_ by Alexander Stepanov and Paul McJones. The language is a subset of C++ with a few extensions. The language is used to describe the algorithms in the book. This was influential in the development of the C++20 Concepts feature.
+
+- [PDF](http://elementsofprogramming.com/eop_coloredlinks.pdf)
+
+---
+
 Date: 2008-10
 
 ### Property Models: From Incidental Algorithms to Reusable Components
@@ -734,7 +758,7 @@ Abstract: A user interface, such as a dialog, assists a user in synthesizing a s
 
 This article presents property models to capture explicitly the algorithms, validation, and interaction rules, arising from command parameter synthesis. A user interface's behavior can be derived from a declarative property model specification, with the assistance of a component akin to a constraint solver. This allows multiple interfaces, both human and programmatic, to reuse a single model along with associated validation logic and widget activation logic.
 
-The proposed technology is deployed in large commercial software application suites. Where we have applied property models, we have measured significant reductions in source-code size with equivalent or increased functionality; additional levels of reuse are apparent, both within single applications, and across product lines; and applications are able to provide more uniform access to functionality. There is potential for wide adoption: by our measurements command parameter synthesis comprises roughly one third of the code and notably more of the defects in desktop applications.
+The proposed technology is deployed in large commercial software application suites. Where we have applied property models, we have measured significant reductions in source-code size with equivalent or increased functionality; additional levels of reuse are apparent, both within single applications and across product lines; and applications can provide more uniform access to functionality. There is potential for wide adoption: by our measurements command parameter synthesis comprises roughly one-third of the code and notably more of the defects in desktop applications.
 
 Note: Paper presented at GPCE 2008.
 
@@ -762,7 +786,7 @@ Date: 2007-01
 
 Authors: Mat Marcus, Jaakko Järvi, Sean Parent
 
-Abstract: A long-held goal of software engineering has been the ability to treat software libraries as reusable components that can be composed with program-specific code to produce applications. The object-oriented programming paradigm offers mechanisms to write libraries that are open for extension, but it tends to impose intrusive interface requirements on the types that will be supplied to the library. The generic programming paradigm has seen much success in C++, partly due to the fact that libraries remain open to extension without imposing the need to intrusively inherit from particular abstract base classes. However, the static polymorphism that is a staple of programming with templates and overloads in C++, limits generic programming’s applicability in application domains where more dynamic polymorphism is required. In this paper we present the poly<> library, a part of Adobe System’s open source library ASL, that combines the object-oriented and generic programming paradigms to provide non-intrusive, transparent, value-based, runtime-polymorphism. Usage, impact on design, and implementation techniques are discussed.
+Abstract: A long-held goal of software engineering has been the ability to treat software libraries as reusable components that can be composed with program-specific code to produce applications. The object-oriented programming paradigm offers mechanisms to write libraries that are open for extension, but it tends to impose intrusive interface requirements on the types that will be supplied to the library. The generic programming paradigm has seen much success in C++, partly because libraries remain open to extension without imposing the need to intrusively inherit from particular abstract base classes. However, the static polymorphism that is a staple of programming with templates and overloads in C++, limits generic programming’s applicability in application domains where more dynamic polymorphism is required. In this paper we present the poly<> library, a part of Adobe System’s open source library ASL, that combines the object-oriented and generic programming paradigms to provide non-intrusive, transparent, value-based, runtime-polymorphism. Usage, impact on design, and implementation techniques are discussed.
 
 From: The 6th International Workshop on Multiparadigm Programming with Object-Oriented Languages at the ECOOP 2007. [Slides](/papers/2007-ecoop/MPOOL2007-slides-marcus.pdf).
 
@@ -772,6 +796,26 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 ---
 
 ## Interviews
+
+---
+
+Date: 2024-03-08
+
+### ADSP: The Podcast - Episode 172: Sean Parent on Flash, Chains & Memory Safety
+
+In this episode, Conor and Bryce interview Sean Parent about Adobe Flash, his new library and idea called Chains and his latest thoughts on memory safety in programming languages and C++.
+
+- [Audio](https://adspthepodcast.com/2024/03/08/Episode-172.html)
+
+---
+
+Date: 2024-01-05
+
+### ADSP: The Podcast - Episode 163: Sean Parent on Tilt Five, Metrowerks & Be Inc. <!-- markdownlint-disable-line -->
+
+In this episode, Conor and Bryce chat with Sean Parent about Jeri Ellsworth of Tilt Five, Greg Galanos of Metrowerks, Jean-Louis Gassée of Be Inc. and more!
+
+- [Audio](https://adspthepodcast.com/2024/01/05/Episode-163.html)
 
 ---
 
@@ -817,7 +861,7 @@ In this episode, Conor and Bryce continue their interview with Sean Parent live 
 
 Date: 2023-07-07
 
-### ADSP: The Podcast - Episode 137: Sean Parent on Val (vs Rust)!
+### ADSP: The Podcast - Episode 137: Sean Parent on Val (vs Rust)! <!-- markdownlint-disable-line -->
 
 In this episode, Conor and Bryce interview Sean Parent live from C++ On Sea 2023 about the Val programming language and how it compares to Rust, Swift, and C++.
 
@@ -1011,7 +1055,7 @@ Date: 1992
 
 ### MacHack 1992
 
-Somehow I convinced Apple to allow me to bring a prototype of the RISC based Macintosh to MacHack 1992. This unit used an [M68110 with an emulator written by Gary Davidian](https://computerhistory.org/blog/transplanting-the-macs-central-processor-gary-davidian-and-his-68000-emulator/). We did not yet have a prototype with a PowerPC processor. I offered $100 dollars to anyone who could find a piece of Mac software that would not run on the prototype. Waldemar Horwat won the $100 dollars by finding that the TMON debugger did not run under emulation. The video from MacHack is unwatchable but does capture me presenting payment to Waldemar.
+Somehow I convinced Apple to allow me to bring a prototype of the RISC-based Macintosh to MacHack 1992. This unit used an [M68110 with an emulator written by Gary Davidian](https://computerhistory.org/blog/transplanting-the-macs-central-processor-gary-davidian-and-his-68000-emulator/). We did not yet have a prototype with a PowerPC processor. I offered $100 to anyone who could find a piece of Mac software that would not run on the prototype. Waldemar Horwat won the $100 by finding that the TMON debugger did not run under emulation. The video from MacHack is unwatchable but does capture me presenting payment to Waldemar.
 
 - [Video](https://youtu.be/MzQgU5IytNw?si=EpeFvpZzqGKWQPwb&t=1351)
 
