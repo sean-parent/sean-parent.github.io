@@ -56,7 +56,7 @@ Date: 2023-10-06
 
 Coauthored and presented with Dave Abrahams.
 
-Are you confident that the code you write, and the changes you make, are correct? What does “correct” even mean? How do we know the code we write today won’t become a long-term liability? These persistent questions can be enough to suck all the fun out of programming, but it doesn’t have to be that way. In this talk, we’ll look at the connective tissue of good code and show how to keep it strong and supple. There is no need to wait for language features to start using contracts. We’ll suggest replacing code reviews with something better and charting the path to a more hopeful future of software.
+Are you confident that the code you write and your changes are correct? What does “correct” even mean? How do we know the code we write today won’t become a long-term liability? These persistent questions can be enough to suck all the fun out of programming, but it doesn’t have to be that way. In this talk, we’ll look at the connective tissue of good code and show how to keep it strong and supple. There is no need to wait for language features to start using contracts. We’ll suggest replacing code reviews with something better and charting the path to a more hopeful future of software.
 
 Note: This talk was presented at the [CppCon 2023](https://cppcon2023.sched.com/event/1Qtgl) conference, 2023-10-06.
 
@@ -72,8 +72,9 @@ Date: 2023-09-28
 
 Algorithm composition is the process of combining existing algorithms to create new ones that solve complex problems. This talk looks at different forms of composition with different trade-offs. The talk will inspire you to think of algorithms as reusable building blocks that can be combined in novel ways.
 
-Note: This talk was presented internally at Adobe and will be available on the [C++ at Adobe](https://developer.adobe.com/cpp/training/) site.
+Note: This talk was presented internally at Adobe and is available on the [Adobe Developer](https://developer.adobe.com/cpp/training/) site.
 
+- [Video](https://youtu.be/HJb6Czi0Ky0)
 - [Slides](/presentations/2023-09-28-algorithm-composition/2023-09-28-algorithm-composition.pdf)
 - [Slides with notes](/presentations/2023-09-28-algorithm-composition/2023-09-28-algorithm-composition-notes.pdf)
 - [Keynote](/presentations/2023-09-28-algorithm-composition/2023-09-28-algorithm-composition.key)
@@ -86,7 +87,7 @@ Date: 2023-06-08, 2023-05-25
 
 A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
 
-Note: This talk was presented internally at Adobe and is available on the [C++ at Adobe](https://developer.adobe.com/cpp/training/) site.
+Note: This talk was presented internally at Adobe and is available on the [Adobe Developer](https://developer.adobe.com/cpp/training/) site.
 
 - [Video](https://youtu.be/wtOkvB_iFw4)
 - [Slides](/presentations/2023-06-08-algorithms/2023-06-08-algorithms.pdf)
@@ -145,7 +146,7 @@ Date: 2023-02-15
 
 ### What’s Your Function?
 
-Abstract: A function is a fundamental building block in software development and a key tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
+Abstract: A function is a fundamental building block in software development and a vital tool for designing efficient and maintainable systems. This talk looks at the characteristics of a “good” function and provides practical guidance on when and how to refactor and utilize existing libraries to develop _Better Code_.
 
 Note: This talk was presented at the [Northwest C++ User’s Group](https://nwcpp.org). The slides linked from here are generated from a Jupyter notebook and are under development.
 
@@ -158,7 +159,7 @@ Date: 2022-08-31, 2022-05-05
 
 ### Exceptions the Other Way Around
 
-Abstract: When discussing exceptions, there is a focus on when to throw an exception and how to propagate it. But little attention is given to how to recover from an exception. By looking at error handling from what it means to recover from a mistake, we can understand the requirements to handle exceptions correctly. We'll see the technique of shifting perspectives is more broadly helpful in developing usable operations and types.
+Abstract: When discussing exceptions, there is a focus on when to throw an exception and how to propagate it. However, little attention is given to how to recover from an exception. By looking at error handling and what it means to recover from an error, we can understand the requirements to handle exceptions correctly. We'll see that shifting perspective helps develop usable operations and types.
 
 Note: Talk presented internally at Adobe. This version was edited for time. 2022-08-31
 
@@ -497,7 +498,7 @@ Abstract: Sean Parent is a Principal Scientist at Adobe Systems, where he has wo
 
 Note: This talk was presented at [AlexFest](https://www.youtube.com/playlist?list=PLHxtyCq_WDLWyNjTNTxEow-6EgF2roZOu).
 
-- [Video](https://youtu.be/1P_K4aGYSsw?si=AQhHX6OudW_mtOi5)
+- [Video](https://youtu.be/1P_K4aGYSsw)
 - [PDF](/presentations/2016-01-10-alex-fest/2016-01-10-alex-fest.pdf)
 - [Keynote](/presentations/2016-01-10-alex-fest/2016-01-10-alex-fest.key)
 
@@ -556,7 +557,7 @@ Abstract: This talk explains why (and how) to implement polymorphism without inh
 
 Note: Talk presented at [C++Now 2012](https://github.com/boostcon/cppnow_presentations_2012).
 
-- [Video](https://youtu.be/_BpMYeUFXv8?si=qTKh4vdMex4MZsOP)
+- [Video](https://youtu.be/_BpMYeUFXv8)
 
 ---
 
@@ -1045,7 +1046,7 @@ Date: 2023-09-08
 
 ### Basal Gangster - A/UX: The Long View (2010)
 
-References my [ADSP interview](https://adspthepodcast.com/2021/06/04/Episode-28.html) discussing how Carbon almost didn't happen.
+This episode references my [ADSP interview](https://adspthepodcast.com/2021/06/04/Episode-28.html), which discussed how Carbon almost didn't happen.
 
 - [Audio](https://macfolkloreradio.com/2023/09/08/basal-gangster-a-ux-the-long-view.html)
 
@@ -1055,13 +1056,13 @@ Date: 1992
 
 ### MacHack 1992
 
-Somehow I convinced Apple to allow me to bring a prototype of the RISC-based Macintosh to MacHack 1992. This unit used an [M68110 with an emulator written by Gary Davidian](https://computerhistory.org/blog/transplanting-the-macs-central-processor-gary-davidian-and-his-68000-emulator/). We did not yet have a prototype with a PowerPC processor. I offered $100 to anyone who could find a piece of Mac software that would not run on the prototype. Waldemar Horwat won the $100 by finding that the TMON debugger did not run under emulation. The video from MacHack is unwatchable but does capture me presenting payment to Waldemar.
+Somehow, I convinced Apple to allow me to bring a prototype of the RISC-based Macintosh to MacHack 1992. This unit used an [M68110 with an emulator written by Gary Davidian](https://computerhistory.org/blog/transplanting-the-macs-central-processor-gary-davidian-and-his-68000-emulator/). We did not yet have a prototype with a PowerPC processor. I offered $100 to anyone who could find a piece of Mac software that would not run on the prototype. Waldemar Horwat won the $100 by finding that the TMON debugger did not run under emulation. The video from MacHack is unwatchable but captures me presenting the payment to Waldemar.
 
-- [Video](https://youtu.be/MzQgU5IytNw?si=EpeFvpZzqGKWQPwb&t=1351)
+- [Video](https://youtu.be/MzQgU5IytNw?t=1351)
 
 On the same unwatchable video is a clip of me presenting my hack, _Okay, What was that?_
 
-- [Video](https://youtu.be/MzQgU5IytNw?si=avV-qL7YslnM6fQd&t=2419)
+- [Video](https://youtu.be/MzQgU5IytNw?t=2419)
 
 ---
 
