@@ -208,7 +208,7 @@ Date: 2021-11-14, 2021-10-24, 2021-06-19
 
 ### Warning: `std::find()` is broken
 
-Abstract: We often take it for granted that calling one of the Standard algorithms will do something meaningful. For example, when invoking `position = find(first, last, value)` we expect that if an element equal to value is contained in the range `[first, last)` then `position` will point to the first such element; otherwise, `position` will equal `last`. But how do we know `find` will perform this operation? This talk explores requirements, guarantees, and domains, and we'll discover that maybe `find` doesn't.
+Abstract: We often take it for granted that calling one of the Standard algorithms will do something meaningful. For example, when invoking `position = find(first, last, value)` we expect that if an element equal to `value` is contained in the range `[first, last)` then `position` will point to the first such element; otherwise, `position` will equal `last`. But how do we know `find` will perform this operation? This talk explores requirements, guarantees, and domains, and we'll discover that maybe `find` doesn't.
 
 Note: Talk presented at [HiPar](https://sc21.supercomputing.org/proceedings/workshops/workshop_pages/misc227.html) under the alternative title, _Reasoning About Software Correctness_, 2021-11-24
 
@@ -250,7 +250,7 @@ Date: 2021-03-13, 2019-10-31, 2019-09-19
 
 ### Better Code: Relationships
 
-Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use and misuse of these paradigms. Then we'll look at ways to model these relationships in C++ and use them to build correct applications.
+Abstract: Computer scientists are bad at relationships. Nearly every program crash is rooted in a mismanaged relationship, yet we spend most of our time discussing types and functions and not the relationships connecting them. This talk looks at common ways data and code are connected in an application, how those relationships are typically represented, and the problems caused by the use and misuse of these paradigms. Then, we'll look at ways to model these relationships in C++ and use them to build correct applications.
 
 Note: Talk presented at [ACCU 2021](https://accu.org/), 2021-03-13
 
@@ -411,7 +411,7 @@ Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
 
 ### Better Code: Concurrency
 
-Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple, reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. As part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
+Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. As part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
 
 **Erratum: I've incorrectly stated that `std::async()` changed with C++14.**
 
@@ -508,7 +508,7 @@ Date: 2014-05-14
 
 ### Goal: Implement Complete & Efficient Types
 
-Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type, and the physical nature of the machine, leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
+Abstract: The C++ Seasoning talk presented at GoingNative 2013 centered on 3 goals for better code. This talk provides foundational material on types, references, and basis operations. We'll look at how the definition of type and the physical nature of the machine leads to the conclusion that all types are regular and why implementing complete types is a worthy goal.
 
 - [Video](https://www.youtube.com/watch?v=mYrbivnruYw)
 - [PDF](/presentations/2014-04-14-goal-complete-types/goal-complete-types.pdf)
@@ -535,7 +535,7 @@ Date: 2013-09-11
 
 ### Inheritance Is The Base Class of Evil
 
-Abstract: Implementing non-intrusive runtime polymorphic objects with value-semantics, and multiple-undo in 20 minutes.
+Abstract: Implementing non-intrusive runtime polymorphic objects with value-semantics and multiple-undo in 20 minutes.
 
 Note: This is an abbreviated version of the [_Value Semantics and Concept-based Polymorphism_](#value-semantics-and-concept-based-polymorphism) talk linked below given at GoingNative 2013.
 
