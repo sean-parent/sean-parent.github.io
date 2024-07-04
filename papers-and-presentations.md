@@ -30,6 +30,7 @@ Local reasoning is the ability to look at a defined unit of code, a function, or
 
 Note: This talk was presented at the [Northwest C++ Users' Group](https://nwcpp.org/May-2024.html).
 
+- [Video](https://youtu.be/N7QcM9nDk_k)
 - [Slides](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.pdf)
 - [Slides with notes](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning-notes.pdf)
 - [Keynote](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.key)
@@ -44,6 +45,7 @@ Starting from separating function execution context from a function result, this
 
 Note: This talk was presented at the [NYC++ Meetup](https://www.meetup.com/new-york-c-c-meetup-group/events/299348651/).
 
+- [Video](https://youtu.be/nQpXOx0D7I8)
 - [Slides](/presentations/2024-03-07-chains/2024-03-07-chains.pdf)
 - [Slides with notes](/presentations/2024-03-07-chains/2024-03-07-chains-notes.pdf)
 - [Keynote](/presentations/2024-03-07-chains/2024-03-07-chains.key)
