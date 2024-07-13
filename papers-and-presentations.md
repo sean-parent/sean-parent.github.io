@@ -580,7 +580,7 @@ Date: 2012-05-17
 
 Abstract:
 _Part 1: Beauty_
-C++ has seen a resurgence in usage as efficiency has come to dominate costs. Yet many still hold their nose as they move to C++. It can be a frightening transition for a programmer coming from Java, JavaScript, or Python. As a community, we need to leverage the tools provided by C++11 to write beautiful, efficient, code.
+C++ has seen a resurgence in usage as efficiency has come to dominate costs. Yet many still hold their nose as they move to C++. It can be a frightening transition for a programmer coming from Java, JavaScript, or Python. As a community, we need to leverage the tools provided by C++11 to write beautiful, efficient code.
 
 _Part 2: Truth_
 On modern hardware, straight C++ code gives you access to just 0.25% of the available performance on the machine. With C++11 we unlock only a little more with thread support. One of the largest challenges for the language and libraries going forward will be how to get at the other 99.75% of the machine.
