@@ -22,11 +22,18 @@ comments: true
 
 ---
 
-Date: 2024-05-16
+Date: 2024-05-16, 2024-09-12
 
 ### Local Reasoning in C++
 
 Local reasoning is the ability to look at a defined unit of code, a function, or a class, understand it, and verify its correctness without understanding all the contexts within which it is used. This talk covers local reasoning principles and explores conventions and rules to support local reasoning and develop better interfaces and code.
+
+Note: This talk was presented at [NDC TechTown](https://ndctechtown.com/), 2024-09-12.
+
+- [Slides](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning.pdf)
+- [Slides with notes](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning-notes.pdf)
+- [Keynote](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning.key)
+- [PowerPoint](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning.pptx)
 
 Note: This talk was presented at the [Northwest C++ Users' Group](https://nwcpp.org/May-2024.html).
 
