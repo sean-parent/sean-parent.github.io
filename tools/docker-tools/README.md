@@ -11,7 +11,7 @@ If you don't already have Docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```zsh
-VERSION="1.0.19"
+VERSION="1.0.20"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -20,7 +20,7 @@ VOLUME="sean-parent.github.io"
 # May have to downgrade to match the version available with latest ubuntu in github actions.
 # See https://github.com/actions/runner-images and https://github.com/ruby/setup-ruby
 
-RUBY_VERSION="3.3.3"
+RUBY_VERSION="3.2.3"
 echo $RUBY_VERSION > ./.ruby-version
 
 # build the base image, no-cache is used so the latest tools are installed
@@ -122,3 +122,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.17 - Downgrading ruby to match the latest Ubuntu in GitHub actions
 - 1.0.18 - Updating tooling
 - 1.0.19 - Updating tooling
+- 1.0.20 - Updating tooling

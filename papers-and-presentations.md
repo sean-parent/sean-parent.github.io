@@ -30,6 +30,7 @@ Local reasoning is the ability to look at a defined unit of code, a function, or
 
 Note: This talk was presented at [NDC TechTown](https://ndctechtown.com/), 2024-09-12.
 
+- [Video](https://youtu.be/bhizxAXQlWc)
 - [Slides](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning.pdf)
 - [Slides with notes](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning-notes.pdf)
 - [Keynote](/presentations/2024-09-12-local-reasoning/2024-09-12-local-reasoning.key)
@@ -41,6 +42,7 @@ Note: This talk was presented at the [Northwest C++ Users' Group](https://nwcpp.
 - [Slides](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.pdf)
 - [Slides with notes](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning-notes.pdf)
 - [Keynote](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.key)
+- [PowerPoint](/presentations/2024-05-16-local-reasoning/2024-05-16-local-reasoning.pptx)
 
 ---
 
@@ -56,6 +58,7 @@ Note: This talk was presented at the [NYC++ Meetup](https://www.meetup.com/new-y
 - [Slides](/presentations/2024-03-07-chains/2024-03-07-chains.pdf)
 - [Slides with notes](/presentations/2024-03-07-chains/2024-03-07-chains-notes.pdf)
 - [Keynote](/presentations/2024-03-07-chains/2024-03-07-chains.key)
+- [PowerPoint](/presentations/2024-03-07-chains/2024-03-07-chains.pptx)
 
 ---
 
@@ -72,6 +75,7 @@ Note: This talk was presented at the [CppCon 2023](https://cppcon2023.sched.com/
 - [Video](https://youtu.be/OWsepDEh5lQ)
 - [Slides](/presentations/2023-10-06-better-code-contracts/2023-10-06-better-code-contracts.pdf)
 - [Keynote](/presentations/2023-10-06-better-code-contracts/2023-10-06-better-code-contracts.key)
+- [PowerPoint](/presentations/2023-10-06-better-code-contracts/2023-10-06-better-code-contracts.pptx)
 
 ---
 
@@ -806,6 +810,28 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 ---
 
 ## Interviews
+
+---
+
+Date: 2024-10-11
+
+### ADSP: The Podcast - Episode 203: Rotates All the Way Down with Sean Parent (Part 2)
+
+In this episode, Conor and Ben continue their chat with Sean Parent about `std::rotate`, `std::stable_sort` and more!
+
+- [Audio](https://adspthepodcast.com/2024/10/11/Episode-203.html)
+
+---
+
+Date: 2024-10-04
+
+### ADSP: The Podcast - Episode 202: Rotates All the Way Down with Sean Parent (Part 1)
+
+In this episode, Conor and Ben chat with Sean Parent about `std::rotate`, GCD, EOP, from Mathematics to Generic Programming and more!
+
+**Erratum: In the talk, I mistakenly said ℝ is in the Euclidean domain. It Isn't. Pythagoras proved that the square root of two is irrational, showing that there is no common divisor between the diagonal and side of a unit square. See Alex Stepanov's [Greatest Common Measure: The Last 2500 Years](https://youtu.be/fanm5y00joc) for the proof—one of my favorite talks and proofs. I can only blame age.**
+
+- [Audio](https://adspthepodcast.com/2024/10/04/Episode-202.html)
 
 ---
 
