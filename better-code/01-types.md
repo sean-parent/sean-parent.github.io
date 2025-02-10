@@ -1,7 +1,6 @@
 ---
 title: Types
 tagline: No Incomplete Types
-
 layout: book-page
 tags: [ better-code ]
 chapter: 1

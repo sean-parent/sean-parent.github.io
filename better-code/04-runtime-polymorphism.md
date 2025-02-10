@@ -1,9 +1,9 @@
 ---
 title: Runtime Polymorphism
 tagline: No Public Inheritance
-
-layout: page
+layout: book-page
 tags: [ better-code ]
+chapter: 4
 ---
 
 Object-oriented programming has been one of the paradigms supported by C++ from its invention. The idea of type inheritance and virtual functions were borrowed from Simula[^cpp-history]. Inheritance can represent a subtype or protocol relationship. Although the two are closely related, in this chapter we're primarily concerned with subtype relationships through class inheritance. Protocols are discussed in the next chapter. {::comment}link{:/comment}
