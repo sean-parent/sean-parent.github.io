@@ -1,20 +1,21 @@
 
 
-{% assign figure-number = figure-number | default: 0 | plus: 1 %}
-{% assign figure-index = figure-number | minus: 1 %}
+{% assign code-number = code-number | default: 0 | plus: 1 %}
+{% assign code-index = code-number | minus: 1 %}
 
-{% assign -figure-ref = '[figure ' | append: page.chapter | append: '.' | append: figure-number
+{% assign -code-ref = '[code ' | append: page.chapter | append: '.' | append: code-number
         | append: '](#' | append: include.name | append: ')' %}
 
-{% if figure-reference %}
-    {% assign figure-reference = ((figure-reference | join: '$') | append: '$'
-        | append: -figure-ref) | split: '$' %}
+{% if code-reference %}
+    {% assign code-reference = ((code-reference | join: '$') | append: '$'
+        | append: -code-ref) | split: '$' %}
 {% else %}
-    {% assign figure-reference = -figure-ref | split: '$'  %}
+    {% assign code-reference = -code-ref | split: '$'  %}
 {% endif %}
 
 ```cpp
-{% include_relative code/{{include.name}}.cpp %}```
+{% include_relative code/{{include.name}}.cpp %}
+```
 <p style='text-align: center;' markdown='1'>
-Code {{page.chapter}}.{{figure-number}}: {{include.caption}}
+Code {{page.chapter}}.{{code-number}}: {{include.caption}}
 </p>{: #{{include.name}} }
