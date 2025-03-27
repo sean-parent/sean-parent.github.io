@@ -605,6 +605,39 @@ A plethora of networked devices is changing the software landscape. The infrastr
 
 ---
 
+Date: 2007-07-25, 2007-07-03, 2007-05-16, 2006-10-22, 2006-06-14
+
+### A Possible Future of Software Development
+
+Abstract: This talk begins with an overview of software development at Adobe and a look at industry trends towards systems built around object oriented frameworks; why they "work", and why they ultimately fail to deliver quality, scalable, software. We'll look at a possible alternative to this future, combining generic programming with declarative programming to build high quality, scalable systems.
+
+Note: The PPT files have decayed over time. The PDF is the best version available.
+
+Note: This talk was presented as a Google Tech Talk on July 25, 2007.
+
+- [Video](https://youtu.be/4moyKUHApq4)
+- [PDF](/presentations/2007-07-25-possible-future/2007-07-25-possible-future.pdf)
+- [PowerPoint](/presentations/2007-07-25-possible-future/2007-07-25-possible-future.ppt)
+
+Note: This talk was presented as an Adobe Tech Talk (uncertain) on July 3, 2007.
+
+- [PDF](/presentations/2007-07-03-possible-future/2007-07-03-possible-future.pdf)
+- [PowerPoint](/presentations/2007-07-03-possible-future/2007-07-03-possible-future.ppt)
+
+Note: This talk was presented as a keynote talk at [BoostCon'07, May 16, 2007](http://boostcon.boost.org/program/previous-years/2007-program/).
+
+- [PDF](/presentations/2007-05-16-possible-future/2007-05-16-possible-future.pdf)
+- [PowerPoint](/presentations/2007-05-16-possible-future/2007-05-16-possible-future.ppt)
+
+Note: This talk was presented at the [Library-Centric Software Design Workshop, OOPSLA, October 22, 2006](https://www.researchgate.net/publication/266421582_Proceedings_of_the_Second_International_Workshop_on_Library-Centric_Software_Design_LCSD_%2706).
+
+- [PDF](/presentations/2006-10-22-possible-future/2006-10-22-possible-future.pdf)
+
+Note: This talk was presented at IBM Research on June 14, 2006. (No archive.)
+Note: This talk was presented at Texas A&M University & Lockheed Martin. (Dates unknown, no archive.)
+
+---
+
 ## Papers
 
 ---
