@@ -24,3 +24,7 @@ xcuserdata/
 *.xcscmblueprint
 
 *.bbprojectsettings
+
+## Powerpoint temporary files
+~$*.pptx
+~$*.ppt
