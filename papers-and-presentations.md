@@ -22,6 +22,20 @@ comments: true
 
 ---
 
+Date: 2025-04-28
+
+### Are We There Yet?
+
+Abstract: At the first BoostCon in 2007, I gave the keynote address, "A Possible Future of Software Development." Unfortunately, my work in the area stopped just a couple of years later. Adobe's Software Technology Lab 2.0 is picking it back up. What has happened during the last 18 years, and what does the future look like now?
+
+Note: This talk was presented at [C++Now 2025](https://cppnow.org/), 2025-04-28.
+
+- [Slides](/presentations/2025-04-28-are-we-there-yet/2025-04-28-are-we-there-yet.pdf)
+- [Slides with notes](/presentations/2025-04-28-are-we-there-yet/2025-04-28-are-we-there-yet-notes.pdf)
+- [PowerPoint](/presentations/2025-04-28-are-we-there-yet/2025-04-28-are-we-there-yet.pptx)
+
+---
+
 Date: 2024-05-16, 2024-09-12
 
 ### Local Reasoning in C++
