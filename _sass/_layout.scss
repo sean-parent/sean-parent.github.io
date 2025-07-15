@@ -422,8 +422,6 @@ table {
                 vertical-align: top;
                 padding-right: 1.5em;
             }
-            > td.brief {
-            }
         }
     }
 }
@@ -457,8 +455,6 @@ table {
                 vertical-align: top;
                 padding-right: 1.5em;
             }
-            > td.defn {
-            }
         }
     }
 }
@@ -481,8 +477,6 @@ table {
     > tbody {
         > tr {
             border-top: 1px solid $table-separator-color;
-            > td {
-            }
         }
     }
 }
@@ -582,8 +576,6 @@ span.annotation {
             > td.decl {
                 font-family: $code-font-family;
                 padding-right: 1.5em;
-            }
-            > td.defn {
             }
         }
     }
