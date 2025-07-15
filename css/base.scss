@@ -1,7 +1,5 @@
 ---
 ---
 
-@use "theme" as *;
-@use "base"  as *;
-@use "layout" as *;
-@use "syntax-highlighting-light" as *;
+@use "main";
+@use "syntax-highlighting-light";
