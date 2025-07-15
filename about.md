@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Sean Parent is a senior principal scientist and software architect in Adobe’s Software Technology
+Lab. Sean joined Adobe in 1993, working on Photoshop, and is one of the creators of Photoshop Web,
+Photoshop Mobile, Lightroom Mobile, and Lightroom Web. In 2009, Sean spent a year at Google working
+on Chrome OS before returning to Adobe. From 1988 to 1993, Sean worked at Apple, where he was part
+of the system software team that developed the technologies enabling Apple’s successful transition
+to PowerPC.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new.html)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+This site is a collection of my thoughts on software development and a list of my papers,
+presentations, and other work.
