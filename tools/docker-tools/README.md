@@ -11,7 +11,7 @@ If you don't already have Docker installed, [install Docker](https://docs.docker
 To build the docker image, first update the VERSION variable below (please use semantic versioning). Add a [release note](#release-notes).
 
 ```zsh
-VERSION="1.0.20"
+VERSION="1.0.21"
 echo $VERSION > ./tools/docker-tools/VERSION
 
 VOLUME="sean-parent.github.io"
@@ -123,3 +123,4 @@ docker run --mount type=bind,source="$(pwd)",target=/mnt/host \
 - 1.0.18 - Updating tooling
 - 1.0.19 - Updating tooling
 - 1.0.20 - Updating tooling
+- 1.0.21 - Updating tooling
