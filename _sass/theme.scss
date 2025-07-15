@@ -1,0 +1,105 @@
+@use "sass:color";
+
+// -----------------------------------------------------------------------------
+// Core brand colours -----------------------------------------------------------
+// -----------------------------------------------------------------------------
+$stlab-purple       : #652f8e !default;
+$site-grey-color    : #949597 !default;
+$site-grey-color-light: color.adjust($site-grey-color, $lightness: 35%) !default;
+$site-grey-color-dark : color.adjust($site-grey-color, $lightness: -25%) !default;
+
+// -----------------------------------------------------------------------------
+// Basic palette ---------------------------------------------------------------
+// -----------------------------------------------------------------------------
+$text-color         : #333 !default;
+$background-color   : #ffffff !default;
+$link-color         : $stlab-purple !default;
+
+// -----------------------------------------------------------------------------
+// Navigation / menu -----------------------------------------------------------
+// -----------------------------------------------------------------------------
+$site-menu-background-color : inherit !default;
+$site-menu-border-color     : transparent !default;
+$site-menu-fill-color       : $site-grey-color-dark !default;
+$site-nav-link-color        : $stlab-purple !default;
+
+// -----------------------------------------------------------------------------
+// Header ----------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+$header-image              : url("/images/site/stlab-logo-long.svg") !default;
+$header-background-color   : #e4e4e4 !default;
+$header-border-color       : transparent !default;
+
+// -----------------------------------------------------------------------------
+// Footer ----------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+$footer-background-color   : #e4e4e4 !default;
+$footer-border-color       : transparent !default;
+$footer-text-color         : $site-grey-color !default;
+$footer-link-color         : $site-grey-color !default;
+
+// -----------------------------------------------------------------------------
+// Icon system -----------------------------------------------------------------
+// -----------------------------------------------------------------------------
+$icon-fill-color            : $stlab-purple !default;
+$icon-primary-color         : $stlab-purple !default;
+$icon-text-color            : $stlab-purple !default;
+$icon-secondary-color       : #ffffff !default;
+$icon-border-color          : $site-grey-color !default;
+$icon-hover-primary-color   : $site-grey-color !default;
+$icon-hover-text-color      : $site-grey-color !default;
+$icon-hover-secondary-color : #ffffff !default;
+$icon-hover-border-color    : $site-grey-color !default;
+
+// -----------------------------------------------------------------------------
+// Misc. component colours ------------------------------------------------------
+// -----------------------------------------------------------------------------
+$post-meta-text-color   : $site-grey-color !default;
+$table-separator-color  : $site-grey-color-light !default;
+
+// Highlight / quote blocks -----------------------------------------------------
+$highlight-background-color : #f0f0f0 !default;
+$highlight-accent-color     : #dbdbdb !default;
+
+$quote-accent-color      : $highlight-accent-color !default;
+$quote-text-color        : $text-color !default;
+$quote-background-color  : $highlight-background-color !default;
+
+// Inline / embedded code -------------------------------------------------------
+$inline-code-accent-color     : $highlight-background-color !default;
+$inline-code-text-color       : $text-color !default;
+$inline-code-background-color : $highlight-background-color !default;
+
+$embedded-code-accent-color     : $highlight-background-color !default;
+$embedded-code-text-color       : $text-color !default;
+$embedded-code-background-color : $highlight-background-color !default; 
+
+// -----------------------------------------------------------------------------
+// Typography & layout variables (shared) --------------------------------------
+// -----------------------------------------------------------------------------
+$base-font-family  : "Source Serif Pro", serif !default;
+$header-font-family: "Source Sans Pro", sans-serif !default;
+$code-font-family  : "Source Code Pro", monospace !default;
+$base-font-size    : 16px !default;
+$base-font-weight  : 400 !default;
+$small-font-size   : $base-font-size * 0.875 !default;
+$base-line-height  : 1.5 !default;
+$footer-height     : 100px !default;
+
+$spacing-unit      : 30px !default;
+
+// Content widths / break-points ----------------------------------------------
+$content-width : 1000px !default;
+$on-palm       : 600px  !default;
+$on-laptop     : 800px  !default;
+
+$header-height : $base-font-size * 2 !default;
+
+// -----------------------------------------------------------------------------
+// Mixins ----------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+} 

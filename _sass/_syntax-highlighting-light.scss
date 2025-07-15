@@ -2,9 +2,7 @@
  * Syntax highlighting styles
  */
 
- @import
-    "syntax-highlighting-base"
-;
+@use "syntax-highlighting-base" as *;
 
 pre.highlight {
     .c     { color: #009926; font-style: italic } // Comment
