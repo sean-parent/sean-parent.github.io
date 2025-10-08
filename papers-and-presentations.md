@@ -891,7 +891,7 @@ Toolbox idiosyncrasies, and some interesting features of the C
 preprocessor, MacsBug, and MPW are explored.
 
 - Note: This paper is referenced in Apple's header file,
-  []`AssertMacos.h`](https://github.com/apple-opensource-mirror/CarbonHeaders/blob/5c4b400a9164cc7e75f60aaa3a5147cee9237d65/AssertMacros.h#L35),
+  [`AssertMacos.h`](https://github.com/apple-opensource-mirror/CarbonHeaders/blob/5c4b400a9164cc7e75f60aaa3a5147cee9237d65/AssertMacros.h#L35),
   which still ships with Xcode as of 2025-10.
 
 - [PDF](/papers/1992-08-living-in-an-exceptional-world/1992-08-living-in-an-exceptional-world.pdf)
