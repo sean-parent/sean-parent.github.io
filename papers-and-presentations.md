@@ -26,10 +26,21 @@ Date: 2025-04-28
 
 ### Are We There Yet?
 
-Abstract: At the first BoostCon in 2007, I gave the keynote address, [_A Possible Future of Software Development_](#a-possible-future-of-software-development). Unfortunately, my work in the area stopped just a couple of years later. Adobe's Software Technology Lab 2.0 is picking it back up. What has happened during the last 18 years, and what does the future look like now?
+Abstract: At the first BoostCon in 2007, I gave the keynote address, [_A Possible Future of Software
+Development_](#a-possible-future-of-software-development). Unfortunately, my work in the area
+stopped just a couple of years later. Adobe's Software Technology Lab 2.0 is picking it back up.
+What has happened during the last 18 years, and what does the future look like now?
+
+Note: This is a revised version of the talk presented at Google Zürich, 2025-10-06, [C++ Under the
+Sea 2025](https://cppunderthesea.nl/program-2025/), 2025-10-09.
+
+- [Slides](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet.pdf)
+- [Slides with notes](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet-notes.pdf)
+- [PowerPoint](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet.pptx)
 
 Note: This talk was presented at [C++Now 2025](https://cppnow.org/), 2025-04-28.
 
+- [Video](https://youtu.be/RK3CEJRaznw)
 - [Slides](/presentations/2025-04-28-are-we-there-yet/2025-04-28-are-we-there-yet.pdf)
 - [Slides with notes](/presentations/2025-04-28-are-we-there-yet/2025-04-28-are-we-there-yet-notes.pdf)
 - [PowerPoint](/presentations/2025-04-28-are-we-there-yet/2025-04-28-are-we-there-yet.pptx)
@@ -656,6 +667,18 @@ Note: This talk was presented at Texas A&M University & Lockheed Martin. (Dates 
 
 ---
 
+Date: 2025-08
+
+### Local Reasoning Can Help Prove Correctness
+
+Authors:Lucian Radu Teodorescu, Sean Parent
+
+Abstract: Making sense of software is challenging. Lucian Radu Teodorescu and Sean Parent show how local reasoning can help.
+
+- [Link](https://accu.org/journals/overload/33/188/teodorescu-parent/)
+
+---
+
 Date: 2023-11-20
 
 ### indirect and polymorphic: Vocabulary Types for Composite Class Design
@@ -856,7 +879,66 @@ From: The 6th International Workshop on Multiparadigm Programming with Object-Or
 
 ---
 
+Date:1992-08
+
+### Living in an Exceptional World
+
+Abstract: Handling exceptions is a difficult but important part of developing
+Macintosh applications. This article provides a methodology as well as a
+set of C tools for handling exceptions and writing robust code.
+Techniques and examples are provided for dealing with some of the
+Toolbox idiosyncrasies, and some interesting features of the C
+preprocessor, MacsBug, and MPW are explored.
+
+- Note: This paper is referenced in Apple's header file,
+  []`AssertMacos.h`](https://github.com/apple-opensource-mirror/CarbonHeaders/blob/5c4b400a9164cc7e75f60aaa3a5147cee9237d65/AssertMacros.h#L35),
+  which still ships with Xcode as of 2025-10.
+
+- [PDF](/papers/1992-08-living-in-an-exceptional-world/1992-08-living-in-an-exceptional-world.pdf)
+
+---
+
 ## Interviews
+
+---
+
+Date: 2025-09-26
+
+### ADSP: The Podcast - Episode 253: Sean Parent on AI and Cursor
+
+In this episode, Conor and Bryce chat with Sean Parent about AI and Cursor!
+
+- [Audio](https://adspthepodcast.com/2025/09/26/Episode-253.html)
+
+---
+
+Date: 2025-09-19
+
+### ADSP: The Podcast - Episode 252: Sean Parent on Rust and AI
+
+In this episode, Conor and Bryce chat with Sean Parent about Rust and AI!
+
+- [Audio](https://adspthepodcast.com/2025/09/19/Episode-252.html)
+
+---
+
+Date: 2025-09-12
+
+### ADSP: The Podcast - Episode 251: Sean Parent C++ Under the Sea Keynote Preview
+
+In this episode, Conor and Bryce interview Sean Parent about his upcoming keynote at C++ Under the Sea!
+
+- [Audio](https://adspthepodcast.com/2025/09/12/Episode-251.html)
+
+---
+
+Date: 2025-09-05
+
+### ADSP: The Podcast - Episode 250: Sean Parent on AI
+
+In this episode, Conor and Bryce interview Sean Parent about his thoughts on AI, its impact on the software industry and society, and more!
+
+- [Audio](https://adspthepodcast.com/2025/09/05/Episode-250.html)
 
 ---
 
