@@ -31,8 +31,13 @@ Development_](#a-possible-future-of-software-development). Unfortunately, my wor
 stopped just a couple of years later. Adobe's Software Technology Lab 2.0 is picking it back up.
 What has happened during the last 18 years, and what does the future look like now?
 
-Note: This is a revised version of the talk presented at Google Zürich, 2025-10-06, [C++ Under the
-Sea 2025](https://cppunderthesea.nl/program-2025/), 2025-10-09.
+Note: This is a revised version of the talk presented at [C++ Under the Sea 2025](https://cppunderthesea.nl/program-2025/), 2025-10-09.
+
+- [Slides](/presentations/2025-10-09-are-we-there-yet/2025-10-09-are-we-there-yet.pdf)
+- [Slides with notes](/presentations/2025-10-09-are-we-there-yet/2025-10-09-are-we-there-yet-notes.pdf)
+- [PowerPoint](/presentations/2025-10-09-are-we-there-yet/2025-10-09-are-we-there-yet.pptx)
+
+Note: This is a revised version of the talk presented at Google Zürich, 2025-10-06.
 
 - [Slides](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet.pdf)
 - [Slides with notes](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet-notes.pdf)
