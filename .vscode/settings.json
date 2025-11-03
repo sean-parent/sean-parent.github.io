@@ -9,5 +9,8 @@
         "OOPSLA",
         "Radu",
         "Teodorescu"
+    ],
+    "rust-analyzer.linkedProjects": [
+        "presentations/2025-11-10-local-reasoning-rs/Cargo.toml": "presentations/2025-11-10-local-reasoning-rs/Cargo.toml"
     ]
 }

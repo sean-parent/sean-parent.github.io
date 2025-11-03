@@ -28,3 +28,5 @@ xcuserdata/
 ## Powerpoint temporary files
 ~$*.pptx
 ~$*.ppt
+/presentations/2025-11-10-local-reasoning-rs/target
+/target
