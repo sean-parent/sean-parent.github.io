@@ -130,21 +130,30 @@ fn demonstrate_pairs_iterator() {
     assert_eq!(numbers, vec![1, 0, 3, 2, 5, 4]);
 }
 
-fn f(a: &mut Box<i32>) -> () {
-}
+// fn f(a: &mut Box<i32>) -> () {}
 
 fn main() {
+    let mut a = vec![0, 1, 2, 3];
+    let e = a.last().unwrap();
+    a.clear(); // e is invalid
 
-    struct Person {
+    let mut a = vec![0, 1, 1, 0];
+
+    let first = a[0];
+    a.retain(|x| *x != first);
+
+    println!("{:?}", a);
+
+    /*     struct Person {
         name: String,
         id: i32,
     }
-    
+
     let b = Person {
         name: "John".to_string(),
         id: 0,
     };
-    println!("{:?}", b);
+    println!("{:?}", b); */
 
     //let mut a = vec![0];
     //let p = &a[0]; // p is a projection
