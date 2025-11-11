@@ -1,9 +1,11 @@
+use anyhow::{Ok, Result};
+
 // Returns the successor of `x`.
 // Precondition: `x < INT_MAX`
 
-fn f(x: i32) -> i32 {
+/* fn f(x: i32) -> i32 {
     x + 1
-}
+} */
 #[derive(Debug)]
 struct Point {
     x: i32,
@@ -132,7 +134,79 @@ fn demonstrate_pairs_iterator() {
 
 // fn f(a: &mut Box<i32>) -> () {}
 
+struct EveryNth<'a, T> {
+    slice: &'a [T],
+    n: usize,
+    i: usize,
+}
+
+impl<'a, T> Iterator for EveryNth<'a, T> {
+    type Item = &'a T;
+    fn next(&mut self) -> Option<Self::Item> {
+        (self.i < self.slice.len()).then(|| {
+            let item = &self.slice[self.i];
+            self.i += self.n;
+            item
+        })
+    }
+}
+
+type Type = i32;
+
+fn f() -> Result<Type> {
+    Ok(1)
+}
+fn g() -> Result<Type> {
+    Ok(2)
+}
+fn h(a: &mut Type) -> Result<()> {
+    Ok(())
+}
+
+fn a(a: &mut Type) -> Result<()> {
+    let mut x = f()?.g()?;
+    h(&mut x)?;
+    h(a)?;
+    Ok(())
+}
+
+fn op(s: String) -> String {
+    s + "!"
+}
+
+struct S {
+    data: String,
+}
+
 fn main() {
+    let mut s = String::from("Hello, world!");
+    s = op(s);
+
+    let mut s2 = S{data: String::from("Hello, world!")};
+    s2.data = op(s2.data);
+
+    let mut a = vec![3, 2, 1, 0];
+    let (left, right) = a.split_at_mut(2); // Ensure non-overlapping
+    right.copy_from_slice(&left);
+
+    println!("{:?}", a);
+
+    let data = [10, 20, 30, 40, 50, 60];
+    let iter = EveryNth {
+        slice: &data,
+        n: 3,
+        i: 0,
+    };
+
+    for val in iter {
+        println!("{}", val); // prints 10, 30, 50
+    }
+
+    /*     let mut a = vec![3, 2, 1, 0];
+    let src = &a[0..2];
+    let dst = &mut a[2..]; // ERROR
+    dst.copy_from_slice(src); */
+
     let mut a = vec![0, 1, 2, 3];
     let e = a.last().unwrap();
     a.clear(); // e is invalid
