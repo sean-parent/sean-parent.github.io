@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1" charset="utf-8"><title>Your Twitter Data</title><style>@media screen and (min-width: 450px) {
+        #mobile-error {
+          display: none;
+        }
+      }
+      #manifest-error {
+        display: none;
+      }
+      /* Lightbox Image Viewer */
+      #lightbox-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #lightbox-overlay.active {
+        display: flex;
+      }
+      #lightbox-image {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+      #lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        line-height: 1;
+        z-index: 10001;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+      }
+      #lightbox-close:hover {
+        opacity: 1;
+      }
+      /* Hide "View on Twitter" links */
+      a[href*="twitter.com/"][href*="/status/"],
+      a[href*="twitter.com/messages/"],
+      a[href*="twitter.com/i/"] {
+        display: none !important;
+      }
+      /* Clickable tweet ID links */
+      a.tweet-id-link {
+        color: #1d9bf0 !important;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a.tweet-id-link:hover {
+        text-decoration: underline;
+      }
+      </style><link rel="icon" href="./assets/images/favicon.ico"></head><body><div id="root"></div><div id="lightbox-overlay" onclick="closeLightbox()"><span id="lightbox-close">&times;</span><img id="lightbox-image" src="" alt="Full size image" onclick="event.stopPropagation()"></div><div id="manifest-error"><h3>Something went wrong, but don’t fret — let’s give it another shot</h3><p>You need to unzip your entire archive, not just individual folders, in order to view them here. If you keep experiencing errors, please <a href="https://help.twitter.com/forms/privacy" target="_blank">fill out this form.</a></p></div><div id="mobile-error"><h3>Your archive isn’t available here.</h3><p>You need to view this on a desktop browser in order to see your archive.</p></div><script>function showManifestError() {
+        document.getElementById('root').style.display = 'none';
+        document.getElementById('manifest-error').style.display = 'block';
+      }
+      
+      // Lightbox functions
+      function openLightbox(imageUrl) {
+        var overlay = document.getElementById('lightbox-overlay');
+        var img = document.getElementById('lightbox-image');
+        img.src = imageUrl;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeLightbox() {
+        var overlay = document.getElementById('lightbox-overlay');
+        overlay.classList.remove('active');
+        document.getElementById('lightbox-image').src = '';
+        document.body.style.overflow = '';
+      }
+      
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+      
+      // Intercept clicks on photo links
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href*="tweets_media"], a[href*="profile_media"]');
+        if (link) {
+          e.preventDefault();
+          openLightbox(link.href);
+        }
+
+      });
+      
+      // Make tweet IDs clickable - wrap raw text node IDs in clickable spans
+      (function() {
+        function linkifyIds() {
+          // Find all divs that contain "ID" text followed by a number
+          document.querySelectorAll('div').forEach(function(div) {
+            // Skip if already processed (has a tweet-id-link child)
+            if (div.querySelector('.tweet-id-link')) return;
+            
+            // Check if this div contains "ID" label pattern
+            var html = div.innerHTML;
+            if (!html.includes('>ID<') && !html.includes('>ID:')) return;
+            
+            // Look for direct text node children that are tweet IDs
+            for (var i = 0; i < div.childNodes.length; i++) {
+              var node = div.childNodes[i];
+              if (node.nodeType === Node.TEXT_NODE) {
+                var text = node.textContent.trim();
+                if (/^\d{10,}$/.test(text)) {
+                  // Wrap the text node in a clickable anchor
+                  var link = document.createElement('a');
+                  link.className = 'tweet-id-link';
+                  link.href = '#/tweets/tweets?q=' + text;
+                  link.title = 'Click to link to this tweet';
+                  link.textContent = text;
+                  div.replaceChild(link, node);
+                  break;
+                }
+              }
+            }
+          });
+        }
+        
+        // Run on mutations and initially after a delay
+        var observer = new MutationObserver(function() {
+          requestAnimationFrame(linkifyIds);
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        setTimeout(linkifyIds, 500);
+        setTimeout(linkifyIds, 1500);
+      })();
+      </script><script src="./data/manifest.js" onerror="showManifestError()"></script><script src="assets/js/runtime.9662ea169e7e46b859ee.js"></script><script src="assets/js/modules.9072ed6e90fe38c485fe.js"></script><script src="assets/js/i18n.e27e67d39fcc91627cab.js"></script><script src="assets/js/main.0506aebee0a5b8f83a32.js"></script></body></html>
