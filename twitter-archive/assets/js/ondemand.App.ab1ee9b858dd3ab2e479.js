@@ -1554,9 +1554,13 @@
           });
         },
         bt = function () {
+          var search = window.location.hash.split("?")[1] || "";
           return r.a.createElement(l.a, {
             from: "/",
-            to: "/tweets/tweets",
+            to: {
+              pathname: "/tweets/tweets",
+              search: search ? "?" + search : "",
+            },
             exact: !0,
           });
         },
