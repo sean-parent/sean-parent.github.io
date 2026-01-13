@@ -52,6 +52,49 @@
       a[href*="twitter.com/i/"] {
         display: none !important;
       }
+      /* Toast notification */
+      .copy-toast {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #1d9bf0;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+      }
+      .copy-toast.show {
+        opacity: 1;
+      }
+      /* Share button hover/active states */
+      .Tweet-action--share {
+        position: relative;
+      }
+      .Tweet-action--share::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        transform: translate(-50%, -50%);
+        width: 26px;
+        height: 26px;
+        border-radius: 4px;
+        background-color: transparent;
+        transition: background-color 0.15s;
+        pointer-events: none;
+      }
+      .Tweet-action--share:hover::before {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      .Tweet-action--share:active::before,
+      .Tweet-action--share.copying::before {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
       /* Clickable tweet ID links */
       a.tweet-id-link {
         color: #1d9bf0 !important;
@@ -61,7 +104,7 @@
       a.tweet-id-link:hover {
         text-decoration: underline;
       }
-      </style><link rel="icon" href="./assets/images/favicon.ico"></head><body><div id="root"></div><div id="lightbox-overlay" onclick="closeLightbox()"><span id="lightbox-close">&times;</span><img id="lightbox-image" src="" alt="Full size image" onclick="event.stopPropagation()"></div><div id="manifest-error"><h3>Something went wrong, but don’t fret — let’s give it another shot</h3><p>You need to unzip your entire archive, not just individual folders, in order to view them here. If you keep experiencing errors, please <a href="https://help.twitter.com/forms/privacy" target="_blank">fill out this form.</a></p></div><div id="mobile-error"><h3>Your archive isn’t available here.</h3><p>You need to view this on a desktop browser in order to see your archive.</p></div><script>function showManifestError() {
+      </style><link rel="icon" href="./assets/images/favicon.ico"></head><body><div id="root"></div><div id="copy-toast" class="copy-toast">Link copied to clipboard</div><div id="lightbox-overlay" onclick="closeLightbox()"><span id="lightbox-close">&times;</span><img id="lightbox-image" src="" alt="Full size image" onclick="event.stopPropagation()"></div><div id="manifest-error"><h3>Something went wrong, but don’t fret — let’s give it another shot</h3><p>You need to unzip your entire archive, not just individual folders, in order to view them here. If you keep experiencing errors, please <a href="https://help.twitter.com/forms/privacy" target="_blank">fill out this form.</a></p></div><div id="mobile-error"><h3>Your archive isn’t available here.</h3><p>You need to view this on a desktop browser in order to see your archive.</p></div><script>function showManifestError() {
         document.getElementById('root').style.display = 'none';
         document.getElementById('manifest-error').style.display = 'block';
       }
@@ -136,5 +179,100 @@
         observer.observe(document.body, { childList: true, subtree: true });
         setTimeout(linkifyIds, 500);
         setTimeout(linkifyIds, 1500);
+      })();
+      
+      // Share button copies tweet ID link to clipboard
+      (function() {
+        function handleShareClick(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          
+          var btn = e.currentTarget;
+          
+          // Prevent double-firing
+          if (btn.dataset.copying === 'true') return false;
+          btn.dataset.copying = 'true';
+          setTimeout(function() { btn.dataset.copying = ''; }, 300);
+          
+          var tweetId = null;
+          
+          // Find the tweet container this button belongs to
+          var tweet = btn.closest('.Tweet') || btn.closest('[class*="Tweet--"]');
+          
+          if (tweet) {
+            var idLink = tweet.querySelector('.tweet-id-link');
+            if (idLink) {
+              tweetId = idLink.textContent.trim();
+            } else {
+              var text = tweet.innerText;
+              var idMatch = text.match(/ID[\s:]*(\d{10,})/);
+              if (idMatch) {
+                tweetId = idMatch[1];
+              }
+            }
+          }
+          
+          if (!tweetId) {
+            var hash = window.location.hash;
+            var urlMatch = hash.match(/q=(\d{10,})/);
+            if (urlMatch) {
+              tweetId = urlMatch[1];
+            } else {
+              var idLinks = document.querySelectorAll('.tweet-id-link');
+              if (idLinks.length > 0) {
+                tweetId = idLinks[0].textContent.trim();
+              } else {
+                var ids = document.body.innerText.match(/\b(\d{18,19})\b/g);
+                if (ids) tweetId = ids[0];
+              }
+            }
+          }
+          
+          if (tweetId) {
+            var url = window.location.origin + window.location.pathname + '#/tweets/tweets?q=' + tweetId;
+            
+            var temp = document.createElement('textarea');
+            temp.value = url;
+            temp.style.position = 'fixed';
+            temp.style.left = '-9999px';
+            document.body.appendChild(temp);
+            temp.select();
+            try {
+              document.execCommand('copy');
+              // Visual feedback - add copying class for darker background
+              btn.classList.add('copying');
+              setTimeout(function() { btn.classList.remove('copying'); }, 150);
+              // Show toast
+              var toast = document.getElementById('copy-toast');
+              toast.classList.add('show');
+              setTimeout(function() { toast.classList.remove('show'); }, 2000);
+            } catch(err) {}
+            document.body.removeChild(temp);
+          }
+          
+          return false;
+        }
+        
+        function attachShareHandlers() {
+          var shareBtns = document.querySelectorAll('.Tweet-action--share');
+          shareBtns.forEach(function(btn) {
+            if (!btn.dataset.shareHandled) {
+              btn.dataset.shareHandled = 'true';
+              btn.removeAttribute('disabled');
+              btn.addEventListener('click', handleShareClick, true);
+            }
+          });
+        }
+        
+        var observer = new MutationObserver(function() {
+          requestAnimationFrame(attachShareHandlers);
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+        setTimeout(attachShareHandlers, 1000);
+        setTimeout(attachShareHandlers, 2000);
+        setTimeout(attachShareHandlers, 3000);
+        setInterval(attachShareHandlers, 2000);
       })();
       </script><script src="./data/manifest.js" onerror="showManifestError()"></script><script src="assets/js/runtime.9662ea169e7e46b859ee.js"></script><script src="assets/js/modules.9072ed6e90fe38c485fe.js"></script><script src="assets/js/i18n.e27e67d39fcc91627cab.js"></script><script src="assets/js/main.0506aebee0a5b8f83a32.js"></script></body></html>
