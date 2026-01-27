@@ -140,6 +140,53 @@
 
       });
       
+      // Preserve initial hash to prevent app from overwriting it
+      (function() {
+        var initialHash = window.location.hash;
+        
+        // Only preserve if it's a non-default tab (replies or retweets)
+        if (initialHash.match(/#\/tweets\/(replies|retweets)/)) {
+          var restored = false;
+          
+          // Watch for hash changes and restore the initial one
+          var hashChangeHandler = function() {
+            if (!restored && window.location.hash !== initialHash) {
+              // App overwrote our hash, restore it
+              window.location.hash = initialHash;
+              restored = true;
+              // Remove listener after first restoration
+              setTimeout(function() {
+                window.removeEventListener('hashchange', hashChangeHandler);
+              }, 100);
+            }
+          };
+          
+          window.addEventListener('hashchange', hashChangeHandler);
+          
+          // Also check periodically for the first few seconds
+          var checkCount = 0;
+          var intervalId = setInterval(function() {
+            checkCount++;
+            if (!restored && window.location.hash !== initialHash && window.location.hash.includes('#/tweets/tweets')) {
+              window.location.hash = initialHash;
+              restored = true;
+              clearInterval(intervalId);
+            }
+            if (checkCount > 20 || restored) {
+              clearInterval(intervalId);
+            }
+          }, 100);
+        }
+      })();
+      
+      // Helper function to get current tab from URL hash
+      function getCurrentTab() {
+        var hash = window.location.hash;
+        // Extract tab from hash like #/tweets/replies?q=123 or #/tweets/tweets
+        var match = hash.match(/#\/tweets\/(tweets|replies|retweets)/);
+        return match ? match[1] : 'tweets';
+      }
+      
       // Make tweet IDs clickable - wrap raw text node IDs in clickable spans
       (function() {
         function linkifyIds() {
@@ -161,7 +208,8 @@
                   // Wrap the text node in a clickable anchor
                   var link = document.createElement('a');
                   link.className = 'tweet-id-link';
-                  link.href = '#/tweets/tweets?q=' + text;
+                  var currentTab = getCurrentTab();
+                  link.href = '#/tweets/' + currentTab + '?q=' + text;
                   link.title = 'Click to link to this tweet';
                   link.textContent = text;
                   div.replaceChild(link, node);
@@ -172,11 +220,29 @@
           });
         }
         
+        // Update links when tab changes
+        function updateExistingLinks() {
+          var currentTab = getCurrentTab();
+          document.querySelectorAll('.tweet-id-link').forEach(function(link) {
+            var tweetId = link.textContent.trim();
+            if (/^\d{10,}$/.test(tweetId)) {
+              link.href = '#/tweets/' + currentTab + '?q=' + tweetId;
+            }
+          });
+        }
+        
         // Run on mutations and initially after a delay
         var observer = new MutationObserver(function() {
           requestAnimationFrame(linkifyIds);
         });
         observer.observe(document.body, { childList: true, subtree: true });
+        
+        // Update links when hash changes (tab navigation)
+        window.addEventListener('hashchange', function() {
+          updateExistingLinks();
+          linkifyIds();
+        });
+        
         setTimeout(linkifyIds, 500);
         setTimeout(linkifyIds, 1500);
       })();
@@ -195,42 +261,35 @@
           btn.dataset.copying = 'true';
           setTimeout(function() { btn.dataset.copying = ''; }, 300);
           
-          var tweetId = null;
+          // Get the tweet ID that was stored on this button
+          var tweetId = btn.getAttribute('data-tweet-id');
           
-          // Find the tweet container this button belongs to
-          var tweet = btn.closest('.Tweet') || btn.closest('[class*="Tweet--"]');
-          
-          if (tweet) {
-            var idLink = tweet.querySelector('.tweet-id-link');
-            if (idLink) {
-              tweetId = idLink.textContent.trim();
-            } else {
-              var text = tweet.innerText;
-              var idMatch = text.match(/ID[\s:]*(\d{10,})/);
-              if (idMatch) {
-                tweetId = idMatch[1];
-              }
-            }
-          }
-          
+          // If no ID stored yet, search for it in this tweet's container
           if (!tweetId) {
-            var hash = window.location.hash;
-            var urlMatch = hash.match(/q=(\d{10,})/);
-            if (urlMatch) {
-              tweetId = urlMatch[1];
-            } else {
-              var idLinks = document.querySelectorAll('.tweet-id-link');
-              if (idLinks.length > 0) {
-                tweetId = idLinks[0].textContent.trim();
-              } else {
-                var ids = document.body.innerText.match(/\b(\d{18,19})\b/g);
-                if (ids) tweetId = ids[0];
+            var tweet = btn.closest('.Tweet') || btn.closest('[class*="Tweet--"]');
+            
+            if (tweet) {
+              // Try to find the ID link - check both the tweet and its parent
+              // (ID section can be a sibling to the tweet, not a child)
+              var idLink = tweet.querySelector('.tweet-id-link');
+              
+              if (!idLink) {
+                var parent = tweet.parentElement;
+                if (parent) {
+                  idLink = parent.querySelector('.tweet-id-link');
+                }
+              }
+              
+              if (idLink) {
+                tweetId = idLink.textContent.trim();
+                btn.setAttribute('data-tweet-id', tweetId);
               }
             }
           }
           
           if (tweetId) {
-            var url = window.location.origin + window.location.pathname + '#/tweets/tweets?q=' + tweetId;
+            var currentTab = getCurrentTab();
+            var url = window.location.origin + window.location.pathname + '#/tweets/' + currentTab + '?q=' + tweetId;
             
             var temp = document.createElement('textarea');
             temp.value = url;
