@@ -22,6 +22,24 @@ comments: true
 
 ---
 
+Date: 2025-11-10
+
+### Local Reasoning in Rust
+
+Abstract: Local reasoning is the ability to look at a defined unit of code, a function, or a class,
+understand it, and verify its correctness without understanding all the contexts within which it is
+used. This talk covers local reasoning principles and explores conventions and rules to support
+local reasoning and develop better interfaces and code.
+
+Note: This version of the talk was presented at an internal Adobe Rust Meetup.
+
+[Slides](/presentations/2025-11-10-local-reasoning-rs/2025-11-10-local-reasoning-rs.pdf)
+[Slides with Notes](/presentations/2025-11-10-local-reasoning-rs/2025-11-10-local-reasoning-rs-notes.pdf)
+[Keynote](/presentations/2025-11-10-local-reasoning-rs/2025-11-10-local-reasoning-rs.key)
+[PowerPoint](/presentations/2025-11-10-local-reasoning-rs/2025-11-10-local-reasoning-rs.pptx)
+
+---
+
 Date: 2025-04-28
 
 ### Are We There Yet?
@@ -39,6 +57,7 @@ Note: This is a revised version of the talk presented at [C++ Under the Sea 2025
 
 Note: This is a revised version of the talk presented at Google Zürich, 2025-10-06.
 
+- [Video](https://youtu.be/WQj3F7LahJI)
 - [Slides](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet.pdf)
 - [Slides with notes](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet-notes.pdf)
 - [PowerPoint](/presentations/2025-10-06-are-we-there-yet/2025-10-06-are-we-there-yet.pptx)
@@ -389,6 +408,66 @@ Note: Talk presented as keynote at [Meeting C++ 2017](http://meetingcpp.com/2017
 
 ---
 
+Date: 2018-04-19, 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
+
+### Better Code: Concurrency
+
+Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its
+infancy. This talk uses the primitives supplied by C++14 to build a simple reference implementation
+of a task system. And then builds on the tasking system to develop a conceptual model for using
+futures and continuations and looks towards sequential communicating processes, higher level
+concurrent constructs. As part of my "Better Code" series of talks, the goal is to learn to write
+software that doesn't wait.
+
+Note: _I've lost track of where this version of the talk was presented._
+
+- [PDF] (/presentations/2018-04-19-concurrency/2018-04-19-concurrency.pdf)
+- [PDF w/ notes] (/presentations/2018-04-19-concurrency/2018-04-19-concurrency-notes.pdf)
+- [Keynote] (/presentations/2018-04-19-concurrency/2018-04-19-concurrency.key)
+- [PowerPoint] (/presentations/2018-04-19-concurrency/2018-04-19-concurrency.pptx)
+
+**Erratum: I've incorrectly stated that `std::async()` changed with C++14.**
+
+Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
+
+- [Video](https://www.youtube.com/watch?v=zULU6Hhp42w)
+- [PDF](/presentations/2017-01-18-concurrency/2017-01-18-concurrency.pdf)
+- [Keynote](/presentations/2017-01-18-concurrency/2017-01-18-concurrency.key)
+
+Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
+
+- [Video](https://www.youtube.com/watch?v=QIHy8pXbneI)
+- [PDF](/presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf)
+- [Keynote](/presentations/2016-11-16-concurrency/2016-11-16-concurrency.key)
+
+Note: This is the version of the talk presented at Bloomberg.
+
+- [PDF](/presentations/2016-08-08-concurrency/2016-08-08-concurrency.pdf)
+- [Keynote](/presentations/2016-08-08-concurrency/2016-08-08-concurrency.key)
+
+Note: This is an interview from [CppCast](http://cppcast.com/) about my talk.
+
+- [Audio](http://cppcast.com/2015/06/sean-parent/)
+
+Note: This is the version of the talk presented at the [Bay Area C++ User Group Meeting](http://www.meetup.com/SF-Bay-Area-Cpp/events/221680178/).
+
+- [PDF](/presentations/2015-04-21-concurrency/concurrency.pdf)
+- [Keynote](/presentations/2015-04-21-concurrency/concurrency.key)
+
+Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I believe the slides are the same as those listed above.
+
+- [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
+
+Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
+
+- [Video (1)](https://www.youtube.com/watch?v=IYmoz7e1L5c)
+- [Video (2)](https://www.youtube.com/watch?v=BngVqHzOFX8)
+- [PDF](/presentations/2015-02-27-concurrency/concurrency.pdf)
+- [Keynote](/presentations/2015-02-27-concurrency/concurrency.key)
+- [C++ Source](/presentations/2015-02-27-concurrency/concurrency-talk.cpp)
+
+---
+
 Date: 2017-11-11
 
 ### Polymorphic Task Template in Ten
@@ -447,54 +526,6 @@ Note: This is an updated version of the "Value Semantics and Concept-based Polym
 
 - [PDF](/presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.pdf)
 - [Keynote](/presentations/2016-10-10-runtime-polymorphism/2016-10-10-runtime-polymorphism.key)
-
----
-
-Date: 2017-01-18, 2016-11-16, 2016-08-08, 2015-06-01, 2015-04-21, 2015-02-27
-
-### Better Code: Concurrency
-
-Abstract: Despite all of the recent interest, concurrency in standard C++ is still barely in its infancy. This talk uses the primitives supplied by C++14 to build a simple reference implementation of a task system. And then builds on the tasking system to develop a conceptual model for using futures and continuations and looks towards sequential communicating processes, higher level concurrent constructs. As part of my "Better Code" series of talks, the goal is to learn to write software that doesn't wait.
-
-**Erratum: I've incorrectly stated that `std::async()` changed with C++14.**
-
-Note: This is a revised version of the talk presented at [NDC { London } 2017](http://ndc-london.com/).
-
-- [Video](https://www.youtube.com/watch?v=zULU6Hhp42w)
-- [PDF](/presentations/2017-01-18-concurrency/2017-01-18-concurrency.pdf)
-- [Keynote](/presentations/2017-01-18-concurrency/2017-01-18-concurrency.key)
-
-Note: This is a heavily revised version of the talk presented at [code::dive 2016](http://codedive.pl/en/index/).
-
-- [Video](https://www.youtube.com/watch?v=QIHy8pXbneI)
-- [PDF](/presentations/2016-11-16-concurrency/2016-11-16-concurrency.pdf)
-- [Keynote](/presentations/2016-11-16-concurrency/2016-11-16-concurrency.key)
-
-Note: This is the version of the talk presented at Bloomberg.
-
-- [PDF](/presentations/2016-08-08-concurrency/2016-08-08-concurrency.pdf)
-- [Keynote](/presentations/2016-08-08-concurrency/2016-08-08-concurrency.key)
-
-Note: This is an interview from [CppCast](http://cppcast.com/) about my talk.
-
-- [Audio](http://cppcast.com/2015/06/sean-parent/)
-
-Note: This is the version of the talk presented at the [Bay Area C++ User Group Meeting](http://www.meetup.com/SF-Bay-Area-Cpp/events/221680178/).
-
-- [PDF](/presentations/2015-04-21-concurrency/concurrency.pdf)
-- [Keynote](/presentations/2015-04-21-concurrency/concurrency.key)
-
-Note: This is a video from the [C++Now 2015](http://cppnow.org/history/2015/talks/). I believe the slides are the same as those listed above.
-
-- [Video](https://www.youtube.com/watch?v=32f6JrQPV8c)
-
-Note: This is the version of the talk I presented at the [C++ Russia Conference, 2015 (1)](http://cpp-russia.ru/). I presented an earlier draft at the [ACCU, Silicon Valley Chapter (2)](http://www.meetup.com/ACCU-Bay-Area/).
-
-- [Video (1)](https://www.youtube.com/watch?v=IYmoz7e1L5c)
-- [Video (2)](https://www.youtube.com/watch?v=BngVqHzOFX8)
-- [PDF](/presentations/2015-02-27-concurrency/concurrency.pdf)
-- [Keynote](/presentations/2015-02-27-concurrency/concurrency.key)
-- [C++ Source](/presentations/2015-02-27-concurrency/concurrency-talk.cpp)
 
 ---
 
@@ -904,6 +935,27 @@ preprocessor, MacsBug, and MPW are explored.
 ---
 
 ## Interviews
+
+---
+
+Date: 2025-12-05
+
+### ADSP: The Podcase - Episode 263: The Sean Parent Origin Story
+
+In this episode, Conor and Bryce interview Sean Parent about the origin story of his career in software engineering!
+
+[Audio](https://adspthepodcast.com/2025/12/05/Episode-263.html)
+
+---
+
+Date: 2025-11-28
+
+### ADSP: The Podcast - Episode 262: Chaos with Sean Parent! Bikes, Buses, Waffles & More!
+
+In this episode, Conor and Bryce interview Sean Parent about generic programming and there is much
+chaos!
+
+- [Audio](https://adspthepodcast.com/2025/11/28/Episode-262.html)
 
 ---
 
