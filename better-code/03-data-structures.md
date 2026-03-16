@@ -1,7 +1,6 @@
 ---
 title: Data Structures
 tagline: No Incidental Data Structures
-
 layout: book-page
 tags: [ better-code ]
 chapter: 3
@@ -23,7 +22,7 @@ As we saw in [chapter 1](01-types.html) a type is a pattern for storing and modi
 
 Values are related to other values, for example, 3 is not equal to 4.
 
-If two objects of the same type have the same representation then they represent the same value. Representational equality implies value equality. If the representation is unique then the converse is also true. A hash is a regular function on a representation or a value. Because it is regular, if two values are equal then the hash of the values are also equal.
+If two objects of the same type have the same representation then they represent the same value. Representational equality implies value equality. If the representation is unique then the converse is also true. A hash is a regular function on a representation or a value. Because it is regular, if two values are equal then the hash of the values is also equal.
 
 Because objects exist in memory, they have a _physical_ relationship. The value at the first location in an array is located before the value in the second location. If we sort the values, we establish a correspondence between the physical and value relationships, i.e. an element before another element is less than or equal to that element. We can represent locations as values (pointers) and use those to represent additional relationships, such as "is a child of".
 
@@ -37,15 +36,15 @@ The choice of encoding can make a dramatic difference on the performance of oper
 
 Although data structures tend to be thought of simply in terms of containers such as arrays, lists, or maps, anytime a relationship is established between objects a data structure is created. However, to avoid confusion we will reserve the term _data structure_ to refer to types with a set of invariants which insure a set of relationships are maintained. More transient data structures will be referred to as _structured data_.
 
-As an example of utilizing structured data_, consider the problem of finding the `nth` to `mth` elements of an array as if the array was in sorted order. The trivial way to do this is to simply sort the entire array and then print the `nth` to `mth` elements. In this example `[sf, sl)` is a subrange of `[f, l)`. {::comment}appendix to describe half open notation?{:/comment}
+As an example of utilizing structured data_, consider the problem of finding the `nth` to `mth` elements of an array as if the array was in sorted order. The trivial way to do this is to simply sort the entire array and then print the `nth` to `mth` elements. In this example `[sf, sl)` is a subrange of `[f, l)`. {::comment}appendix to describe half-open notation?{:/comment}
 
 {% include code.md name='sort-subrange-0' caption='inefficient sort subrange' %}
 
 {::comment} Should this section start with partial_sort then add nth_element instead of the other way around? {:/comment}
 
-This function, however, does more work than is necessary. There is a function in the standard library, `nth_element()` which given a position `nth` within a range `[f, l)` has the post condition that the element at `nth` is the same element that would be in that position if `[f, l)` were sorted. `nth_element()` is a special case of sort_subrange when the subrange is of length 1 (or 0 if `nth == l`).
+This function, however, does more work than is necessary. There is a function in the standard library, `nth_element()` which given a position `nth` within a range `[f, l)` has the post-condition that the element at `nth` is the same element that would be in that position if `[f, l)` were sorted. `nth_element()` is a special case of sort_subrange when the subrange is of length 1 (or 0 if `nth == l`).
 
-This would not be of much use to build `sort_subrang()` except that `nth_element()` has an additional post condition. The range `[f, l)` is partitioned such that all elements prior to `nth` are less than or equal to the final element at `nth`. This post condition leaves us with _structured data_ and we can take advantage of that structure. If we find the `nth_element()` where `nth` is `sf` then we only need to sort the remaining elements to `sl` which can be done with `partial_sort()`.
+This would not be of much use to build `sort_subrang()` except that `nth_element()` has an additional post-condition. The range `[f, l)` is partitioned such that all elements prior to `nth` are less than or equal to the final element at `nth`. This post-condition leaves us with _structured data_ and we can take advantage of that structure. If we find the `nth_element()` where `nth` is `sf` then we only need to sort the remaining elements to `sl` which can be done with `partial_sort()`.
 
 {% include code.md name='sort-subrange-1' caption='improved sort subrange' %}
 
